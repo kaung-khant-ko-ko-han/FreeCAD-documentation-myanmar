@@ -1,7 +1,7 @@
-# Artwork Ship
-These icons are in the indicated source path.
+# Artwork (Ship) — သင်္ဘော အိုင်ကွန်များ
+ဤအိုင်ကွန်များကို ဖော်ပြထားသော ရင်းမြစ် ဖိုလ်ဒါလမ်းကြောင်းတွင် တွေ့ရှိနိုင်ပါသည်။
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+မူလအရင်းမြစ် သစ်ပင် (source tree) အတွင်းရှိ အိုင်ကွန်များအားလုံးကို ကြည့်ရန် [Artwork](Artwork.md) ကို အသုံးပြုပါ။
 
 ## Mod/Ship/
 

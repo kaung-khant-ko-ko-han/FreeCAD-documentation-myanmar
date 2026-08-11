@@ -1,5 +1,5 @@
-# Artwork Robot
-These icons are in the indicated source path.
+# ပန်းချီပစ္စည်း Robot (Artwork Robot)
+ဤအိုင်ကွန်များကို ဖော်ပြထားသော မူလ ဖိုင်လမ်းကြောင်း (source path) တွင် တွေ့နိုင်သည်။
 
 For all icons in the source tree, see [Artwork](Artwork.md).
 

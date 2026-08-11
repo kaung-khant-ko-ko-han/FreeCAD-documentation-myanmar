@@ -1,7 +1,8 @@
-# Artwork Part
-These icons are in the indicated source path.
+# ပန်းချီ အစိတ်အပိုင်း (Artwork Part)
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+ဤအိုင်ကွန်များ (icons) ကို ဖော်ပြထားသည့် ရင်းမြစ်လမ်းကြောင်း (source path) တွင် တွေ့နိုင်ပါသည်။
+
+ရင်းမြစ် ဖိုင်ပင် (source tree) အတွင်းရှိ အိုင်ကွန်များအားလုံးအတွက် [Artwork](Artwork.md) ကို ကြည့်ပါ။
 
 ## src/Mod/Part/
 
@@ -28,4 +29,5 @@ For all icons in the source tree, see [Artwork](Artwork.md).
 
 
 ---
+ဤစာမျက်နှာနှင့် ဆက်စပ်သော စုစည်းခံစာများအတွက် အောက်ပါ လင့်ခ်ကို ပြန်လည်ကြည့်ပါ။
 ⏵ [documentation index](../README.md) > [Artwork](Category_Artwork.md) > [Part](Category_Part.md) > Artwork Part

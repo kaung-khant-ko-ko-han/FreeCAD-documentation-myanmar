@@ -1,29 +1,30 @@
-# Artwork Guidelines
-## Introduction
+# အနုပညာ လမ်းညွှန်ချက်များ
+## မိတ်ဆက်
 
 
-**Note:**
+**မှတ်ချက်။**
 
-for all icons in the source tree, see [Artwork](Artwork.md).
+source tree ပေါ်ရှိ icon အားလုံးအတွက် [Artwork](Artwork.md) ကို ကြည့်ရှုပါ။
 
-A FreeCAD **icon** is composed of 6 elements which can be remembered by the acronym SALCHO: **S**troke, **A**lignment, **L**ighting, **C**olor, **H**ighlighting, **O**utline.
+ဖရီးကက် (FreeCAD) ၏ **icon** တစ်ခုသည် SALCHO ဟု အက်ရိုနာမ် (acronym) ဖြင့် မှတ်မိနိုင်သော အချက် 6 ခုဆိုင်ရာ မှာ ဖြစ်သည်။ ၎င်းတို့မှာ **S**troke (အထွက်လိုင်း / Stroke), **A**lignment (ညီထပ်မှု / Alignment), **L**ighting (အလင်းထိုး / Lighting), **C**olor (အရောင် / Color), **H**ighlighting (အထူးထင်ရှားအလင်း / Highlight), **O**utline (အပြင်ဘောင် / Outline) တို့ဖြစ်သည်။
 
-Here\'s a concrete, yet arbitrary example:
+အောက်မှာ တိကျသော်လည်း ကန့်သတ်ချက်မဲ့ တစ်ဥပမာကို ပြထားသည်။
 
+ 
  ![](images/FreeCAD_icon_example_details.svg ) 
 
   --- 
-  A   The highlight color is used for this entire surface to indicate light falling from above.
-  B   The obligatory dark outline surrounds the icon shape to provide form contrast.
-  C   Just inside the outline, the highlight stroke (Highlight color) provides contrast on dark backgrounds.
-  D   This face is primarily the base color, but a light gradient from highlight (top left) to base (bottom right) gives the impression of light falling from above left.
-  E   The highlight here is the base color (one tone down) to give the impression of this being the face furthest from the light.
-  F   This face is like D but goes from Base (top left) to Dark (bottom right), to indicate that this is the face furthest from the light.
+  A   ဤမျက်နှာပြင်တစ်ခုလုံးတွင် အလင်းတစ်ဖက်မှ လျော့ကျရိပ်သာလာသည်ကို ဖေါ်ပြရန် အထူးထင်ရှားအရောင်ကို အသုံးပြုထားသည်။
+  B   အကနှင့် ထိပ်ဆုံးရှိ မဖြစ်မနေရှိသင့်သော အမှောင်မြင့် အပြင်ဘောင် (outline) သည် icon ပုံသဏ္ဍာန်ကို ပုံဖော်ကာ မတူကြောင်းကို ဖန်တီးပေးသည်။
+  C   အပြင်ဘောင်၏ အတွင်းဘက်တွင် အထူးထင်ရှားရောင် (Highlight color) ဖြင့် သေးငယ်သော stroke တစ်ခု ထည့်ထား၍ မိမိ icon ကို အမှောင်နောက်ခံပေါ်တွင် မျက်နှာထောက်ပေးစေသည်။
+  D   ဤမျက်နှာပြင်သည် အခြေခံအရောင် (Base) ဖြစ်သော်လည်း အထူးထင်ရှားအရောင်မှ (ထိပ်ဘက် ဘယ်) အခြေခံအရောင် (အောက်ညာ) သို့ မျဉ်းနည်း gradient တစ်ခုထည့်ထားခြင်းကြောင့် ပွင့်လင်းတောက်ပသော အလင်း ခံစားမှုကို ဖန်တီးပေးသည်။
+  E   ဒီနေရာရှိ အထူးထင်ရှားချက်သည် အခြေခံအရောင်၏ တစ်ဖန်ထပ်သက်သာစေရန် အရောင်တန်ဖိုး တစ်ဆင့်နိမ့်စေထားခြင်းဖြင့် အလင်းမှ အကွာဆုံးဖြစ်နေသော မျက်နှာဖြစ်ကြောင်း ခံစားစေသည်။
+  F   ဤမျက်နှာပြင်သည် D ကဲ့သို့ပင် ဖြစ်သော်လည်း အပေါ်ဘယ်မှ အောက်ညာသို့ Base → Dark အဖြစ် ပြောင်းသည့်အတွက် အလင်းမှ အကွာဆုံး မျက်နှာဖြစ်ကြောင်း ဖော်ပြသည်။
   --- 
 
-The following sections explain these elements with more detail.
+အောက်ပါအပိုင်းများမှာ ဤအချက်များအား အသေးစိတ်ရှင်းပြထားသည်။
 
-This icon is displayed as follows:
+ဤ icon ကို အောက်ပါအတိုင်း ပြသပါသည် -
 
 +++
 | <img alt="" src=images/FreeCAD_icon_example.svg  style="width:64px;"> | 64 px, original size, large buttons.                                       |
@@ -33,14 +34,12 @@ This icon is displayed as follows:
 | <img alt="" src=images/FreeCAD_icon_example.svg  style="width:16px;"> | 16 px, small size, as it appears in the [tree view](tree_view.md). |
 +++
 
-## Colors
+## အရောင်များ
 
 
-**Obligatory**
+**လိုအပ်ပါသည်**
 
-FreeCAD uses a palette adapted from the [Tango palette](https://web.archive.org/web/20190921043652/http://tango.freedesktop.org/tango_icon_theme_guidelines). Each main color comes in 4 tones: Highlight, Base, Dark and Outline. Notice that the Outline is not completely black but a very dark variation of the Base.
-
-
+ဖရီးကက် (FreeCAD) သည် [Tango palette](https://web.archive.org/web/20190921043652/http://tango.freedesktop.org/tango_icon_theme_guidelines) မှ ချိန်ညှိထားသော palette ကို အသုံးပြုပါသည်။ မူလအဓိကအရောင်တိုင်းသည် Highlight, Base, Dark နှင့် Outline ဆိုသည့် 4 ပုံသဏ္ဍာန်အရောင်များကို ပါ၀င်သည်။ Outline သည် အပြည့်အစုံ အနက်ရောင်မဟုတ်ဘဲ Base ၏ အလွန်အမင်း မျိုးဆက်(ခန့်) မြင့်မားသော ဗားရှင်း ဖြစ်ကြောင်း သတိပြုပါ။
 
 +++++
 | #fce94f         | #edd400         | #c4a000         | #302b00         |
@@ -87,10 +86,10 @@ FreeCAD uses a palette adapted from the [Tango palette](https://web.archive.org/
  
 *Complete palette*
 
-A selection of some key colors.
+အဓိကအချို့သော အရောင်များ ချမှတ်ထားခြင်း ဖြစ်သည်။
 
       
-                                                                                                                                                          Use the Yellow tones for tools that create objects; for an example, see [Part](Part_Workbench.md) and [Draft Workbenches](Draft_Workbench.md).
+Use the Yellow tones for tools that create objects; for an example, see [Part](Part_Workbench.md) and [Draft Workbenches](Draft_Workbench.md).
   style=\"background-color:#729fcf;\|   style=\"background-color:#3465a4;\|   style=\"background-color:#204a87;\|   style=\"background-color:#0b1521;\|   Use the Blue tones for tools that modify objects; for an example, see [Part](Part_Workbench.md) and [Draft Workbenches](Draft_Workbench.md).
   style=\"background-color:#34e0e2\|    style=\"background-color:#16d0d2\|    style=\"background-color:#06989a\|    style=\"background-color:#042a2a\|    Use the Teal tones for view-related tools; for an example, see the [View Menu](Std_View_Menu.md).
   style=\"background-color:#ef2929\|    style=\"background-color:#cc0000\|    style=\"background-color:#a40000\|    style=\"background-color:#280000\|    Use the Red tones for Constraint related tools; for an example, see [Sketcher Workbench](Sketcher_Workbench.md).
@@ -101,119 +100,118 @@ A selection of some key colors.
   How do I use the FreeCAD palette?                        Installing [the palette](https://gist.github.com/GAZ082/724d2092b2986e3b17b9663f34093cf5) is as easy as [copying it into your Inkscape palette folder](https://inkscape.org/en/learn/faq/#how-install-new-extensions-palettes-document-templates-symbol-sets-icon-sets-etc).
    
 
-## Grid and stroke width 
+## စစ်တမ်းဇယား (Grid) နှင့် stroke အနံ (stroke width) 
 
 
-**Obligatory**
+**လိုအပ်ပါသည်**
 
-FreeCAD icons have a nominal size of 64 pixels both in width and height. When creating or editing an icon, make sure the document size is 64 x 64 with the units being pixels (px). Leaving an inner 2px margin of empty space all around the document area is useful as it prevents effects like anti-aliasing (blurring of edges). That is, the usable space for the icon should be considered 60 x 60, and the edges should be left empty.
+ဖရီးကက် (FreeCAD) icon များသည် အနံနှင့်အမြင့် တိုင်းကို 64 pixels ဖြစ်စေရန် သတ်မှတ်ထားသည်။ icon တစ်ခုဖန်တီးသို့မဟုတ် တည်းဖြတ်နေရင် document အရွယ်အစားကို px (pixels) အဖြစ် width = 64 နှင့် height = 64 ဖြစ်စေပါ။ သို့သော် document အနားပတ်လည်တွင် အတွင်းပိုင်း 2px အလွတ် နေရာ (margin) ထားပေးခြင်းအားဖြင့် anti-aliasing (နားထောင့် မျက်နှာကျပ်မှု ချော့ယွင်းခြင်း) ကဲ့သို့သော ထိခိုက်မှုများကို ကာကွယ်နိုင်သည်။ အထူးသဖြင့် icon အသုံးချနိုင်သော နေရာကို 60 x 60 px ဟု ယူဆရမည်ဖြစ်ပြီး အနားပိုင်းများကို ဖျတ်ထားသင့်သည်။
 
  <img alt="" src=images/FreeCAD_icon_size.svg  style="width:128px;">  
-*Draw the icon inside the blue area and everything will work out fine.*
+*စိမ်းရောင် အခြေပြု နေရာအတွင်းတွင် icon ကို ဆွဲပါ၊ ထိုနည်းဖြင့် အားလုံးအဆင်ပြေပါလိမ့်မည်။*
 
-It\'s also strongly recommended to use a visual grid that has a minor grid line every pixel, and a major grid line every 2 pixels. The strokes of the icon should be aligned along the minor grid intersections.
+ထို့အတူ visual grid ကို အသုံးပြုရန် အကြံပြုပါသည်။ မိုနာဂျာ grid line တစ်ခုကို တစ် pixel အလိုက်၊ မိုင်းဂျာ grid line ကို 2 pixel အလိုက် ထားပါ။ icon ၏ strokes များကို minor grid intersections များနှင့် ကိုက်ညီအောင် လိုက်နာဆွဲရန် အကြံပြုပါသည်။
 
-Strokes should be no *thinner* than 2px, with rounded caps and corners in most cases. Strokes can be *thicker*, but they should preferably be a multiple of 2px in order to minimize scaling fuzziness.
+Strokes သည် သာမန်အားဖြင့် rounded caps နှင့် corners ဖြင့် 2px ထက် ပိုသေးငယ်မကျရန် သတ်မှတ်ပါ။ Strokes များသည် ပိုထူခိုင်မြဲစေနိုင်သော်လည်း များသောအားဖြင့် 2px ၏ မျိုးစုံ (multiple of 2px) ဖြစ်ရန် ဦးစားပေးပါ၊ ထို့ကြောင့် scaling လုပ်သည့်အခါ anti-aliasing ပျက်ကွက်မှုများကို လျော့ပါးစေသည်။
 
  <img alt="" src=images/FreeCAD_icon_stroke_2px.svg  style="width:320px;">  
-*Grid with strokes that are multiples of 2px.*
+*2px ၏ မျိုးစုံဖြင့် သတ်မှတ်ထားသည့် grid နှင့် strokes.*
 
    
-  Why use this grid and stroke size?   For historical reasons, FreeCAD uses a 64x64 icon that then gets scaled down. Not ideal, but it adds character. As a result, keeping things aligned to a power of two grid with thicknesses that are powers of two helps to avoid or at least mitigate anti-aliasing issues upon re-scaling.
-  How do I comply with this?           If you are using Inkscape, go to **File → Document Properties** and confirm the width, height and units of your page are correct. Then go to the **Grids** tab, click **New**, set the units to `px`, `Spacing X` and `Spacing Y` to 1 and `Major grid line every` to 2.
+  Why use this grid and stroke size?   သမိုင်းဆိုင်ရာ အကြောင်းအရ ဖရီးကက် (FreeCAD) သည် 64x64 icon ကို အသုံးပြုပြီး ပိုင်းခြားပြီး scale လုပ်၍ အသုံးပြုလေ့ရှိသည်။ ဤအတွက် power-of-two grid နှင့် thickness များကို လိုက်နာခြင်းအားဖြင့် re-scaling အတွင်း anti-aliasing ပြဿနာများကို လျော့ချပေးစေသည်။
+  How do I comply with this?           Inkscape ကို အသုံးပြုပါက **File → Document Properties** သို့သွား၍ မိတ္တူ၏ width, height နှင့် units အတိအကျ ဖြစ်နေသည်ကို အတည်ပြုပါ။ ထို့နောက် **Grids** tab ကို သွား၍ **New** ကို နှိပ်၊ units ကို `px` သတ်မှတ်၊ `Spacing X` နှင့် `Spacing Y` ကို 1 သတ်မှတ်ပြီး `Major grid line every` ကို 2 သတ်မှတ်ပါ။
    
 
-## Outline
+## အပြင်ဘောင် (Outline)
 
 
-**Obligatory**
+**လိုအပ်ပါသည်**
 
-Basing yourself on the main color of the icon, ensure that there is a dark outline of 2px, as mentioned earlier. This works in unison with the highlight to ensure good form contrast on multiple background tones.
+icon ၏ မူလအဓိကအရောင်ပေါ် အခြေခံ၍ အမျိုးအစားတစ်ခုလုံးအတွင်း 2px အနက်ရောင် outline ရှိရန် သေချာစေပါ။ ၎င်းသည် highlight နှင့် ညီဖက်ကာ မတူညီသော ဖောင် အရောင်ကွာဟချက် (form contrast) ကို အမျိုးမျိုးသော နောက်ခံအရောင်ပေါ်တွင် ပေးစွမ်းစေသည်။
 
  <img alt="" src=images/Draft_Point.svg  style="width:" height="128px;"> <img alt="" src=images/Draft_Point_backgrounds.svg  style="width:" height="128px;">  
-*The dark edge of the icon is the outline.*
+*icon ၏ အမှောင်ဖြစ်သော အနားကွင်းသည် outline ဖြစ်ပါသည်။*
 
    
-  Why is the outline needed?   The outline is the skeleton on which everything else hangs by adding form contrast. Using the Outline color or the Dark color depends on the situation, but without this line, the range of backgrounds on which the icon is visible gets drastically limited
-  How do I comply with this?   Simply add a stroke of 2px around every part of the icon that will be adjacent to the background color, that is, the outline is for external strokes. In case of shapes that have a hole in the middle, for example, a donut, the outline should also be added to the interior hole. Snap your path\'s nodes to the grid whenever possible, aiming for the minor grid intersections.
+  Why is the outline needed?   Outline သည် မည်သည့် အရာများမဆို ဖောင်ကို ပံ့ပိုးပေးသည့် skeleton (အသတ္တုအခြေခံ) ဖြစ်သည်။ Outline color သို့မဟုတ် Dark color ကို အသုံးပြုမှုသည် အခြေအနေပေါ်မူတည်သည်၊ သို့သော် ဤလိုင်းမရှိပါက icon ကို မြင်နိုင်သော နောက်ခံအရောင် အမျိုးမျိုးပေါ်လွန်စွာ ကန့်သတ်ခံရမည်ဖြစ်သည်။
+  How do I comply with this?   icon ၏ နောက်ခံအရောင်နှင့် ထိပ်သက်မည့် အပိုင်းတိုင်းပေါ်တွင် 2px stroke တစ်ခု ထည့်ပေးပါ (outline သည် အပြင်ဘက် strokes များအတွက်ဖြစ်သည်)။ အလယ်တွင် ဂုတ်အမျိုးအစားရှိသော ပုံစံများ၊ ဥပမာ donut (အစားအစာ) ကဲ့သို့ ဖြင့် အတွင်းပေါက်အတွက်လည်း outline ထည့်သင့်သည်။ အချို့သော အခါများတွင် path nodes များကို grid အပေါ်၌ snap ပြုလုပ်၍ minor grid intersections များပေါ်ကို ရောက်အောင် ကြိုးစားပါ။
    
 
-## Highlight
+## အထူးထင်ရှားအလင်း (Highlight)
 
 
-**Strongly advised**
+**ကိုင်းစား အကြံဉာဏ်**
 
-Using the Highlight color, add an internal stroke of 2px to help make that outline pop. On dark backgrounds, it\'s this highlight what will be providing the form to the icon.
+အထူးထင်ရှားအရောင်ကို အသုံးပြုပြီး outline ၏ အတွင်းဘက်တွင် 2px stroke တစ်ခု ထည့်သွင်းပါ။ အမှောင်နောက်ခံများပေါ်တွင် ဤ highlight သည် icon ၏ ဖောင်ကို မျက်နှာထောက်ပေးလိမ့်မည်။
 
  <img alt="" src=images/Draft_Move.svg  style="width:" height="128px;"> <img alt="" src=images/Draft_Move_backgrounds.svg  style="width:" height="128px;">  
-*The light highlight helps in dark backgrounds.*
+*အလင်း highlight သည် အမှောင်နောက်ခံပေါ်တွင် အထောက်အကူဖြစ်စေသည်။*
 
    
-  Why use the highlight?       The highlight works in unison with the outline to improve form contrast, especially on dark backgrounds. It is never a bad idea, but if you don\'t have the space, for example, you have a very thin line, you can opt out of it provided you have ensured enough contrast between the main color and the outline.
-  How do I comply with this?   Just like the outline, simply trace a stroke of 2px around the internal side of the outline, snapping nodes to the grid when possible, aiming for the minor grid intersections.
+  Why use the highlight?       Highlight သည် outline နှင့် ပေါင်းပြီး ဖောင်ကွာဟချက်ကို တိုးမြှင့်ပေးပြီး အမှောင်နောက်ခံပေါ်တွင် ထူးခြားစေသည်။ အမြဲလိုအပ်သည်ဟု မဆိုနိုင်ပေမယ့် ဒါပေမယ့် stroke အလျော့ငယ်ကဲ့သို့ နေရာမရှိပါက မပါမှ မရနိုင်ပါ။ ထိုအချိန်တွင် main color နှင့် outline အကြား လုံလောက်သော ကွာဟချက်ရှိရန် သေချာစေပါ။
+  How do I comply with this?   Outline ကဲ့သို့ပင် outline ၏ အတွင်းဘက်တွင် 2px stroke တစ်ခု ဆွဲပေးပါ၊ အလားတူ grid အပေါ် nodes များ snap ပြုလုပ်၍ minor grid intersections ကို ရည်ညွှန်းပါ။
    
 
-## Lighting
+## အလင်းထိုးခြင်း (Lighting)
 
 
-**Optional**
+**ရွေးချယ်အသုံးပြုနိုင်သည်**
 
-As per Tango guidelines, if you\'re adding a gradient lighting effect, try to make it look like the light is coming from the top left. This is done by adding the highlight color up top left and the Base or Dark color bottom right. Notice that only palette colors are used.
+Tango အညွှန်းများအတိုင်း gradient lighting effect တစ်ခု ထည့်လိုပါက အလင်းသည် ထိပ်ဘက် ဘယ်ကမှ လာသည်ဟု ခံစားရစေရန် ကြိုးစားပါ။ ၎င်းအတွက် ထိပ်ဘက် ဘယ်ဧကာမှ အထူးထင်ရှားအရောင်ကို ထည့်ပြီး အောက်ညာတွင် Base သို့မဟုတ် Dark အရောင်ကို ထားပါ။ သတိပြုရန် palette ထဲ၌ပါရှိသော အရောင်များကိုသာ အသုံးပြုသင့်သည်။
 
  <img alt="" src=images/Draft_Clone.svg  style="width:" height="128px;"> <img alt="" src=images/Draft_Clone_backgrounds.svg  style="width:" height="128px;">  
-*Subtle lighting effect coming from top left.*
+*ထိပ်ဘက် ဘယ်က ထွက်လာသလို စတင်သော သက်ငယ်လင်းထိုး အကျိုးသက်ရောက်မှု တစ်ခု။*
 
    
-  style=\"width:25%;\|Why use lighting?   Lighting is just another way to tie icons together and ensure that there are varying levels of [\"value\"](https://en.wikipedia.org/wiki/Lightness) to improve their readability. Provided the outline and highlight are present though, it can be considered optional
-  How do I comply with this?              Set the fill to be a linear or a radial gradient. In Inkscape this is available in the stroke and fill settings; with \"F2\" it is possible to move the nodes of the gradient around to make sure they are at the right angle.
+  style=\"width:25%;\|Why use lighting?   Lighting သည် icon များကို တစ်စုတည်း ချိတ်ဆက်ပေးခြင်း၊ [\"value\"](https://en.wikipedia.org/wiki/Lightness) အဆင့်များကို ချိုးထွင်ပေး၍ ဖတ်ရှုနိုင်မှုကို တိုးပွားစေသည့် နည်းလမ်းတစ်ခု ဖြစ်သည်။ Outline နှင့် highlight တို့ ရှိပြီးသားဖြစ်ပါက၊ lighting သည် ရွေးချယ်အသုံးပြုနိုင်သည်။
+  How do I comply with this?              Fill ကို linear သို့ radial gradient အဖြစ် သတ်မှတ်ပါ။ Inkscape တွင် stroke and fill settings မှာ ရနိုင်ပြီး၊ "F2" သုံး၍ gradient nodes များကို ဘယ်ထောင့်ကို ရှိမရှိ လှှိမ့်ညှိနိုင်ပါသည်။
    
 
-## Recommended recording format 
+## မှတ်တမ်းသိမ်းရန် တိုက်တွန်းသော ဖိုင်ပုံစံ 
 
-All icons should be created in [SVG](SVG.md) format with a vector image application, such as [Inkscape](http://inkscape.org). This makes it easier to apply changes and derive additional icons in the same application space.
+icon အားလုံးကို vector image application (ဥပမာ [Inkscape](http://inkscape.org)) ဖြင့် [SVG](SVG.md) ဖိုင်ပုံစံဖြင့် ဖန်တီးရပါမည်။ ၎င်းက ထပ်ပြင်ဆင်ခြင်းများပြုလုပ်ရန်နှင့် တူညီသော အက်ပလီကေးရှင်းပတ်ဝန်းကျင်အတွင်း အခြား icon များကို ကူးယူဖန်တီးရန် ပို၍ အဆင်ပြေစေသည်။
 
-When committing icons to be used directly by FreeCAD (in a \*.qrc file), save them as \"Plain SVG\". This will reduce the icon size and save the disk and memory space.
+ဖရီးကက် (FreeCAD) မှ တိုက်ရိုက် သုံးရန် commit လုပ်မည့် icon များ (တစ်ခုတည်း \*.qrc ဖိုင်အတွင်း) အဖြစ် အသုံးတင်မည့်အခါ "Plain SVG" အနေဖြင့် သိမ်းဆည်းပါ။ ၎င်းက icon အရွယ်အစားကို လျော့နည်းစေပြီး disk နှင့် memory အကွာအဝေးကို သိန်းသိမ့်စေမည်။
 
-## Closing remarks 
+## ပိတ်သိမ်းစကားလုံးများ 
 
-Remember: **SALCHO**, Stroke, Alignment, Lighting, Color, Highlight, Outline
+မှတ်သားပါ: **SALCHO**, Stroke, Alignment, Lighting, Color, Highlight, Outline
 
-Here are some tips to check your work.
+အလုပ်ကို စစ်ဆေးရန် အကြံပြုချက်အချို့ ပါသည်။
 
-### Checking size 
+### အရွယ်စစ်ဆေးခြင်း 
 
-Inkscape has a handy tool to check your icon at various sizes. Go to **View → Icon Preview...** and it\'ll show you previews of your icon resized to 16, 24, 32 and 64 pixels.
+Inkscape တွင် icon ကို မတူညီသော အရွယ်များတွင် ကြည့်ရှုစစ်ဆေးနိုင်သော ကိရိယာ ရှိသည်။ **View → Icon Preview...** သို့ သွားပါ၊ ထိုနေရာတွင် 16, 24, 32 နှင့် 64 pixels အရွယ်များအဖြစ် ပြန်လည်ချမည့် preview များပြပါလိမ့်မည်။
 
-### Checking your outline 
+### အပြင်ဘောင် စစ်ဆေးခြင်း 
 
-1.  Put your icon on a big rectangle that is the same color as the darkest color in your icon.
-2.  Still looks OK? Great. Go to the next step. If not, adjust the highlight.
-3.  Do the same but this time using the lightest color.
-4.  Still looks OK? Great. Outlines and highlights have been used appropriately. Otherwise, adjust the outline.
+1.  icon ကို မိမိ icon ၏ အမှောင်ဆုံးအရောင်နှင့် တူညီသော အကြီး rectangle အပေါ်ထားပါ။  
+2.  ထိုအခြေအနေတွင်လည်း ကောင်းစွာ အသိနိုင်ပါသလား? ကောင်းပါက နောက်အဆင့်သို့ ဆက်သွားပါ။ မဟုတ်လျှင် highlight ကို ချိန်ညှိပါ။  
+3.  အရိုးတူစစ်ဆေးမှုကို အလင်းဆုံးအရောင်ကို အသုံးပြု၍ ထပ်လုပ်ပါ။  
+4.  ထိုအခြေအနေတွင်လည်း ကောင်းပါသလား? ကောင်းပါက outlines နှင့် highlights များကို သင့်တော်စွာ အသုံးပြုထားပါသည်။ မဟုတ်ပါက outline ကို ပြင်ဆင်ပါ။
 
  <img alt="" src=images/Draft_Move_backgrounds_outline.svg  style="width:" height="128px;">  
-*Testing the icon against the darkest and lightest colors as background*
+*icon ကို အမှောင်ဆုံးနှင့် အလင်းဆုံး အရောင်များကို နောက်ခံအဖြစ် အသုံးပြု၍ စမ်းရေးမှု*
 
    
-  My icon is barely visible.   You have poor form contrast. Double check the outline and highlight, one of these is probably missing or improperly applied.
+  My icon is barely visible.   မိမိအကြည့်ထင်ရှားမှု (form contrast) နှင့် ပြဿနာရှိသည်။ Outline နှင့် highlight တို့ကို နှစ်ချက်စစ်ဆေးပါ၊ ၎င်းတို့ထဲမှ တစ်ခုခု မရှိခြင်း သို့မဟုတ် မမှန်ကန်စွာ အသုံးပြုထားခြင်း ဖြစ်နိုင်သည်။
    
 
-### Checking your contrast 
+### ကွာဟချက် (contrast) စစ်ဆေးခြင်း 
 
-1.  Export your icon from SVG to a bitmap format, like `.png` or `.jpg`.
-2.  Load your bitmap in an image program, and change it to grayscale. For example, in GIMP you would go to **Image → Mode → Grayscale**.
-3.  Inkscape allows you to convert the SVG directly to grayscale using **Extensions → Color → Grayscale**.
-4.  Can you still clearly make out any internal details? Great. The contrast is good.
+1.  SVG မှ bitmap ဖိုင်ပုံစံ (ဥပမာ `.png` သို့မဟုတ် `.jpg`) သို့ export ပြုလုပ်ပါ။  
+2.  bitmap ကို image program တစ်ခုတွင် load ပြီး grayscale သို့ ပြောင်းပါ။ ဥပမာ GIMP တွင် **Image → Mode → Grayscale** သို့ သွားနိုင်သည်။  
+3.  Inkscape သည် **Extensions → Color → Grayscale** ဖြင့် SVG ကို တိုက်ရိုက် grayscale သို့ ပြောင်းနိုင်ပါသည်။  
+4.  အတွင်းသေးငယ်သေးငယ်သော အကြောင်းအရာများကို စစ်ဆေးပါ — အချက်အလက်များကို ထင်မှတ်နိုင်လော? ကောင်းပါပြီ။ contrast ကောင်းပါသည်။
 
-A grayscale image allows you to more easily identify problems in contrast, as only a mix of black and white is present. Testing grayscale images is also good for colorblind users. If they can see the details in a grayscale image, then the contrast of the fully colored image is probably good as well.
+grayscale ရုပ်ပုံသည် စစ်ဆေးရာတွင် ထောက်ခံမှုရှိပြီး အရောင်ပေါင်းစုံ မဟုတ်ဘဲ အနက်နှင့်ဖြုတ်သာသာဖြင့်သာ ကြည့်ရှုနိုင်သဖြင့် contrast ပြဿနာများကို စိတ်ရှင်းလင်းစေရန် အထောက်အကူဖြစ်စေသည်။ colorblind အသုံးပြုသူများအတွက်လဲ ထိုလို့ စမ်းသပ်ခြင်း ကောင်းသည်။ ၎င်းတို့သည် grayscale ရုပ်ပုံ၌ အသေးစိတ်များကို မြင်နိုင်ပါက၊ အရောင်ပြည့်စုံထားသည့် ဗားရှင်း၏ contrast လည်း မကြာခဏကောင်းခြင်း ဖြစ်နိုင်သည်။
 
  <img alt="" src=images/Draft_Move_contrast_grayscale.svg  style="width:" height="128px;">  
-*Testing the icon's contrast in grayscale*
+*icon ၏ contrast ကို grayscale ဖြင့် စမ်းသပ်ခြင်း*
 
    
-  I can\'t make out all the details.   The colors you\'ve chosen have poor value contrast. Try using colors that are further apart in your 4 tone palette, that is, a highlight green beside a highlight yellow will be difficult to see, knock one of those colors down to Base or Dark.
-
-
+  I can\'t make out all the details.   မင်းရွေးထားသော အရောင်များသည် value အရ (အလင်း/မှောင် မတူကွာချက်) ဆိုင်ရာတွင် ကောင်းစွာ မကွာခြားပါ။ 4-tone palette ထဲမှ အရောင်များကို ပိုမိုကွာခြားသော အဆင့်များနှင့် ရွေးချယ်ပြောင်းလဲစမ်းပါ။ ဥပမာ၊ highlight green နှင့် highlight yellow အလားတူ ရွေးချယ်ထားခြင်းက အခက်အခဲ ဖြစ်စေပြီး တစ်ခုခုကို Base သို့မဟုတ် Dark သို့ ချော့ချလိုက်ပါ။
 
 ---
+
 ⏵ [documentation index](../README.md) > [Artwork](Category_Artwork.md) > [Developer Documentation](Category_Developer%20Documentation.md) > Artwork Guidelines

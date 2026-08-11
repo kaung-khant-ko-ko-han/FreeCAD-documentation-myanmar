@@ -1,7 +1,7 @@
-# Artwork Plot
-These icons are in the indicated source path.
+# ပန်းချီပစ္စည်း (Artwork) — ပလော့ (Plot)
+ဤအိုင်ခွန်များကို ဖော်ပြထားသော မူရင်း ဖိုင်လမ်းကြောင်းတွင် တွေ့ရှိနိုင်သည်။
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+မူရင်း ဖိုင်ပင် (source tree) အတွင်းရှိ အိုင်ခွန်များအားလုံးကို ကြည့်ရန် [Artwork](Artwork.md) ကို ဖတ်ပါ။
 
 ## Mod/Plot/
 
@@ -12,4 +12,4 @@ For all icons in the source tree, see [Artwork](Artwork.md).
 
 
 ---
-⏵ [documentation index](../README.md) > [Artwork](Category_Artwork.md) > [Plot](Category_Plot.md) > Artwork Plot
+⏵ [စာတမ်း အညွှန်း](../README.md) > [ပန်းချီပစ္စည်း (Artwork)](Category_Artwork.md) > [ပလော့ (Plot)](Category_Plot.md) > ပန်းချီပစ္စည်း — ပလော့ (Artwork Plot)

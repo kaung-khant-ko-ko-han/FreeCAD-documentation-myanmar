@@ -1,7 +1,8 @@
-# Artwork Sketcher
-These icons are in the indicated source path.
+# ပုံကြမ်း (Sketcher) အနုပညာ
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+ဤ အိုင်ကွန်များကို ဖော်ပြထားသည့် မူရင်း (source) လမ်းကြောင်း၌ တွေ့နိုင်ပါသည်။
+
+မူရင်း ဖိုင်ပင် (source tree) ထဲရှိ အိုင်ကွန်များ အားလုံးအတွက်၊ [Artwork](Artwork.md) ကို ကြည့်ပါ။
 
 ## src/Mod/Sketcher/
 

@@ -1,7 +1,8 @@
-# Artwork Draft
-These icons are in the indicated source path.
+# အနုပညာ — Draft အိုင်ကွန်များ
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+ဤ အိုင်ကွန်များကို ဖော်ပြထားသည့် မူရင်း ဖိုင်လမ်းကြောင်း (source path) တွင် တွေ့နိုင်ပါသည်။
+
+မူရင်း ဖိုင် tree (source tree) အတွင်းရှိ အားလုံးသော အိုင်ကွန်များအတွက် [Artwork](Artwork.md) ကို ကြည့်ပါ။
 
 ## src/Mod/Draft/
 

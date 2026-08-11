@@ -1,7 +1,7 @@
-# Artwork Points
-These icons are in the indicated source path.
+# ပန်းချီ အမှတ်များ (Artwork Points)
+ဤ အိုင်ကွန်များကို အောက်ပါ သတ်မှတ်ထားသော မူရင်း ဖိုင်လမ်းကြောင်းတွင် တွေ့ရှိနိုင်ပါသည်။
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+မူရင်း ဖိုင်စနစ် (source tree) အတွင်းရှိ အိုင်ကွန်အားလုံးအတွက် [Artwork](Artwork.md) ကို ကြည့်ပါ။
 
 ## src/Mod/Points/
 

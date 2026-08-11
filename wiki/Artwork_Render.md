@@ -1,7 +1,7 @@
-# Artwork Render
-These icons are in the indicated source path.
+# အနုပညာ ပုံဖော်ခြင်း (Artwork Render)
+ဤ အိုင်ကွန်များသည် ဖော်ပြထားသည့် အရင်းအမြစ် လမ်းကြောင်း၌ တည်ရှိပါသည်။
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+အရင်းအမြစ် ဖိုင်မြက် (source tree) တွင် ပါဝင်သည့် အိုင်ကွန်အားလုံးကို ကြည့်ရန် [Artwork](Artwork.md) ကို ကြည့်ပါ။
 
 ## Mod/Render/
 

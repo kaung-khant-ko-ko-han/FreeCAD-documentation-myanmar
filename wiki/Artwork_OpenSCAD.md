@@ -1,7 +1,7 @@
-# Artwork OpenSCAD
-These icons are in the indicated source path.
+# OpenSCAD အတွက် Artwork
+ဤအိုင်ကွန်များကို ဖော်ပြထားသော အရင်းမြစ် လမ်းကြောင်းတွင် တွေ့နိုင်ပါသည်။
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+အရင်းမြစ် ဖိုင်ပင် (source tree) အတွင်းရှိ အိုင်ကွန်များအားလုံးအတွက် [Artwork](Artwork.md) ကို ကြည့်ပါ။
 
 ## src/Mod/OpenSCAD/
 
@@ -12,4 +12,4 @@ For all icons in the source tree, see [Artwork](Artwork.md).
 
 
 ---
-⏵ [documentation index](../README.md) > [Artwork](Category_Artwork.md) > [OpenSCAD](Category_OpenSCAD.md) > Artwork OpenSCAD
+⏵ [documentation index](../README.md) > [Artwork](Category_Artwork.md) > [OpenSCAD](Category_OpenSCAD.md) > OpenSCAD အတွက် Artwork

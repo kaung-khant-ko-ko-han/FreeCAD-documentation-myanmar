@@ -1,7 +1,8 @@
-# Artwork SheetMetal
-These icons are in the indicated source path.
+# SheetMetal အတွက် အိုင်ကွန်များ (Artwork)
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+ဤ အိုင်ကွန်များ (icons) ကို အောက်တွင် ပြထားသည့် မူလ အရင်းအမြစ် လမ်းကြောင်းတွင် တွေ့နိုင်ပါသည်။
+
+မူလ အရင်းအမြစ် ဖိုင်ပင်တွင် ရှိသမျှ အိုင်ကွန်များအားလုံးကို ကြည့်ရန် [Artwork](Artwork.md) ကို ကိုးကားပါ။
 
 ## Mod/SheetMetal/
 
@@ -12,4 +13,4 @@ For all icons in the source tree, see [Artwork](Artwork.md).
 
 
 ---
-⏵ [documentation index](../README.md) > [Artwork](Category_Artwork.md) > [SheetMetal](Category_SheetMetal.md) > Artwork SheetMetal
+⏵ [documentation index](../README.md) > [Artwork](Category_Artwork.md) > [SheetMetal](Category_SheetMetal.md) > SheetMetal အတွက် အိုင်ကွန်များ (Artwork)

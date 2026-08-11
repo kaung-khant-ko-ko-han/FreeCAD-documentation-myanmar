@@ -1,7 +1,8 @@
-# Artwork Mesh
-These icons are in the indicated source path.
+# အနုပညာ မက်ရှ် (Artwork Mesh)
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+ဤ အိုင်ကွန်များကို ဖော်ပြထားသည့် မူရင်း ဖိုင်လမ်းကြောင်းတွင် ရှိသည်။
+
+မူရင်း ဖိုင်အရွက် (source tree) တွင် ပါဝင်သော အိုင်ကွန်အားလုံးအတွက် [Artwork](Artwork.md) ကို ကြည့်ပါ။
 
 ## src/Mod/Mesh/
 
@@ -16,4 +17,4 @@ For all icons in the source tree, see [Artwork](Artwork.md).
 
 
 ---
-⏵ [documentation index](../README.md) > [Artwork](Category_Artwork.md) > [Mesh](Category_Mesh.md) > Artwork Mesh
+⏵ [စာတမ်းညွှန်း (documentation index)](../README.md) > [အနုပညာ (Artwork)](Category_Artwork.md) > [မက်ရှ် (Mesh)](Category_Mesh.md) > အနုပညာ မက်ရှ် (Artwork Mesh)

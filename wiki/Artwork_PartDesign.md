@@ -1,7 +1,7 @@
-# Artwork PartDesign
-These icons are in the indicated source path.
+# အနုပညာ — အစိတ်အပိုင်း ဒီဇိုင်း (Artwork PartDesign)
+ဤ အိုင်ကွန်များသည် ဖော်ပြထားသော မူရင်း ဖိုင်လမ်းကြောင်း (source path) တွင် ရှိပါသည်။
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+မူရင်း ဖိုင်ပင် (source tree) အတွင်းရှိ အိုင်ကွန်များအားလုံးအတွက် [Artwork](Artwork.md) ကို ကြည့်ပါ။
 
 ## src/Mod/PartDesign/
 
