@@ -1,136 +1,136 @@
-# Artwork
-Here is the artwork that has been created for FreeCAD. Feel free to reuse in other applications. If you would like to contribute with icons, please read the [artwork guidelines](Artwork_Guidelines.md).
+# ပုံဆိုင်ရာ ပစ္စည်းများ (Artwork)
 
-## Miscellaneous icons 
+ဒီမှာ ဖရီးကက် (FreeCAD) အတွက် ဖန်တီးထားသော ပုံဆိုင်ရာ ပစ္စည်းများကို ဖော်ပြထားပါတယ်။ အခြား အပလီကေးရှင်းများတွင် ပြန်လည်အသုံးပြုနိုင်ပါသည်။ အိုင်ကွန်များထည့်သွင်း ပံ့ပိုးလိုပါက [artwork guidelines](Artwork_Guidelines.md) ကို ဖတ်ရှုပါ။
 
-### FreeCAD logo 
+## အမျိုးမျိုး အိုင်ကွန်များ (Miscellaneous icons)
+
+### ဖရီးကက် လိုဂို (FreeCAD logo)
 
  <img alt="" src=images/Freecad.svg  style="width:64px;"> 
 
-### Workbench icons used in the wiki 
+### ဝီကီတွင် အသုံးပြုသော လုပ်ငန်းခွင် (Workbench) အိုင်ကွန်များ
 
  <img alt="" src=images/Workbench_Assembly.svg  style="width:64px;"> <img alt="" src=images/Workbench_BIM.svg  style="width:64px;"> <img alt="" src=images/Workbench_CAM.svg  style="width:64px;"> <img alt="" src=images/Workbench_Draft.svg  style="width:64px;"> <img alt="" src=images/Workbench_FEM.svg  style="width:64px;"> <img alt="" src=images/Workbench_Inspection.svg  style="width:64px;"> <img alt="" src=images/Workbench_Material.svg  style="width:64px;"> <img alt="" src=images/Workbench_Mesh.svg  style="width:64px;"> <img alt="" src=images/Workbench_OpenSCAD.svg  style="width:64px;"> <img alt="" src=images/Workbench_Part.svg  style="width:64px;"> <img alt="" src=images/Workbench_PartDesign.svg  style="width:64px;"> <img alt="" src=images/Workbench_Points.svg  style="width:64px;"> <img alt="" src=images/Workbench_Reverse_Engineering.svg  style="width:64px;"> <img alt="" src=images/Workbench_Robot.svg  style="width:64px;"> <img alt="" src=images/Workbench_Sketcher.svg  style="width:64px;"> <img alt="" src=images/Workbench_Spreadsheet.svg  style="width:64px;"> <img alt="" src=images/Workbench_Surface.svg  style="width:64px;"> <img alt="" src=images/Workbench_TechDraw.svg  style="width:64px;"> <img alt="" src=images/Workbench_Test.svg  style="width:64px;"> 
 
-## Splash screens 
+## စပလက်ရှ် စခရင်များ (Splash screens)
 
-See [Artwork Splash screen](Artwork_Splash_screen.md).
+ကြည့်ရန် [Artwork Splash screen](Artwork_Splash_screen.md) ကို ဖတ်ပါ။
 
-## Icons by their location in the source code 
+## အိုင်ကွန်များ — အရင်းအမြစ် ကုဒ် (source code) တွင် တည်နေရာအလိုက်
 
-### From src/Gui/ 
+### src/Gui/ မှ
 
-See [Artwork Gui](Artwork_Gui.md).
+ကြည့်ရန် [Artwork Gui](Artwork_Gui.md) ကို ဖတ်ပါ။
 
-### From src/Mod/Assembly/ 
+### src/Mod/Assembly/ မှ
 
-See [Artwork Assembly](Artwork_Assembly.md).
+ကြည့်ရန် [Artwork Assembly](Artwork_Assembly.md) ကို ဖတ်ပါ။
 
-### From src/Mod/BIM/ 
+### src/Mod/BIM/ မှ
 
-See [Artwork BIM](Artwork_BIM.md).
+ကြည့်ရန် [Artwork BIM](Artwork_BIM.md) ကို ဖတ်ပါ။
 
-### From src/Mod/CAM/ 
+### src/Mod/CAM/ မှ
 
-See [Artwork CAM](Artwork_CAM.md).
+ကြည့်ရန် [Artwork CAM](Artwork_CAM.md) ကို ဖတ်ပါ။
 
-### From src/Mod/Draft/ 
+### src/Mod/Draft/ မှ
 
-See [Artwork Draft](Artwork_Draft.md).
+ကြည့်ရန် [Artwork Draft](Artwork_Draft.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Fem/ မှ
 
-### From src/Mod/Fem/ 
+ကြည့်ရန် [Artwork Fem](Artwork_Fem.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Inspection/ မှ
 
-See [Artwork Fem](Artwork_Fem.md).
+ကြည့်ရန် [Artwork Inspection](Artwork_Inspection.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Material/ မှ
 
-### From src/Mod/Inspection/ 
+ကြည့်ရန် [Artwork Material](Artwork_Material.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Mesh/ မှ
 
-See [Artwork Inspection](Artwork_Inspection.md).
+ကြည့်ရန် [Artwork Mesh](Artwork_Mesh.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/MeshPart/ မှ
 
-### From src/Mod/Material/ 
+ကြည့်ရန် [Artwork MeshPart](Artwork_MeshPart.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/OpenSCAD/ မှ
 
-See [Artwork Material](Artwork_Material.md).
+ကြည့်ရန် [Artwork OpenSCAD](Artwork_OpenSCAD.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Part/ မှ
 
-### From src/Mod/Mesh/ 
+ကြည့်ရန် [Artwork Part](Artwork_Part.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/PartDesign/ မှ
 
-See [Artwork Mesh](Artwork_Mesh.md).
+ကြည့်ရန် [Artwork PartDesign](Artwork_PartDesign.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Points/ မှ
 
-### From src/Mod/MeshPart/ 
+ကြည့်ရန် [Artwork Points](Artwork_Points.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/ReverseEngineering/ မှ
 
-See [Artwork MeshPart](Artwork_MeshPart.md).
+ကြည့်ရန် [Artwork ReverseEngineering](Artwork_ReverseEngineering.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Robot/ မှ
 
-### From src/Mod/OpenSCAD/ 
+ကြည့်ရန် [Artwork Robot](Artwork_Robot.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Sketcher/ မှ
 
-See [Artwork OpenSCAD](Artwork_OpenSCAD.md).
+ကြည့်ရန် [Artwork Sketcher](Artwork_Sketcher.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Spreadsheet/ မှ
 
-### From src/Mod/Part/ 
+ကြည့်ရန် [Artwork Spreadsheet](Artwork_Spreadsheet.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Surface/ မှ
 
-See [Artwork Part](Artwork_Part.md).
+ကြည့်ရန် [Artwork Surface](Artwork_Surface.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/TechDraw/ မှ
 
-### From src/Mod/PartDesign/ 
+ကြည့်ရန် [Artwork TechDraw](Artwork_TechDraw.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Test/ မှ
 
-See [Artwork PartDesign](Artwork_PartDesign.md).
+ကြည့်ရန် [Artwork Test](Artwork_Test.md) ကို ဖတ်ပါ။
+ 
+### src/Mod/Tux/ မှ
 
-### From src/Mod/Points/ 
+ကြည့်ရန် [Artwork Tux](Artwork_Tux.md) ကို ဖတ်ပါ။
 
-See [Artwork Points](Artwork_Points.md).
+## ပြင်ပ လုပ်ငန်းခွင် (Workbench) နှင့် အပိုဆောင်း add-on များ
 
-### From src/Mod/ReverseEngineering/ 
+### Mod/asm3/ မှ
 
-See [Artwork ReverseEngineering](Artwork_ReverseEngineering.md).
+ကြည့်ရန် [Artwork Assembly3](Artwork_Assembly3.md) ကို ဖတ်ပါ။
+ 
+### Mod/Plot/ မှ
 
-### From src/Mod/Robot/ 
+ကြည့်ရန် [Artwork Plot](Artwork_Plot.md) ကို ဖတ်ပါ။
+ 
+### Mod/Reinforcement/ မှ
 
-See [Artwork Robot](Artwork_Robot.md).
+ကြည့်ရန် [Artwork Reinforcement](Artwork_Reinforcement.md) ကို ဖတ်ပါ။
+ 
+### Mod/Render/ မှ
 
-### From src/Mod/Sketcher/ 
+ကြည့်ရန် [Artwork Render](Artwork_Render.md) ကို ဖတ်ပါ။
+ 
+### Mod/SheetMetal/ မှ
 
-See [Artwork Sketcher](Artwork_Sketcher.md).
+ကြည့်ရန် [Artwork SheetMetal](Artwork_SheetMetal.md) ကို ဖတ်ပါ။
+ 
+### Mod/Ship/ မှ
 
-### From src/Mod/Spreadsheet/ 
-
-See [Artwork Spreadsheet](Artwork_Spreadsheet.md).
-
-### From src/Mod/Surface/ 
-
-See [Artwork Surface](Artwork_Surface.md).
-
-### From src/Mod/TechDraw/ 
-
-See [Artwork TechDraw](Artwork_TechDraw.md).
-
-### From src/Mod/Test/ 
-
-See [Artwork Test](Artwork_Test.md).
-
-### From src/Mod/Tux/ 
-
-See [Artwork Tux](Artwork_Tux.md).
-
-## External workbenches and addons 
-
-### From Mod/asm3/ 
-
-See [Artwork Assembly3](Artwork_Assembly3.md).
-
-### From Mod/Plot/ 
-
-See [Artwork Plot](Artwork_Plot.md).
-
-### From Mod/Reinforcement/ 
-
-See [Artwork Reinforcement](Artwork_Reinforcement.md).
-
-### From Mod/Render/ 
-
-See [Artwork Render](Artwork_Render.md).
-
-### From Mod/SheetMetal/ 
-
-See [Artwork SheetMetal](Artwork_SheetMetal.md).
-
-### From Mod/Ship/ 
-
-See [Artwork Ship](Artwork_Ship.md).
-
+ကြည့်ရန် [Artwork Ship](Artwork_Ship.md) ကို ဖတ်ပါ။
 
 
 ---

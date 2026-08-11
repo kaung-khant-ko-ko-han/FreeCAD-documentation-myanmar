@@ -1,9 +1,9 @@
 # Arch 3DS
-## Description
+## ဖော်ပြချက်
 
-The BIM Workbench supports importing [3DS](https://en.wikipedia.org/wiki/.3ds) files. The 3DS format is ancient but still widely used on the internet. It can contain mesh data and material information. At the moment, it will import mesh objects contained in the file as FreeCAD mesh objects, and has no support for materials yet.
+BIM လုပ်ငန်းခွင် (Workbench) သည် [3DS](https://en.wikipedia.org/wiki/.3ds) ဖိုင်များကို တင်သွင်းနိုင်ပါသည်။ 3DS ဖော်မာသည် ရှေးခေတ်ဖြစ်သော်လည်း အင်တာနက်ပေါ်တွင် ကျယ်ကျယ်ပြန့်ပြန့် အသုံးများဆဲဖြစ်ပါသည်။ ၎င်းတွင် မက်ရှ် (mesh) ဒေတာများနှင့် ပစ္စည်းဆိုင်ရာ အချက်အလက်များ (material information) ပါဝင်နိုင်သည်။
 
-
+ယနေ့အချိန်တွင် ဖိုင်ထဲ ပါဝင်သော မက်ရှ် (mesh) အရာဝတ္ထုများကို ဖရီးကက် (FreeCAD) မက်ရှ် အရာဝတ္ထုများအဖြစ် တင်သွင်းနိုင်ပါသည်၊ သို့သော် ပစ္စည်းများ (materials) အတွက် ပံ့ပိုးမှု မရှိသေးပါ။
 
 ---
-⏵ [documentation index](../README.md) > [File Formats](Category_File%20Formats.md) > [BIM](Category_BIM.md) > Arch 3DS
+⏵ [စာရွက်စာတမ်း အညွှန်း (documentation index)](../README.md) > [ဖိုင် ဖော်မာများ (File Formats)](Category_File%20Formats.md) > [BIM](Category_BIM.md) > Arch 3DS

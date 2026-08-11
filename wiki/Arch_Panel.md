@@ -6,82 +6,80 @@
    Shortcut: **P** **A**
    Version: 0.15
    SeeAlso: Arch_Panel_Cut, Arch_Panel_Sheet
----
+---# Arch Panel
 
-# Arch Panel
+## ဖေါ်ပြချက်
 
-## Description
-
-The **Arch Panel** tool allows you to build all kinds of panel-like elements, typically for panel constructions like the [WikiHouse](https://www.wikihouse.cc/) project, but also for all kinds of objects that are based on a flat profile.
+**Arch Panel** ကိရိယာသည် ပန်နယ်အဖြစ်အသုံးပြုနိုင်သော အမျိုးမျိုးသော အရာဝတ္ထုများကို ဖန်တီးရန် အသုံးပြုနိုင်သည်။ ပုံမှန်အားဖြင့် [WikiHouse](https://www.wikihouse.cc/) ကဲ့သို့ ပန်နယ်ဆောက်လုပ်ရေးများအတွက် သီးသန့်ကောင်းမွန်ပြီး၊ မျက်နှာပြင်ပေါ်အခြေခံထားသော အရာဝတ္ထု မျိုးစုံကိုလည်း ဖန်တီးနိုင်သည်။
 
  <img alt="" src=images/Arch_Panel_example.jpg  style="width:700px;"> 
 
-*The above image shows a series of panel objects, simply made from imported 2D contours from a DXF file. They can then be rotated and assembled to create structures.*
+*ဤပုံတွင် DXF ဖိုင်မှ တင်သွင်းထားသည့် 2D ကုန်ကြောင်းများကို အသုံးပြု၍ ရိုးရှင်းစွာ ဖန်တီးထားသော ပန်နယ်အရာဝတ္ထု စီးရီးများကို ပြထားသည်။ ၎င်းတို့ကို လှည့်၍ တပ်ဆင်ကာ ဆောက်လုပ်မှုများဖန်တီးနိုင်သည်။*
 
-Since version <small>(v0.17)</small>  the Arch Panel can also be used to create corrugated or trapezoidal profiles:
+Since version <small>(v0.17)</small>  Arch Panel ကို ကော်ရူဂိတ် (corrugated) သို့မဟုတ် trapezoidal ပရိုဖိုင်များ ဖန်တီးရန်လည်း အသုံးပြုနိုင်ပါသည်။
 
  <img alt="" src=images/Arch_panel_wave.jpg  style="width:700px;"> 
 
-## Usage
+## အသုံးပြုပုံ
 
-1.  Select a 2D shape (Draft object, face or sketch) - optional.
-2.  Press the **<img src="images/Arch_Panel.svg" width=16px> [Panel](Arch_Panel.md)** button, or press **P** then **A** keys.
-3.  Adjust the desired properties.
+1.  Draft အရာဝတ္ထု၊ မျက်နှာ (face) သို့မဟုတ် ပုံကြမ်း / စကစ် (Sketch) ရွေးချယ်ပါ။ - ရွေးချယ်သော်လည်းရ၊ မရွေးချယ်သော်လည်းရ။
+2.  **<img src="images/Arch_Panel.svg" width=16px> [Panel](Arch_Panel.md)** ခလုတ်ကိုနှိပ်ပါ၊ သို့မဟုတ် **P** ထပ်ပြီး **A** ကီးများကို နှိပ်ပါ။
+3.  လိုသလို ဂုဏ်သတ္တိများကို ချိန်ညှိပါ။
 
-### Limitations
+### ကန့်သတ်ချက်များ
 
--   There is currently no automatic system to produce 2D cutting sheets from panel objects, but such feature is in the plans and will be added in the future.
+-   လက်ရှိအချိန်တွင် panel အရာဝတ္ထုများမှ 2D ဖြတ်တောက်ရန် အလိုအလျောက် စာရွက်များ (cutting sheets) ရရှိစေရန် စနစ်တစ်ခု မရှိသေးပါ။ သို့သော် ဤအင်္ဂါရပ်ကို လာမည့်ဗားရှင်းများတွင် ထည့်သွင်းရန် စီမံကိန်းများတွင် ပါဝင်သည်။
 
-## Options
+## ရွေးချယ်စရာများ
 
--   Panels share the common properties and behaviours of all [Arch Components](Arch_Component.md).
--   The thickness of a panel can be adjusted after creation.
--   Press **Esc** or the **Cancel** button to abort the current command.
--   Double-clicking on the panel in the tree view after it is created allows you to enter edit mode and access and modify its additions and subtractions.
--   It is possible to automatically make panels composed of more than one sheet of a material, by raising its Sheets property.
--   Panels can make use of <img alt="" src=images/Arch_MultiMaterial.svg  style="width:24px;"> [Multi-Materials](Arch_MultiMaterial.md). When using a multi-material, the panel will become multi-layer, using the thicknesses specified by the multi-material. Any layer with a thickness of zero will have its thickness defined automatically by the remaining space defined by the Panel\'s own Thickness value, after subtracting the other layers.
+-   Panels များသည် [Arch Components](Arch_Component.md) များအားလုံး၏ ပုံမှန်ဂုဏ်သတ္တိများနှင့် အပြုအမူများကို မွီတောက်ထားသည်။
+-   Panel ၏ အထူ (Thickness) ကို ဖန်တီးပြီးပါက ပြန်လည်ချိန်ညှိနိုင်သည်။
+-   လက်ရှိคำสั่งကို ပယ်ဖျက်ရန် **Esc** သို့မဟုတ် **Cancel** ခလုတ်ကို နှိပ်ပါ။
+-   Panel ကို tree view တွင် ဖန်တီးပြီးနောက် နှစ်ချက်နှိပ်လျှင် edit mode သို့ ဝင်ရောက်နိုင်ပြီး ထည့်သွင်းမှုများနှင့် ဖြုတ်ချမှုများကို ပြင်ဆင်နိုင်သည်။
+-   Sheets ပေါင်းကို မြှင့်၍ panel ကို ပစ္စည်းလွှာများ (sheet) တစ်ခုထက်ပိုရှိသော အခြေနေသို့ အလိုအလျောက် ပြုလုပ်နိုင်သည်။
+-   Panel များသည် <img alt="" src=images/Arch_MultiMaterial.svg  style="width:24px;"> [Multi-Materials](Arch_MultiMaterial.md) ကို အသုံးပြုနိုင်သည်။ Multi-material အသုံးပြုသောအခါ panel သည် အလွှာပေါင်းများ (multi-layer) ဖြစ်လာပြီး multi-material တွင် သတ်မှတ်ထားသော အထူများကို အသုံးပြုမည်ဖြစ်သည်။ အထူသည် အနံ့သတ်မှတ်ချက်မရှိ (0) ပါသည့် အလွှာများတွင် အထူးသတ်မှတ်ချက်မရှိပါက၊ Panel ၏ ကိုယ်ပိုင် အထူ (Thickness) တန်ဖိုးမှ အခြားအလွှာအများကို ဖြုတ်၍ ကျန်နေသည့် အရာအရ အလိုအလျောက် အထူကို သတ်မှတ်ပေးမည်ဖြစ်သည်။
 
-## Properties
+## ပိုင်ဆိုင်မှုများ (Properties)
 
--    **Length**: The length of the panel
+-    **Length**: ပန်နယ်၏ အရှည်
 
--    **Width**: The width of the panel
+-    **Width**: ပန်နယ်၏ အနံ
 
--    **Thickness**: The thickness of the panel
+-    **Thickness**: ပန်နယ်၏ အထူ
 
--    **Area**: The area of the panel (automatic)
+-    **Area**: ပန်နယ်၏ မျက်နှာပြင် အရွယ်အစား (အလိုအလျောက်)
 
--    **Sheets**: The number of sheets of material the panel is made of
+-    **Sheets**: ပန်နယ်ကို ဖန်တီးထားသော ပစ္စည်းရွက် စာရင်း (sheet) အရေအတွက်
 
--    **Wave Length**: The length of the wave for corrugated panels
+-    **Wave Length**: ကော်ရူဂိတ်ပန်နယ်များအတွက် လိမ်းလှုပ်၏ လျှပ်စီးရှည် (wave length)
 
--    **Wave Height**: The height of the wave for corrugated panels
+-    **Wave Height**: ကော်ရူဂိတ်ပန်နယ်များအတွက် လိမ်းလှုပ်၏ အမြင့် (wave height)
 
--    **Wave Type**: The type of the wave for corrugated panels, curved, trapezoidal or spiked
+-    **Wave Type**: ကော်ရူဂိတ်ပန်နယ်များအတွက် လိမ်းပုံစံ (ပုဝါလည်းရှိ, trapezoidal သို့မဟုတ် spiked)
 
--    **Wave Direction**: The orientation of the waves for corrugated panels
+-    **Wave Direction**: ကော်ရူဂိတ်လိမ်းများ၏ ပန်းလာပုံစံ (ရှေ့/နောက်/ဘယ်/ညာ အပေါ်မူတည်၍)
 
--    **Bottom Wave**: If the bottom wave of the panel is flat or not
+-    **Bottom Wave**: ပန်နယ်၏ အောက်ဖက် လိမ်းပုံက တန်းသည့် (flat) ဟုတ်/မဟုတ်
 
-## Scripting
+## စကရစ်ရေးခြင်း (Scripting)
 
 
-**See also:**
+**လည်းကြည့်ပါ:**
 
 [Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
 
-The Panel tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+Panel ကိရိယာကို [macros](Macros.md) များ၌နှင့် [Python](Python.md) ကွန်ဆိုလ်မှ အောက်ပါ function ကို အသုံးပြု၍ သုံးနိုင်ပါသည်:
 
  
 ```python
 Panel = makePanel(baseobj=None, length=0, width=0, thickness=0, placement=None, name="Panel")
 ```
 
--   Creates a `Panel` object from the given `baseobj`, which is a closed profile, and the given extrusion `thickness`.
-    -   If no `baseobj` is given, you can provide the numerical values for the `length`, `width`, and `thickness` to create a block panel.
--   If a `placement` is given, it is used.
+-   ပေးထားသည့် `baseobj` (ပိတ်ပုံထားသော ပရိုဖိုင်း) နှင့် ပေးထားသော extrusion `thickness` ကို အသုံးပြု၍ `Panel` အရာဝတ္ထုကို ဖန်တီးသည်။
+    -   `baseobj` မပေးထားပါက `length`, `width`, နှင့် `thickness` အတွက် နျူမေရစ်တန်ဖိုးများပေး၍ block panel တစ်ခု ဖန်တီးနိုင်သည်။
+-   `placement` တန်ဖိုးတစ်ခု ပေးထားပါက ၎င်းကို အသုံးပြုမည်ဖြစ်သည်။
 
-Example:
+ဥပမာ:
 
  
 ```python
@@ -91,7 +89,7 @@ Rect = Draft.makeRectangle(1000, 400)
 Panel = Arch.makePanel(Rect, thickness=36)
 ```
 
-## Tutorials
+## သင်ခန်းစာများ (Tutorials)
 
 -   [Wikihouse porting tutorial](Wikihouse_porting_tutorial.md)
 

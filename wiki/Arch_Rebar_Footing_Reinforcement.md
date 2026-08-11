@@ -1,7 +1,7 @@
-# Arch Rebar Footing Reinforcement
-1.  REDIRECT [Reinforcement_FootingRebars](Reinforcement_FootingRebars.md)
+# Arch ရဲ့ Footing ကြိုးသား (Rebar) အားပေးခြင်း
+1.  ပြန်လည်ညွှန်းသည် [Reinforcement_FootingRebars](Reinforcement_FootingRebars.md)
 
 
 
 ---
-⏵ [documentation index](../README.md) > Arch Rebar Footing Reinforcement
+⏵ [documentation index](../README.md) > Arch ရဲ့ Footing ကြိုးသား (Rebar) အားပေးခြင်း

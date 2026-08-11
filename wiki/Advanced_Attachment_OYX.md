@@ -6,70 +6,67 @@
    Time: 1 hour
    FCVersion: 0.19 or above
    Files: TBD
----
-
-# Advanced Attachment OYX
+---# အဆင့်မြင့် တပ်ဆင်မှု OYX
 
  
 
 
 
  <img alt="" src=images/AttOYX_Setup.png  style="width:800px;">  
-*The objects in initial position*
+*အစောပိုင်းအရေးအပေါက်များတွင် ရှိသော အရာများ (The objects in initial position)*
 
-## Introduction
+## မိတ်ဆက်
 
-This demonstration addresses the use of the OYX attachment mode to adjust the position of the origin of a sketch as described in [Part:Attachment](Part_EditAttachment.md), it is not comprehensive, but hopefully will help users experiment.
+ဤတိုက်ရိုက်ပြသချက်သည် OYX တပ်ဆင်မှု (Attachment) မုတ်ဆက်ပုံစံကို အသုံးပြု၍ ပုံကြမ်း/စကစ် (စကစ် (Sketch)) ၏ အစ (origin) အနေအထားကို ချိန်ညှိခြင်းကို ဆောင်ရွက်ပုံကို ဖော်ပြထားခြင်းဖြစ်သည်၊ [Part:Attachment](Part_EditAttachment.md) တွင် ဖော်ပြထားသည့်အတိုင်း ဖြစ်ပါသည်။ ဤစာတမ်းသည် အပြည့်အစုံ မဟုတ်ပေမယ့် အသုံးပြုသူများ စမ်းသပ်လေ့လာရန် အထောက်အကူဖြစ်စေရန် ရည်ရွယ်သည်။
 
-The image above shows the geometry used in this demonstration.
+ပုံ၏ အပေါ်ဖက်တွင် ဤပြသချက်အတွက် အသုံးပြုထားသော ဂျီအိုမက်ထရီကို ဖော်ပြထားသည်။
 
-The lower right frame shows the top view of the scene. Note the scene includes a sketch containing a square and text indicating the vertical (Y), horizontal (X) axes of the sketch. The lower left corner of the square is located at 0,0,0 of the sketch (the origin of the sketch).
+ပုံ၏ ဘယ်အောက်ဖက်ချန်နယ်တွင် ရှေ့မြင်ကွင်း (top view) ကို ပြထားသည်။ ဤမြင်ကွင်းတွင် ပုံကြမ်း/စကစ် (Sketch) တစ်ခုရှိပြီး ထိုစကစ်တွင် စတုရန်းနှင့် လမ်းညွှန်စာသားဖြင့် စကစ်၏ ထောင့်လိုက် (Y) နှင့် အလျှားလိုက် (X) အလျှာများကို ပြထားသည်။ စတုရန်း၏ ဘယ်လက်အောက်ခြေထောင့်မှာ စကစ်၏ အစ (origin) 0,0,0 တွင် တည်ရှိသည်။
 
-The origin of the sketch and the global origin (designated by the red, green and blue [axis cross](Std_AxisCross.md)) are the same. In the other frames of the image we can see that the square is at Z=0, so the sketch is in the XY plane.
+စကစ်၏ အစ (origin) နှင့် ကချင်ရိုး အစ (global origin) (အနီ၊ အစိမ်း နှင့် အပြာ သတ်မှတ်ထားသော [axis cross](Std_AxisCross.md) ဖြင့် သတ်မှတ်ထားသည်) သည် တူညီသည်။ ပုံ၏ အခြားအပိုင်းများတွင် စတုရန်းသည် Z=0 တွင် ရှိနေကြောင်း တွေ့ရသောကြောင့် စကစ်သည် XY မျက်နှာပြင် (XY plane) ပေါ်တွင် ရှိကြောင်း သိသာသည်။
 
-There are two other sketches which include geometry that will be used to re-position the sketch containing the square. One sketch contains an orange line that is oriented along the global Z axis in the XZ plane. The other sketch contains a yellow line in the XY plane.
+စတုရန်းပါဝင်သည့် စကစ်ကို ပြန်စီတင်ရန် အသုံးပြုမည့် ဂျီအိုမက်ထရီ ပါဝင်သည့် အခြားစကစ်နှစ်ခုလည်း ရှိသည်။ တစ်ခုတွင် ကမ္မရွှေဘရောင် (orange) ရောင်လိုင်း တစ်ခု ရှိပြီး ၎င်းသည် ကမ္ဘာလုံးဆိုင်ရာ Z အလျှာသို့ ညွှန်လှည့်ထားကာ XZ မျက်နှာပြင်တွင် တည်ရှိသည်။ အခြားစကစ်တွင် အဝါရောင် (yellow) လိုင်းတစ်ခု XY မျက်နှာပြင်တွင် ရှိသည်။
 
-## Discussion
+## ဆွေးနွေးချက်
 
-Attachment mode Align O-Y-X is defined as follows in [Part:Attachment](Part_EditAttachment.md): *Matches object\'s origin with first referenced vertex and aligns its vertical and horizontal plane axes toward vertex/along line.*. It also notes there are several reference combinations.
+တပ်ဆင်မှု မုတ်ဆက်ပုံ Align O-Y-X ကို [Part:Attachment](Part_EditAttachment.md) တွင် အောက်ပါအတိုင်း သတ်မှတ်ထားသည်။ *Matches object's origin with first referenced vertex and aligns its vertical and horizontal plane axes toward vertex/along line.* ၎င်းတွင် ကိုးကားချက်ပေါင်းစုံ (reference combinations) ရှိနိုင်ကြောင်းလည်း ဖော်ပြထားသည်။
 
 :; Reference combinations:
 
-:   Vertex, Vertex, Vertex
-:   Vertex, Vertex, Edge
-:   Vertex, Edge, Vertex
-:   Vertex, Edge, Edge
-:   Vertex, Vertex
-:   Vertex, Edge
+:   ထိပ် (Vertex), ထိပ် (Vertex), ထိပ် (Vertex)
+:   ထိပ် (Vertex), ထိပ် (Vertex), အနား (Edge)
+:   ထိပ် (Vertex), အနား (Edge), ထိပ် (Vertex)
+:   ထိပ် (Vertex), အနား (Edge), အနား (Edge)
+:   ထိပ် (Vertex), ထိပ် (Vertex)
+:   ထိပ် (Vertex), အနား (Edge)
 
-Lets start with *Vertex, Vertex, Vertex*.
+စတင်အဖြစ် *ထိပ်၊ ထိပ်၊ ထိပ် (Vertex, Vertex, Vertex)* ကို ကြည့်လေ့လာကြပါစို့။
 
-If we match the definition to the reference:
+သတ်မှတ်ချက်အား အောက်ပါအတိုင်း ကိုးကားချက်နှင့် ကိုက်ညီစေရန် ဘာတွေလုပ်ရမည်ကို တွက်ကြည့်မည်။
 
-The first vertex selected will position the origin of the sketch to the selected vertex.
+- ပထမဆုံးရွေးချယ်မည့် ထိပ် (first vertex) သည် စကစ်၏ အစ (origin) ကို ရွေးချယ်ထားသော ထိပ်သို့ တက်နေရာချသည့်အရာ ဖြစ်လိမ့်မည်။
+- ဒုတိယရွေးချယ်မည့် ထိပ်သည် စကစ်၏ ထောင့်လိုက် အလှည့် (vertical axis) ကို အလျှောက်ညှိသွားမည် (ဒီ demonstration စီစဉ်မှုတွင် ဤအလှည့်ကို **Y** ဖြင့် သတ်မှတ်ထားသည်)။
 
-The second vertex selected will align the vertical axis of the sketch (in the demo setup this axis is indicated with **Y**).
-
-So, if we select the upper left/upper vertex of the yellow edge (as seen in the larger right frame) and the lower/right vertex of the yellow edge the sketch is positioned like this:
+ထို့ကြောင့် အဝါရောင်လိုင်း၏ အပေါ်ဘယ်/အပေါ်ထိပ်နှင့် အဝါရောင်လိုင်း၏ အောက်/ညာထိပ်ကို (ပုံ၏ ဗဟိုဘယ်ဘက် အကြီးမားသော ဖရိေမ်တွင် မြင်ရသည့်အတိုင်း) ရွေးချယ်ပါက စကစ်ကို အောက်ပါအတိုင်း တင်ထားမည်ဖြစ်သည်။
 
  <img alt="" src=images/AttOYX_vv.png  style="width:800px;"> 
 
 :; Notes:
 
-:   The Align O-Y-X is selected in the Attachment dialogue.
-:   The sketch origin is now at the upper left/upper vertex of the yellow line.
-:   The Y axis of the sketch is now aligned with the yellow line.
-:   The Z axis of the sketch is perpendicular to the yellow line.
+:   Align O-Y-X ကို တပ်ဆင်မှု (Attachment) ဆွဲပေါ်ပေါက်ပေါ်တွင် ရွေးချယ်ထားသည်။
+:   စကစ်၏ အစ (origin) သည် အခုအခါ အဝါလိုင်း၏ အပေါ်ဘယ်/အပေါ် ထိပ်တွင် တည်ရှိနေသည်။
+:   စကစ်၏ Y အလှည့်သည် အခုအခါ အဝါလိုင်းနှင့် ဆက်စပ်တန်းညှိထားသည်။
+:   စကစ်၏ Z အလှည့်သည် အဝါလိုင်းနှင့် ထောင့်ဖြင့် ကြားကျ (perpendicular) ဖြစ်နေသည်။
 
-Now if we add a third reference by selecting the upper vertex of the orange edge the scene changes to:
+ယခု အရောင်ပါသော တစ်ခုတည်းသော ထိပ်နှင့် ဒုတိယထိပ်ကို ရွေးချယ်ခြင်းဖြင့် ရရှိသည့် အချက်အလက်ဖြစ်သည်။ အနောက်ဖက်တွင် သုံးခု目 ယူ၍ ဆက်လက် ပြင်ဆင်နိုင်သည်။ ဥပမာအနေနှင့် တတိယ ကိုးကားချက်ပွဲ (third reference) အနေဖြင့် ကမ္မရွှေဘရောင် (orange) လိုင်း၏ အပေါ်ထိပ်ကို ရွေးချယ်ပါက မြင်ကွင်းသည် အောက်ပါအတိုင်း ပြောင်းလဲမည်ဖြစ်သည်။
 
  <img alt="" src=images/AttOYX_vvv.png  style="width:800px;"> 
 
 :; Notes:
 
-:   Now the X axis of the sketch is aligned in the direction of the selected vertex of the orange edge.
+:   ယခု စကစ်၏ X အလှည့်သည် ကမ္မရွှေဘရောင် အနား၏ ရွေးချယ်ထားသော ထိပ်ဘက်၏ ဦးတည်ရာနှင့် တန်းညှိထားသည်။
 
 
 
 ---
-⏵ [documentation index](../README.md) > Advanced Attachment OYX
+⏵ [စာတမ်း အညွှန်း](../README.md) > အဆင့်မြင့် တပ်ဆင်မှု OYX

@@ -4,66 +4,70 @@
    MenuLocation: 3D/BIM , Fence
    Workbenches: BIM_Workbench
    Version: 0.19
----
+---# Arch Fence
 
-# Arch Fence
+## ဖော်ပြချက်
 
-## Description
-
-The **Arch Fence** is an object that builds a fence by repeating a single fence post and section along a given path.
+**Arch Fence** သည် ထပ်မံအသုံးပြုရန် အထက်တန်း တံခါးတံ (fence post) တစ်ခုနှင့် အပိုင်း (section) တစ်ခုကို သတ်မှတ်ထားသော လမ်းကြောင်းတစ်ခုအတိုင်း ထပ်တလဲလဲ စက်ရုံသို့မဟုတ် ပုံစံတူ ခြံတံစနစ်ကို ဖန်တီးပေးသည့် အရာတစ်ခု ဖြစ်သည်။
 
  <img alt="" src=images/Arch_Fence_description_example.png  style="width:600px;"> 
 
-## Usage
+## အသုံးပြုမှု
 
-### Creating from scratch 
+### အစမှ တည်ဆောက်ခြင်း
 
-1.  Use a workbench of your choice to create a single fence post and a single section.
-2.  Create the path the fence should follow using the [Sketcher Workbench](Sketcher_Workbench.md) or [Draft Workbench](Draft_Workbench.md).
-3.  Switch back to the [BIM Workbench](BIM_Workbench.md).
-4.  Select the section, post and path in exactly that order.
+1.  ကိုင်တွယ်လိုသော လုပ်ငန်းခွင် (Workbench) တစ်ခု ဖြင့် တံခါးတံ (post) တစ်ခုနှင့် အပိုင်း (section) တစ်ခုကို ဖန်တီးပါ။
+
+2.  ခြံသည် လိုက်နေရမည့် လမ်းကြောင်းကို [Sketcher Workbench](Sketcher_Workbench.md) သို့မဟုတ် [Draft Workbench](Draft_Workbench.md) အသုံးပြုပြီး ဆွဲဆောင်ပါ။
+
+3.  ပြန်လည် [BIM Workbench](BIM_Workbench.md) သို့ ပြန်ရွှေ့ပါ။
+
+4.  အပိုင်း (Section), တံခါးတံ (Post) နှင့် လမ်းကြောင်း (Path) ကို အတိအကျ အဆိုပါ အရေအတွက်အတိုင်း ရွေးချယ်ပါ (ယင်းအမှာအရာကို အဆိုပါအဆင့်အတိုင်း ရွေးပါ။)။
+
 5.  Press the **<img src="images/Arch_Fence.svg" width=16px> [Fence](Arch_Fence.md)** button
 
-## Options
+## ရွေးချယ်စရာများ
 
-For now the tool assumes the following
+ယခုအချိန်တွင် ကိရိယာသည် အောက်ပါအချက်များကို ထင်မှတ်ထားသည်။
 
-1.  The Path is drawn on the XY-Plane
-2.  Section and Post are drawn at the origin so that they stand upright in front view
+1.  လမ်းကြောင်း (Path) ကို XY-လေကာန်းပေါ် (XY-Plane) တွင် ဆွဲထားသည်ဟု ယူဆသည်။
 
-## Properties
+2.  Section နှင့် Post ကို မူလဗဟို (origin) တွင် ဆွဲထားပြီး ရှေ့မြင်ကွင်းတွင် တိုက်ရိုက်ထောင့်ထောင်ထားသည်ဟု ယူဆသည်။
 
-### Data
+## ပိုင်ဆိုင်ချက်များ
 
--    **Path**: The path the fence should follow
+### ဒေတာ (Data)
 
--    **Post**: A single fence post to repeat
+-    **Path**: ခြံသည် လိုက်နေရမည့် လမ်းကြောင်း (Path)
 
--    **Section**: A single section to repeat
+-    **Post**: ထပ်မံအသုံးပြုရန် တံခါးတံ (Post) တစ်ခု
 
--    **Number Of Posts**: The total number of posts used to build the fence. This is calculated automatically.
+-    **Section**: ထပ်မံအသုံးပြုရန် အပိုင်း (Section) တစ်ခု
 
--    **Number Of Sections**: The total number of sections used to build the fence. This is calculated automatically.
+-    **Number Of Posts**: ခြံတည်ဆောက်ရာတွင် အသုံးပြုမည့် တံခါးတံများ စုစုပေါင်း အရေအတွက် — ဤအချက်ကို အလိုအလျှောက် တွက်ချက်ပေးပါသည်။
 
-### View
+-    **Number Of Sections**: ခြံတည်ဆောက်ရာတွင် အသုံးပြုမည့် အပိုင်းများ စုစုပေါင်း အရေအတွက် — ဤအချက်ကို အလိုအလျှောက် တွက်ချက်ပေးပါသည်။
 
--    **Use Original Colors**: When set to `True` the fence will use the colors from the original section and post. Otherwise the ShapeColor of the fence will be used to colorize the fence.
+### မျက်နှာမြင် (View)
 
-## Notes
+-    **Use Original Colors**: ဤကို `True` အဖြစ် သတ်မှတ်ထားပါက ခြံသည် မူလ Section နှင့် Post ထဲမှ အရောင်များကို အသုံးပြုမည်။ မဟုတ်ပါက ခြံ၏ ShapeColor ကို အသုံးပြု၍ အရောင်ပေးမည်။
 
--   Arch Fence was introduced in FC v0.19 by user furti.
--   [Forum thread](https://forum.freecadweb.org/viewtopic.php?t=36149) discussing Arch Fence functionality
+## မှတ်ချက်များ
 
-## Scripting
+-   Arch Fence ကို ဖရီးကက် (FreeCAD) v0.19 တွင် user furti က စတင်မိတ်ဆက်ခဲ့သည်။
 
-The Fence tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+-   Arch Fence လုပ်ဆောင်ချက်များနှင့် ပတ်သက်၍ ဆွေးနွေးထားသည့် [Forum thread](https://forum.freecadweb.org/viewtopic.php?t=36149)
+
+## Script အသုံးပြုခြင်း (Scripting)
+
+Fence ကိရိယာကို [macros](Macros.md) နှင့် [Python](Python.md) console မှ အသုံးပြုနိုင်ပြီး အောက်ပါ function ကို အသုံးချနိုင်ပါသည်။
 
  
 ```python
 Fence = buildFence(section, post, path)
 ```
 
-Example:
+ဥပမာ:
 
  
 ```python

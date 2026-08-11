@@ -4,41 +4,39 @@
    MenuLocation: Arch , Utilities , 3 Views from mesh
    Workbenches: Arch_Workbench
    SeeAlso: Arch_SplitMesh, Arch_MeshToShape
----
+---# Arch 3Views
 
-# Arch 3Views
+## ဖော်ပြချက်
 
-## Description
+**ဤအမိန့်သည် လက်ရှိတွင် အသုံးမပြုပါ။**
 
+ဤအမိန့်ကို [Mesh](Mesh_Workbench.md) အခြေပြု အရာဝတ္ထုမှ ပုံပေါ်အခြေခံ တန်းပြပုံများ (flat, shape-based views) ထုတ်ယူရန် အသုံးပြုမည် ဖြစ်ပြီး ၎င်းတို့ကို **<img src="images/Arch_Equipment.svg" width=24px> [Arch Equipment](Arch_Equipment.md)** ကိရိယာအတွက် အသုံးပြုနိုင်ပါသည်။
 
-**This command is currently not in use.**
+  
+## အသုံးပြုနည်း
 
-It will serve to generate flat, shape-based views from a [Mesh](Mesh_Workbench.md) based object, to be used by the **<img src="images/Arch_Equipment.svg" width=24px> [Arch Equipment](Arch_Equipment.md)** tool.
+1.  Mesh အရာဝတ္ထုကို ရွေးပါ။
+2.  **<img src="images/Arch_3Views.svg" width=16px>** ဘတ်တန်ကို နှိပ်ပါ၊ သို့မဟုတ် အပေါ်မီနူးမှ **Arch** → **Utilities** → **<img src="images/Arch_3Views.svg" width=16px> [3Views](Arch_3Views.md)** ကို ရွေးပါ။
 
-## Usage
-
-1.  Select a Mesh object.
-2.  Select the **<img src="images/Arch_3Views.svg" width=16px>** button, or **Arch** → **Utilities** → **<img src="images/Arch_3Views.svg" width=16px> [3Views](Arch_3Views.md)** from the top menu.
-
-## Scripting
+## စကရစ်ဖြင့်အသုံးပြုခြင်း (Scripting)
 
 
-**See also:**
+**အောက်ပါ မျက်နှာများကိုလည်း ကြည့်ပါ။**
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md)။
 
-This tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:  
+ဤကိရိယာကို [မက်ခရိုများ](Macros.md) တွင် သို့မဟုတ် [Python](Python.md) ကွန်ဆိုလ်မှ အောက်ပါ function ကို အသုံးပြု၍ ခေါ်နိုင်ပါသည်။  
 ```python
 shape = createMeshView(obj, direction=FreeCAD.Vector(0, 0, -1), outeronly=False, largestonly=False)
 ```
 
--   Creates a flat `shape` that is the projection of the given mesh object (`obj`) in the given `direction`.
--   If `outeronly` is `True` only the outer contour is taken into consideration, discarding the inner holes.
--   If `largestonly` is `True` only the largest segment of the given mesh will be used.
+- ပေးထားသော mesh အရာ (obj) ကို တိုက်ရိုက် projection လုပ်၍ ထွက်လာသော တန်းပြ `shape` ကို ဖန်တီးသည်။
+- `outeronly` ကို `True` သတ်မှတ်ပါက ပြင်ပ အကန့်နှင့် မပြည့်သော အတွင်းအပေါက်များကို ဖယ်ရှားပြီး ပြင်ပ ကွန်တောက်(outer contour) ပဲ တွက်ချက်မည်။
+- `largestonly` ကို `True` သတ်မှတ်ပါက ပေးထားသော mesh ၏ အကြီးဆုံး ဆက်စပ်အစိတ်အပိုင်းသာ အသုံးပြုမည်။
 
-Use `Part.show()` to display the resulting flat shape.
+ရရှိလာသည့် တန်းပြပုံကို ပြသရန် Part.show() ကို အသုံးပြုပါ။
 
-Example:  
+ဥပမာ:  
 ```python
 import FreeCAD, Draft, Arch, Mesh, MeshPart
 
@@ -69,7 +67,6 @@ Part.show(s3)
 Wall.ViewObject.Visibility = False
 mesh_obj.ViewObject.Visibility = False
 ```
-
 
 
 ---

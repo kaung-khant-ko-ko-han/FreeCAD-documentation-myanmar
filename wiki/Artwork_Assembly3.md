@@ -1,5 +1,5 @@
-# Artwork Assembly3
-These icons are in the indicated source path of Realthunder\'s Link Branch:
+# အနုပညာ အစိတ်အပိုင်းများ တပ်ဆင်စုစည်းမှု 3 (Artwork Assembly3)
+ဤ အိုင်ကွန်များကို Realthunder ရဲ့ Link Branch ၌ ဖော်ပြထားသော ရင်းမြစ်လမ်းကြောင်း (source path) တွင် တွေ့မြင်နိုင်သည်။
 
 ## Mod/asm3
 

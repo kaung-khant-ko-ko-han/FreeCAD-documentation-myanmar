@@ -1,171 +1,171 @@
-# Arch Workbench
+# Arch လုပ်ငန်းခွင်
+
 **In v1.0 the BIM, Native-IFC and Arch Workbenches have been merged into the integrated [BIM Workbench](BIM_Workbench.md).**
 
 <img alt="Arch workbench icon" src=images/Workbench_Arch.svg  style="width:128px;">
 
- 
+## နိဒါန်း
 
-## Introduction
+The <img alt="" src=images/Workbench_Arch.svg  style="width:24px;"> [Arch လုပ်ငန်းခွင် (Arch Workbench)](Arch_Workbench.md) သည် ဖရီးကက် (FreeCAD) အတွက် ခေတ်မီသော [Building Information Modeling (BIM)](http://en.wikipedia.org/wiki/Building_Information_Modeling) အလုပ်စဉ်ကို ပံ့ပိုးပေးပြီး နံရံ၊ အခေါက်များ၊ ခေါင်းမိုးများ၊ ပြတင်းပေါက်များ၊ တံခါးစက်မှုလှေကားများ၊ ပိုက်လျှပ်စစ်စနစ်များနှင့် ပရိဘောဂများကဲ့သို့သော အပြည့်အဝ ပါရာမက်ထရီ (parametric) အဏုဇီဝ အင်တာတိုင်းများအား ထောက်ပံ့ပေးနိုင်သည်။ ၎င်းသည် [Industry Foundation Classes (IFC)](Arch_IFC.md) ဖိုင်များကို သက်ဆိုင်စွာ ထောက်ပံ့နိုင်ပြီး <img alt="" src=images/Workbench_TechDraw.svg  style="width:24px;"> [TechDraw လုပ်ငန်းခွင် (TechDraw Workbench)](TechDraw_Workbench.md) နှင့် ပေါင်း၍ 2D မျက်နှာပြင်ပြခြင်း (floor plans) ထုတ်လုပ်နိုင်သည်။
 
-The <img alt="" src=images/Workbench_Arch.svg  style="width:24px;"> [Arch Workbench](Arch_Workbench.md) provides a modern [**B**uilding **I**nformation **M**odelling](http://en.wikipedia.org/wiki/Building_Information_Modeling) (BIM) workflow to FreeCAD, with support for features like fully parametric architectural entities such as walls, beams, roofs, windows, stairs, pipes, and furniture. It supports [**I**ndustry **F**oundation **C**lasses](Arch_IFC.md) (IFC) files, and production of 2D floor plans in combination with the <img alt="" src=images/Workbench_TechDraw.svg  style="width:24px;"> [TechDraw Workbench](TechDraw_Workbench.md).
+Arch လုပ်ငန်းခွင်တွင် <img alt="" src=images/Workbench_Draft.svg  style="width:24px;"> [Draft လုပ်ငန်းခွင် (Draft Workbench)](Draft_Workbench.md) ထဲမှ ကိရိယာများအား လုံးဝတစ်ပြိုင်နက်တင်သွင်းထားသည်၊ ၎င်းတွင် Draft ၏ 2D အရာများကို အသုံးပြု၍ 3D ပါရာမက်ထရီ အဆောက်အအုံ အရာများကို ဖန်တီးသည်။ ထို့ပြင် Arch သည် <img alt="" src=images/Workbench_Part.svg  style="width:24px;"> [Part လုပ်ငန်းခွင် (Part Workbench)](Part_Workbench.md)၊ <img alt="" src=images/Workbench_PartDesign.svg  style="width:24px;"> [PartDesign လုပ်ငန်းခွင် (PartDesign Workbench)](PartDesign_Workbench.md) ကဲ့သို့သော အခြားလုပ်ငန်းခွင်များဖြင့် ဖန်တီးထားသည့် sólido အမျိုးအစားများကိုလည်း အသုံးပြုနိုင်သည်။
 
-The Arch Workbench imports all tools from the <img alt="" src=images/Workbench_Draft.svg  style="width:24px;"> [Draft Workbench](Draft_Workbench.md), as it uses its 2D objects to build 3D parametric architectural objects. Nevertheless, Arch can also use solid shapes created with other workbenches like <img alt="" src=images/Workbench_Part.svg  style="width:24px;"> [Part](Part_Workbench.md) and <img alt="" src=images/Workbench_PartDesign.svg  style="width:24px;"> [PartDesign](PartDesign_Workbench.md).
+ဖရီးကက် (FreeCAD) ၏ BIM လုပ်ဆောင်ချက်များကို ယခုအခါ အစိတ်အပိုင်း ဒီဇိုင်းဆိုင်ရာ အခြေခံကိရိယာများကို ထည့်သွင်းထားသည့် ဒီ Arch လုပ်ငန်းခွင်နှင့် ကိရိယာများအပေါ် အသစ်သော မျက်နှာပြင် အလယ်အလတ်ကို ထည့်သွင်းပေးသည့် <img alt="" src=images/Workbench_BIM.svg  style="width:24px;"> [BIM လုပ်ငန်းခွင် (BIM Workbench)](BIM_Workbench.md) အဖြစ် အေဝေးစီစဉ်ချက်ဖြင့် ခွဲထုတ်ထားသည်။ BIM လုပ်ငန်းခွင်ကို <img alt="" src=images/Std_AddonMgr.svg  style="width:24px;"> [Addon Manager](Std_AddonMgr.md) မှတဆင့် ရယူနိုင်ပြီး၊ ဤသစ် interface ထပ်တားမှုက Arch ကိရိယာများကို ပိုမိုသဘာဝနှင့် အသုံးပြုရလွယ်ကူစေရန် ရည်ရွယ်ထားသည်။ အသေးစိတ်အချက်အလက်များအတွက် [FreeCAD BIM migration guide](https://yorik.uncreated.net/blog/2020-010-freecad-bim-guide) ကို ကြည့်ပါ။
 
-The BIM functionality of FreeCAD is now progressively split into this Arch Workbench, which holds basic architectural tools, and the <img alt="" src=images/Workbench_BIM.svg  style="width:24px;"> [BIM Workbench](BIM_Workbench.md), which is available from the <img alt="" src=images/Std_AddonMgr.svg  style="width:24px;"> [Addon Manager](Std_AddonMgr.md). This BIM Workbench adds a new interface layer on top of the Arch tools, with the aim of making the BIM workflow more intuitive and user-friendly. See [FreeCAD BIM migration guide](https://yorik.uncreated.net/blog/2020-010-freecad-bim-guide).
-
-The developers of Draft, Arch, and BIM also collaborate with the greater [OSArch community](https://osarch.org), with the ultimate goal of improving building design by using entirely free software.
+Draft၊ Arch နှင့် BIM ကို ဖန်တီးသူများသည် [OSArch community](https://osarch.org) နှင့် ပူးပေါင်းဆောင်ရွက်လျက်ရှိပြီး၊ အခမဲ့ ဆော့ဖ်ဝဲလ်များဖြင့် တည်ဆောက်ရေး ဒီဇိုင်းကို တိုးတက်ကောင်းမွန်စေရန် အကောင်းဆုံးရည်ရွယ်ချက်ဖြင့် အတူတကွ အလုပ်လုပ်လျက်ရှိကြသည်။
 
  <img alt="" src=images/Screenshot_arch_window.jpg  style="width:600px;"> 
 
-## Tools
+## ကိရိယာများ
 
-These are tools for creating architectural objects.
+ဤကိရိယာများသည် အဆောက်အအုံဆိုင်ရာ အရာများ ဖန်တီးရန် အသုံးပြုသည်။
 
--   <img alt="" src=images/Arch_Wall.svg  style="width:32px;"> [Wall](Arch_Wall.md): Creates a wall from scratch or using a selected object as a base.
+-   <img alt="" src=images/Arch_Wall.svg  style="width:32px;"> [နံရံ (Wall)](Arch_Wall.md): သန့်ရှင်းစွာနံရံတည်ဆောက်ခြင်း သို့မဟုတ် ရွေးချယ်ထားသော အရာတစ်ခုကို အခြေခံ၍ နံရံတစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Structure.svg  style="width:32px;"> [Structure](Arch_Structure.md): Creates a structural element from scratch or using a selected object as a base.
+-   <img alt="" src=images/Arch_Structure.svg  style="width:32px;"> [ဖွဲ့စည်းမှု (Structure)](Arch_Structure.md): သန့်ရှင်းစွာ ဖွဲ့စည်းမှုတစ်ခု ဖန်တီးခြင်း သို့မဟုတ် ရွေးချယ်ထားသော အရာကို အခြေခံ၍ ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_CompRebarStraight.png  style="width:48px;"> [Rebar tools](Arch_CompRebarStraight.md): These tools, except the last, are only available if the [Reinforcement Workbench](Reinforcement_Workbench.md) has been installed.
+-   <img alt="" src=images/Arch_CompRebarStraight.png  style="width:48px;"> [Rebar ကိရိယာများ (Rebar tools)](Arch_CompRebarStraight.md): အောက်ပါကိရိယာများထဲမှ နောက်ဆုံးအရာတစ်ခုကို မပါလျှင် သာ [Reinforcement လုပ်ငန်းခွင် (Reinforcement Workbench)](Reinforcement_Workbench.md) ကို ထည့်သွင်းထားမှသာ အသုံးပြုနိုင်သည်။
 
-  - <img alt="" src=images/Reinforcement_StraightRebar.svg  style="width:32px;"> [Straight Rebar](Reinforcement_StraightRebar.md): Creates a straight reinforcement bar in a selected structural element.
+  - <img alt="" src=images/Reinforcement_StraightRebar.svg  style="width:32px;"> [တန်းတစိုက် အားသံ (Straight Rebar)](Reinforcement_StraightRebar.md): ရွေးချယ်ထားသော ဖွဲ့စည်းမှု အရာနှင့် အတွင်းတွင် တန်းတစိုက် အားသံတစ်ခု ဖန်တီးသည်။
 
-  - <img alt="" src=images/Reinforcement_UShapeRebar.svg  style="width:32px;"> [U-Shape Rebar](Reinforcement_UShapeRebar.md): Creates a U-shape reinforcement bar in a selected structural element.
+  - <img alt="" src=images/Reinforcement_UShapeRebar.svg  style="width:32px;"> [U-ပုံသဏ္ဍာန် အားသံ (U-Shape Rebar)](Reinforcement_UShapeRebar.md): ရွေးချယ်ထားသော ဖွဲ့စည်းမှု အရာ၌ U-ပုံသဏ္ဍာန် အားသံတစ်ခု ဖန်တီးသည်။
 
-  - <img alt="" src=images/Reinforcement_LShapeRebar.svg  style="width:32px;"> [L-Shape Rebar](Reinforcement_LShapeRebar.md): Creates an L-shape reinforcement bar in a selected structural element.
+  - <img alt="" src=images/Reinforcement_LShapeRebar.svg  style="width:32px;"> [L-ပုံသဏ္ဍာန် အားသံ (L-Shape Rebar)](Reinforcement_LShapeRebar.md): ရွေးချယ်ထားသော ဖွဲ့စည်းမှု အရာ၌ L-ပုံသဏ္ဍာန် အားသံတစ်ခု ဖန်တီးသည်။
 
-  - <img alt="" src=images/Reinforcement_StirrupRebar.svg  style="width:32px;"> [Stirrup](Reinforcement_StirrupRebar.md): Creates a stirrup reinforcement bar in a selected structural element.
+  - <img alt="" src=images/Reinforcement_StirrupRebar.svg  style="width:32px;"> [Stirrup](Reinforcement_StirrupRebar.md): ရွေးချယ်ထားသော ဖွဲ့စည်းမှု အရာ၌ stirrup အမျိုးအစား အားသံတစ်ခု ဖန်တီးသည်။
 
-  - <img alt="" src=images/Reinforcement_BentShapeRebar.svg  style="width:32px;"> [Bent-Shape Rebar](Reinforcement_BentShapeRebar.md): Creates a bent-shape reinforcement bar in a selected structural element.
+  - <img alt="" src=images/Reinforcement_BentShapeRebar.svg  style="width:32px;"> [နက်သော ပုံသဏ္ဍာန် အားသံ (Bent-Shape Rebar)](Reinforcement_BentShapeRebar.md): ရွေးချယ်ထားသော ဖွဲ့စည်းမှု အရာ၌ နက်သော ပုံသဏ္ဍာန် အားသံတစ်ခု ဖန်တီးသည်။
 
-  - <img alt="" src=images/Reinforcement_HelicalRebar.svg  style="width:32px;"> [Helical Rebar](Reinforcement_HelicalRebar.md): Creates a helical reinforcement bar in a selected structural element.
+  - <img alt="" src=images/Reinforcement_HelicalRebar.svg  style="width:32px;"> [Helical အားသံ (Helical Rebar)](Reinforcement_HelicalRebar.md): ရွေးချယ်ထားသော ဖွဲ့စည်းမှု အရာ၌ helical အားသံတစ်ခု ဖန်တီးသည်။
 
-  - <img alt="" src=images/Reinforcement_ColumnRebars.svg  style="width:32px;"> [Column Reinforcement](Reinforcement_ColumnRebars.md): Creates reinforcement bars in a selected column.
+  - <img alt="" src=images/Reinforcement_ColumnRebars.svg  style="width:32px;"> [ထုဆောက် အားသံများ (Column Reinforcement)](Reinforcement_ColumnRebars.md): ရွေးချယ်ထားသော ထုတန်း (column) တွင် အားသံများ ဖန်တီးသည်။
 
-  - <img alt="" src=images/Reinforcement_BeamRebars.svg  style="width:32px;"> [Beam Reinforcement](Reinforcement_BeamRebars.md): Creates reinforcement bars in a selected beam.
+  - <img alt="" src=images/Reinforcement_BeamRebars.svg  style="width:32px;"> [ဘီမ် အားသံများ (Beam Reinforcement)](Reinforcement_BeamRebars.md): ရွေးချယ်ထားသော ဘီမ်တွင် အားသံများ ဖန်တီးသည်။
 
-  - <img alt="" src=images/Reinforcement_SlabRebars.svg  style="width:32px;"> [Slab Reinforcement](Reinforcement_SlabRebars.md): Creates reinforcement bars in a selected slab.
+  - <img alt="" src=images/Reinforcement_SlabRebars.svg  style="width:32px;"> [လိပ်ပြင် အားသံများ (Slab Reinforcement)](Reinforcement_SlabRebars.md): ရွေးချယ်ထားသော စတုံး (slab) တွင် အားသံများ ဖန်တီးသည်။
 
-  - <img alt="" src=images/Reinforcement_FootingRebars.svg  style="width:32px;"> [Footing Reinforcement](Reinforcement_FootingRebars.md): Creates reinforcement bars in a selected footing.
+  - <img alt="" src=images/Reinforcement_FootingRebars.svg  style="width:32px;"> [ခုံထောက် အားသံများ (Footing Reinforcement)](Reinforcement_FootingRebars.md): ရွေးချယ်ထားသော footing တွင် အားသံများ ဖန်တီးသည်။
 
-  - <img alt="" src=images/Arch_Rebar.svg  style="width:32px;"> [Custom Rebar](Arch_Rebar.md): Creates a custom reinforcement bar in a selected structural element using a sketch.
+  - <img alt="" src=images/Arch_Rebar.svg  style="width:32px;"> [စိတ်ကြိုက် အားသံ (Custom Rebar)](Arch_Rebar.md): sketch တစ်ခုကို အသုံးပြု၍ ရွေးချယ်ထားသော ဖွဲ့စည်းမှု အရာ၌ စိတ်ကြိုက် အားသံတစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_CurtainWall.svg  style="width:32px;"> [Curtain Wall](Arch_CurtainWall.md): Creates a curtain wall from scratch or using a selected object as a base.
+  
+-   <img alt="" src=images/Arch_CurtainWall.svg  style="width:32px;"> [ကာတွန်း နံရံ (Curtain Wall)](Arch_CurtainWall.md): သန့်ရှင်းစွာ curtain wall တစ်ခု ဖန်တီးခြင်း သို့မဟုတ် ရွေးချယ်ထားသော အရာကို အခြေခံ၍ ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_BuildingPart.svg  style="width:32px;"> [Building Part](Arch_BuildingPart.md): Creates a building part including selected objects.
+-   <img alt="" src=images/Arch_BuildingPart.svg  style="width:32px;"> [ဆောက်လုပ်ရေး အပိုင်း (Building Part)](Arch_BuildingPart.md): ရွေးချယ်ထားသော အရာများပါဝင်သည့် building part တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Project.svg  style="width:32px;"> [Project](Arch_Project.md): Creates a project including selected objects.
+-   <img alt="" src=images/Arch_Project.svg  style="width:32px;"> [ပဋိဇီဝ (Project)](Arch_Project.md): ရွေးချယ်ထားသော အရာများပါဝင်သည့် project တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Site.svg  style="width:32px;"> [Site](Arch_Site.md): Creates a site including selected objects.
+-   <img alt="" src=images/Arch_Site.svg  style="width:32px;"> [ဆိုက် (Site)](Arch_Site.md): ရွေးချယ်ထားသော အရာများပါဝင်သည့် site တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Building.svg  style="width:32px;"> [Building](Arch_Building.md): Creates a building including selected objects.
+-   <img alt="" src=images/Arch_Building.svg  style="width:32px;"> [အဆောက်အဦ (Building)](Arch_Building.md): ရွေးချယ်ထားသော အရာများပါဝင်သည့် building တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Floor.svg  style="width:32px;"> [Level](Arch_Floor.md): Creates a floor including selected objects.
+-   <img alt="" src=images/Arch_Floor.svg  style="width:32px;"> [ထပ် (Level)](Arch_Floor.md): ရွေးချယ်ထားသော အရာများပါဝင်သည့် floor/level တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Reference.svg  style="width:32px;"> [External reference](Arch_Reference.md): Links objects from another FreeCAD file into the current document.
+-   <img alt="" src=images/Arch_Reference.svg  style="width:32px;"> [အပြင်အရင်း အညွှန် (External reference)](Arch_Reference.md): အခြား ဖရီးကက် (FreeCAD) ဖိုင်မှ အရာများကို လက်ရှိ အမှတ်တမ်းထဲသို့ လင့်ခ်ချိတ်ဆက်သည်။
 
--   <img alt="" src=images/Arch_Window.svg  style="width:32px;"> [Window](Arch_Window.md): Creates a window from scratch or using a selected object as a base.
+-   <img alt="" src=images/Arch_Window.svg  style="width:32px;"> [ပြတင်းပေါက် (Window)](Arch_Window.md): သန့်ရှင်းစွာ ပြတင်းပေါက်တစ်ခု ဖန်တီးခြင်း သို့မဟုတ် ရွေးချယ်ထားသော အရာကို အခြေခံ၍ ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Roof.svg  style="width:32px;"> [Roof](Arch_Roof.md): Creates a sloped roof from a selected wire.
+-   <img alt="" src=images/Arch_Roof.svg  style="width:32px;"> [ခေါင်းမိုး (Roof)](Arch_Roof.md): ရွေးချယ်ထားသော wire မှ ဆင်းလာသော လှည်းထောင့်ချိုး ခေါင်းမိုးတစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_CompAxis.png  style="width:48px;"> [Axis tools](Arch_CompAxis.md)
+-   <img alt="" src=images/Arch_CompAxis.png  style="width:48px;"> [အဲစစ် ကိရိယာများ (Axis tools)](Arch_CompAxis.md)
 
-  - <img alt="" src=images/Arch_Axis.svg  style="width:32px;"> [Axis](Arch_Axis.md): Adds a 1-direction array of axes.
+  - <img alt="" src=images/Arch_Axis.svg  style="width:32px;"> [အဲစစ် (Axis)](Arch_Axis.md): တစ်လမ်းတည်း အပါအဝင် axis array တစ်ခု ထည့်သွင်းသည်။
 
-  - <img alt="" src=images/Arch_AxisSystem.svg  style="width:32px;"> [Axis System](Arch_AxisSystem.md): Adds an axis system composed of several axes.
+  - <img alt="" src=images/Arch_AxisSystem.svg  style="width:32px;"> [အဲစစ် စနစ် (Axis System)](Arch_AxisSystem.md): အဲစစ်မျိုးစုံ ပါဝင်သည့် axis system တစ်ခု ထည့်သွင်းသည်။
 
-  - <img alt="" src=images/Arch_Grid.svg  style="width:32px;"> [Grid](Arch_Grid.md): Adds a grid-like object.
+  - <img alt="" src=images/Arch_Grid.svg  style="width:32px;"> [အကွက် (Grid)](Arch_Grid.md): grid ပုံစံ object တစ်ခု ထည့်သွင်းသည်။
 
--   <img alt="" src=images/Arch_SectionPlane.svg  style="width:32px;"> [Section Plane](Arch_SectionPlane.md): Adds a section plane object.
+-   <img alt="" src=images/Arch_SectionPlane.svg  style="width:32px;"> [အပိုင်း ဖြတ် plane (Section Plane)](Arch_SectionPlane.md): section plane object တစ်ခု ထည့်သွင်းသည်။
 
--   <img alt="" src=images/Arch_Space.svg  style="width:32px;"> [Space](Arch_Space.md): Creates a space object.
+-   <img alt="" src=images/Arch_Space.svg  style="width:32px;"> [အာကာသ (Space)](Arch_Space.md): space object တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Stairs.svg  style="width:32px;"> [Stairs](Arch_Stairs.md): Creates a stairs object.
+-   <img alt="" src=images/Arch_Stairs.svg  style="width:32px;"> [ခြေလှမ်း (Stairs)](Arch_Stairs.md): stairs object တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_CompPanel.png  style="width:48px;"> [Panel tools](Arch_CompPanel.md)
+-   <img alt="" src=images/Arch_CompPanel.png  style="width:48px;"> [Panel ကိရိယာများ (Panel tools)](Arch_CompPanel.md)
 
-  - <img alt="" src=images/Arch_Panel.svg  style="width:32px;"> [Panel](Arch_Panel.md): Creates a panel object from a selected 2D object.
+  - <img alt="" src=images/Arch_Panel.svg  style="width:32px;"> [Panel](Arch_Panel.md): ရွေးချယ်ထားသော 2D အရာမှ panel object တစ်ခု ဖန်တီးသည်။
 
-  - <img alt="" src=images/Arch_Panel_Cut.svg  style="width:32px;"> [Panel Cut](Arch_Panel_Cut.md): Creates a 2D cut view from a panel.
+  - <img alt="" src=images/Arch_Panel_Cut.svg  style="width:32px;"> [Panel ဖြတ် (Panel Cut)](Arch_Panel_Cut.md): panel မှ 2D ဖြတ်မြင်ကွင်းတစ်ခု ဖန်တီးသည်။
 
-  - <img alt="" src=images/Arch_Panel_Sheet.svg  style="width:32px;"> [Panel Sheet](Arch_Panel_Sheet.md): Creates a 2D cut sheet including panel cuts or other 2D objects.
+  - <img alt="" src=images/Arch_Panel_Sheet.svg  style="width:32px;"> [Panel စာရွက် (Panel Sheet)](Arch_Panel_Sheet.md): panel ဖြတ်များ သို့မဟုတ် အခြား 2D အရာများကို ပါဝင်သည့် 2D cut sheet တစ်ခု ဖန်တီးသည်။
 
-  - <img alt="" src=images/Arch_Nest.svg  style="width:32px;"> [Nest](Arch_Nest.md): Allows to nest several flat objects inside a container shape.
+  - <img alt="" src=images/Arch_Nest.svg  style="width:32px;"> [ပေါင်းစည်းတင် (Nest)](Arch_Nest.md): အမြင်ကြီး ပုံစုံ(flat) အရာများစွာကို container shape အတွင်း nested လုပ်ခွင့်ပြုသည်။
 
--   <img alt="" src=images/Arch_Equipment.svg  style="width:32px;"> [Equipment](Arch_Equipment.md): Creates an equipment or furniture object.
+-   <img alt="" src=images/Arch_Equipment.svg  style="width:32px;"> [ပစ္စည်း/ပရိဘောဂ (Equipment)](Arch_Equipment.md): ပစ္စည်း သို့မဟုတ် ပရိဘောဂ object တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Frame.svg  style="width:32px;"> [Frame](Arch_Frame.md): Creates a frame object from a selected layout.
+-   <img alt="" src=images/Arch_Frame.svg  style="width:32px;"> [အကျုံ (Frame)](Arch_Frame.md): ရွေးချယ်ထားသော layout မှ frame object တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Fence.svg  style="width:32px;"> [Fence](Arch_Fence.md): Creates a fence object from a selected post and path.
+-   <img alt="" src=images/Arch_Fence.svg  style="width:32px;"> [ပေါက်တံ (Fence)](Arch_Fence.md): ရွေးချယ်ထားသော post နှင့် path မှ fence object တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Truss.svg  style="width:32px;"> [Truss](Arch_Truss.md): Creates a truss from a selected line or from scratch.
+-   <img alt="" src=images/Arch_Truss.svg  style="width:32px;"> [ထရပ်စ် (Truss)](Arch_Truss.md): ရွေးချယ်ထားသော အကြောင်းကြောင်း (line) မှ သို့မဟုတ် သန့်စင်စွာ Truss တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_Profile.svg  style="width:32px;"> [Profile](Arch_Profile.md): Creates a parametric 2D profile.
+-   <img alt="" src=images/Arch_Profile.svg  style="width:32px;"> [ပရိုဖိုင် (Profile)](Arch_Profile.md): ပါရာမက်ထရီ 2D ပရိုဖိုင် တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_CompSetMaterial.png  style="width:48px;"> [Material tools](Arch_CompSetMaterial.md)
+-   <img alt="" src=images/Arch_CompSetMaterial.png  style="width:48px;"> [ပစ္စည်း ကိရိယာများ (Material tools)](Arch_CompSetMaterial.md)
 
-  - <img alt="" src=images/Arch_SetMaterial.svg  style="width:32px;"> [Material](Arch_SetMaterial.md): Creates a material and attributes it to selected objects, if any.
+  - <img alt="" src=images/Arch_SetMaterial.svg  style="width:32px;"> [ပစ္စည်း (Material)](Arch_SetMaterial.md): ပစ္စည်းတစ်ခု ဖန်တီးပြီး ရွေးချယ်ထားသော အရာများကို သတ်မှတ်ပေးသည် (ရှိပါက)။
 
-  - <img alt="" src=images/Arch_MultiMaterial.svg  style="width:32px;"> [Multi-Material](Arch_MultiMaterial.md): Creates a multi-material and attributes it to selected objects, if any.
+  - <img alt="" src=images/Arch_MultiMaterial.svg  style="width:32px;"> [စုံပစ္စည်း (Multi-Material)](Arch_MultiMaterial.md): multi-material တစ်ခု ဖန်တီးပြီး ရွေးချယ်ထားသော အရာများကို သတ်မှတ်ပေးသည် (ရှိပါက)။
 
--   <img alt="" src=images/Arch_Schedule.svg  style="width:32px;"> [Schedule](Arch_Schedule.md): Creates different types of schedules.
+-   <img alt="" src=images/Arch_Schedule.svg  style="width:32px;"> [ဇယား (Schedule)](Arch_Schedule.md): အမျိုးမျိုးသော schedule များ ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_CompPipe.png  style="width:48px;"> [Pipe tools](Arch_CompPipe.md)
+-   <img alt="" src=images/Arch_CompPipe.png  style="width:48px;"> [ပိုက် ကိရိယာများ (Pipe tools)](Arch_CompPipe.md)
 
-  - <img alt="" src=images/Arch_Pipe.svg  style="width:32px;"> [Pipe](Arch_Pipe.md): Creates a pipe.
+  - <img alt="" src=images/Arch_Pipe.svg  style="width:32px;"> [ပိုက် (Pipe)](Arch_Pipe.md): ပိုက်တစ်ခု ဖန်တီးသည်။
 
-  - <img alt="" src=images/Arch_PipeConnector.svg  style="width:32px;"> [Connector](Arch_PipeConnector.md): Creates a corner or T-connection between 2 or 3 selected pipes.
+  - <img alt="" src=images/Arch_PipeConnector.svg  style="width:32px;"> [ချိတ်ဆက်ကိရိယာ (Connector)](Arch_PipeConnector.md): ရွေးချယ်ထားသော ပိုက် 2 သို့မဟုတ် 3 ခုကြားတွင် ထောင့်သို့မဟုတ် T-ချိတ်ဆက်မှု တစ်ခု ဖန်တီးသည်။
 
-### Modification tools 
+### ပြုပြင်ပြောင်းလဲရေး ကိရိယာများ
 
-These are tools for modifying architectural objects.
+ဤကိရိယာများသည် အဆောက်အအုံဆိုင်ရာ အရာများကို ပြင်ဆင်ရန် အသုံးပြုသည်။
 
--   <img alt="" src=images/Arch_CutPlane.svg  style="width:32px;"> [Cut with plane](Arch_CutPlane.md): Cuts an object according to a plane.
+-   <img alt="" src=images/Arch_CutPlane.svg  style="width:32px;"> [လွှဲဖြတ် plane ဖြင့် ဖြတ်ခြင်း (Cut with plane)](Arch_CutPlane.md): plane တစ်ခုအတိုင်း အရာတစ်ခုကို ဖြတ်သည်။
 
--   <img alt="" src=images/Arch_CutLine.svg  style="width:32px;"> [Cut with line](Arch_CutLine.md): Cuts an object according to a line.
+-   <img alt="" src=images/Arch_CutLine.svg  style="width:32px;"> [ကြောင်းဖြင့် ဖြတ်ခြင်း (Cut with line)](Arch_CutLine.md): line တစ်ခုအတိုင်း အရာတစ်ခုကို ဖြတ်သည်။
 
--   <img alt="" src=images/Arch_Add.svg  style="width:32px;"> [Add component](Arch_Add.md): Adds objects to a component.
+-   <img alt="" src=images/Arch_Add.svg  style="width:32px;"> [စိတ်ပိုင်း ထည့်ခြင်း (Add component)](Arch_Add.md): အရာများကို component ထဲသို့ ထည့်သည်။
 
--   <img alt="" src=images/Arch_Remove.svg  style="width:32px;"> [Remove component](Arch_Remove.md): Subtracts or removes objects from a component.
+-   <img alt="" src=images/Arch_Remove.svg  style="width:32px;"> [စိတ်ပိုင်း ဖယ်ရှားခြင်း (Remove component)](Arch_Remove.md): component မှ အရာများကို လျှော့ချ သို့မဟုတ် ဖယ်ရှားသည်။
 
--   <img alt="" src=images/Arch_Survey.svg  style="width:32px;"> [Survey](Arch_Survey.md): Enters or leaves surveying mode.
+-   <img alt="" src=images/Arch_Survey.svg  style="width:32px;"> [စစ်ဆေးမှု (Survey)](Arch_Survey.md): surveying mode သို့ ဝင်ခြင်း သို့မဟုတ် ထွက်ခြင်း။
 
-### Utilities
+### ကူညီရေး ကိရိယာများ
 
-These are additional tools to help you in specific tasks.
+ဤကိရိယာများသည် သတ်မှတ်ထားသည့် အလုပ်အကိုင်များတွင် သင်အား ကူညီပေးရန် ဖြစ်သည်။
 
--   <img alt="" src=images/Arch_Component.svg  style="width:32px;"> [Component](Arch_Component.md): Creates a non-parametric Arch component.
+-   <img alt="" src=images/Arch_Component.svg  style="width:32px;"> [Component](Arch_Component.md): non-parametric Arch component တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_CloneComponent.svg  style="width:32px;"> [Clone component](Arch_CloneComponent.md): Produces Arch Components that are clones of selected Arch objects (not to be confused with [Draft Clone](Draft_Clone.md)).
+-   <img alt="" src=images/Arch_CloneComponent.svg  style="width:32px;"> [ကလုန်း component (Clone component)](Arch_CloneComponent.md): ရွေးချယ်ထားသော Arch အရာများ၏ ကလုန်းများဖြစ်သော Arch Components များ ထုတ်ပေးသည် (ဤသည်ကို [Draft Clone](Draft_Clone.md) နှင့် မလွဲရပါ)။
 
--   <img alt="" src=images/Arch_SplitMesh.svg  style="width:32px;"> [Split Mesh](Arch_SplitMesh.md): Splits a selected mesh into separate components.
+-   <img alt="" src=images/Arch_SplitMesh.svg  style="width:32px;"> [Mesh ခွဲခြား (Split Mesh)](Arch_SplitMesh.md): ရွေးချယ်ထားသော mesh တစ်ခုကို သီးခြား အစိတ်အပိုင်းများသို့ ခွဲသည်။
 
--   <img alt="" src=images/Arch_MeshToShape.svg  style="width:32px;"> [Mesh to Shape](Arch_MeshToShape.md): Converts a mesh into a shape, unifying coplanar faces.
+-   <img alt="" src=images/Arch_MeshToShape.svg  style="width:32px;"> [Mesh ကို Shape သို့ (Mesh to Shape)](Arch_MeshToShape.md): mesh ကို shape သို့ ပြောင်းလဲပြီး coplanar မျက်နှာများကို ညည်းညိတ်သိမ်းသည်။
 
--   <img alt="" src=images/Arch_SelectNonSolidMeshes.svg  style="width:32px;"> [Select non-manifold meshes](Arch_SelectNonSolidMeshes.md): Selects all non-manifold meshes from the current selection or from the document.
+-   <img alt="" src=images/Arch_SelectNonSolidMeshes.svg  style="width:32px;"> [non-manifold mesh များ ရွေးချယ်ခြင်း (Select non-manifold meshes)](Arch_SelectNonSolidMeshes.md): လက်ရှိ ရွေးချယ်မှုမှ သို့မဟုတ် အထက်မှာရှိသော document မှ non-manifold mesh များအားလုံးကို ရွေးချယ်သည်။
 
--   <img alt="" src=images/Arch_RemoveShape.svg  style="width:32px;"> [Remove Shape from Arch](Arch_RemoveShape.md): Turns cubic shape-based Arch object fully parametric.
+-   <img alt="" src=images/Arch_RemoveShape.svg  style="width:32px;"> [Arch မှ Shape များ ဖယ်ရှားခြင်း (Remove Shape from Arch)](Arch_RemoveShape.md): cubic shape-based Arch object ကို အပြည့်အဝ ပါရာမက်ထရီအဖြစ် ပြောင်းလဲသတ်မှတ်သည်။
 
--   <img alt="" src=images/Arch_CloseHoles.svg  style="width:32px;"> [Close holes](Arch_CloseHoles.md): Closes holes in a selected shape-based object.
+-   <img alt="" src=images/Arch_CloseHoles.svg  style="width:32px;"> [ပေါက်ပိတ်ခြင်း (Close holes)](Arch_CloseHoles.md): ရွေးချယ်ထားသော shape-based အရာထဲမှ ပေါက်များကို ပိတ်သည်။
 
--   <img alt="" src=images/Arch_MergeWalls.svg  style="width:32px;"> [Merge Walls](Arch_MergeWalls.md): Merge two or more walls.
+-   <img alt="" src=images/Arch_MergeWalls.svg  style="width:32px;"> [နံရံများ ပေါင်းစည်းခြင်း (Merge Walls)](Arch_MergeWalls.md): နံရံနှစ်ခု သို့မဟုတ် ထို့ထက်ပိုသော နံရံများကို ပေါင်းစည်းသည်။
 
--   <img alt="" src=images/Arch_Check.svg  style="width:32px;"> [Check](Arch_Check.md): Check if the selected objects are solids and don\'t contain defects.
+-   <img alt="" src=images/Arch_Check.svg  style="width:32px;"> [စစ်ဆေးခြင်း (Check)](Arch_Check.md): ရွေးချယ်ထားသော အရာများသည် sólido ဖြစ်ကြောင်းနှင့် ချို့ယွင်းချက်များ မပါဝင်ကြောင်း စစ်ဆေးသည်။
 
--   <img alt="" src=images/Arch_ToggleIfcBrepFlag.svg  style="width:32px;"> [Toggle IFC Brep flag](Arch_ToggleIfcBrepFlag.md): Forces a selected object to be exported as an [IfcFacetedBrep](http://www.buildingsmart-tech.org/ifc/IFC4/final/html/schema/ifcgeometricmodelresource/lexical/ifcfacetedbrep.htm).
+-   <img alt="" src=images/Arch_ToggleIfcBrepFlag.svg  style="width:32px;"> [IFC Brep ဖလပ် ပြောင်းခြင်း (Toggle IFC Brep flag)](Arch_ToggleIfcBrepFlag.md): ရွေးချယ်ထားသော အရာကို [IfcFacetedBrep](http://www.buildingsmart-tech.org/ifc/IFC4/final/html/schema/ifcgeometricmodelresource/lexical/ifcfacetedbrep.htm) အဖြစ် export လုပ်ရန် ငေါ့ကြေညာပေးသည်။
 
--   <img alt="" src=images/Arch_3Views.svg  style="width:32px;"> [3 Views from mesh](Arch_3Views.md): Creates top, front and side views from a [mesh](Mesh_Workbench.md).
+-   <img alt="" src=images/Arch_3Views.svg  style="width:32px;"> [mesh မှ 3 ရှုခင်း (3 Views from mesh)](Arch_3Views.md): [mesh](Mesh_Workbench.md) မှ top, front နှင့် side views များ ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_IfcSpreadsheet.svg  style="width:32px;"> [Create IFC spreadsheet\...](Arch_IfcSpreadsheet.md): Creates a spreadsheet to store [IFC](Arch_IFC.md) properties of an object.
+-   <img alt="" src=images/Arch_IfcSpreadsheet.svg  style="width:32px;"> [IFC spreadsheet ဖန်တီး\... (Create IFC spreadsheet\...)](Arch_IfcSpreadsheet.md): အရာတစ်ခု၏ [IFC](Arch_IFC.md) သက်ဆိုင်သော အင်္ဂါရပ်များကို သိမ်းဆည်းရန် spreadsheet တစ်ခု ဖန်တီးသည်။
 
--   <img alt="" src=images/Arch_ToggleSubs.svg  style="width:32px;"> [Toggle subcomponents](Arch_ToggleSubs.md): Shows or hides the subcomponents of an Arch object.
+-   <img alt="" src=images/Arch_ToggleSubs.svg  style="width:32px;"> [အပိုင်းများ ပြသ/ဖျောက် (Toggle subcomponents)](Arch_ToggleSubs.md): Arch အရာတစ်ခု၏ subcomponents များကို ပြသ သို့မဟုတ် ဖျောက်သည်။
 
-### Preferences
+### နှစ်သက်မှုများ (Preferences)
 
--   <img alt="" src=images/Preferences-arch.svg  style="width:32px;"> [Preferences](Arch_Preferences.md): preferences for the default appearance of walls, structures, rebars, windows, stairs, panels, pipes, grids and axes.
+-   <img alt="" src=images/Preferences-arch.svg  style="width:32px;"> [နှစ်သက်မှုများ (Preferences)](Arch_Preferences.md): နံရံ၊ ဖွဲ့စည်းမှုများ၊ အားသံများ၊ ပြတင်းပေါက်များ၊ စတီး၊ panel များ၊ pipes၊ grids နှင့် axis များ၏ မူလ အမြင်ပုံရိပ် သတ်မှတ်ချက်များအတွက် preferences များ။
 
-### File formats 
+### ဖိုင်ဖော်မတ်များ
 
--   [IFC](Arch_IFC.md): industry foundation classes
+-   [IFC](Arch_IFC.md): Industry Foundation Classes
 -   [DAE](Arch_DAE.md): Collada mesh format
 -   [OBJ](Arch_OBJ.md): OBJ mesh format (export only)
 -   [JSON](Arch_JSON.md): JavaScript Object Notation format (export only)
@@ -174,12 +174,12 @@ These are additional tools to help you in specific tasks.
 
 ## API
 
-The Arch module can be used in [Python](Python.md) scripts and [macros](Macros.md) using the [Arch Python API](Arch_API.md) functions.
+Arch မော်ဂျူးကို [Python](Python.md) စာတမ်းများနှင့် [macros](Macros.md) ထဲတွင် [Arch Python API](Arch_API.md) ဖန်ဆင်းချက်များကို အသုံးပြု၍ ကုဒ်ရေးနိုင်သည်။
 
-## Tutorials
+## သင်ခန်းစာများ (Tutorials)
 
 -   [Migrating to FreeCAD from Revit](Migrating_to_FreeCAD_from_Revit.md)
--   [Architecture workflow](http://yorik.uncreated.net/guestblog.php?tag=freecad): An example of how FreeCAD can begin to have its preliminary place in an architecture workflow.
+-   [Architecture workflow](http://yorik.uncreated.net/guestblog.php?tag=freecad): ဖရီးကက် (FreeCAD) ကို အဆောက်အအုံ အလုပ်စဉ်တစ်ခုထဲသို့ မည်သို့ စတင်ထည့်သွင်းနိုင်သည်ကို ဥပမာတစ်ခု ဖြင့် ဖော်ပြသည်။
 -   [Arch tutorial](Arch_tutorial.md) (v0.14)
 -   [Quick arch overview on Yorik\'s blog](http://yorik.uncreated.net/guestblog.php?2012=180) (v0.13)
 -   [Video presentation of the Arch workbench](https://www.youtube.com/watch?v=lTDOeHapv_E) (2016)
@@ -191,4 +191,4 @@ The Arch module can be used in [Python](Python.md) scripts and [macros](Macros.m
 
 
 ---
-⏵ [documentation index](../README.md) > [Obsolete_Workbenches](Category_Obsolete_Workbenches.md) > [Arch](Category_Arch.md) > Arch Workbench
+⏵ [documentation index](../README.md) > [Obsolete_Workbenches](Category_Obsolete_Workbenches.md) > [Arch](Category_Arch.md) > Arch လုပ်ငန်းခွင်

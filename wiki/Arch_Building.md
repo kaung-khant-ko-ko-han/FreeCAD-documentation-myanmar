@@ -5,46 +5,42 @@
    Workbenches: BIM_Workbench
    Shortcut: **B** **U**
    SeeAlso: 
----
+---# Arch Building — အဆောက်အအုံ (Arch Building)
 
-# Arch Building
+## ဖေါ်ပြချက်
 
-## Description
+Arch Building သည် ဖရီးကက် (FreeCAD) အတွင်းမှာ အထူးသီးသန့် ဖုန်းရှင်အဖြစ် အသုံးပြုရန် သင့်လျော်သော Group အရာဝတ္တုတစ်မျိုးဖြစ်ပြီး တစ်ခုလုံးသော အဆောက်အအုံယူနစ်ကို ကိုယ်စားပြုရန် အထူးသင့်တော်သည်။ ၎င်းကို မူလအားဖြင့် မော်ဒယ်အား စီစဉ်ရန် အထူးသင့်တော်ပြီး [floor](Arch_Floor.md) အရာဝတ္တုများကို ထားရှိကာ စီစဉ်ပေးရန် အသုံးပြုသည်။
 
-The Arch Building is a special type of FreeCAD group object particularly suited for representing a whole building unit. They are mostly used to organize your model, by containing [floor](Arch_Floor.md) objects.
+## အသုံးပြုခြင်း
 
-## Usage
+1.  လိုလျှင် သင်၏ အသစ်ဖန်တီးမည့် အဆောက်အအုံတွင် ထည့်လိုသော အရာဝတ္တု(များ) ကို ရွေးပါ။
+2.  **<img src="images/Arch_Building.svg" width=16px> [Building](Arch_Building.md)** ခလုတ်ကို နှိပ်ပါ၊ သို့မဟုတ် ကီးဘုတ်ပေါ်မှ **B** ထို့နောက် **U** ကို နှိပ်ပါ။
 
-1.  Optionally, select one or more objects to be included in your new building.
-2.  Press the **<img src="images/Arch_Building.svg" width=16px> [Building](Arch_Building.md)** button, or press the **B** then **U** keys.
+## ရွေးချယ်စရာများ
 
-## Options
+-   ဖရီးကက် (FreeCAD) ဗားရှင်း 0.18 မှစ၍ Building အရာဝတ္တုသည် အမှန်တကယ် [BuildingPart](Arch_BuildingPart.md) တစ်ခုဖြစ်ပြီး ၎င်း၏ **IFC Type** သတ်မှတ်ချက်ကို "Building" ဟု သတ်မှတ်ထားသည်။ သင်သည် တ任 သည့် BuildingPart ကို IFC Type ကိုပြောင်းခြင်းဖြင့် အလွယ်တကူ Building သို့ပြောင်းလဲနိုင်သည်။
+-   အဆောက်အအုံကို ဖန်တီးပြီးနောက် သင်သည် Tree View တွင် ဆွဲနှင့်ပစ်ခြင်း (drag and drop) ဖြင့် သို့မဟုတ် **<img src="images/Arch_Add.svg" width=16px> [Arch Add](Arch_Add.md)** ကိရိယာဖြင့် ထပ်မံ အရာများထည့်နိုင်သည်။
+-   သင်သည် Tree View တွင် ဆွဲနှင့်ထုတ်ပစ်ခြင်းဖြင့် သို့မဟုတ် **<img src="images/Arch_Remove.svg" width=16px> [Arch Remove](Arch_Remove.md)** ကိရိယာကို အသုံးပြုပြီး အရာများကို အဆောက်အအုံထဲမှ ဖယ်ရှားနိုင်သည်။
 
--   Starting from FreeCAD version 0.18, the Building object is actually a [BuildingPart](Arch_BuildingPart.md) with its **IFC Type** property set to \"Building\". You can convert any BuildingPart to a Building simply by changing its IFC Type.
--   After creating a building, you can add more objects to it by drag and dropping them in the Tree View or by using the **<img src="images/Arch_Add.svg" width=16px> [Arch Add](Arch_Add.md)** tool.
--   You can remove objects from a building by drag and dropping them out of it the Tree View or by using the **<img src="images/Arch_Remove.svg" width=16px> [Arch Remove](Arch_Remove.md)** tool.
+## အင်္ဂါရပ်များ
 
-## Properties
+-    **Building Type**: အဆောက်အအုံ၏ အမျိုးအစား၊ စာရင်းမှ ရွေးချယ်ရန်။
 
--    **Building Type**: The type of this building, to choose from a list
+## စကရစ်ရေးခြင်း (Scripting)
 
-## Scripting
+**တွဲဖက်ကြည့်ရန်:**
 
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) ကို ကြည့်ပါ။
 
-**See also:**
-
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
-
-The Building tool can be used in [macros](macros.md) and from the [Python](Python.md) console by using the following function:  
+Building ကိရိယာကို [macros](macros.md) များတွင်နှင့် [Python](Python.md) ကွန်ဆိုလ်မှ အောက်ပါ function အသုံးပြု၍ အသုံးပြုနိုင်သည်။  
 ```python
 Building = makeBuilding(objectslist=None, baseobj=None, name="Building")
 ```
 
--   Creates a `Building` object from `objectslist`, which is a list of objects, or `baseobj`, which is a `Shape`.
+-   `objectslist` သည် အရာဝတ္တုများ၏ စာရင်းဖြစ်ပြီး `baseobj` သည် `Shape` တစ်ခုဖြစ်သည့်အခါမှ `Building` အရာဝတ္တုကို ဖန်တီးပေးသည်။
 
-Example:
+ဥပမာ:
 
- 
 ```python
 import FreeCAD, Draft, Arch
 
@@ -62,8 +58,6 @@ Building = Arch.makeBuilding([Wall1, Wall2])
 Site = Arch.makeSite(Building)
 FreeCAD.ActiveDocument.recompute()
 ```
-
-
 
 ---
 ⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch Building

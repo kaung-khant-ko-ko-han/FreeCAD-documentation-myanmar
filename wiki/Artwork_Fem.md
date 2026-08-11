@@ -1,7 +1,7 @@
-# Artwork Fem
-These icons are in the indicated source path.
+# FEM (Finite Element Method / အပိုင်းငယ်နည်းစနစ်) အနုပညာပုံများ (Artwork Fem)
+ဤ သင်္ကေတများ (icons) ကို ဖော်ပြထားသော မူရင်း လမ်းကြောင်းတွင် တွေ့နိုင်ပါသည်။
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+မူရင်း ဖိုင်သစ်ပင် (source tree) အတွင်းရှိ သင်္ကေတအားလုံးအတွက်၊ [Artwork](Artwork.md) ကို ကြည့်ပါ။
 
 ## src/Mod/Fem/
 

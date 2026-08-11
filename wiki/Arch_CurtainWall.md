@@ -6,124 +6,122 @@
    Shortcut: **C** **W**
    Version: 0.19
    SeeAlso: 
----
-
-# Arch CurtainWall
+---# Arch CurtainWall
 
 ## Description
 
-The **Arch CurtainWall** tool creates a [curtain wall](https://en.wikipedia.org/wiki/Curtain_wall_(architecture)) by subdividing a base face into quadrangular faces, then creating vertical mullion on the vertical edges, horizontal mullions on the horizontal edges, and filling the spaces between mullions with panels.
+**Arch CurtainWall** ကိရိယာက မူလ မျက်နှာပြင် (base face) ကို စတုထွေ (quadrangular) မျက်နှာပြင်များအဖြစ် ခွဲခြမ်းပြီး၊ ထိုမျက်နှာပြင်များ၏ ရိုးများပေါ်တွင် အလျားလိုက် မော်လီယွန်း (vertical mullion) များ၊ အနံလိုက် မော်လီယွန်း (horizontal mullion) များကို ဖန်တီးပေးကာ မော်လီယွန်းများကြားရှိ အာရုံပေါက်များကို ပါနယ် (panels) များဖြင့် ဖြည့်စွက်ပေးသည်။ [curtain wall](https://en.wikipedia.org/wiki/Curtain_wall_(architecture)) အကြောင်းအရင်းကိုလည်း အထက်ပါလင့်ခ်တွင် ဆက်ကြည့်နိုင်သည်။
 
  <img alt="" src=images/Arch_CurtainWall_example.png  style="width:780px;"> 
 
-Curtain Walls can be created from any type of existing object, in which case all the faces of the object will be subdivided. It works therefore best if used with an object that has only one face. Typically, you would first create a face, preferably bound by exactly 4 edges, that represents the area you want to fill with a curtain wall, then apply the tool.
+Curtain wall များကို မည်သည့်အမျိုးအစားရှိသည့် အရာဝတ္ထု (object) မဆို အခြေခံထား၍ ဖန်တီးနိုင်သည်။ ထိုအချိန်တွင် အရာဝတ္ထု၏ မျက်နှာပြင်အားလုံးကို ခွဲခြမ်းမည်ဖြစ်သောကြောင့် မျက်နှာတစ်ခုသာ ပါသည့် အရာဝတ္ထုနှင့်အတူ အသုံးပြုပါက အကောင်းဆုံးဖြစ်သည်။ စက်တင်မှာ 通常အားဖြင့် သင်လိုချင်သည့် Curtain Wall ဖြည့်စွက်မည့် ဒေသကို ကိုယ်စားပြုသည့် မူလ မျက်နှာပြင်ကို (တိတိကျကျ 4 ခုသော အနား-edge များဖြင့် ကန့်သတ်ထားသည့်) အရင် ဖန်တီးပြီးနောက် ကိရိယာကို ဆောင်ရွက်သည်။
 
-Curtain walls can also be built from a linear object, such as a line, arc or polyline, like the normal [wall](Arch_Wall.md) tool.
+အလျားလိုက် အရာဝတ္ထု (ဥပမာ၊ line, arc သို့မဟုတ် polyline) ကဲ့သို့သော လိုင်နီယာ အရာဝတ္ထုမှလည်း Curtain wall များကို ဖန်တီးနိုင်သည်။ ၎င်းသည် အလားတူ အလုပ်လုပ်သော [wall](Arch_Wall.md) ကိရိယာနှင့် ဆင်တူဖြစ်သည်။
 
-Faces that have double curvature, or faces with more than 4 edges will work too, but the result is less predictable.
+နှစ်ဆမှုပလီ (double curvature) ပါသော မျက်နှာပြင်များ သို့မဟုတ် အနားများ 4 ထက်ပိုသော မျက်နှာပြင်များလည်း အလုပ်လုပ်နိုင်ေပမယ့် ရလဒ်သည် ခန့်မှန်းရန် ခက်ခဲနိုင်သည်။
 
-Faces will be divided in quadrangular facets. If the 4 points of the facet are coplanar, a square facet is created. If not, it is divided into two triangles and a diagonal mullion is added.
+မျက်နှာပြင်များကို စတုထွေဖက်ဆိုင်သို့ ခွဲသွားမည်။ ဖက်ဆိုင်၏ 4 ခုသော အချက်ချက်များသည် တစ်ပြောင့်ပျော့ (coplanar) ဖြစ်ပါက စတုထွေဖက်ဖြစ်ပေါ်မည်။ မဖြစ်ပါက အချက်ကို နှစ်ခုသော တထောင့်သံကောက် (triangles) သို့ ခွဲပြီး ဒိုင်ယက်ဆွန် မော်လီယွန်း (diagonal mullion) တစ်ခု ထည့်သွင်းမည်ဖြစ်သည်။
 
-In case you need a non-regular subdivision, it is also possible to build your own subdivided object, for example using [Arch Grid](Arch_Grid.md), and set the vertical and horizontal subdivisions of the curtain wall to 1.
+မှာသောစနစ်က များစွာ အစီအစဉ်မရှိသော subdivision လိုအပ်ပါက သင်ဝင်ငွေပြင်ထားသည့် subdivided object ကို ကိုယ်တိုင် ဖန်တီးနိုင်သည်။ ဥပမာ၊ [Arch Grid](Arch_Grid.md) ကို အသုံးပြု၍ ကိုယ်ပိုင် subdivided object တစ်ခုကို ထုတ်လုပ်ပြီး Curtain wall ရဲ့ vertical နှင့် horizontal subdivisions ကို 1 သို့ သတ်မှတ်နိုင်သည်။
 
-You can also use the curtain wall tool without any selected object, in which case you will be able to draw a baseline, which will the be extruded vertically to form the face on which the curtain wall will be built.
+ရွေးချယ်ထားသည့် အရာဝတ္ထုမရှိဘဲ Curtain wall ကိရိယာကို အသုံးပြုနိုင်သည်။ ထိုအခါ Baseline တစ်ခုကို ချကြှန့်ဆွဲနိုင်ပြီး ၎င်းကို ထောင်လျက် (vertically) အထူဖော်ထုတ် (extrude) လုပ်၍ Curtain wall ကို တည်ဆောက်မည့် မျက်နှာပြင်ကို ဖန်တီးပေးမည်။
 
 ## Usage
 
 ### Drawing a curtain wall from scratch 
 
-1.  Make sure nothing is selected
-2.  There are several ways to invoke the tool:
+1.  ဘာမှရွေးထားခြင်းမရှိကြောင်း သေချာပါစေ
+2.  ကိရိယာကို ဖွင့်ရန် အနည်းဆုံး နည်းလမ်းအချို့မှာ အောက်ပါအတိုင်းဖြစ်ပါသည် -
     -   Press the **<img src="images/Arch_CurtainWall.svg" width=16px> [Curtain Wall](Arch_CurtainWall.md)** button.
     -   Select the **3D/BIM → <img src="images/Arch_CurtainWall.svg" width=16px> Curtain Wall** option from the menu.
     -   Use the keyboard shortcut: **C** then **W**.
-3.  Click a first point on the 3D view, or type coordinates.
-4.  Click a second point on the 3D view, or type coordinates.
-5.  Adjust needed properties.
+3.  3D ကြည့်ခင်းတွင် ပထမဆုံး အချက်တစ်ချက်ကို နှိပ်ပါ၊ သို့မဟုတ် ကိုအော်ဒင်းနိတ်များကို ရိုက်ထည့်ပါ။
+4.  3D ကြည့်ခင်းတွင် ဒုတိယ အချက်ကို နှိပ်ပါ၊ သို့မဟုတ် ကိုအော်ဒင်းနိတ်များကို ရိုက်ထည့်ပါ။
+5.  အလိုအလျောက် လိုအပ်သည့် ပရော်ပပ်တီများ (properties) ကို ချိန်ညှိပါ။
 
 ### Creating a curtain wall from a selected object 
 
-1.  Select one or more base geometry objects (Draft object, sketch, etc).
-2.  Invoke the tool as described above.
-3.  Adjust needed properties.
+1.  မူလ ပထမ အခြေခံ ဂျီယိုမက်ထရီ အရာဝတ္ထုများ (Draft object, sketch, စသည်) တစ်ခု သို့မဟုတ် အများကို ရွေးချယ်ပါ။
+2.  အထက် ဖော်ပြထားသည့် နည်းလမ်းဖြင့် ကိရိယာအား ဖျော်ဖြေပါ။
+3.  လိုအပ်သည့် ပရော်ပပ်တီများကို ချိန်ညှိပါ။
 
 ## Options
 
--   Curtain walls share the common properties and behaviours of all [Arch Components](Arch_Component.md)
--   Curtain wall mullions can be made from an automatic square profile (set their **Mullion Size** properties) or from a custom profile (set their **Mullion Profile** property). The mullions can be centered over each edge, or placed relatively to the (0,0,0) point by turning off the **Center Profile** property. For example, if you want a profile to be placed slightly behind the panels, you would draw that profile slightly below the (0,0,0) origin point
--   Curtain walls support [Multi-materials](Arch_MultiMaterial.md). Inside the multi-material, the **Frame** layer will be used for the mullions, and the **Glass panel** layer for panels, or **Solid panel** if no Glass panel layer exists in the multi-material.
--   Curtain walls can be based on a linear object such as a line, arc or polyline. In that case, internally, a base surface will be built by extruding the linear object along the direction given by the **Vertical Direction** property, by the length given by the **Height** property.
+-   Curtain wall များသည် [Arch Components](Arch_Component.md) အားလုံးနှင့် ညီမျှသော ပရေါပတ်တီများနှင့် အပြုအမူများကို မျှဝေသည်။
+-   Curtain wall ၏ မော်လီယွန်း (mullions) များကို အလိုအလျောက် စတုရန်းပရိုဖိုင် (automatic square profile) မှ ဖန်တီးနိုင်ပြီး (၎င်းအတွက် **Mullion Size** ပရော်ပပ်တီကို သတ်မှတ်ပါ) သို့မဟုတ် သင်၏ မိမိတုံ့ပြန်ထားသော ပရိုဖိုင် (custom profile) မှ ပြုလုပ်နိုင်သည် (၎င်းအတွက် **Mullion Profile** ပရော်ပပ်တီကို သတ်မှတ်ပါ)။ မော်လီယွန်းများကို အနားတစ်ခုစီပေါ်တွင် အလယ်အလတ်ထားနိုင်သည် (centered) သို့မဟုတ် **Center Profile** ပရော်ပပ်တီကို ပိတ်လိုက်လျှင် (0,0,0) အချက်ကို သက်ရောက်မှုအရ တည်နေရာထားနိုင်သည်။ ဥပမာ၊ ပရိုဖိုင်တစ်ခုကို ပါနယ်များ၏ နောက်ဘက်ပိုင်းသို့ အနည်းငယ်ထားချင်ပါက ထိုပရိုဖိုင်ကို (0,0,0) စတင်ချက်ထက် အနည်းငယ် အောက်ဘက်တွင် ဆွဲထားရမည်။
+-   Curtain wall များသည် [Multi-materials](Arch_MultiMaterial.md) ကို ထောက်ပံ့ပေးသည်။ Multi-material အတွင်း၌ **Frame** အလွှာသည် မော်လီယွန်းများအတွက် အသုံးပြုမည်ဖြစ်ပြီး **Glass panel** အလွှာသည် ပါနယ်များအတွက် အသုံးပြုမည်ဖြစ်သည်။ Glass panel အလွှာမရှိပါက **Solid panel** ကို အသုံးပြုမည်ဖြစ်သည်။
+-   Curtain wall များကို line, arc သို့မဟုတ် polyline ကဲ့သို့သော လိုင်းနီယာ အရာဝတ္ထုအပေါ် အခြေတည်၍ တည်ဆောက်နိုင်သည်။ ထိုအခြေအနေနှင့် တွဲဖက်၍ Curtain wall သည် အတွင်းပိုင်းတွင် **Vertical Direction** ပရော်ပပ်တီဖြင့် သတ်မှတ်ထားသည့် ဒိုင်ရက်ရှင်းအတိုင်း အလျားပေါ်သို့ အထူဖော်ထုတ် (extrude) လုပ်၍ **Height** ပရော်ပပ်တီဖြင့် သတ်မှတ်ထားသည့် အလျားသတ်မှတ်ချက်အတိုင်း မူလ မျက်နှာပြင်ကို တည်ဆောက်မည်ဖြစ်သည်။
 
 ## Properties
 
-Curtain wall objects inherit the properties of [Arch Components](Arch_Component.md) objects, and also have the following extra properties:
+Curtain wall အရာဝတ္ထုများမှာ [Arch Components](Arch_Component.md) အရာဝတ္ထုများ၏ ပရော်ပပ်တီများကို ဆက်လက်ခံယူပြီး အောက်ပါ အပိုပရော်ပပ်တီများကို အထူးထည့်သွင်းထားသည် -
 
--    **Vertical Mullion Number**:The number of vertical mullions
+-    **Vertical Mullion Number**: မော်လီယွန်း (vertical mullion) အရေအတွက်
 
--    **Vertical Mullion Alignment**: If the profile of the vertical mullions get aligned with the surface or not
+-    **Vertical Mullion Alignment**: ထောင့်လိုက် မော်လီယွန်းများ၏ ပရိုဖိုင်ကို မျက်နှာပြင်( surface )နှင့် အလိုက်တန်းစေရန် (aligned) ရှိ/မရှိ
 
--    **Vertical Sections**: The number of vertical sections of this curtain wall
+-    **Vertical Sections**: Curtain wall ၏ အလျားလိုက် ဝက်စ်အပိုင်းအရေအတွက် (vertical sections)
 
--    **Vertical Mullion Height**: The height of the vertical mullions profile, if no profile is used
+-    **Vertical Mullion Height**: ပရိုဖိုင်မသုံးသော အခါ မော်လီယွန်း (vertical) ၏ အမြင့်
 
--    **Vertical Mullion Width**: The width of the vertical mullions profile, if no profile is used
+-    **Vertical Mullion Width**: ပရိုဖိုင်မသုံးသော အခါ မော်လီယွန်း (vertical) ၏ အနံ
 
--    **Vertical Mullion Profile**: A profile for vertical mullions (disables vertical mullion size)
+-    **Vertical Mullion Profile**: ဤသည်မှာ ထောင့်လိုက် မော်လီယွန်းများအတွက် အသုံးပြုမည့် ပရိုဖိုင်ဖြစ်သည် (ဤကို သတ်မှတ်ထားလျှင် vertical mullion size ကို ပိတ်ပေးမည်)
 
--    **Horizontal Mullion Number**: The number of horizontal mullions
+-    **Horizontal Mullion Number**: အနံလိုက် မော်လီယွန်း (horizontal mullion) အရေအတွက်
 
--    **Horizontal Mullion Alignment**: If the profile of the horizontal mullions gets aligned with the surface or not
+-    **Horizontal Mullion Alignment**: အနံလိုက် မော်လီယွန်းပရိုဖိုင်ကို မျက်နှာပြင်နှင့် အလိုက်တန်းစေရန် ရှိ/မရှိ
 
--    **Horizontal Sections**: The number of horizontal sections of this curtain wall
+-    **Horizontal Sections**: Curtain wall ၏ အနံလိုက် ဝက်စ်အပိုင်းအရေအတွက် (horizontal sections)
 
--    **Horizontal Mullion Height**: The height of the horizontal mullions profile, if no profile is used
+-    **Horizontal Mullion Height**: ပရိုဖိုင်မသုံးသော အခါ အနံလိုက် မော်လီယွန်း၏ အမြင့်
 
--    **Horizontal Mullion Width**: The width of the horizontal mullions profile, if no profile is used
+-    **Horizontal Mullion Width**: ပရိုဖိုင်မသုံးသော အခါ အနံလိုက် မော်လီယွန်း၏ အနံ
 
--    **Horizontal Mullion Profile**: A profile for horizontal mullions (disables horizontal mullion size)
+-    **Horizontal Mullion Profile**: အနံလိုက် မော်လီယွန်းများအတွက် အသုံးပြုမည့် ပရိုဖိုင် (ဤကို သတ်မှတ်ထားလျှင် horizontal mullion size ကို ပိတ်ပေးမည်)
 
--    **Diagonal Mullion Number**: The number of diagonal mullions
+-    **Diagonal Mullion Number**: ဒိုင်ယက်ဆယ် မော်လီယွန်း (diagonal mullion) အရေအတွက်
 
--    **Diagonal Mullion Size**: The size of the diagonal mullions, if any, if no profile is used
+-    **Diagonal Mullion Size**: ရှေ့ထုတ်မော်လီယွန်း(ဒိုင်ယက်ဆယ်) များရှိပါက ၎င်း၏ အရွယ်အစား (ပရိုဖိုင်မသုံးသော အခါ)
 
--    **Diagonal Mullion Profile**: A profile for diagonal mullions, if any (disables horizontal mullion size)
+-    **Diagonal Mullion Profile**: ဒိုင်ယက်ဆယ် မော်လီယွန်းများအတွက် ပရိုဖိုင် (သတ်မှတ်လျှင် horizontal mullion size ကို ပိတ်ပေးမည်)
 
--    **Override Edges**: (<small>(v1.0)</small> ) Input are index numbers of edges of Base ArchSketch/Sketch geometries (in Edit mode). Selected edges are used to create the shape of this Arch Curtain Wall (instead of using all edges by default). Ignored if Base ArchSketch provided the selected edges. ENHANCEMENT by ArchSketch: GUI \'Edit Curtain Wall\' Tool is provided in the external <img alt="" src=images/SketchArch_Workbench.svg  style="width:16px;"> [SketchArch Add-on](https://github.com/paullee0/FreeCAD_SketchArch) to let users to select the edges interactively. \'Toponaming-Tolerant\' if ArchSketch is used in Base (and SketchArch Add-on is installed). Warning: Not \'Toponaming-Tolerant\' if just Sketch is used. (See forum thread - <https://forum.freecad.org/viewtopic.php?t=73018&start=40#p756554>)
+-    **Override Edges**: (<small>(v1.0)</small>) Input သည် Base ArchSketch/Sketch ဂျီယိုမက်ထရီများ (Edit mode တွင်) ရှိ edge များ၏ index နံပါတ်များဖြစ်သည်။ ရွေးထားသော အနား(edge) များကို အသုံးပြု၍ ဤ Arch Curtain Wall ၏ အပေါ်ပိုင်းပုံသဏ္ဍာန်ကို ဖန်တီးမည် (အခြေခံအားဖြင့် အားလုံးသော အနားများကို အသုံးပြုမည်မဟုတ်)။ Base ArchSketch ထံမှ ရွေးထားသော အနားများရှိပါက ဤ option ကို ဖြတ်တောက်မည်မဟုတ်ပါ။ ArchSketch မှတဆင့် တိုးတက်မှု (ENHANCEMENT) အဖြစ်၊ အသုံးပြုသူများကို အင်တာအက်တီဗ် (interactive) အနေဖြင့် အနားများကို ရွေးနိုင်စေရန် GUI 'Edit Curtain Wall' Tool ကို အပြင်ပေါ် <img alt="" src=images/SketchArch_Workbench.svg  style="width:16px;"> [SketchArch Add-on](https://github.com/paullee0/FreeCAD_SketchArch) တွင် ပံ့ပိုးပေးထားသည်။ Base အဖြစ် ArchSketch ကို အသုံးပြုပါက 'Toponaming-Tolerant' ဖြစ်သည် (နှင့် SketchArch Add-on ထည့်သွင်းထားရန် လိုအပ်သည်)။ သတိပေးချက် - သင်က ရိုးရိုး Sketch ကိုသာ အသုံးပြုပါက 'Toponaming-Tolerant' မဟုတ်နိုင်ပါ။ (ဆွေးနွေးချက်အတွက် ဖိုရမ် သရုပ်ပြချက် - <https://forum.freecad.org/viewtopic.php?t=73018&start=40#p756554>)
 
--    **Panel Number**: The number of panels
+-    **Panel Number**: ပါနယ် (panel) အရေအတွက်
 
--    **Panel Thickness**: The thickness of the panels
+-    **Panel Thickness**: ပါနယ်များ၏ထူထပ်မှု
 
--    **Swap Horizontal Vertical**: Swaps horizontal and vertical lines
+-    **Swap Horizontal Vertical**: အနံလိုက်နှင့် အလျားလိုက် လိုင်းများကို လဲလှယ်ပေးမည်
 
--    **Refine**: Perform subtractions between components so none overlap
+-    **Refine**: အစိတ်အပိုင်းများနှင့် အချိုးအဆက်များ မတူကြစေရန် အနုတ်ယူခြင်းများ (subtractions) ကို ဆောင်ရွက်ပေးမည်
 
--    **Center Profiles**: Centers the profile over the edges or not
+-    **Center Profiles**: ပရိုဖိုင်များကို အနားများပေါ်တွင် အလယ်ဗဟိုထားမည်/မထားမည်
 
--    **Vertical Direction**: The vertical direction reference to be used by this object to deduce vertical/horizontal directions. Keep it close to the actual vertical direction of your curtain wall
+-    **Vertical Direction**: ဤအရာဝတ္ထုအတွက် ထောင့်လျက်/အနံလိုက် အတိုင်းအတာများကို သတ်မှတ်ရန် အသုံးပြုမည့် ထောင့်လျက် (vertical) ကို ရည်ညွှန်းသည့် ဒိုင်ရက်ရှင်း။ Curtain wall ၏ ဖြစ်တည်မှုအပိုင်းနှင့် နီးစပ်အောင် ထားပါ။
 
--    **Height**: The height of this curtain wall, in case it is based on a linear object
+-    **Height**: Curtain wall ၌ လိုင်းနီယာ အရာဝတ္ထုအပေါ် အခြေခံထားပါက ၎င်း၏ အမြင့်။
 
--    **Host**: The host of this curtain wall. The curtain wall will appear embedded in its host object in the tree view (no other action is performed)
+-    **Host**: Curtain wall ၏ host။ Curtain wall သည် tree view တွင် ၎င်း၏ host အရာဝတ္ထုအတွင်း ထည့်သွင်းထားသလို ပြသမည် (အခြားဆောင်ရွက်ချက်များမရှိပါ)
 
 ## Making frame walls 
 
-Curtain walls are convenient to use in conjunction with [walls](Arch_Wall.md) to create frame walls (walls where an inner, structural layer is made of frames, usually wooden or metal, instead of an homogeneous material such as concrete or brick).
+Curtain wall များကို [walls](Arch_Wall.md) နှင့် တွဲဖက်အသုံးပြု၍ frame walls (အတွင်းပိုင်း ဖွဲ့စည်းပုံသည် သစ်သား သို့မဟုတ် သံဖြင့် ဖရိတ်ဖွဲ့ထားသော အကြမ်းအရောင်အစား တိကျသော အလျားကျအလောင်းများဖြင့် ဖန်တီးထားသော နံရံများ) ဖန်တီးရာတွင် အဆင်ပြေသည်။
 
  <img alt="" src=images/Frame_wall_example.png  style="width:780px;"> 
 
-The procedure described below creates a wall and a curtain wall based on a same baseline, then gives the wall a multi-material which leaves an empty space, where the curtain wall is placed:
+အောက်ပါ လုပ်ဆောင်ချက်များက wall တစ်ခုနှင့် curtain wall တစ်ခုကို အနားကွဲတူသော baseline ပေါ်မှ တစ်ပြိုင်နက်ဖန်တီးပြီးနောက်၊ wall ကို multi-material တစ်ခုစွဲထိုး၍ curtain wall ရှိရာ နေရာအတွက် ပေါက်အမျိုးအစား တစ်ခု ထားရှိစေသည်။
 
-1.  Create a normal [Arch Wall](Arch_Wall.md), either by clicking two points of from an existing linear object
-2.  Select the base object of the newly created arch wall
-3.  Press the **<img src="images/Arch_CurtainWall.svg" width=16px> [CurtainWall](Arch_CurtainWall.md)** button, or press the **C** then **W** keys to create a curtain wall from the same baseline as the wall
-4.  Make sure both the wall and curtain wall have the same **Height**
-5.  Set the number of **horizontal sections** of the curtain wall to zero if you wish only vertical frames
-6.  Set the desired **horizontal mullion width** and **horizontal mullion height** (or use a mullion profile)
-7.  Prepare two (or more) [materials](Arch_SetMaterial.md), one for the panels, one for the void where the frame will be
-8.  Make one [multi-material](Arch_MultiMaterial.md), using one layer of the panel material, one layer of the void material with a negative width value (which will make it not drawn) corresponding to the vertical mullion height of the curtain wall, and another layer of panel material
-9.  Attribute the multi-material to the wall
-10. Set the **Host** property of the curtain wall to the wall we created in first point
+1.  ရိုးရိုး [Arch Wall](Arch_Wall.md) တစ်ခုကို ဖန်တီးပါ၊ ဒုတိယအချက်နှစ်ချက်နှိပ်ခြင်းအားဖြင့် သို့မဟုတ် ရှိပြီးသား လိုင်းနီယာ အရာဝတ္ထုပေါ်မှ ဖန်တီးနိုင်သည်။
+2.  အောက်ဆောက်ထုတ်ထားသည့် arch wall ၏ base object ကို ရွေးချယ်ပါ။
+3.  **<img src="images/Arch_CurtainWall.svg" width=16px> [CurtainWall](Arch_CurtainWall.md)** ခလုတ်ကို နှိပ်ပါ၊ သို့မဟုတ် C နှင့် W ကီးများနှစ်ခုကို နှိပ်၍ wall နှင့်တူသော baseline မှ Curtain wall ကို ဖန်တီးပါ။
+4.  Wall နှင့် Curtain wall နှစ်ခုစလုံး၏ **Height** သတ်မှတ်ချက်များ တူကြောင်း သေချာစေပါ။
+5.  Curtain wall ၏ **horizontal sections** အရေအတွက်ကို သင် စိတ်ကြိုက် တင်ပြပါ။ ဥပမာ၊ သင်သည် ဖရိတ်များကိုသာ ရှိစေရန် ဆန္ဒရှိပါက horizontal sections ကို zero သတ်မှတ်ပါ။
+6.  လိုအပ်သလို **horizontal mullion width** နှင့် **horizontal mullion height** ကို သတ်မှတ်ပါ (သို့) မော်လီယွန်းအတွက် ပရိုဖိုင် တစ်ခု သတ်မှတ်ပါ။
+7.  ပါနယ်များအတွက် တစ်ခု၊ ဖရိတ်အတွင်း ဖြစ်သည့် ပေါက် (void) အတွက် တစ်ခု စသဖြင့် materials (ဗဟို) နှစ်ခု (သို့) ပို၍ ပြင်ဆင်ပါ။
+8.  မိမိပြင်ဆင်ထားသည့် materials များကို အသုံးပြု၍ multi-material တစ်ခု ပြုလုပ်ပါ။ ထို multi-material တွင် ပါနယ် အလွှာတစ်ခု၊ ပြတ်လတ်မှုရှိစေရန် negative width တန်ဖိုးရှိသော void material အလွှာတစ်ခု (ဤမှာ curtain wall ၏ vertical mullion height ကို ကိုက်ညီစေရန်) နှင့် နောက်ထပ် ပါနယ် အလွှာတစ်ခု ထည့်ပါ။
+9.  အဆိုပါ multi-material ကို wall ထံ သတ်မှတ် (attribute) ပေးပါ။
+10. Curtain wall ၏ **Host** ပရော်ပပ်တီကို အဆင့် 1 မှ ဖန်တီးထားသည့် wall သို့ သတ်မှတ်ပါ။
 
 ## Scripting
 
@@ -132,7 +130,7 @@ The procedure described below creates a wall and a curtain wall based on a same 
 
 [Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
 
-The Curtain wall tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+Curtain wall ကိရိယာကို [macros](Macros.md) တွင် သုံးနိုင်ပြီး [Python](Python.md) console မှလည်း အောက်ပါ function ကို အသုံးပြုပြီး ဖန်တီးနိုင်သည် -
 
  
 ```python

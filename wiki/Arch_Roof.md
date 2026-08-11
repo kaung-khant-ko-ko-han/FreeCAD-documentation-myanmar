@@ -5,72 +5,70 @@
    Workbenches: BIM_Workbench
    Shortcut: **R** **F**
    SeeAlso: 
----
+---# Arch Roof
 
-# Arch Roof
+## ဖော်ပြချက်
 
-## Description
+**Arch Roof** ကိရိယာသည် ရွေးချယ်ထားသည့် wire မှ sloped အမိုး (ခေါင်) တစ်ခု ဖန်တီးရန် အသုံးပြုသည်။ ဖန်တီးထားသော အမိုး အရာဝတ္ထုသည် parametric ဖြစ်ပြီး အခြေ (base) အရာနှင့် ဆက်နွယ်မှုကို ထိမ်းသိမ်းထားသည်။ နိယာမက မည်သည့် အနား (edge) တစ်ခုတိုင်းကို အမိုးပရိုဖိုင်တစ်ခု (slope, width, overhang, thickness) ဖြင့် သတ်မှတ်ထားသည်ဟု ထင်မြင်၍ အလုပ်လုပ်ပါသည်။
 
-The **Arch Roof** tool allows for the creation of a sloped roof from a selected wire. The created roof object is parametric, keeping its relationship with the base object. The principle is that each edge is seen allotting a profile of roof (slope, width, overhang, thickness).
+မှတ်ချက်: ဤကိရိယာကို ဆက်လက်ဖွံ့ဖြိုးနေဆဲဖြစ်ပြီး ပုံစံရှုပ်ထွေးလွန်းသော အရာများတွင် အလုပ်မလုပ်နိုင်ပါ။
 
-**Note:** This tool is still in development, and might fail with very complex shapes.
 
  <img alt="" src=images/RoofExample.png  style="width:600px;">  
-*View from above a building model showing the roof with certain transparency*
+*အဆောက်အဦ မော်ဒယ်ကို ထောင့်မြင်မြင်နေ၍ အမိုးကို ထောင်မွှမ်း်ဖြင့် ပြသထားသည်။*
 
-## Usage (wire base) 
+## အသုံးပြုနည်း (wire အခြေ)
 
-1.  Create a closed wire with following the counter-clockwise direction and select it.
+1.  counter-clockwise ဦးတည်မှုဖြင့် ပတ်ပတ်လည် ပိတ်ထားသော wire တစ်ခုကို ဖန်တီးပြီး ရွေးချယ်ပါ။
 
     :   <img alt="" src=images/CounterclockwiseWire.png  style="width:600px;">
 
-2.  Press the **<img src="images/Arch_Roof.svg" width=16px> [Roof](Arch_Roof.md)** button, or press **R** then **F** keys
+2.  **<img src="images/Arch_Roof.svg" width=16px> [Roof](Arch_Roof.md)** ခလုတ်ကို နှိပ်ပါ၊ သို့မဟုတ် **R** ပြီးနောက် **F** ကီးများကို နှိပ်ပါ။
 
-3.  The default roof object could have a strange shape, it\'s because the tool is missing some necessary information.
+3.  အကယ်၍ ပုံမှန်တည်ဆောက်ထားသော အမိုး object သည် အံ့ဩစရာပုံစံရှိနိုင်ပြီး ၎င်းသည် ကိရိယာမှ မလိုအပ်သော အချက်အလက်အချို့ကို လက်လွတ်ထားခြင်းကြောင့် ဖြစ်ပါသည်။
 
-4.  After creating the default roof, double click on the object in the [tree view](Tree_view.md) to access and edit all the properties. Angle must be between 0 and 90.
+4.  ပုံမှန်အမိုးကို ဖန်တီးပြီးနောက် [tree view](Tree_view.md) တွင် အရာကို double-click ပြုလုပ်ကာ အင်အားအားလုံးကို ပြင်ဆင်နိုင်ပါသည်။ Angle သည် 0 မှ 90 ကြား ဖြစ်ရပါမည်။
 
     :   ![](images/RoofTable.png )
 
-5.  Each line corresponds to a roof pane. So you can set the properties you want for each roof pane.
+5.  အတိုင်းအတာတစ်ကြောင်းချင်းစီသည် အမိုး pane တစ်ခုချင်းစီနဲ့ ကိုက်၍ ရှိသည်။ သို့ဖြစ်၍ သင်လိုချင်သည့် အင်္ဂါရပ်များကို pane တစ်ခုချင်းစီအတွက် သတ်မှတ်နိုင်သည်။
 
-6.  To help you, you can set `Angle` or `Run` to `0` and define a `Relative Id`, this makes an automatic calculation to find the data relative to the `Relative Id`.
+6.  ထောက်ပံ့ရန်အတွက် `Angle` သို့မဟုတ် `Run` ကို `0` သတ်မှတ်ပြီး `Relative Id` ကို သတ်မှတ်နိုင်ပြီး ၎င်းဖြင့် `Relative Id` နှင့် ဆက်စပ်သော ဒေတာကို အလိုအလျောက် တွက်ချက်ပေးမည်ဖြစ်သည်။
 
-7.  It works like this:
-    1.  If `Angle &#61; 0` and `Run &#61; 0` then profile is identical to the relative profile.
-    2.  If `Angle &#61; 0` then `Angle` is calculated so that the height is the same one as the relative profile.
-    3.  If `Run &#61; 0` then `Run` is calculated so that the height is the same one as the relative profile.
+7.  လည်ပတ်ပုံမှာ အောက်ပါအတိုင်းဖြစ်သည်။
+    1.  `Angle &#61; 0` နှင့် `Run &#61; 0` ဖြစ်ပါက profile သည် relative profile နှင့် တူညီပါသည်။
+    2.  `Angle &#61; 0` ဖြစ်ပါက `Angle` ကို relative profile နှင့် အမြင့်တူအောင် တွက်ချက်ပေးမည်။
+    3.  `Run &#61; 0` ဖြစ်ပါက `Run` ကို relative profile နှင့် အမြင့်တူအောင် တွက်ချက်ပေးမည်။
 
-8.  Finally, set an Angle to 90° to make a gable.
+8.  နောက်ဆုံးတွင် Angle ကို 90° သတ်မှတ်၍ gable ကို ဖန်တီးနိုင်ပါသည်။
 
     :   <img alt="" src=images/RoofProfil.png  style="width:600px;">
 
 9.  
-    **Note**: for better comprehension, please see this [youtube clip](https://www.youtube.com/watch?v=4Urwru71dVk).
+    မှတ်ချက်။ နက်ရှိုင်းစွာ နားလည်ရန် ဒီ [youtube clip](https://www.youtube.com/watch?v=4Urwru71dVk) ကို ကြည့်ရှုရန် အကြံပြုပါသည်။
 
-## Usage (solid base) 
+## အသုံးပြုနည်း (solid အခြေ)
 
-If your roof has a complex shape (e.g. contains pitched windows or other non-standard features) you can create a custom solid object using various other FreeCAD workbenches ([Part](Part_Workbench.md), [Sketcher](Sketcher_Workbench.md) etc.). And then use this solid as the **Base** object of your roof:
+သင့်အမိုးတွင် ဝင်ရိုးအသွင်များ (ဥပမာ: pitched windows သို့မဟုတ် မစံချိန်ပြု ဖော်စပ်ထားသော အင်္ဂါရပ်များ) အပါအဝင် ရှိ၍ ပုံစံရှုပ်ထွေးပါက ဖရီးကက် (FreeCAD) ၏ အခြား လုပ်ငန်းခွင်များ ([Part](Part_Workbench.md), [Sketcher](Sketcher_Workbench.md) စသဖြင့်) ကို အသုံးပြု၍ custom solid အရာဝတ္ထုတစ်ခု ဖန်တီးနိုင်ပါသည်။ ထိုနောက် ဤ solid ကို သင့်အမိုး၏ **Base** အရာအဖြစ် အသုံးပြုပါ။
 
-1.  Select the solid base object.
-2.  Press the **<img src="images/Arch_Roof.svg" width=16px> [Arch Roof](Arch_Roof.md)** button, or press **R** then **F** keys.
+1.  solid base object ကို ရွေးချယ်ပါ။
+2.  **<img src="images/Arch_Roof.svg" width=16px> [Arch Roof](Arch_Roof.md)** ခလုတ်ကို နှိပ်ပါ၊ သို့မဟုတ် **R** ပြီးနောက် **F** ကီးများကို နှိပ်ပါ။
 
-## Subtracting a roof 
+## အမိုးကို ဖြုတ်ယူခြင်း (Subtracting a roof)
 
-Roofs have an automatically generated subtraction volume (<small>(v1.0)</small>  for roofs with a solid base). When a roof is [removed](Arch_Remove.md) from the walls of a building, both the roof itself as well as everything above it is subtracted from the walls.
-
+အမိုးများအတွက် အလိုအလျောက် ဖန်တီးမပြုထားသော subtraction volume (<small>(v1.0)</small> — solid base နှင့် ရှိသော အမိုးများအတွက်) ကို ဖန်တီးထုတ်ပေးပါသည်။ အမိုးကို သူ့ရဲ့ နံရံများ (walls) မှ [remove](Arch_Remove.md) ပြုလုပ်သောအခါ၊ အမိုးကိုယ်တိုင်နှင့် ၎င်းအမြင့် အထက်ရှိ အရာအားလုံးကို နံရံများထဲမှ ဖြုတ်ပစ်သည်။
 
 <small>(v1.0)</small> 
 
-: It is possible to override the automatic subtraction volume by setting the **Subvolume** property of the roof to a custom solid object.
+: အလိုအလျောက်ဖန်တီးထားသော subtraction volume ကို အစားထိုးလိုပါက အမိုး၏ **Subvolume** property ကို custom solid object တစ်ခု သတ်မှတ်၍ override ပြုနိုင်သည်။
 
  <img alt="" src=images/Arch_Roof_Subtract_Default.png  style="width:" height="150px;"> <img alt="" src=images/Arch_Roof_Subtract_Subvolume.png  style="width:" height="150px;"> <img alt="" src=images/Arch_Roof_Subvolume_Example.png  style="width:" height="150px;">  
-*Solid-based roof before (1st image) and after (2nd image) [removing](Arch_Remove.md) it from walls.<br>
-The 3rd image shows the generated subtraction volume.*
+*Solid-based အမိုးကို နံရံများမှ ဖြုတ်ရမည့် မတိုင်မီ (ပထမဓာတ်ပုံ) နှင့် ဖြုတ်ပြီးနောက် (ဒုတိယဓာတ်ပုံ) ကိုပြထားသည်။<br>
+တတိယဓာတ်ပုံတွင် ဖန်တီးထားသော subtraction volume ကို ပြထားသည်။*
 
-## Options
+## ရွေးချယ်စရာများ (Options)
 
--   Roofs share the common properties and behaviors of all [Arch Components](Arch_Component.md).
+-   အမိုးများသည် [Arch Components](Arch_Component.md) များအားလုံးနှင့် မျှဝေသော property နှင့် အပြုအမူများကို မျှဝေပါသည်။
 
 ## Properties
 
@@ -79,47 +77,46 @@ The 3rd image shows the generated subtraction volume.*
 
 {{TitleProperty|Roof}}
 
--    **Angles|FloatList**: The list of angles of the roof segments.
+-    **Angles|FloatList**: အမိုး အပိုင်းများ၏ angle များစာရင်း။
 
--    **Border Length|Length**: The total length of the borders of the roof.
+-    **Border Length|Length**: အမိုး၏ အနားများ (borders) အားလုံး၏ စုစုပေါင်း အရှည်။
 
--    **Face|Integer**: The face number of the base object used to build the roof (not used).
+-    **Face|Integer**: အမိုးကို တည်ဆောက်ရာတွင် အသုံးပြုသော base object ၏ face အမှတ် (အသုံးမပြု)။
 
--    **Flip|Bool**: Specifies if the direction of the roof should be flipped.
+-    **Flip|Bool**: အမိုး၏ ဦးတည်ချက်ကို ပြန်လှန်ဖလှယ်ရန် သတ်မှတ်သည်။
 
--    **Heights|FloatList**: The list of calculated heights of the roof segments.
+-    **Heights|FloatList**: အမိုး အပိုင်းများ၏ တွက်ချက်ထားသော အမြင့်များစာရင်း။
 
--    **Id Rel|IntegerList**: The list of IDs of the relative profiles of the roof segments.
+-    **Id Rel|IntegerList**: အမိုး အပိုင်းများ၏ relative profiles ၏ ID များစာရင်း။
 
--    **Overhang|FloatList**: The list of overhangs of the roof segments.
+-    **Overhang|FloatList**: အမိုး အပိုင်းများ၏ overhang များစာရင်း။
 
--    **Ridge Length|Length**: The total length of the ridges and hips of the roof.
+-    **Ridge Length|Length**: အမိုး၏ ridge နှင့် hip များ၏ စုစုပေါင်း အရှည်။
 
--    **Runs|FloatList**: The list of horizontal length projections of the roof segments.
+-    **Runs|FloatList**: အမိုး အပိုင်းများ၏ ညီမျှလျှောက်လျားသော အလျား (horizontal length projections) များစာရင်း။
 
--    **Subvolume|Link**: The volume to subtract. If specified it is used instead of the auto-generated subvolume. <small>(v1.0)</small> 
+-    **Subvolume|Link**: ဖြုတ်ပစ်ရန် volume။ သတ်မှတ်ပါက အလိုအလျောက် ဖန်တီးထားသော subvolume အစား ၎င်းကို အသုံးပြုမည်။ <small>(v1.0)</small> 
 
--    **Thickness|FloatList**: The list of thicknesses of the roof segments.
+-    **Thickness|FloatList**: အမိုး အပိုင်းများ၏ အထူများစာရင်း။
 
 ## Scripting
 
+**လည်းကြည့်ရန်:**
 
-**See also:**
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) ကို ကြည့်ပါ။
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
-
-The Roof tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+Roof ကိရိယာကို [macros](Macros.md) များထဲတွင်သို့မဟုတ် [Python](Python.md) console မှ အသုံးပြုနိုင်ပြီး အောက်ပါ function ကို အသုံးပြုပါ။
 
  
 ```python
 Roof = makeRoof(baseobj=None, facenr=0, angles=[45.,], run=[], idrel=[0,], thickness=[50.,], overhang=[100.,], name="Roof")
 ```
 
--   Creates a `Roof` object from the given `baseobj`, which can be a closed wire or a solid object.
-    -   If `baseobj` is a wire, you can provide lists for `angles`, `run`, `idrel`, `thickness`, and `overhang`, for each edge in the wire to define the shape of the roof.
-    -   The lists are automatically completed to match the number of edges in the wire.
+-   ပေးထားသော `baseobj` (closed wire သို့မဟုတ် solid object ဖြစ်နိုင်သည်) မှ `Roof` object ကို ဖန်တီးသည်။
+    -   `baseobj` သည် wire ဖြစ်ပါက wire တွင် ရှိသည့် အနားတိုင်းအတွက် `angles`, `run`, `idrel`, `thickness`, နှင့် `overhang` အတွက် စာရင်းများ (lists) ကို ပေးနိုင်ပြီး အမိုး၏ ပုံသဏ္ဍာန်ကို သတ်မှတ်နိုင်သည်။
+    -   စာရင်းများကို auto-complete ပြုလုပ်၍ wire တွင် ရှိသည့် အနားများ ဂဏန်းနှင့် ကိုက်အောင် ပြည့်စုံစေမည်။
 
-Example:
+ဥပမာ:
 
  
 ```python

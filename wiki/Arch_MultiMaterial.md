@@ -5,51 +5,51 @@
    Workbenches: Arch_Workbench, BIM_Workbench
    Version: 0.17
    SeeAlso: Arch_SetMaterial
----
+---# Arch MultiMaterial
 
-# Arch MultiMaterial
+## ဖော်ပြချက်
 
-## Description
-
-The Multi-Material tool defines a list of [materials](Material.md) with, for each material, a name and a thickness value. This multi-materials list can then be added to an [Arch](Arch_Workbench.md) object instead of a single [Arch Material](Arch_SetMaterial.md) .
+Multi-Material ကိရိယာသည် တစ်ခုချင်းစီအတွက် အမည်နှင့် ထူမှုတန်ဖိုးတစ်ခုပါဝင်သော [ပစ္စည်းများ](Material.md) (materials) စာရင်းကို သတ်မှတ်ပေးသည်။ ဤ မူလပစ္စည်းများစာရင်းကို single [Arch Material](Arch_SetMaterial.md) အစား [Arch](Arch_Workbench.md) (လုပ်ငန်းခွင်) အရာဝတ္တုတစ်ခုသို့ ထည့်သွင်းနိုင်သည်။
 
 ![](images/Arch_multimaterial_example.png )
 
-Not all Arch objects can currently make use of multi-materials, and the use they do of it differs. Currently:
+လက်ရှိတွင် အားလုံးသော Arch အရာဝတ္တုများကို multi-material များနှင့် အသုံးမပြုနိုင်သေးပါက၊ အသုံးပြုပုံသည် အမျိုးအစားအလိုက် ချိုးနိမ့်ကွာခြားပါသည်။ လက်ရှိတွင် -
 
--   <img alt="" src=images/Arch_Wall.svg  style="width:24px;"> [Walls](Arch_Wall.md) with a MultiMaterial will use the material definitions and thicknesses to create a multi-layer wall
--   <img alt="" src=images/Arch_Window.svg  style="width:24px;"> [Windows](Arch_Window.md) with a MultiMaterial will attribute materials with a given name defined inside the MultiMaterial to window components with a same name or type (see below). Material thickness is not considered.
--   <img alt="" src=images/Arch_Panel.svg  style="width:24px;"> [Panels](Arch_Panel.md) with a MultiMaterial will use the material definitions and thicknesses to create a multi-layer panel
+-   <img alt="" src=images/Arch_Wall.svg  style="width:24px;"> [နံရံများ (Walls)](Arch_Wall.md) သို့ MultiMaterial ထည့်ထားပါက၊ အဆိုပါ ပစ္စည်းသတ်မှတ်ချက်များနှင့် ထူမှုများကို အသုံးပြု၍ အလွှာစုံ နံရံ (multi-layer wall) ဖန်တီးမည်။
+-   <img alt="" src=images/Arch_Window.svg  style="width:24px;"> [ပြတင်းပေါက်များ (Windows)](Arch_Window.md) သို့ MultiMaterial ထည့်ထားပါက၊ MultiMaterial အတွင်း သတ်မှတ်ထားသည့် အမည်ရှိ ပစ္စည်းများကို အမျိုးအစား သို့မဟုတ် အမည်တူသော ပြတင်းပေါက် အစိတ်အပိုင်းများအား ချိတ်ဆက်ပေးမည်။ အဆိုပါအခါတွင် ပစ္စည်း၏ ထူမှုကို မတွက်ချက်ပါ။
+-   <img alt="" src=images/Arch_Panel.svg  style="width:24px;"> [Panels](Arch_Panel.md) များသို့ MultiMaterial ထည့်ထားပါက၊ ပစ္စည်းသတ်မှတ်ချက်များနှင့် ထူမှုများကို အသုံးပြု၍ အလွှာစုံ panel များ ဖန်တီးမည်။
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Create first a series of **<img src="images/Arch_SetMaterial.svg" width=16px> [Arch Materials](Arch_SetMaterial.md)** that you will need in your Multi-Material.
-2.  Optionally, select an Arch object you wish to attribute the new Multi-Material to.
-3.  Press the **<img src="images/Arch_MultiMaterial.svg" width=16px> [Multi-Material](Arch_MultiMaterial.md)** button.
-4.  Set the desired material layers.
+1.  အရင်ဆုံး သင်၏ Multi-Material တွင် လိုအပ်မည့် **<img src="images/Arch_SetMaterial.svg" width=16px> [Arch Materials](Arch_SetMaterial.md)** (ပစ္စည်းသတ်မှတ်ချက်များ) များကို ဖန်တီးပါ။
+2.  မလိုလားအပ်ပါက၊ အသစ်ဖန်တီးမည့် Multi-Material ကို ပေးလိုသော Arch အရာဝတ္တုတစ်ခုကို ရွေးချယ်ထားနိုင်သည်။
+3.  **<img src="images/Arch_MultiMaterial.svg" width=16px> [Multi-Material](Arch_MultiMaterial.md)** ခလုတ်ကို နှိပ်ပါ။
+4.  လိုအပ်သည့် ပစ္စည်းအလွှာများကို သတ်မှတ်ပါ။
 
-## Options
+## ရွေးချယ်စရာများ
 
 ![](images/Arch_multimaterial_panel.png )
 
-Upon creating or editing a multi-material by double-clicking it in the tree, the following options are available:
+Multi-material ကို ဖန်တီးသည့်အခါ သို့မဟုတ် tree တွင် အရာကို နှစ်ချက်ကလစ်၍ တည်းဖြတ်သည့်အခါ အောက်ပါ ရွေးချယ်စရာများ ရရှိပါသည်-
 
--   **Duplicate** another existing Multi-Material from the same document. This only copies the values over, and doesn\'t link the two multi-materials in any way.
--   The **Name** field will also set the material object\'s Label
--   The **Composition** list is the list of the different material layers that compose this multi-material. Each layer has a name, a material and a thickness value.
--   Click **Add** to add a new layer, **Up** to move a selected layer up, **Down** to move a selected layer down, or **Del** to delete a selected layer.
--   Double-click the **name** of a layer to edit it, the material will offer you a drop-down list of available [Arch Materials](Arch_SetMaterial.md) in the same document, and thickness can be set to any value in any unit
--   Name and Material fields are mandatory. Thickness can be left blank (it will then adopt a value of 0).
--   When a multi-material contains layers with a thickness of zero, that thickness is considered variable. Arch objects that use the multi-material, such as Walls and Panels, will treat that accordingly, and give that layer the remaining space available given their own width or thickness.
--   If you name the different components of a multi-material \"Frame\", \"Solid panel\", \"Glass panel\" or \"Louvre\", and apply that material to a window, the given materials will be applied to the corresponding window components.
+-   **မိတ္တူ (Duplicate)** - document တူညီသော အခြားရှိသော Multi-Material တစ်ခုကို မိတ္တူယူနိုင်သည်။ ၎င်းသည် တန်ဖိုးများကိုသာ မိတ္တူကူးယူပြန်ပေးသော်လည်း မိတ္တူနှစ်ခုကို မည်သည့်နည်းဖြင့်မှ ချိတ်ဆက်မထားပါ။
+-   **အမည် (Name)** ကွက်လပ်သည် ပစ္စည်း အရာဝတ္တု၏ တံဆိပ် (Label) ကိုလည်း သတ်မှတ်ပေးပါသည်။
+-   **ဖွဲ့စည်းမှု (Composition)** စာရင်းမှာ ဤ multi-material ကို ဖွဲ့စည်းထားသည့် ပစ္စည်းအလွှာများ၏ စာရင်းဖြစ်သည်။ အလွှာ တစ်ခုချင်းစီတွင် အမည်၊ ပစ္စည်းနှင့် ထူမှု (thickness) တန်ဖိုး တစ်ခုရှိပါသည်။
+-   **Add (ထည့်မည်)** ကို နှိပ်၍ အလွှာအသစ်ထည့်ပါ၊ **Up (မြှောက်)** ကို နှိပ်၍ ရွေးထားသော အလွှာကို အထက်သို့ရွှေ့ပါ၊ **Down (လျှော့)** ကို နှိပ်၍ အောက်သို့ရွှေ့ပါ၊ သို့မဟုတ် **Del (ဖျက်)** ကို အလွှာရွေးချယ်ပြီး ဖျက်ပါ။
+-   အလွှာ၏ **အမည်** ကို နှစ်ချက်ကလစ်၍ တည်းဖြတ်နိုင်သည်။ ပစ္စည်းရွေးချယ်မှုကတော့ အချိတ်ဆက်ရှိသော document အတွင်းရှိ [Arch Materials](Arch_SetMaterial.md) များ၏ dropdown စာရင်းအား ပေးလိမ့်မည်။ ထူမှုကို မည်သည့်ယူနစ်ဖြင့်မဆို တန်ဖိုး သတ်မှတ်နိုင်သည်။
+-   အမည်နှင့် ပစ္စည်းကွက်လပ်များသည် မလိုလားအပ်နိုင်ကြောင်း မဖြစ်မနေဖြည့်ရပါမည်။ ထူမှု (thickness) ကို အလွတ်ထားနိုင်သည် (အလွတ်ထားပါက 0 ဖြစ်သတ်မှတ်မည်)။
+-   multi-material တစ်ခုတွင် ထူမှု 0 ဖြစ်သော အလွှာများ ပါဝင်ပါက ၎င်းထူမှုကို မရှေ့တမ်းသတ်မှတ်နိုင်သော (variable) အဖြစ် သတ်မှတ်မည်ဖြစ်သည်။ Walls နှင့် Panels ကဲ့သို့ ဤ multi-material ကို အသုံးပြုသော Arch အရာဝတ္တုများမှာ ၎င်းအတိုင်း ကိုင်တွယ်ပြီး ကိုယ်ပိုင် အနံ သို့မဟုတ် ထူမှုပမာဏအရ ရရှိသော ကျန်နေသည့် နေရာအား အဆိုပါ အလွှာထဲသို့ ပေးအပ်မည်။
+-   Multi-material ၏ မတူညီသော အစိတ်အပိုင်းများကို "Frame", "Solid panel", "Glass panel" သို့မဟုတ် "Louvre" ဟု အမည်ပေးပြီး ထို material ကို ပြတင်းပေါက် (window) သို့ လျှောက်ထားပါက၊ ပေးထားသည့် ပစ္စည်းများကို အဆိုပါ ပြတင်းပေါက်၏ ကိုက်ညီရာ အစိတ်အပိုင်းများပေါ် မျှဝေပေးမည်။
 
-## Relation to IFC 
+## IFC နှင့် ဆက်စပ်မှု
 
-This roughly corresponds to a combination of [IfcMaterialLayerSet](https://standards.buildingsmart.org/IFC/DEV/IFC4_2/FINAL/HTML/link/ifcmateriallayerset.htm) and [IfcMaterialLayer](https://standards.buildingsmart.org/IFC/DEV/IFC4_2/FINAL/HTML/link/ifcmateriallayer.htm).
+ဤသည်မှာ စံအတိုင်း [IfcMaterialLayerSet](https://standards.buildingsmart.org/IFC/DEV/IFC4_2/FINAL/HTML/link/ifcmateriallayerset.htm) နှင့် [IfcMaterialLayer](https://standards.buildingsmart.org/IFC/DEV/IFC4_2/FINAL/HTML/link/ifcmateriallayer.htm) တို့ကို တွဲဖက်ထားသည့် အဓိပ္ပာယ်အနည်းငယ်ထိ တစ်ခုချင်းဆန့်ကျင် သို့မဟုတ် ကိုက်ညီသည်။
 
-## Limitations
+## ကန့်သတ်ချက်များ
 
-## Scripting
+(ကန့်သတ်ချက်များ မရှိပါက သတ်မှတ်ရန်)
+
+## Script များရေးသားခြင်း (Scripting)
 
 
 

@@ -1,7 +1,7 @@
-# Arch Rebar ColumnReinforcement TwoTiesSixRebars
-1.  REDIRECT [Reinforcement_ColumnRebars_TwoTiesSixRebars](Reinforcement_ColumnRebars_TwoTiesSixRebars.md)
+# Arch Rebar ကော်လံ အားပေးခြင်း (ColumnReinforcement — TwoTiesSixRebars)
 
-
+1. ပြန်လည်ညွှန်ပြရန် — [Reinforcement_ColumnRebars_TwoTiesSixRebars](Reinforcement_ColumnRebars_TwoTiesSixRebars.md)
 
 ---
-⏵ [documentation index](../README.md) > Arch Rebar ColumnReinforcement TwoTiesSixRebars
+
+⏵ [စာတမ်း အညွှန်း (documentation index)](../README.md) > Arch Rebar ကော်လံ အားပေးခြင်း (ColumnReinforcement — TwoTiesSixRebars)

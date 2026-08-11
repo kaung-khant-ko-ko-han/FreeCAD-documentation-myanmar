@@ -1,5 +1,5 @@
-# Artwork Material
-These icons are in the indicated source path.
+# အနုပညာ ပစ္စည်း (Artwork Material)
+ဒီအိုင်ကွန်များကို အောက်ပါ ရင်းမြစ် ဖိုင်လမ်းကြောင်းတွင် တွေ့ရှိနိုင်ပါသည်။
 
 For all icons in the source tree, see [Artwork](Artwork.md).
 

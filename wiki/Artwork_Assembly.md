@@ -1,7 +1,7 @@
-# Artwork Assembly
-These icons are in the indicated source path.
+# ပုံရိပ် အစိတ်အပိုင်းများ တပ်ဆင်စုစည်းမှု (Artwork Assembly)
+ဤ အိုင်ကွန်များသည် ဖော်ပြထားသော မူလ အရင်းအမြစ် လမ်းကြောင်း (source path) တွင် တည်ရှိသည်။
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+မူလ အရင်းအမြစ် ဖိုင်အပင် (source tree) အတွင်းရှိ အိုင်ကွန်အားလုံးအတွက်၊ [Artwork](Artwork.md) ကို ကြည့်ပါ။
 
 ## src/Mod/Assembly/
 
@@ -12,4 +12,4 @@ For all icons in the source tree, see [Artwork](Artwork.md).
 
 
 ---
-⏵ [documentation index](../README.md) > [Artwork](Category_Artwork.md) > [Assembly](Category_Assembly.md) > Artwork Assembly
+⏵ [စာရွက်စာတမ်း အညွှန်း](../README.md) > [ပုံရိပ် (Artwork)](Category_Artwork.md) > [အစိတ်အပိုင်းများ တပ်ဆင်စုစည်းမှု (Assembly)](Category_Assembly.md) > ပုံရိပ် အစိတ်အပိုင်းများ တပ်ဆင်စုစည်းမှု (Artwork Assembly)

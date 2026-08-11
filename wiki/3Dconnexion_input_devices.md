@@ -1,14 +1,12 @@
-# <img alt="3Dconnexion SpaceNavigator" src=images/SpaceNavigator.jpg  style="width:200px;"> 3Dconnexion input devices
+# <img alt="3Dconnexion SpaceNavigator" src=images/SpaceNavigator.jpg  style="width:200px;"> 3Dconnexion ထည့်သွင်းကိရိယာများ
 
- 
-
-## Driver installation 
+## ဒရိုင်ဘာထည့်သွင်းခြင်း
 
 ### Linux
 
-FreeCAD supports drivers from project [Spacenav](http://spacenav.sourceforge.net/). This is a project aiming to create an open-sourced driver which is compatible with the proprietary drivers from 3Dconnexion.
+ဖရီးကက် (FreeCAD) သည် Project [Spacenav](http://spacenav.sourceforge.net/) မှ ဒရိုင်ဘာများကို ထောက်ခံပေးပါသည်။ ဤ project သည် 3Dconnexion ၏ ပိုင်ဆိုင်ဒရိုင်ဘာများနှင့် ကိုက်နှိုင်းနိုင်သော အကျိုးဝင်သော ဖွင့်လှစ်-မူကြာဒရိုင်ဘာ (open-sourced driver) တည်ဆောက်ရန် ရည်ရွယ်အပ်သည်။
 
-#### Install from repo 
+#### ရေပို (repo) မှ ထည့်သွင်းခြင်း
 
 ##### Ubuntu
 
@@ -17,7 +15,7 @@ FreeCAD supports drivers from project [Spacenav](http://spacenav.sourceforge.net
 sudo apt-get install spacenavd
 ```
 
-Note, however, that version 0.6 available on Ubuntu 20.04 (and probably older ones) does not seem to work. You then have to compile spacenavd from source as explained below.
+သတိပြုရန် — Ubuntu 20.04 (နှင့် အခြားအဟောင်းဗားရှင်းများ) တွင် တွေ့ရသော 0.6 ဗားရှင်းသည် အလုပ်မလုပ်နိုင်နိုင်သလို ဖြစ်နိုင်ပါသည်။ ထို့ကြောင့် အောက်ပါအတိုင်း spacenavd ကို မူရင်းကုဒ်မှ ကွန်ပိုင် (compile) ပြုလုပ်ရန် လိုအပ်လာနိုင်သည်။
 
 ##### Fedora
 
@@ -33,7 +31,7 @@ sudo yum install spacenavd
 apt-get install spacenavd libspnav-dev
 ```
 
-Spacenav needs these permissions:
+Spacenav သည် အောက်ဖော်ပြပါ ခွင့်ပြုချက်များလိုအပ်သည်:
 
 
 
@@ -47,7 +45,7 @@ Spacenav needs these permissions:
 
 
 
-Restart spnavd and FreeCAD
+spnavd နှင့် ဖရီးကက် (FreeCAD) ကို ပြန်စတင်ပါ
 
 
 
@@ -69,16 +67,16 @@ Restart spnavd and FreeCAD
 sudo zypper install spacenavd
 ```
 
-#### Compile Spacenav from source 
+#### Spacenav ကို မူရင်းကုဒ်မှ ကွန်ပိုင်ပြုလုပ်ခြင်း
 
-This is recommended if your distribution might provide an outdated version.
+သင်၏ distribution သည် အဟောင်းဗားရှင်းကို ပေးထားနိုင်သဖြင့် ဤနည်းလမ်းကို အကြံပြုပါသည်။
 
--   Download the following files:
-    -   [spacenavd](https://sourceforge.net/projects/spacenav/files/latest/download) (latest version)
-    -   [libspnav](https://sourceforge.net/projects/spacenav/files/spacenav%20library%20%28SDK%29/) (get latest libspnav version)
-    -   [spnavcfg](https://sourceforge.net/projects/spacenav/files/spacenavd%20config%20gui/) (get latest libspnav version)
--   Unpack the archives into a folder in your home directory.
--   Enter the spacenavd-x.x directory and run the following commands:
+-   အောက်ပါ ဖိုင်များကို ဒေါင်းလုတ်ဆွဲပါ။
+    -   [spacenavd](https://sourceforge.net/projects/spacenav/files/latest/download) (လက်ရှိဗားရှင်း)
+    -   [libspnav](https://sourceforge.net/projects/spacenav/files/spacenav%20library%20%28SDK%29/) (libspnav ၏ လက်ရှိဗားရှင်း ရယူပါ)
+    -   [spnavcfg](https://sourceforge.net/projects/spacenav/files/spacenavd%20config%20gui/) (spnavcfg ၏ လက်ရှိဗားရှင်း ရယူပါ)
+-   အားလုံးကို သင့် အိမ်ဖိုးဒါတွင် ဖွင့်ထုတ် (unpack) ထားပါ။
+-   spacenavd-x.x ဒိုင်ရက်တဲ့ထရီကို ဝင်ကာ အောက်ပါ အမိန့်များကို ဆောင်ရွက်ပါ။
 
 
 
@@ -90,7 +88,7 @@ This is recommended if your distribution might provide an outdated version.
     
 ```
     
--   If this was successful, run the following commands **as root** (or prefix with sudo.)
+-   အကောင်အထည်ဖော်နိုင်ပါက အောက်ပါ အမိန့်များကို **root အဖြစ်** (သို့မဟုတ် sudo ဖြင့်) အသုံးပြုပြီး ဆောင်ရွက်ပါ။
 
 
 
@@ -103,8 +101,8 @@ This is recommended if your distribution might provide an outdated version.
     
 ```
     
--   This installs the spacenav daemon, configures it to automatically load on system boot, and starts the daemon without having to reboot.
--   Now it is time to check that your device is properly detected. With your device unplugged, run the following command and then plug it in.
+-   ဤအဆင့်များသည် spacenav daemon ကို ထည့်သွင်းကာ စက်ဖွင့်တိုင်း အလိုအလျှောက် စတင်ရန် ဖွဲ့စည်းပေးပြီး သက်ဆိုင်ရာ daemon ကို reboot မလိုပဲ စတင်ပါလိမ့်မည်။
+-   ယခု အကြိမ် သင့်ကိရိယာကို မှန်ကန်စွာ စုဆောင်းပါဝင်မှုရှိ/မရှိ စစ်ဆေးရန် ဝင်ရောက်ချိန်ဖြစ်သည်။ ကိရိယာကို မထိုးထားချိန်တွင် အောက်ပါ command ကို ပြေးနှင့် အဲဒီနောက် ကိရိယာကို ထိုးထည့်ပါ။
 
 
 
@@ -115,7 +113,7 @@ This is recommended if your distribution might provide an outdated version.
     
 ```
     
--   If the output looks something like this, you can continue.
+-   ထွက်ရှိချက်သည် အောက်ပါမူလကဲ့သို့ ဖြစ်ပါက ဆက်လက်ဆောင်ရွက်နိုင်ပါသည်။
 
 
 
@@ -131,7 +129,7 @@ This is recommended if your distribution might provide an outdated version.
     
 ```
     
--   Now enter the directory named libspnav-x.x.x and run the following commands:
+-   ယခု libspnav-x.x.x ဟူသော ဒိုင်ရက်တရီသို့ ဝင်ကာ အောက်ပါ အမိန့်များကို ဆောင်ရွက်ပါ။
 
 
 
@@ -143,7 +141,7 @@ This is recommended if your distribution might provide an outdated version.
     
 ```
     
--   If make fails with the following error: \...
+-   make အဖြစ် အောက်ဖော်ပြပါ error ဖြင့် မအောင်လျှင် — \...
 
 
 
@@ -154,7 +152,7 @@ This is recommended if your distribution might provide an outdated version.
     
 ```
     
--   \... then you need to install **libgtkmm-2.4-dev**. Under Ubuntu, this is done like this:
+-   \... ဆိုပါက **libgtkmm-2.4-dev** ကို ထည့်သွင်းရန် လိုအပ်ပါသည်။ Ubuntu အောက်တွင် အောက်ပါအတိုင်း ပြုလုပ်နိုင်သည်။
 
 
 
@@ -165,7 +163,7 @@ This is recommended if your distribution might provide an outdated version.
     
 ```
     
--   When make has completed successfully, run the following command **as root** (or prefix with sudo.)
+-   make အောင်မြင်စွာ ပြီးစီးလာပါက အောက်ဖော်ပြပါ အမိန့်ကို **root အဖြစ်** (သို့မဟုတ် sudo ဖြင့်) အသုံးပြုပြီး ဆောင်ရွက်ပါ။
 
 
 
@@ -176,24 +174,24 @@ This is recommended if your distribution might provide an outdated version.
     
 ```
     
--   Look in the directory libspnav-x.x.x/examples/. If you want to test your device, compile and run either one of the two examples.
+-   libspnav-x.x.x/examples/ ဒိုင်ရက်တရီကို ကြည့်ပါ။ ကိရိယာ စမ်းသပ်လိုပါက ဤမစ်ရှ်ဦးထဲမှ ဥပမာတစ်ခုကို ကွန်ပိုင်ပြီး ချRUN မလုပ်ပါက စမ်းသပ်နိုင်သည်။
 
--   Follow the same pattern to compile and install **spnavcfg**. Make sure to run spnavcfg as root, or no settings will be saved!
+-   spnavcfg ကို ကွန်ပိုင် နှင့် ထည့်သွင်းရာတွင်လည်း ဤပုံစံကို လိုက်နာပါ။ spnavcfg ကို root အဖြစ် run မလုပ်ပါက သတ်မှတ်ချက်များ သိမ်းမထားနိုင်ပါ။
 
-#### Starting spacenavd as a systemd service at boot 
+#### systemd ဖြင့် ဘုတ် (boot) 時 spacenavd စတင်အလုပ်လုပ်စေရန်
 
-If you want to start spacenavd at boot using systemd, do the following:
+systemd ဖြင့် boot 時 spacenavd ကို စတင်လိုပါက အောက်ပါအတိုင်း ဆောင်ရွက်ပါ။
 
--   Go to the directory where you clone the spacenavd repository (to the root of the repository)
--   \"sudo cp contrib/systemd/spacenavd.service /usr/lib/systemd/system/spacenavd-local.service\".
--   \"sudo systemctl enable spacenavd-local.service\".
--   \"sudo systemctl start spacenavd-local.service\", if you want to start it right away.
+-   spacenavd repository ကို clone ထားသည့် ဒိုင်ရက်တရီသို့ သွားပါ (repository ၏ root တွင်)
+-   "sudo cp contrib/systemd/spacenavd.service /usr/lib/systemd/system/spacenavd-local.service".
+-   "sudo systemctl enable spacenavd-local.service".
+-   အချိန်တစ်ချို့တွင် ယခုတင်ပြထားသည့် service ကို ချက်ချင်းစတင်လိုပါက "sudo systemctl start spacenavd-local.service" ကိုပေးပါ။
 
-This is only necessary for the installation from source.
+ဤနည်းလမ်းသည် မူရင်းကုဒ်မှ ထည့်သွင်းသောအခါ အသာအယာလိုအပ်ပါသည်။
 
-#### Restarting spacenavd 
+#### spacenavd ကို ပြန်စတင်ခြင်း
 
-If sometimes SpaceNavigator stops working, it is good to restart driver. To restart it, go to Terminal and execute:
+SpaceNavigator တခါတရံ မအလုပ်လုပ်တော့ပါက driver ကို ပြန်စတင်ပေးသင့်သည်။ ပြန်စတင်ရန် Terminal သို့ ဝင်ကာ အောက်ပါအတိုင်း ထုတ်ပေးပါ။
 
  
 ```python
@@ -201,11 +199,11 @@ sudo xhost +
 sudo /etc/init.d/spacenavd restart
 ```
 
-After that restart FreeCAD. On some distros this is necessary at each boot.
+ထိုနောက် ဖရီးကက် (FreeCAD) ကို ပြန်ဖွင့်ပါ။ တချို့ distribution များတွင် အချိန်တိုင်း boot တစ်ခုစီအတွက် ဤအလုပ်ကို ပြန်လုပ်ရနိုင်သည်။
 
-#### Known Issues 
+#### သိရှိရသည့် ပြဿနာများ
 
-A user reported on the [forum](https://forum.freecadweb.org/viewtopic.php?p=341327#p341327) they saw the following:
+အသုံးပြုသူတစ်ဦးသည် [ဖိုရမ်](https://forum.freecadweb.org/viewtopic.php?p=341327#p341327) တွင် အောက်ပါကဲ့သို့ မြင်ရကြောင်း ဖော်ပြထားသည် -
 
  Spacenav daemon 0.6
  failed to open config file /etc/spnavrc: No such file or directory. using defaults.
@@ -215,7 +213,7 @@ A user reported on the [forum](https://forum.freecadweb.org/viewtopic.php?p=3413
  No protocol specified
  failed to open X11 display ":0.0" 
 
-The workaround that worked for them:
+သူတို့အား အလုပ်ဖြေရှင်းပေးနိုင်သည့် workaround သည် အောက်ပါအတိုင်း ဖြစ်ပါသည် -
 
  
 ```python 
@@ -226,61 +224,61 @@ sudo systemctl restart spacenavd
 
 ### MacOS
 
-3Dconnexion input devices are supported on macOS, provided FreeCAD is built and used on a system with the 3Dconnexion drivers installed. You may need 3DxWare 10.7.2 or greater for macOS 12 Monterey.
+macOS တွင် 3Dconnexion ထည့်သွင်းကိရိယာများကို ထောက်ခံပေးပါသည်၊ သို့သော် ဖရီးကက် (FreeCAD) ကို 3Dconnexion drivers တပ်ဆင်ထားသည့် စနစ်ပေါ်တွင် တည်ဆောက် (build) ပြီးအသုံးပြုသည်ဆိုရမည်။ macOS 12 Monterey အတွက် 3DxWare 10.7.2 သို့မဟုတ် ထို့ထက်မြင့်သော ဗားရှင်းလိုအပ်နိုင်ပါသည်။
 
 ### Windows
 
-As of version 0.13, 3D mouse is supported under Windows. You need to have 3Dconnexion drivers installed. In FreeCAD version 1.0 a [new integration with 3Dconnexion devices](https://github.com/FreeCAD/FreeCAD/pull/12929) has been introduced. If compiled with that integration, only recent hardware is supported: to support older devices users will need to self-compile with the FREECAD_3DCONNEXION_SUPPORT cMake variable set to \"Raw Input\". Windows users should be aware that 3Dconnexion\'s driver (*not* the code in FreeCAD) contains a telemetry package that communicates information about your installed software back to 3Dconnexion.
+0.13 ဗားရှင်းမှစ၍ Windows ပေါ်တွင် 3D mouse ကို ထောက်ခံပါသည်။ သင်သည် 3Dconnexion drivers ကို တပ်ဆင်ထားရပါမည်။ ဖရီးကက် (FreeCAD) ဗားရှင်း 1.0 တွင် 3Dconnexion ကိရိယာများနှင့် [တိုးချဲ့မည့် ပေါင်းစည်းမှု](https://github.com/FreeCAD/FreeCAD/pull/12929) အသစ်တစ်ခု ထည့်သွင်းထားသည်။ ထို integration ဖြင့် ကွန်ပိုင်ထားပါက လတ်တလော hardware များသာ ထောက်ခံမည်ဖြစ်ပြီး၊ အဟောင်းကိရိယာများကို ထောက်ခံရန် အသုံးပြုသူများသည် FREECAD_3DCONNEXION_SUPPORT cMake အမျိုးအစားကို "Raw Input" အဖြစ် သတ်မှတ်၍ ကိုယ်တိုင် ကွန်ပိုင်ရမည် ဖြစ်သည်။ Windows အသုံးပြုသူများအနေနှင့် သတိပြုရန်ကတော့ 3Dconnexion ၏ driver (ဖရီးကက် (FreeCAD) အတွင်းရှိ ကုဒ်မဟုတ်ဘဲ) သည် သင့်စနစ်တွင် တပ်ဆင်ထားသော ဆော့ဖ်ဝဲအချက်အလက်များကို 3Dconnexion သို့ ပြန်ပေးပို့သည့် telemetry package ကို ပါဝင်ထားနိုင်သည်။
 
-#### Known Issues 
+#### သိရှိရသည့် ပြဿနာများ
 
--   In FreeCAD version 1.0 and later changing settings in the 3DX config window may not have the expected results ([issue](https://github.com/FreeCAD/FreeCAD/issues/14044)). To fix this:
-    1.  Stop the driver (by running Stop 3DxWare).
-    2.  Go to **..<user>\AppData\Roaming\3Dconnexion\3DxWare\Cfg** and delete the **FreeCAD.xml** file.
-    3.  Start the driver (by running Start 3DxWare).
-    4.  Run FreeCAD and check if you can change the [Spaceball Motion](#Spaceball_Motion.md) settings.
+-   ဖရီးကက် (FreeCAD) ဗားရှင်း 1.0 နှင့် အထက်၌ 3DX config ပြတင်းပေါက်တွင် သတ်မှတ်ချက်များ ပြောင်းလဲသည်ဖြစ်သော်လည်း မမျှော်လင့်ထားသည့် ရလဒ် မဖြစ်နိုင်ပါ ([issue](https://github.com/FreeCAD/FreeCAD/issues/14044))။ ပြုပြင်ရန် အောက်ပါကို လုပ်ဆောင်ပါ။
+    1.  driver ကို ရပ်ပါ (Stop 3DxWare ကို run ဆောင်ပါ)။
+    2.  **..<user>\AppData\Roaming\3Dconnexion\3DxWare\Cfg** သို့ သွားကာ **FreeCAD.xml** ဖိုင်ကို ဖျက်ပစ်ပါ။
+    3.  driver ကို ပြန်စတင်ပါ (Start 3DxWare ကို run ဆောင်ပါ)။
+    4.  ဖရီးကက် (FreeCAD) ကို စတင် run ပြီး [Spaceball Motion](#Spaceball_Motion.md) သတ်မည့်ချက်များ ပြောင်းလဲနိုင်/မနိုင်စစ်ဆေးပါ။
 
-## Setting up FreeCAD 
+## ဖရီးကက် (FreeCAD) အတွက် ဆက်တင်လုပ်ခြင်း
 
 
 <small>(v1.0)</small> 
 
-: The 3Dconnexion manipulator can be set up in its driver app (3DxWare software).
+: 3Dconnexion manipulator ကို ၎င်း၏ driver application (3DxWare software) ထဲမှ သတ်မှတ်၍ ဆက်တင်နိုင်ပါသည်။
 
 
 {{VersionMinus|0.21}}
 
-: If a Spaceball is detected the following tabs in the [Customize dialog](Interface_Customization.md) can be used to change settings:
+: Spaceball တစ်လုံး ကိုတွေ့ရှိနိုင်ပါက [Customize dialog](Interface_Customization.md) အတွင်းရှိ အောက်ပါ တက်ဘ်များဖြင့် ဆက်တင်များကို ပြောင်းနိုင်ပါသည်။
 
  <img alt="" src=images/Spaceball_Motion.png  style="width:450px;"> <img alt="" src=images/Spaceball_Buttons.png  style="width:450px;"> 
 
-### Spaceball Motion 
+### Spaceball Motion
 
-In this tab you have ability to set up some of general space mouse settings. They include:
+ဤတက်ဘ်တွင် space mouse ၏ ဆိုင်ရာ ဆက်တင်အချို့ကို သတ်မှတ်နိုင်ပါသည်။ ၎င်းတို့တွင် ပါဝင်သည်မှာ -
 
--   Global Sensitivity - Slider with ability to set global sensitivity
--   Dominant - if you enable dominant mode, only axes with highest move will be considered
--   Flip YZ - This option enables you to flip Y and Z axes on 3D mouse
--   Enable Translations - easy way to enable/disable translations
--   Enable Rotations - easy way to enable/disable rotations
--   Calibrate - enables you to calibrate space navigator. It is pressed while space navigator is not moved.
--   Set To Default - removes all settings and sets them to default.
+-   Global Sensitivity - ပတ္တိဝါနှင့် ပြောင်းလွယ်သော global sensitivity သတ်မှတ် slider
+-   Dominant - dominant mode ကို ဖွင့်လျှင် အဆင့်မြင့်ဆုံးရွှေ့မှုပါသော axis များသာ စဉ်းစားမည်
+-   Flip YZ - ဤရွေးချယ်မှုက 3D mouse ပေါ်ရှိ Y နှင့် Z axis များကို ပြောင်းသတ်မှတ်နိုင်သည်
+-   Enable Translations - translations ကို အလွယ်တကူ ဖွင့်/ပိတ်နိုင်ခြင်း
+-   Enable Rotations - rotations ကို အလွယ်တကူ ဖွင့်/ပိတ်နိုင်ခြင်း
+-   Calibrate - space navigator ကို ကယ်လီဘရိတ်လုပ်နိုင်ရန်၊ space navigator မရွှေ့သည့်အချိန်တွင် နှိပ်ပါ။
+-   Set To Default - ဆက်တင်အားလုံးကို ဖယ်ရှား၍ ပုံမှန်သတ်မှတ်ချက်သို့ ပြန်သတ်မှတ်သည်။
 
-Other than this, for each axes you have ability to set:
+ဤအရာများအပြင် တစ်ခုချင်း axis အတွက် အောက်ပါအရာများကို သတ်မှတ်နိုင်ပါသည် -
 
--   Enabled - Enable/Disable axes
--   Reverse - Reverse movement on axes
--   Sensitivity - slider with ability to set sensitivity
+-   Enabled - axis ကို ဖွင့်/ပိတ်
+-   Reverse - axis တွင် ရွှေ့မှုကို လှည့်ပြောင်း
+-   Sensitivity - sensitivity သတ်မှတ်နိုင်သည့် slider
 
-### Spaceball Buttons 
+### Spaceball Buttons
 
-When you open this tab for the first time, it will be empty and unavailable. To activate it, you must press one of your space mouse buttons. After you do, list of buttons will appear on the left side, and list of commands will be available on the right side.
+ဤတက်ဘ်ကို ပထမဆုံး ဖွင့်သည်နှင့် အပေါက်မရှိ၍ မရနိုင်ပါ။ အသုံးပြုနိုင်ရန် သင့် space mouse ၏ ခလုတ်တစ်ခုကို နှိပ်ရပါမည်။ ထိုအပြီးတွင် ဘက်ဘက်ဘက် ဘာသာဖြင့် ဘာဖြစ်သည်ဆိုသည့် ခလုတ်စာရင်း ဖြင့် ညာဘက်တွင် အမိန့်များစာရင်းကို ကြည့်ရှုရပါမည်။
 
-To connect certain command with a button, select button on the left side, and it\'s command on the right side. To clear commands from button, press \"Clear\".
+ခလုတ်တစ်ခုနှင့် အမိန့်တစ်ခုကို ချိတ်ဆက်ရန် ဘယ်ဘက်ရှိ ခလုတ်ကို ရွေးပြီး ညာဘက်ရှိ ၎င်း၏ အမိန့်ကို ရွေးချယ်ပါ။ ခလုတ်မှ အမိန့်များကို ဖယ်ရှားလိုပါက "Clear" ကို နှိပ်ပါ။
 
-### Troubleshooting
+### ပြဿနာဖြေရှင်းခြင်း (Troubleshooting)
 
-Check if your FreeCAD installation links to the spacenav library. The best way to check this is by running FreeCAD from the command line terminal `FreeCAD --log-file /tmp/freecad.log` and close it immediately again. Then open the file **/tmp/freecad.log** and search for the messages:
+သင့် ဖရီးကက် (FreeCAD) တပ်ဆင်မှုသည် spacenav စာကြောင်း (library) ကို link ချထားမထားကို စစ်ဆေးပါ။ အကောင်းဆုံး စစ်ဆေးနည်းမှာ Terminal သင်္ချာကနေ ဖရီးကက် ကို `FreeCAD --log-file /tmp/freecad.log` အတိုင်း run ပြီး ချက်ချင်း ပိတ်ကြည့်ရန် ဖြစ်သည်။ ထို့နောက် **/tmp/freecad.log** ဖိုင်ကို ဖွင့်ကာ အောက်ပါ လုပ်ဆောင်ချက်စာတန်းများကို ရှာပါ။
 
  
 
@@ -288,12 +286,12 @@ or
 
  
 
-If none of them appears then your FreeCAD build doesn\'t link to the spacenav library. If the former message appears then it basically works. The latter message means there is probably a problem with the spacenav daemon.
+ဤစာတန်းများမှ မည်မျှမျှ တစ်ခုမျှ မမြင်ရဘူးဆိုရင် သင့် ဖရီးကက် (FreeCAD) build သည် spacenav library နှင့် link မထားသေးပါ။ ပထမစာတန်းပေါ်ပါက အခြေခံအားဖြင့် အလုပ်လုပ်နေပါသည်။ နောက်စာတန်းပေါ်ပါက spacenav daemon တွင် ပြဿနာတစ်ခု ရှိနိုင်သည်။
 
-## Related
+## ဆက်စပ်
 
--   Forum thread [spacenav on Windows](https://forum.freecadweb.org/viewtopic.php?f=3&t=51023)
--   Forum thread [Space navigator axis confusion](https://forum.freecadweb.org/viewtopic.php?f=8&t=57188)
+-   ဖိုရမ် စာသား [spacenav on Windows](https://forum.freecadweb.org/viewtopic.php?f=3&t=51023)
+-   ဖိုရမ် စာသား [Space navigator axis confusion](https://forum.freecadweb.org/viewtopic.php?f=8&t=57188)
 
 
 

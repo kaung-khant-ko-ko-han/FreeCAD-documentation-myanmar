@@ -4,20 +4,16 @@
    MenuLocation: Utils , Toggle IFC B-rep flag
    Workbenches: BIM_Workbench
    SeeAlso: Arch_IfcExplorer, Arch_IFC
----
+---# Arch ToggleIfcBrepFlag
 
-# Arch ToggleIfcBrepFlag
+## ဖော်ပြချက်
 
-## Description
+**Arch ToggleIfcBrepFlag** ကိရိယာက ရွေးထားသော [BIM](BIM_Workbench.md) အရာဝတ္ထု၏ IfcBrep ဖလက် (flag) ကို ဖွင့်/ပိတ် ပြောင်းနိုင်သည် (ပုံမှန်တိုင်း ပိတ်ထားသည်)။ ဖလက်ကို ဖွင့်ထားပါက IFC အဖြစ် ထုတ်ပို့သောအခါ အဆိုပါ အရာဝတ္ထုကို [IfcFacetedBrep](https://standards.buildingsmart.org/IFC/DEV/IFC4_2/FINAL/HTML/schema/ifcgeometricmodelresource/lexical/ifcfacetedbrep.htm) အမျိုးအစားအဖြစ် ထုတ်ပို့မည်ဖြစ်သည် — IfcExtrudedAreaSolid သို့ IfcBooleanResult ကဲ့သို့ အဆင့်မြင့် ထုတ်ပို့နည်းများဖြင့်လည်း ထုတ်ပို့နိုင်မည့် အခါဖြစ်စေမည့် အခြေအနေများတွင်ပါ။ IfcFacetedBrep အရာဝတ္ထုများမှာ ဝိတ်ကြီး၍ ပြုပြင်ပြောင်းလဲရန် ပိုမလွယ်ကူပေမယ့် (modeling history ကဲ့သို့ ဂီဩမက်ထရီ သတင်းအချက်အလက် တချို့ထုတ်ပယ်ခံရနိုင်သည်) အမှားဖြစ်ခြင်းနှုန်းနည်းသော အကျိုးဖြစ်စေတတ်သည်။ ဤဖလက်ကို သတ်မှတ်ခြင်းက ဖလက် မရှိရာတွင် မှန်ကန်စွာ ထုတ်ပို့မရသော အချို့သော ရုပ်ပုံများကို ဖြေရှင်းပေးနိုင်သည်။
 
-The **Arch ToggleIfcBrepFlag** tool turns the IfcBrep flag of a selected [BIM](BIM_Workbench.md) object on/off (the default is always off). If the flag in on, when exported to IFC, the object will be exported as an [IfcFacetedBrep](https://standards.buildingsmart.org/IFC/DEV/IFC4_2/FINAL/HTML/schema/ifcgeometricmodelresource/lexical/ifcfacetedbrep.htm) object, even if a higher-level kind of export such as IfcExtrudedAreaSolid or IfcBooleanResult is possible. Although IfcFacetedBrep objects are heavier and less editable (they loose some geometry information such as the modeling history), they are often less error-prone. Setting this flag allows to solve some cases of objects that are not exported correctly when the flag is not set.
+## အသုံးပြုနည်း
 
-## Usage
-
-1.  Select an Arch object.
-2.  Select the **Utils → <img src="images/Arch_ToggleIfcBrepFlag.svg" width=16px> Toggle IFC B-rep flag** option from the menu.
-
-
+1. Arch အရာဝတ္ထုကို ရွေးပါ။
+2. မီနူးမှ **Utils → <img src="images/Arch_ToggleIfcBrepFlag.svg" width=16px> Toggle IFC B-rep flag** ရွေးချယ်ပါ။
 
 ---
 ⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch ToggleIfcBrepFlag

@@ -1,7 +1,7 @@
 # Artwork BIM
-These icons are in the indicated source path.
+ဤအိုင်ကွန်များသည် ဖော်ပြထားသော အရင်းအမြစ် လမ်းကြောင်းတွင် (source path) တည်ရှိပါသည်။
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+source tree အတွင်းရှိ အားလုံးသော အိုင်ကွန်များကို ကြည့်ရန် [Artwork](Artwork.md) ကို ဖွင့်ပါ။
 
 ## src/Mod/BIM/
 

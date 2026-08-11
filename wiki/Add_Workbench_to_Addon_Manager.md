@@ -26,22 +26,22 @@ Requirements:
     -   
         **Path to Addon**
         
-        : The path to the local git repository.
+        : ဒါက ဒေသခံ git repository သို့ ဆက်သွယ်သည့် လမ်းကြောင်း (path) ဖြစ်သည်။
 
     -   
         **Addon Name**
         
-        : This will appear in the listings of the Addon Manager.
+        : Addon Manager ၏ စာရင်းတွင် ပြပါမည့် အမည် ဖြစ်သည်။
 
     -   
         **Description**
         
-        : Idem.
+        : ဖော်ပြချက်။
 
     -   
         **Version**
         
-        : Idem.
+        : ဗားရှင်း အချက်အလက်။
 
     -   
         **Repository URL**
@@ -54,12 +54,13 @@ Requirements:
     -   
         **README URL**
         
-        : Recommended.
+        : အကြံပြုပါသည်။
 
     -   
         **Icon**
         
-        : The icon must be part of the repository.
+        : အိကွန်းကို repository အတွင်း ပါဝင်ရမည်။
+
 5.  Press the **<img src="images/List-add.svg" width=16px>** button at the bottom of the dialog.
 6.  The **Content Item** dialog opens.
     <img alt="" src=images/Addon_Manager_Content_Item_Dialog.png  style="width:350px;">

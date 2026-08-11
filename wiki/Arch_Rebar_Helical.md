@@ -1,7 +1,7 @@
-# Arch Rebar Helical
-1.  REDIRECT [Reinforcement_HelicalRebar](Reinforcement_HelicalRebar.md)
+# Arch အတွက် လှည့်ပတ်သံကြိုး (Helical Rebar)
+1. ပြန်လည်ညွှန်ရန် [Reinforcement_HelicalRebar](Reinforcement_HelicalRebar.md)
 
 
 
 ---
-⏵ [documentation index](../README.md) > Arch Rebar Helical
+⏵ [စာတမ်း အညွှန်း](../README.md) > Arch အတွက် လှည့်ပတ်သံကြိုး (Helical Rebar)

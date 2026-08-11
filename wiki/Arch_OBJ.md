@@ -1,13 +1,13 @@
 # Arch OBJ
-## Description
+## ဖော်ပြချက်
 
-Additionally to the standard FreeCAD [OBJ](https://en.wikipedia.org/wiki/Wavefront_.obj_file) exporter, the [BIM Workbench](BIM_Workbench.md) features an alternative exporter that exports coplanar faces as whole OBJ faces, instead of triangulating [Shape](Shape.md)-based objects, like the standard exporter does.
+စံ ဖရီးကက် (FreeCAD) [OBJ](https://en.wikipedia.org/wiki/Wavefront_.obj_file) exporter အပြင်၊ [BIM Workbench](BIM_Workbench.md) (BIM လုပ်ငန်းခွင်) သည် coplanar မျက်နှာပြင်များကို တစုလုံး OBJ မျက်နှာပြင်များအဖြစ် ထုတ်ပေးနိုင်သည့် အခြား exporter တစ်ခုကို ပါဝင်ထားပြီး၊ စံ exporter ကလို [Shape](Shape.md) (ပုံသဏ္ဌာန်) အခြေပြု အရာဝတ္ထုများကို သုံးထောင့်ပြားသို့ သွင်းပြောင်း (triangulate) မလုပ်ဘဲ ထုတ်ပေးသည်။
 
-## Exporting without GUI 
+## GUI မပါဘဲ ထုတ်ပို့ခြင်း
 
-Exporting without the graphical interface is possible from the command line, using the [Mesh Workbench](Mesh_Workbench.md) exporter only.
+ဂရပ်ဖစ် မျက်နှာပြင် (GUI) မပါဘဲ ထုတ်ပို့ခြင်းကို ကွန်မန်ဒ်လိုင်း (command line) မှ တဆင့်သာ ပြုလုပ်နိုင်ပြီး၊ ၎င်းအတွက် [Mesh Workbench](Mesh_Workbench.md) (Mesh လုပ်ငန်းခွင်) exporter ကိုသာ အသုံးပြုနိုင်သည်။
 
-In this example, a STEP file is imported, the colors of the [Shape](Shape.md) are saved, then a mesh is created from it, the colors of the original object are re-applied to the faces of the new mesh, which is then exported to OBJ format. Since this is done with the Mesh Workbench, the result is a triangulated mesh.
+ဤဥပမာတွင် STEP ဖိုင်ကို သွင်းယူပြီး၊ [Shape](Shape.md) (ပုံသဏ္ဌာန်) ၏ အရောင်များကို သိမ်းဆည်းထားသည်။ ထို့နောက် ထို Shape မှ မက်ရှ် (mesh) တစ်ခု ဖန်တီး၍ မူရင်း အရာဝတ္ထု၏ အရောင်များကို အသစ်ဖန်တီးထားသော မက်ရှ် ၏ မျက်နှာပြင်များပေါ်သို့ ပြန်လည်အသက်ဝင်စေပြီး၊ ထို့နောက် OBJ ပုံစံဖြင့် ထုတ်ပို့သည်။ ဤလုပ်ငန်းစဉ်ကို [Mesh Workbench](Mesh_Workbench.md) (Mesh လုပ်ငန်းခွင်) ဖြင့် ပြုလုပ်သောကြောင့် ရလဒ်မှာ သုံးထောင့်ပြားပြောင်းထားသော မက်ရှ် (triangulated mesh) ဖြစ်ပါသည်။
 
  
 ```python
@@ -32,11 +32,11 @@ for i in range(mesh.countSegments()):
 mesh.write(Filename="new_example.obj", Material=face_colors, Format="obj")
 ```
 
-## More information 
+## ပိုမိုသိရှိရန် 
 
 -   [Convert STEP to Wavefront OBJ with colors of faces](https://forum.freecadweb.org/viewtopic.php?f=8&t=37452)
 
-## Tutorials
+## သင်ခန်းစာများ
 
 -   [Import from STL or OBJ](Import_from_STL_or_OBJ.md)
 -   [Export to STL or OBJ](Export_to_STL_or_OBJ.md)

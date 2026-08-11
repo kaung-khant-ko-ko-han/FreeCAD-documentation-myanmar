@@ -6,110 +6,108 @@
    Shortcut: **S** **P**
    Version: 0.14
    SeeAlso: 
----
+---# Arch Space
 
-# Arch Space
+## ဖော်ပြချက်
 
-## Description
-
-The **Arch Space** tool allows you to define an empty volume, either by basing it on a solid shape, or by defining its boundaries, or a mix of both. If it is based solely on boundaries, the volume is calculated by starting from the bounding box of all the given boundaries, and subtracting the spaces behind each boundary. The Space object always defines a solid volume. The floor area of a space object, calculated by intersecting a horizontal plane at the center of mass of the space volume, can also be displayed.
+**Arch Space** ကိရိယာက သင်အား အာမခံထားသော ဗಾಲျံ (empty volume) ကို သတ်မှတ်နိုင်စေသည်၊ ၎င်းကို အထူအပုံသဏ္ဍာန်တစ်ခုအား အခြေခံ၍ သတ်မှတ်နိုင်သည်၊ သို့မဟုတ် ၎င်း၏ နယ်နိမိတ်များအား သတ်မှတ်၍ သတ်မှတ်နိုင်သည်၊ သို့မဟုတ် တို့နှစ်မျိုးပေါင်းစပ်၍လည်း ပြုလုပ်နိုင်သည်။ နယ်နိမိတ်များသာ အခြေခံထားလျှင် အထူးသဖြင့် သတ်မှတ်ထားသော နယ်နိမိတ်များအားလုံး၏ bounding box (ကန့်သတ်ဘောက်) မှ စတင်၍ ဧရိယာကို တွက်ချက်ကာ နယ်နိမိတ်တစ်ခုချင်းစီ၏ နောက်ဖက်ရှိ အာကာသများကို ဖြုတ်ပစ်ခြင်းဖြင့် ဗောလက်မြောက်အတိုင်း တွက်ချက်ထားသည်။ Space object သည် အမြတ်မဲ့ မဟုတ်ဘဲ အမြောက်အကျသော အထူဗောလက် (solid volume) ကို အမြဲ သတ်မှတ်ပေးသည်။ စပေ့စ်ရည်၏ ကြမ်းပြင်ဧရိယာ (floor area) ကိုလည်း တွက်ချက်နိုင်ပြီး၊ ၎င်းသည် စပေ့စ်ဗောလက်၏ စင်တာအလေးချိန်(center of mass) တွင် horizontal plane တစ်ခုနှင့် ကိစ္စဖြတ်၍ ပြသနိုင်သည်။
 
  <img alt="" src=images/Arch_Space_example.jpg  style="width:640px;"> 
 
 
 
-*Space object created from an existing solid object, then two wall faces are added as boundaries.*
+*Space object ကို ရှိပြီးသား solid object မှ ဖန်တီးပြီးနောက်၊ နံရံ ပုံမျက်နှာပြင် နှစ်ခုကို နယ်နိမိတ်အဖြစ် ထည့်သွင်းထားသည်။*
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Select an existing solid object, or faces on boundary objects.
-2.  Invoke the command using several methods:
-    -   Pressing the **<img src="images/Arch_Space.svg" width=16px> [Space](Arch_Space.md)** button in the toolbar.
-    -   Using the **S** then **P** keyboard keys
-    -   Using the **3D/BIM → Space** entry from the top menu
+1.  ရှိပြီးသား အထူအစိတ်အပိုင်း (solid object) တစ်ခုကို သို့မဟုတ် နယ်နိမိတ် အရာများပေါ်ရှိ မျက်နှာပြင်များကို ရွေးချယ်ပါ။
+2.  အောက်ပါ နည်းလမ်းများဖြင့် ကိရိယာကို ခေါ်ပါ။
+    -   ကိရိယာတန်း (Toolbar) တွင် **<img src="images/Arch_Space.svg" width=16px> [Space](Arch_Space.md)** ခလုတ်ကို နှိပ်ခြင်း။
+    -   ကီးဘုတ်မှ **S** အရင်နှိပ်ပြီး **P** ကို နှိပ်ခြင်း
+    -   ထိပ်ဆုံး မီနူးမှ **3D/BIM → Space** ကို အသုံးပြုခြင်း
 
-### Limitations
+### ကန့်သတ်ချက်များ
 
--   The boundaries properties is currently not editable via GUI.
--   See the [forum announcement](http://forum.freecadweb.org/viewtopic.php?f=9&t=4275).
+-   ဤအချိန်တွင် boundaries properties ကို GUI မှတဆင့် တည်းဖြတ်၍ မရနိုင်ပါ။
+-   သတင်းအချက်အလက်များအတွက် [forum announcement](http://forum.freecadweb.org/viewtopic.php?f=9&t=4275) ကို ကြည့်ပါ။
 
-## Properties
+## မှတ်ပုံတင်ပစ္စည်းများ (Properties)
 
--    **Base**: The base object, if any (must be a solid)
+-    **Base**: အခြေခံ အရာ (Base) — ရှိပါက အဆိုပါ အရာသည် အထူ (solid) ဖြစ်ရမည်။
 
--    **Boundaries**: A list of optional boundary elements
+-    **Boundaries**: မဖြစ်မနေနဲ့ မျှော်လင့်ထားနိုင်သော နယ်နိမိတ် အတိုင်းအတာများ (Boundaries) 的 စာရင်း
 
--    **Area**: The computed floor area of this space
+-    **Area**: ဤနေရာ (Space) ၏ တွက်ချက်ထားသော ကြမ်းပြင်ဧရိယာ (floor area)
 
--    **FinishFloor**: The finishing of the floor of this space
+-    **FinishFloor**: ဤနေရာ၏ ကြမ်းပြင် ပျော့ပျောင်းအလှဆင်ခြင်း (floor finishing)
 
--    **FinishWalls**: The finishing of the walls of this space
+-    **FinishWalls**: နံရံများ၏ အလှဆင်မှု (wall finishing)
 
--    **FinishCeiling**: The finishing of the ceiling of this space
+-    **FinishCeiling**: အခေါက်/မလိုက် (ceiling) ၏ အလှဆင်မှု
 
--    **Group**: Objects that are included inside this space, such as furniture
+-    **Group**: အဆိုပါနေရာအတွင်း ပါဝင်သော အရာများ (ဥပမာ ဖာနီချာ) — အုပ်စု
 
--    **SpaceType**: The type of this space
+-    **SpaceType**: ဤနေရာ၏ အမျိုးအစား
 
--    **FloorThickness**: The thickness of the floor finish
+-    **FloorThickness**: ကြမ်းပြင် အလျားနက်ပြင် (thickness)
 
--    **NumberOfPeople**: The number of people who typically occupy this space
+-    **NumberOfPeople**: ယေဘုယျအားဖြင့် ဤနေရာတွင် တည်ရှိသော လူဦးရေ
 
--    **LightingPower**: The electric power needed to light this space in Watts
+-    **LightingPower**: ဤနေရာအား မီးအလင်းအဖြစ် လျှပ်စစ်စွမ်းအားလိုအပ်ချက် (Watts)
 
--    **EquipmentPower**: The electric power needed by the equipment of this space in Watts
+-    **EquipmentPower**: ဤနေရာ၏ ကိရိယာများကလိုအပ်သော လျှပ်စစ်စွမ်းအား (Watts)
 
--    **AutoPower**: If True, Equipment Power will be automatically filled by the equipment included in this space
+-    **AutoPower**: True ဖြစ်လျှင်၊ EquipmentPower ကို ဤနေရာတွင် ပါဝင်သော ကိရိယာများအလိုအလျောက် ဖြည့်စွက်ပေးမည်
 
--    **Conditioning**: The type of air conditioning of this space
+-    **Conditioning**: ဤနေရာ၏ လေလှုပ်ရှားမှု/အေးဂျင်းအမျိုးအစား (air conditioning type)
 
--    **Internal**: Specifies if this space is internal or external
+-    **Internal**: ဤနေရာသည် အတွင်းပိုင်း (internal) သို့မဟုတ် ပြင်ပ (external) ဖြစ်ကြောင်း သတ်မှတ်ခြင်း
 
--    **Text**: The text to show. Use \$area, \$label, \$tag, \$floor, \$walls, \$ceiling to insert the respective data
+-    **Text**: ပြသရန် စာသား။ ဆက်စပ်ဒေတာထည့်ရန် \$area, \$label, \$tag, \$floor, \$walls, \$ceiling များကို အသုံးပြုနိုင်သည်
 
--    **FontName**: The name of the font
+-    **FontName**: အသုံးပြုမည့် ဖောင့်အမည်
 
--    **TextColor**: The color of the text
+-    **TextColor**: စာသား၏ အရောင်
 
--    **FontSize**: The size of the text
+-    **FontSize**: ဖောင့်၏ အရွယ်အစား
 
--    **FirstLine**: The size of the first line of text (multiplies the font size. 1 = same size, 2 = double size, etc..)
+-    **FirstLine**: စာကြောင်းပထမတန်း၏ အရွယ်အစား (ဖောင့်အရွယ်အစားကို များထပ်ပိုင်း လုပ်သည်။ 1 = တူညီအရွယ်၊ 2 = နှစ်ပိုင်း အရွယ် စသည်ဖြင့်)
 
--    **LineSpacing**: The space between the lines of text
+-    **LineSpacing**: စာကြောင်းများအကြား အကွာအဝေး
 
--    **TextPosition**: The position of the text. Leave (0,0,0) for automatic position
+-    **TextPosition**: စာသား၏ တည်နေရာ။ အလိုအလျောက် တည်နေရာအတွက် (0,0,0) ထားပါ
 
--    **TextAlign**: The justification of the text
+-    **TextAlign**: စာသား၏ ညှိနှိုင်းမှု (justification)
 
--    **Decimals**: The number of decimals to use for calculated texts
+-    **Decimals**: တွက်ချက်ထားသော စာသားများတွင် အသုံးပြုမည့် ဒသမအရေအတွက်
 
--    **ShowUnit**: Show the unit suffix or not
+-    **ShowUnit**: တိုင်းတာယူနစ်နောက်ဆက် (unit suffix) ကို ပြသမည်/မပြသမည်
 
-## Options
+## ရွေးချယ်စရာများ (Options)
 
--   To create zones that group several spaces, use an [Arch BuildingPart](Arch_BuildingPart.md) and set its IFC type to \"Spatial Zone\".
--   The Space object has the same display modes as other Arch and Part objects, with one more, called **Footprint**, that displays only the bottom face of the space.
+-   အများသော နေရာများ (spaces) ကို အုပ်စုဖွဲ့သည့်ဇုန်များ (zones) ဖန်တီးရန် [Arch BuildingPart](Arch_BuildingPart.md) ကို အသုံးပြု၍ ၎င်း၏ IFC အမျိုးအစားကို "Spatial Zone" သို့ သတ်မှတ်ပါ။
+-   Space object သည် အခြား Arch နှင့် Part အရာများကဲ့သို့ မူလ ပြသမှုမုဒ်များ (display modes) ကို အသုံးပြုနိုင်သည်။ ထို့အပြင် **Footprint** ဟု အမည်ပေးထားသည့် ထို့ပေါ်တစ်ခုရှိ၍ ၎င်းက စပေ့စ်၏ အောက်ခြေ မျက်နှာပြင်ကိုသာ ပြသပေးသည်။
 
-## Scripting
+## စာရင်းဇယား (Scripting)
 
 
 **See also:**
 
 [Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
 
-The Space tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+Space ကိရိယာကို [macros](Macros.md) များတွင် သို့မဟုတ် [Python](Python.md) console မှ အောက်ပါ function ကို အသုံးပြု၍ ဖန်တီးနိုင်သည်။
 
  
 ```python
 Space = makeSpace(objects=None, baseobj=None, name="Space")
 ```
 
--   Creates a `Space` object from the given `objects` or `baseobj`, which can be
-    -   one document object, in which case it becomes the base shape of the Space object, or
-    -   a list of selection objects as returned by `FreeCADGui.Selection.getSelectionEx()`, or
-    -   a list of tuples `(object, subobjectname)`
+-   ပေးထားသော `objects` သို့မဟုတ် `baseobj` မှ `Space` အရာကို ဖန်တီးပေးသည်၊ ၎င်းသည် ဖြစ်နိုင်သော အမျိုးအစားများမှာ
+    -   တစ်ခုသော document object ဖြစ်၍ အဆိုပါ object သည် Space အရာ၏ base shape ဖြစ်သွားသည်၊ သို့မဟုတ်
+    -   `FreeCADGui.Selection.getSelectionEx()` မှ ပြန်လာသော selection objects များ၏ စာရင်းတစ်ခု၊ သို့မဟုတ်
+    -   `(object, subobjectname)` တွဲဖက် tuple များ၏ စာရင်းတစ်ခု
 
-Example:
+ဥပမာ:
 
  
 ```python
@@ -125,7 +123,7 @@ Space.ViewObject.LineWidth = 2
 FreeCAD.ActiveDocument.recompute()
 ```
 
-After a space object is created, selected faces can be added to it with the following code:
+Space object တစ်ခု ဖန်တီးပြီးနောက်၊ ရွေးချယ်ထားသော မျက်နှာပြင်များကို အောက်ပါ ကုဒ်ဖြင့် ထည့်သွင်းနိုင်သည်။
 
  
 ```python
@@ -141,7 +139,7 @@ selection = FreeCADGui.Selection.getSelectionEx()
 Arch.addSpaceBoundaries(Space, selection)
 ```
 
-Boundaries can also be removed, again by selecting the indicated faces:
+နယ်နိမိတ်များကို ဖယ်ရှားချင်ပါကလည်း၊ ထပ်မံ၍ ဖော်ပြထားသည့် မျက်နှာပြင်များကို ရွေးချယ်ပြီး အောက်ပါကဲ့သို့ ပြုလုပ်နိုင်သည်။
 
  
 ```python

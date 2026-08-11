@@ -4,47 +4,44 @@
    MenuLocation: Annotation , Axis System
    Workbenches: BIM_Workbench
    SeeAlso: Arch_Axis, Arch_Grid
----
+---# Arch AxisSystem
 
-# Arch AxisSystem
+## ဖော်ပြချက်
 
-## Description
+[AxisSystem](Arch_AxisSystem.md) ကိရိယာသည် သင်အား အခန်းနှစ်ခု သို့မဟုတ် သုံးခုရှိသော [Arch Axis](Arch_Axis.md) အရာဝတ္ထုများကိုပေါင်းစည်းနိုင်စေသည်။
 
-The [AxisSystem](Arch_AxisSystem.md) tool allows you to combine two or three [Arch Axis](Arch_Axis.md) objects.
-
-This is useful to define the intersection points between the different axes. Arch objects can then use this system to duplicate their shape on the different intersection points.
+ဤကိရိယာကို အကွာအဝေးထားသော အချက်များ (axes) များကြားရှိ အဆုံခုံများ (intersection points) ကို သတ်မှတ်ရန် အသုံးပြုနိုင်သည်။ ၎င်းစနစ်ကို အသုံးပြု၍ Arch အရာဝတ္ထုများသည် ၎င်းတို့၏ ရုပ်ထွက်ကို အဆုံခုံစဉ်များပေါ်တွင် မိတ္တူတူ ဖန်တီးနိုင်သည်။
 
  <img alt="" src=images/Arch_AxisSystem_example.jpg  style="width:600px;">  
-*Three [Arch Axis](Arch_Axis.md) objects combined into one [Arch AxisSystem](Arch_AxisSystem.md). An [Arch Structure](Arch_Structure.md) object uses this system as its **Axis* property, to have its shape duplicated at each intersection point.**
+*Three [Arch Axis](Arch_Axis.md) objects combined into one [Arch AxisSystem](Arch_AxisSystem.md). An [Arch Structure](Arch_Structure.md) object uses this system as its **Axis* property, to have its shape duplicated at each intersection point.*
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Optionally, select the [Arch Axis](Arch_Axis.md) objects you wish to include in this system.
-2.  Press the **<img src="images/Arch_AxisSystem.svg" width=16px> [Axis System](Arch_AxisSystem.md)** button.
-3.  Right-click the newly created axes system object in the tree view to add/edit the [Arch Axis](Arch_Axis.md) objects included in this system.
-4.  Select any existing [Arch Axis](Arch_Axis.md) and press **<img src="images/Arch_Add.svg" width=16px> [Add](Arch_Add.md)** or **<img src="images/Arch_Remove.svg" width=16px> [Remove](Arch_Remove.md)** buttons to add or remove it to/from this system.
-5.  Set the **Axis** property of any Arch object to point to this system, to have its shape duplicated to the intersection points of this system.
+1.  အလိုလိုဖြစ်စေ၊ ဒီစနစ်တွင် ထည့်လိုသော [Arch Axis](Arch_Axis.md) အရာဝတ္ထုများကို ရွေးချယ်ပါ။
+2.  **<img src="images/Arch_AxisSystem.svg" width=16px> [Axis System](Arch_AxisSystem.md)** ခလုတ်ကို နှိပ်ပါ။
+3.  သစ်လွင် ဖန်တီးထားသည့် axis system အရာဝတ္ထုကို tree view မှာ ညာခလုတ်နှိပ်၍ ဒီစနစ်တွင် ပါဝင်သော [Arch Axis](Arch_Axis.md) များကို ထည့်/ပြင်ဆင်နိုင်သည်။
+4.  ရှိပြီးသား [Arch Axis](Arch_Axis.md) တစ်ခုခုကို ရွေးပြီး **<img src="images/Arch_Add.svg" width=16px> [Add](Arch_Add.md)** များ သို့မဟုတ် **<img src="images/Arch_Remove.svg" width=16px> [Remove](Arch_Remove.md)** ခလုတ်များကို သုံး၍ ဒီစနစ်ထဲသို့ ထည့်ခြင်း သို့မဟုတ် ဖယ်ရှားခြင်း ပြုလုပ်ပါ။
+5.  Arch အရာဝတ္ထုများ၏ **Axis** property ကို ဒီစနစ်ကို ဆက်စပ်ရန် သတ်မှတ်ပါ၊ ၎င်းအားဖြင့် ၎င်းတို့၏ ရုပ်ထွက်ကို ဒီစနစ်၏ အဆုံခုံစポイントများပေါ်တွင် မိတ္တူဖန်တီးမည်ဖြစ်သည်။
 
-## Options
+## ရွေးချယ်စရာများ
 
--   A same [Arch Axis](Arch_Axis.md) object can be part of more than one system
--   Any shape-based object can also be used as the **Axis** property of Arch objects. In this case, the object shape will be duplicated along the vertices of the Axis object
+-   အတူတူသော [Arch Axis](Arch_Axis.md) အရာဝတ္ထုတစ်ခုသည် စနစ်တစ်ခုထက်ပိုသော စနစ်များတွင်ပါဝင်နိုင်သည်။
+-   ဧကရာဇ်ပေါ်အခြေခံထားသော ရုပ်ပိုင်းတစ်ခုခုကိုလည်း Arch အရာဝတ္ထုများ၏ **Axis** property အဖြစ် အသုံးပြုနိုင်သည်။ ဤအခြေအနေတွင် အဆိုပါ အရာဝတ္ထု၏ shape ကို Axis အရာဝတ္ထု၏ vertices ပေါ်တွင် မိတ္တူဖန်တီးပေးမည်ဖြစ်သည်။
 
-## Scripting
+## စကရစ်ရေးခြင်း (Scripting)
 
+**ရှာဖွေရန်လည်းပါ:**
 
-**See also:**
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) တွင် ကြည့်ရှုပါ။
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
-
-The AxisSystem tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:  
+AxisSystem ကိရိယာကို [macros](Macros.md) များတွင် သို့မဟုတ် [Python](Python.md) console မှ အသုံးပြုနိုင်ပြီး အောက်ပါ function ကို အသုံးပြုပါ:  
 ```python
 AxisSystem = makeAxisSystem(axes, name="Axis System")
 ```
 
--   Creates an `AxisSystem` object from the given `axes`, which is a single [Arch Axis](Arch_Axis.md), or a list of them.
+-   ပေးအပ်ထားသည့် `axes` မှ အ `AxisSystem` အရာဝတ္ထုကို ဖန်တီးပါသည်။ `axes` သည် တစ်ခုသော [Arch Axis](Arch_Axis.md) တစ်ခုဖြစ်နိုင်သည်၊ သို့မဟုတ် ၎င်းတို့၏ စာရင်းတစ်ခုဖြစ်နိုင်သည်။
 
-Example:  
+ဥပမာ:  
 ```python
 import Draft, Arch
 
@@ -74,8 +71,6 @@ Draft.move(Structure, FreeCAD.Vector(-100, 0, 0))
 Structure.Axis = AxisSystem
 FreeCAD.ActiveDocument.recompute()
 ```
-
-
 
 ---
 ⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch AxisSystem

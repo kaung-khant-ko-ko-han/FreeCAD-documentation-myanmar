@@ -4,39 +4,35 @@
    MenuLocation: Modify , Add component
    Workbenches: BIM_Workbench
    SeeAlso: Arch_Remove
----
+---# Arch Add
 
-# Arch Add
+## ဖော်ပြချက်
 
-## Description
+Add ကိရိယာဖြင့် အောက်ပါ အမျိုးအစား ၄ မျိုးသော လုပ်ဆောင်ချက်များ ပြုလုပ်နိုင်သည်။
 
-The Add tool allows you to do 4 kinds of operations:
+-   [ပုံစံ](Part_Workbench.md)-အခြေခံ အရာဝတ္ထုများကို Arch အစိတ်အပိုင်းတွင် စုပေါင်းထည့်ရန်၊ ဥပမာ **<img src="images/Arch_Wall.svg" width=16px> [နံရံ (wall)](Arch_Wall.md)** သို့မဟုတ် **<img src="images/Arch_Structure.svg" width=16px> [ဖွဲ့စည်းမှု (structure)](Arch_Structure.md)** ကဲ့သို့သော အရာဝတ္ထုများ။ ၎င်းတို့သည် Arch အစိတ်အပိုင်း၏ အစိတ်အပိုင်းတစ်စိတ်တစ်ပိုင်းဖြစ်လာပြီး အကျယ်၊ အမြင့်ကဲ့သို့ အခြေခံပိုင်ဆိုင်မှုများကို ထိန်းသိမ်းထား၍ ပုံသဏ္ဌာန်ကို ပြင်ဆင်နိုင်သည်။
+-   Arch အစိတ်အပိုင်းများကို အုပ်စုအခြေပြု arch အရာဝတ္ထုတစ်ခုတွင် ထည့်ရန်၊ ဥပမာ **<img src="images/Arch_Wall.svg" width=16px> [Arch နံရံများ (Arch Walls)](Arch_Wall.md)** သို့မဟုတ် **<img src="images/Arch_Structure.svg" width=16px> [Arch ဖွဲ့စည်းမှုများ (Arch Structures)](Arch_Structure.md)** ကို **<img src="images/Arch_Floor.svg" width=16px> [Arch မနက်ရပ် (Arch Floors)](Arch_Floor.md)** ကဲ့သို့သော အုပ်စုအခြေပြု အရာဝတ္ထုတစ်ခုထဲသို့ ထည့်ထားနိုင်သည်။
+-   **<img src="images/Arch_Axis.svg" width=16px> [အချိုးအဆ (Axis systems)](Arch_Axis.md)** များကို **<img src="images/Arch_Structure.svg" width=16px> [ဖွဲ့စည်းရေး အရာဝတ္ထုများ (structural objects)](Arch_Structure.md)** ထဲသို့ ထည့်ရန်။
+-   အရာဝတ္ထုများကို **<img src="images/Arch_SectionPlane.svg" width=16px> [ဘုံဖြတ်ပေများ (section planes)](Arch_SectionPlane.md)** ထဲသို့ ထည့်နိုင်သည်။
 
--   Add [shape](Part_Workbench.md)-based objects to an Arch component, such as a **<img src="images/Arch_Wall.svg" width=16px> [wall](Arch_Wall.md)** or **<img src="images/Arch_Structure.svg" width=16px> [structure](Arch_Structure.md)**. These objects make then part of the Arch component, and allow you to modify its shape but keeping its base properties such as width and height
--   Add Arch components, such as a **<img src="images/Arch_Wall.svg" width=16px> [Arch Walls](Arch_Wall.md)** or **<img src="images/Arch_Structure.svg" width=16px> [Arch Structures](Arch_Structure.md)**, to a group-based arch object such as **<img src="images/Arch_Floor.svg" width=16px> [Arch Floors](Arch_Floor.md)**.
--   Add **<img src="images/Arch_Axis.svg" width=16px> [Axis systems](Arch_Axis.md)
-** to **<img src="images/Arch_Structure.svg" width=16px> [structural objects](Arch_Structure.md)**
--   Add objects to **<img src="images/Arch_SectionPlane.svg" width=16px> [section planes](Arch_SectionPlane.md)
-**
-
-The counterpart of this tool is the **<img src="images/Arch_Remove.svg" width=16px> [Arch Remove](Arch_Remove.md)** tool.
+ဤကိရိယာ၏ ကိုယ်စားလှယ်ကိရိယာမှာ **<img src="images/Arch_Remove.svg" width=16px> [Arch ဖယ်ရှားခြင်း (Arch Remove)](Arch_Remove.md)** ဖြစ်သည်။
 
  <img alt="" src=images/Arch_Add_example.jpg  style="width:640px;">  
-*A box added to a wall as a component.*
+*နံရံတစ်ရှည်၌ အစိတ်အပိုင်းတစ်ခုအဖြစ် ပြားကွန်တိနာ (box) တစ်ခု ထည့်သွင်းထားသည့် ဥပမာ။*
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Select the objects to be added together. The last object selected will be the host Arch object.
-2.  Press the **<img src="images/Arch_Add.svg" width=16px> [Add component](Arch_Add.md)** button, or use **Modify → <img src="images/Arch_Add.svg" width=16px> Add component** from the top menu.
+1.  စုပေါင်းထည့်လိုသော အရာဝတ္ထုများကို ရွေးချယ်ပါ။ နောက်ဆုံးရွေးထားသော အရာဝတ္ထုသည် အိမ်ရှင် (host) Arch အရာဝတ္ထု ဖြစ်သည်။
+2.  **<img src="images/Arch_Add.svg" width=16px> [Add component](Arch_Add.md)** ခလုတ်ကို နှိပ်ပါ၊ ဒါမှမဟုတ် ထိပ်တန်းမီနူးမှ **Modify → <img src="images/Arch_Add.svg" width=16px> Add component** ကို အသုံးပြုပါ။
 
 ## Scripting
 
 
-**See also:**
+**ဆက်စပ် ဖတ်ရှုရန်:**
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
+[Arch API](Arch_API.md) နှင့် [ဖရီးကက် စကရစ်ပြုလုပ်ခြင်း အခြေခံများ (FreeCAD Scripting Basics)](FreeCAD_Scripting_Basics.md) ကို ကြည့်ပါ။
 
-The Add tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function: 
+Add ကိရိယာကို [macros](Macros.md) များတွင် သို့မဟုတ် [Python](Python.md) ကွန်ဆိုးမှ အောက်ပါ function ကို သုံး၍ အသုံးပြုနိုင်သည်။ 
 
 :   
     
@@ -48,10 +44,10 @@ The Add tool can be used in [macros](Macros.md) and from the [Python](Python.md)
 
 
 
-:   The above code snippet adds the given objects in `objectsList` to the given `host` object.
-:   **Note:** `objectsList` can be a single object or a list of objects.
+:   အထက်ပါ ကုဒ်ပိုင်းကို သုံးပါက `objectsList` တွင် ဖော်ပြထားသော အရာဝတ္ထုများကို ပေးထားသော `host` အရာဝတ္ထုထဲသို့ ထည့်သွင်းပါသည်။
+:   မှတ်ချက်။ `objectsList` သည် တစ်ခုတည်းသော အရာဝတ္ထုတစ်ခု ဖြစ်နိုင်သလို အရာဝတ္ထုများ စာရင်းတစ်ခု ဖြစ်နိုင်ပါသည်။
 
-Example:
+ဥပမာ:
 
  
 ```python

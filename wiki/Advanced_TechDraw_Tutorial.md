@@ -4,86 +4,78 @@
    Level: Experienced User
    Author: domad
    FCVersion: 0.19.23300 or higher
----
+---# အဆင့်မြင့် TechDraw လေ့ကျင့်မှု
 
-# Advanced TechDraw Tutorial
+## ရည်ရွယ်ချက် (အကျဉ်းချုံး)
 
+TechDraw ရှိ view များတွင် သို့မဟုတ် တစ်ခုလုံး \"cosmetic\" ဆွဲချရေးများတွင် အမှန်တကျ တိကျမှုဖြင့် မျက်နှာပြင်ပေါ်တွင် အမှတ်များ၊ မျက်နှာကြောင်းများ၊ စက်လှည့်များ၊ အဝိုင်းများ၊ အပိုင်းကွက်များ စသည်တို့ကို ဖန်တီး၍ အဲဒီ view တွင် အသုံးပြုထားသည့် dimension tool များဖြင့် တိုင်းတာနိုင်သော အနက်ရှင်းပြီး အသေးစိတ်အပြည့်နဲ့ နည်းပညာဆိုင်ရာ ဆွဲကြမ်းများကို ထုတ်လုပ်နိုင်ရန်ဖြစ်သည်။
 
+## နိဒါန်း
 
+ဤလေ့ကျင့်မှုစာတမ်းသည် အတွေ့အကြုံရှိ အသုံးပြုသူများအား <img alt="" src=images/Workbench_TechDraw.svg  style="width:24px;"> [TechDraw လုပ်ငန်းခွင် (TechDraw Workbench)](TechDraw_Workbench.md) တွင် မရှိသေးသော လုပ်ဆောင်ချက်များအား တိုးချဲ့နိုင်စေရန် Draft၊ Sketcher စသည့် အခြားလုပ်ငန်းခွင်များမှ ရှိပြီးသား ကိရိယာများနှင့် နည်းလမ်းများကို အဆင့်မြင့်အသုံးပြုနည်းများဖြင့် ပြသပြောကြားထားသည်။ ဤလေ့ကျင့်မှုသည် TechDraw လုပ်ငန်းခွင်အတွက် ကုန်လုံးစုံ ညွှန်ကြားချက်တစ်ရပ် မဟုတ်၍ ကိရိယာများနှင့် အင်အားများအများအပြားကို မဖော်ပြထားပါ။ ထိုသို့ဖြစ်ပါက TechDraw ဖြင့် နေ့စဉ်တွေ့ကြုံရသော သေးငယ်သော အခက်အခဲများကို ကျော်ဖြတ်နိုင်စေရန် အကူအညီပေးရန် ရည်ရွယ်သည်။ ဤလေ့ကျင့်မှုတွင် အဆင့်မြင့်အသုံးပြုသူများကို [Basic Part Design Tutorial](Basic_Part_Design_Tutorial.md) မှ အစိတ်အပိုင်း၏ စိန်ခေါ်မှုမြင့် နည်းပညာဆိုင်ရာ ဆွဲကြမ်းများကို ထုတ်လုပ်ရန် လိုအပ်သော အဆင့်ဆင့် လမ်းစဉ်များအား လမ်းပြသွားမည်ဖြစ်ပြီး နောက်ပါ ကိရိယာများကို အသုံးပြုပါသည်။
 
- 
+1.  <img alt="" src=images/Workbench_Draft.svg  style="width:24px;"> [Draft လုပ်ငန်းခွင် (Draft Workbench)](Draft_Workbench.md) — ကဲလိုင်းများ၊ ပိုလီလိုင်းများ၊ ဝတ်လည်အဝိုင်းများ (circumferences), အပိုင်းကွက်များ (arcs), spline/Bezier များ စသည့် ကိရိယာများနှင့် အထူးသဖြင့် snaps များကို အသုံးပြုပြီး အချက်အလက်တိကျစွာ \"cosmetic points\" များကို အဘယ်သို့ပင် ရိုက်ထည့်၍ TechDraw တွင် အတိုင်းအတာပြိုင်နိုင်စေသည်။
+2.  <img alt="" src=images/Workbench_Sketcher.svg  style="width:24px;"> [ပုံကြမ်း/စကစ် လုပ်ငန်းခွင် (Sketcher Workbench)](Sketcher_Workbench.md) ကိုလည်းအောက်ပါအတိုင်း အသုံးပြုနိုင်သည်။  
+    -  2D တွင် TechDraw အတွက် မူလပုံကြမ်း (base-sketchTD) များကို မျိုးဆက်ထုတ်ကာ (ဥပမာ: စနစ်ပုံစံ၊ အထပ်အစီအစဉ်များ၊ မျက်နှာပြင်စီမံကိန်းများ၊ ယန္တရား ဆီသို့မဟုတ် ကုန်ကြမ်းပုံသဏ္ဍာန်မြင်ကွင်းများ) ဖန်တီးခြင်း၊ သို့မဟုတ်  
+    -  3D မော်ဒယ်များကို ဖန်တီးခဲ့သည့် စကစ်များကို တိုက်ရိုက် အသုံးပြုခြင်း၊ သို့မဟုတ်  
+    -  Draft မှ ရရှိသော facebinder (မြင်ရသော မျက်နှာများမှ ဖန်တီးထားသော) ကို စကစ်သို့ ပြောင်းလဲခြင်းဖြင့် အသုံးပြုနိုင်သည်။
+3.  သီးသန့် ပြုပြင်ထားသော မှတ်စုတခု (cuts on different planes or axes) များကို TechDraw တွင် ပြသရန် (မူလ 3D အရာဝတ္ထု၏ ကော်ပီတစ်ခုကို အသုံးပြုရန် အကြံပြုသည်) <img alt="" src=images/Workfeature_workbench_icon.svg  style="width:24px;"> [Workfeature လုပ်ငန်းခွင် (Workfeature Workbench)](Workfeature_Workbench.md) မှ လေ့ကျင့်ပြီး အခြားအလျားစဉ်များအပေါ် ဖန်တီးထားသည့် ပလိန်များအား အသုံးပြုကာ 3D အရာဝတ္ထုကို <img alt="" src=images/Part_SliceApart.svg  style="width:24px;"> [Part SliceApart](Part_SliceApart.md) ဖြင့် ကပ်ပိုင်းခြား၍ မျက်နှာများကို ဖန်တီးနိုင်ပြီး ထိုမျက်နှာများကို <img alt="" src=images/Draft_Draft2Sketch.svg  style="width:24px;"> [Draft Draft2Sketch](Draft_Draft2Sketch.md) ဖြင့် စကစ်အဖြစ် ပြောင်း၍ ထို့နောက် ပုံကြမ်း/စကစ် လုပ်ငန်းခွင်တွင် တည်းဖြတ်ကာ TechDraw အတွက် သင့်လျော်အောင် ပြင်ဆင်နိုင်သည်။ [Workfeature လုပ်ငန်းခွင် (Workfeature Workbench)](Workfeature_Workbench.md) (နှင့် [Macro WorkFeatures](Macro_WorkFeatures.md)) တွင် သုံးစွဲရလွယ်ကူသော ဖန်တီးရေးစနစ်များစွာ ပါရှိပြီး ထူးခြားသော အကြောင်းအရာမှာ သုံးထောင့် သို့မဟုတ် သုံးချက်ကို ရွေးချယ်ခြင်းဖြင့် အရိပ်မပင်းလှည့်မည့် (theoretically အထူးမရှိသော) ပလိန်များကို အလွယ်တကူ ဖန်တီးနိုင်သည်။ (သတိပေးချက် - သုံးချက်မတန်းမတံမျိုးဖြင့် တစ်ခုတည်းသော ပလိန်တစ်ခုသာ သိုက်ကျသည် ဆိုသော ဂျီယိုမက်ထက် အကြောင်းအရာသည် အတည်ပြုထားသည်) ၎င်းသည် WorkFeatureDev ကိရိယာ၏ တိကျမှုရှိသော ပလိန် ဖန်တီးနိုင်စွမ်းကို မကွဲမစိတ် အထောက်အထား ပေးသည်။
 
+(*ဤနည်းလမ်းကို AutoCAD ၏ Slice command [1](https://knowledge.autodesk.com/support/autocad/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/AutoCAD-Core/files/GUID-27593C5E-4B89-41F2-872B-927D69517CBF-htm.html) နှင့် နှိုင်းယှဉ်နိုင်ပါသည်။ AutoCAD တွင်လည်း သုံးချက်အား အခြေခံ၍ ကတ်ရှင်းပလိန်ကို သတ်မှတ်သည်။*)
 
+မှတ်ချက် - ဤပလိန်များကို <img alt="" src=images/Part_Fuse.svg  style="width:24px;"> [Part Union](Part_Fuse.md) (Part workbench) ၏ Boolean လုပ်ဆောင်ချက်ဖြင့် အဆက်မပြတ်/ခုနှစ်ကြောင်းတော်တော်တူညီစေရန် ထပ်ထည့်၍ တွဲဖက်နိုင်သည်။ ထိုပလိန်များကို သင့်ရည်ရွယ်ချက်အတိုင်း တင်ဆင်ထားခြင်းဖြင့် အထက်ပါ <img alt="" src=images/Part_SliceApart.svg  style="width:24px;"> [Part SliceApart](Part_SliceApart.md) ကို “ချောက်ဆီးကတ်တား” အဖြစ် သုံးကာ 3D အရာဝတ္ထုကို ဘာသာရပ်လိုက် အပိုင်းအခြားများ အဖြစ် ဖြတ်ခွဲနိုင်မည်ဖြစ်သည်။
 
-## Purpose in Brief 
+## စတင်ရန်မတိုင်မီ
 
-Create points, lines, circles, arcs, etc. in TechDraw views and/ or entire \"cosmetic\" drawings with absolute precision, suitable for the dimensioning tools that the workbench is equipped with, to generate compliant and detailed technical drawings.
+ဤဥပမာစာရွက်အတွက် အသုံးပြုထားသော လုပ်ငန်းခွင်များမှာ -
 
-## Introduction
+* <img alt="" src=images/Workbench_Part.svg  style="width:24px;"> [Part လုပ်ငန်းခွင် (Part Workbench)](Part_Workbench.md)
+* <img alt="" src=images/Workbench_Draft.svg  style="width:24px;"> [Draft လုပ်ငန်းခွင် (Draft Workbench)](Draft_Workbench.md)
+* <img alt="" src=images/Workbench_Sketcher.svg  style="width:24px;"> [ပုံကြမ်း/စကစ် လုပ်ငန်းခွင် (Sketcher Workbench)](Sketcher_Workbench.md)
+* <img alt="" src=images/Workfeature_workbench_icon.svg  style="width:24px;"> [Workfeature လုပ်ငန်းခွင် (Workfeature Workbench)](Workfeature_Workbench.md)
+* <img alt="" src=images/Workbench_TechDraw.svg  style="width:24px;"> [TechDraw လုပ်ငန်းခွင် (TechDraw Workbench)](TechDraw_Workbench.md)
 
-This tutorial introduces the experienced user to some advanced use of existing tools and techniques from other workbenches to extend actually missing functionality in <img alt="" src=images/Workbench_TechDraw.svg  style="width:24px;"> [TechDraw Workbench](TechDraw_Workbench.md). This tutorial is not a complete and comprehensive guide to the TechDraw Workbench and many of the tools and capabilities are not covered. It should contribute to overcome the difficulties that are encountered in quoting and enriching the technical drawing using TechDraw. This tutorial will take advanced users through the steps needed to produce challenging technical drawings of the part from the [Basic Part Design Tutorial](Basic_Part_Design_Tutorial.md) using drawing tools of the
+## အလုပ်တာဝန်
 
-1.  <img alt="" src=images/Workbench_Draft.svg  style="width:24px;"> [Draft Workbench](Draft_Workbench.md) (lines, polylines, circumferences, arcs, splines, beziers, etc.), in particular the snaps, to create on the object effectively precise \"cosmetic points\" that could then be used for dimensioning in TechDraw.
-2.  It is also possible to use the <img alt="" src=images/Workbench_Sketcher.svg  style="width:24px;"> [Sketcher Workbench](Sketcher_Workbench.md) as
-    -   generator of \"base-sketchTD\" (sketch bases for TechDraw) in 2D (e.g. such as system diagram, floor plans, elevations, views of mechanical or overall parts, etc.) or by
-    -   using directly the sketches that generated the 3D models, or by
-    -   converting to sketch the "facebinder" generated with Draft obtained from faces and/ or sections of the 3D models.
-3.  To obtain particular sections (cuts on different planes or axes) to be presented on the page in TechDraw (it is advised to use a copy of the original 3D object), then through the creation of planes (even on different axes) using the <img alt="" src=images/Workfeature_workbench_icon.svg  style="width:24px;"> [Workfeature Workbench](Workfeature_Workbench.md), it is possible to section the copy of the 3D object <img alt="" src=images/Part_SliceApart.svg  style="width:24px;"> [Part SliceApart](Part_SliceApart.md) to obtain the faces to be converted into sketch <img alt="" src=images/Draft_Draft2Sketch.svg  style="width:24px;"> [Draft Draft2Sketch](Draft_Draft2Sketch.md) and then through the Sketcher Workbench edit them to make them suitable to the technical drawing that we are interested in generating in TechDraw. The [Workfeature Workbench](Workfeature_Workbench.md) (and [Macro WorkFeatures](Macro_WorkFeatures.md)) are full of convenient additional functions, that allow us to easily create planes (theoretically infinite in extension and quantity) by selecting three points (vertices) *(remember that for three points passing, one and only one plane passes through three non-aligned points one and only one plane passes through three non-aligned points*) is a geometric axiom, which confirms without any ambiguity (!) the validity and importance of the WorkFeatureDev tool to create precise plans very easily.
+လုပ်ငန်းတက်လမ်းစဉ်များ:
 
-(\**This is quite comparable to AutoCAD Slice command [1](https://knowledge.autodesk.com/support/autocad/learn-explore/caas/CloudHelp/cloudhelp/2019/ENU/AutoCAD-Core/files/GUID-27593C5E-4B89-41F2-872B-927D69517CBF-htm.html) which is based on that axiom. Without pre-building any new plane, a cutting plane using three points is defined.*)
+1.  ရိုးရာ မော်ဒယ်ဆန်ဆန် အတိုင်း 3D အရာဝတ္ထု(များ) ဖန်တီးခြင်း။
+2.  သီးသန့် မူကွဲများ (copies) သို့မဟုတ် ရိုးရှင်းသော မိတ္တူများ ဖန်တီးနိုင်သောကြောင့် ၊ မျိုးစုံ ပလိန်များ သို့မဟုတ် အက်ဆစ်များပေါ်တွင် တည်နေသော အဆက်မပြတ် အပိုင်းအခွဲများကို ဖန်တီးရန် အသုံးပြုနိုင်သည်။ ၎င်းတို့ကို \"facebinder\", \"Draft to Sketch\", Shape 2D View စသည်ဖြင့် အသုံးပြုပြီး “Sketch” များကို တည်ဆောက်နိုင်ပြီး ထို့နောက် ad hoc \"cosmetic points\" သို့မဟုတ် လိုင်းများ ဖန်တီးခြင်းဖြင့် TechDraw တွင် အသုံးပြုနိုင်သည့် အခြေအနေသို့ ပြုပြင်နိုင်သည်။ ဤစကစ်များကို \"base-sketchTD\" ဟု အမည်ပေးထားသည်။
+3.  \"base-sketchTD\" များကို ပတ်သက်ရာ အလွှာများ (layers) သို့မဟုတ် ဖိုလ်ဒါအုပ်စု (grouping folder) ထဲသို့ ထည့်သွင်း/ဖန်တီးခြင်း (drag and drop လည်းအပါအဝင်)။
+4.  သင်္ကေတ(စက္ကူ)နှင့် အချိုးကျသော drawing စာမျက်နှာဖန်တီးခြင်း။
+5.  TechDraw ဖြင့် view ဖန်တီးခြင်း: အဖွဲ့အစည်း (structure) ထဲမှ base-sketchTD ပါဝင်သော layer သို့မဟုတ် grouping folder ကို ရွေးချယ်၍ \"insert view\" ခလုတ်ကို နှိပ်ပါ။ TechDraw သည် layer သို့မဟုတ် grouping folder ၏ အကြောင်းအရာအား view အတွင်းသို့ ထည့်သွင်းပေးမည်။ မှန်ကန်စွာ \"base-sketchTD\" ဖန်တီးရန်အတွက် ထို base-sketchTD သည် မော်နီတာ/မြင်ကွင်းအား ထောင့်မှန်အတိုင်း ထားရှိရမည်။ သိရှိထားရမည့်အချက်မှာ layer သို့မဟုတ် grouping-folder ထဲတွင် နောက်ပိုင်းတွင် ထည့်သွင်းသည့် အရာများ သို့မဟုတ် \"base-sketchTD\" တွင် ပြင်ဆင်မှုများကို TechDraw view တွင် အချိန်နှင့်တပြေးညီ update လုပ်ပေးမည် ဖြစ်သည်။ သင်ပြင်ဆင်မှုများကြောင့် အရင်ထည့်ထားသော dimension များ သို့မဟုတ် TechDraw ၏ view တွင် ဖန်တီးထားသော cosmetic line များကို ထိခိုက်နိုင်ကြောင်း သတိထားရန်လိုသည်။
+6.  view တွင် \"base-sketchTD\" သတ်မှတ်ပြီးပါက TechDraw ၏ သင့်တော်သော tools များဖြင့် dimension များထည့်ပါ။
 
-*Note: These planes can be joined together by overlapping/ coinciding of two edges using the Boolean feature of <img alt="" src=images/Part_Fuse.svg  style="width:24px;"> [Part Union](Part_Fuse.md).* The planes thus formed and suitably positioned (according to our provisions) will be used as **cutting blades** <img alt="" src=images/Part_SliceApart.svg  style="width:24px;"> [Part SliceApart](Part_SliceApart.md), cutting our 3D object into several parts according to the chosen planar confirmation.\'\'
+\"base-sketchTD\" ကို projection group views ထဲသို့လည်း ထည့်သွင်းနိုင်သည်။
 
-## Before You Begin 
+-   projection view ကို ရွေးချယ်ပါ -> properties tab -> Data -> "Projection" record အပိုင်း -> Source တွင် သုံးချက်ပါက ခလုတ်ကို နှိပ်၍ တိုက်ရိုက် \"base-sketchTD\" သို့မဟုတ် ၎င်းပါရှိသည့် layer ကို ထည့်ပါ။
 
-The Workbenches that are used to produce the drawings of the attached examples are:
-\* <img alt="" src=images/Workbench_Part.svg  style="width:24px;"> [Part Workbench](Part_Workbench.md)
+:   သတိပြုရန်ရှိသည်မှာ \"base-sketchTD\" သည် မော်ဒယ်/အရာဝတ္ထု၏ အမြင့်ဆုံး မျက်နှာပေါ်တွင် တင်ထားရမည်၊ မဟုတ်ပါက TechDraw တွင် ဖောက်ခွဲခြင်းခံပြီး မမြင်သာနိုင်ပါ။
 
--   <img alt="" src=images/Workbench_Draft.svg  style="width:24px;"> [Draft Workbench](Draft_Workbench.md)
--   <img alt="" src=images/Workbench_Sketcher.svg  style="width:24px;"> [Sketcher Workbench](Sketcher_Workbench.md)
--   <img alt="" src=images/Workfeature_workbench_icon.svg  style="width:24px;"> [Workfeature Workbench](Workfeature_Workbench.md)
--   <img alt="" src=images/Workbench_TechDraw.svg  style="width:24px;"> [TechDraw Workbench](TechDraw_Workbench.md)
+projection view များမှရရှိသည့် အပိုင်းဖြတ် view များတွင် ဤကိစ္စက များသောအားဖြင့် မဖြစ်နိုင်ပါ။ တိုင်းတာရန် သတ်မှတ်ချက်ရှိသော တိကျသော cosmetic points များ (ဥပမာ tangency points) ကို ဖန်တီးရန် လိုသောအခါ တွင် -
 
-## The Task 
+-   \"ပုံကြမ်း/စကစ် (Sketcher)\" တွင် construction lines များကို အသုံးပြုပြီး အဆုံးတွင် အလွန်အမင်းအသေး (infinitesimal) သေတ္တာ/အက်ဆစ်ရှိသော circle (radius = 0.00001) များ ထည့်သွင်းခြင်းဖြင့် ထိုအချက်များကို TechDraw မှ point/vertex အဖြစ် ရှာဖွေတွေ့ရှိနိုင်သည်။
+-   Draft တွင်လည်း အတူတူနည်းလမ်းဖြင့် ဖန်တီးကာ ပတ်သက်ရာ layer သို့မဟုတ် folder-grouping ထဲသို့ ထည့်သွင်းနိုင်သည်။
 
-Stages of the procedure:
+:   \"base-sketchTD\" ပြင်ဆင်ခြင်း သို့မဟုတ် Draft အရာဝတ္ထုကို layer သို့မဟုတ် grouping folder ထဲသို့ ထည့်သွင်းပြီးနောက် TechDraw သည် view ကို အလိုအလျောက် update လုပ်မည်ဖြစ်သည်။ မဖြစ်ပါက သင့်တော်သည့် command ဖြင့် လက်မောင်း update လုပ်ပါ။
 
-1.  Creation of the 3D object(s) according to the canons of traditional modeling;
-2.  Possible creation of independent or simple copies, eg. to be used for the creation of specific continuous sections positioned on multiple planes or axes, and which then through the use of the \"facebinder\", \"Draft to Sketch\", Shape 2D View, etc. functions. it will allow us to produce perfect "Sketches", then edit them to make them (by creating ad hoc "cosmetic points or lines") usable in TechDraw; to these sketches I gave the name of \"base-sketchTD\";
-3.  insertion / creation of \"base-sketchTD\" in the layers of belonging (also with \"drag and drop\");
-4.  creation of the drawing page with its template;
-5.  creation of the view with TechDraw: select the layer or the grouping folder (which contains the "base-sketchTD") from the structure, then click on the "insert view" button; TechDraw will insert the contents of the layer or grouping folder into the view. For a correct creation \"base-sketchTD\" must be perpendicular to the monitor / display view; I point out that whatever we add later in the layer or in the grouping-folder, or modifications of the "base-sketchTD", will be updated in realtime in the TechDraw view. Keep in mind that updates and / or modifications may affect the dimensions already introduced or cosmetic lines created with the specific tool of TechDraw in the view.
-6.  once the "base-sketchTD" has been defined in the view, we can move on to dimensioning with the appropriate TechDraw tools;
+section fill များ သို့မဟုတ် pattern များ ထည့်ရန်:
+မျက်နှာများပေါ်တွင် အနံ/လိုင်းများကို ဖန်တီးရာတွင် အနည်းဆုံး ကိုက်သည့် အနားနှစ်ခု သို့မဟုတ် ထက်ပိုသော အနားများဖြတ်တောက်သည့် သဘောထားကို သတိထားပါ။ TechDraw က၎င်းကို မျက်နှာကို ခွဲထုတ်သည့် အစိတ်အပိုင်းများအဖြစ် မြင့်မားစွာ သတ်မှတ်ပါမည်၊ ထို့ကြောင့် fill သို့မဟုတ် pattern က အကျယ်ဖြန့်ချိခြင်းကို တားဆီးပြီး pre-drill hole ကို သတ်မှတ်သည့် လိုင်းထိ မ၀င်နိုင်စေလိမ့်မည်။ ဤသို့ဖြစ်လျှင် အကောင်းဆုံးနည်းလမ်းမှာ construction lines များ အသုံးပြုပြီး vertex များတွင် infinitesimal radius ရှိသည့် circle များ ထည့်သွင်း၍ TechDraw မှ cosmetic points အဖြစ် မှတ်ယူစေပြီး TechDraw တွင် two-point cosmetic line ဖန်တီးခြင်းဖြင့် ထိုနောက် ချိတ်ဆက်သွားခြင်း ဖြစ်ပါသည်။
+view များတွင် ပြသထားသည့် လိုင်းများ (cosmetic များ အပါအဝင်) အားလုံးကို TechDraw ၏ "Change Appea(r)ence of selected Lines" command ဖြင့် formatting မှတစ်ဆင့် တည်းဖြတ်နိုင်သည်။
+မျိုးစုံ အလိုက် ကွဲပြားသော အက်ဆစ်များ သို့မဟုတ် ပလိန်များပေါ်တွင် သတ်မှတ်ထားသည့် ဆက်လက်နေသော အပိုင်းများကို ဖန်တီးရန်အတွက်၊ ငါသည် \"WorkFeatureDev\" လုပ်ငန်းခွင်ကို အသုံးပြုခဲ့ပြီး ၎င်းသည် သုံး vertex ရွေးချယ်ခြင်းဖြင့် ထူထဲမရှိ (thickness = 0) သို့သော် \"solid\" ပလိန်များကို ဖန်တီးနိုင်သည်။ ဤပလိန်များကို Part လုပ်ငန်းခွင်၏ Boolean လုပ်ဆောင်ချက်များဖြင့် အတူတကွ သို့မဟုတ် တလျှောက်တည်း အနားတက်အပေါက်များဖြင့် ပေါင်းစည်းနိုင်ပြီး ၎င်းတို့အား မော်ဒယ်ကို Slice apart ကော်မန်းရှိ Part workbench ၏ \"Slice apart\" ဖြင့် ဖြတ်ခွဲရာတွင် အသုံးပြုနိုင်သည်။ ဖြတ်ပြီးလက်ကျန်ရှိသော မျက်နှာများကို \"Facebinder\" ဖန်တီးမှုဖြင့် ပျော်ရွှင်စွာ အသုံးချကာ TechDraw တွင် ရည်ရွယ်သော အပိုင်းမြင်ကွင်းများ (section views) အဖြစ် ဖန်တီး၍ dimension အား ထည့်သွင်းနိုင်သည်။
+ကျွန်ုပ် ယခုထိ ပိုမိုကာကွယ်စွာ အသုံးပြုနိုင်သည့် \"trick\" (သို့မဟုတ် စနစ်) များအား လိုက်စေပြီး TechDraw အတွက် မပါဝင်သေးသော ထူးခြားသော ကိရိယာများကို အသုံးပြုပြီး အပေါင်းအသင်း အကန့်အသတ်မရှိဘဲ မူလတန်ဖိုးမြင့် နည်းပညာဆိုင်ရာ ဆွဲကြမ်းများကို ဖန်တီးနိုင်ရန် ပြုလုပ်ထားသော နည်းလမ်းများအား အသေးစိတ် ဖော်ပြခဲ့သလို ထိုနည်းလမ်းကြောင့် TechDraw လုပ်ငန်းခွင်ကို ပိုမိုထိရောက်စေပြီး လိုအပ်ချက်အမျိုးမျိုးအတွက် ကိုက်ညီစေတတ်သည်ဟု ယူဆပါသည်။ ထို့အပြင် ဤစနစ်ဖြင့် 2D ဖိုင်တစ်ခုလုံးကို ဖန်တီးကာ TechDraw ဖြင့် မှာမလိုအပ်ပဲ LibreCad သို့မဟုတ် AutoCAD LT ကဲ့သို့သော 2D CAD tool များလိုပဲ dimension တွေ ထည့်သွင်းနိုင်သည်။
 
-It is possible to insert the \"base-sketchTD\" also in the projection group views:
+ငါ၏ ရှင်းလင်းချက်(ဘာသာပြန်လိုက်ပါက) သည် \"လုပ်ဆောင်ရ အလွယ်၊ ရှင်းပြရ ခက်\" ဆိုသည့် စကားဝါအတိုင်း ရိုးရှင်းလွယ်ကူစေရန် ရည်ရွယ်ပါသည်။ Draft နှင့်/သို့မဟုတ် Sketcher ဖြင့် ဖန်တီးထားသည့် 2D ဆွဲကြမ်းများကို structure ထဲမှ ရွေးချယ်၍ TechDraw တွင် \"create a view\" command ဖြင့် တင်သွင်းခြင်းဖြင့် view များထဲသို့ ထည့်သွင်းနိုင်ခြင်းသည် အစစ်အမှန်ဖြစ်သည်။ သို့သော် ကျွန်ုပ်သည် workflow အနည်းငယ် စုစည်းထားသည့် ပုံစံဖြင့် နည်းလမ်းကို ရိုးရှင်းစေပေးရန် ကြိုးစားဖော်ပြထားသည်။ ၎င်းအား ကိုယ့်စိတ်ကူးနှင့် တီထွင်နိုင်မှုဖြင့် အပြည့်အဝ Optimize လုပ်ခြင်းသည် တစ်ဦးချင်းစီ၏ တာဝန်ဖြစ်သည်။
 
--   select the projection view -\> properties tab -\> Data -\> "Projection" record section -\> Source click on the button with the three dots and directly add the "base-sketchTD" or the layer that contains it.
+နမူနာ workflow များ (TechDraw အယုံမရှိဘဲသာဖြစ်သော) အတွက် ဖိုင်အချို့ကို ဤစာတမ်းတွင် တွဲပူးတင်ထားပါသည်။ အောက်တွင် ပြထားသည့် ပုံများကို ထိုဖိုင်များမှ ယူထားသည်။
 
-:   It should be noted that the \"base-sketchTD\" must be positioned on the highest face of the model / object, otherwise it will be hidden and will be invisible in TechDraw.
+အသုံးဝင်ကြောင်း မျှော်လင့်လျက်— အလုပ်ကောင်းများနှင့် စမ်းသပ်မှုကောင်းများ!
 
-The sections obtained from the views do not seem to have this possibility. Whenever it is necessary to create precise cosmetic points suitable for dimensioning (e.g. tangency points), they can be generated:
+## မှတ်ချက်များ
 
--   in \"Sketcher\" through construction lines and inserting circles with infinitesimal diameter / radius (0.00001) in the ends, these will be seen by TechDraw as points / vertices suitable for dimensioning;
--   in Draft with the same method to be inserted in the relevant layer or folder-grouping;
+## အနာဂတ် ရှေ့မြင်ကာလ
 
-:   once the \"base-sketchTD\" has been modified or the Draft object added in the layer or grouping folder, TechDraw will automatically update the view, if this does not happen, update manually with the appropriate command.
-
-To insert section fills or patterns:
-pay attention to the lines created on the faces that intersect two or more edges, they are seen by TechDraw as separating elements of the face that affect the creation of the fills or patterns. This occurs e.g. when creating the outer lines that define the thread of a hole, this line will prevent the fill or pattern from extending further preventing it from arriving on the one that defines the pre-drill hole. In this case it is better to create cosmetic points through construction lines by inserting circles of infinitesimal radius in the vertices that will be seen by TechDraw as cosmetic points and then join them in TechDraw with create cosmetic line by two points.
-All lines and / or paths (including cosmetic ones) that are displayed in the views can be edited in the formatting through TechDraw\'s "Change Apparence of selected Lines" command.
-To create specific continuous sections on different axes or planes, I used the "WorkFeatureDev" workbench which allows you to create "solid" planes, with a thickness of "0", by selecting three vertices. These planes can be joined through a common or overlapping edge using the Boolean functions of the "Part" workbench and subsequently used for slicing / sectioning the solid model through the "Slice apart" command of the same workbench. The faces of the cut objects can be suitably exploited for the creation, with the "Facebinder" function, the "base-sketchTD"s to produce specific section views in TechDraw and therefore to be able to dimension and detail them.
-I believe I have made public every \"trick\" (or rather system) experimented to be able to use more specific tools (not provided for TechDraw) and create high quality professional technical drawings without any limits, making the TechDraw workbench more efficient and adaptable to any need , in all likelihood on par (if not more flexible and powerful) than commercial peers.
-It should be said, which is not negligible, that with this system it is possible to create entire 2D files and quote them with TechDraw in the same way as \"LibreCad\" or \"Autocad LT\" or other two-dimensional cads.
-I hope I was clear enough (translation permitting) in explaining the procedure (\"trick / system\") that I believe to be \"easier to do than to say\", as it is all about being able to enter 2D drawings into the views of TDs created with \"Draft\" and / or with \"Sketcher\" simply by selecting them from the structure and creating a view in TD with the appropriate command \"create a view\"; but I thought of doing something pleasant and more technical by describing the procedure, certainly, in a \"simplified\" way to create a minimum of organized workflow.
-It is up to each of us, with imagination and inventiveness, to optimize it to the maximum to obtain the best result.
-I am attaching the files of some workflow examples of technical drawings (not feasible with TechDraw only) from which the images shown below were taken.
-In the hope of having been useful, good work and good experimentation!
-
-## Notes
-
-## Future Outlook 
-
-However, the described path could represent the starting point (or the idea) to write additional code to automate the system and integrate it directly into TechDraw with appropriate button / command functions.
+သို့သော် သတ်မှတ်ထားသည့် လမ်းကြောင်းသည် စနစ်ကို အလိုအလျောက် လုပ်ဆောင်ရန် နှင့် ထိုစနစ်ကို TechDraw အတွင်း သက်ဆိုင်ရာ button/command များဖြင့် တိုက်ရိုက် ထည့်သွင်းနိုင်ရန် အပိုကုဒ်များရေးသားခြင်း၏ စတင်ချက် (သို့မဟုတ် အတွေး) အဖြစ် အသုံးပြုနိုင်သည်။
 
 ## Links
 
@@ -93,8 +85,6 @@ However, the described path could represent the starting point (or the idea) to 
 -   [TechDraw: -- come utilizzare gli strumenti Draft/Snaps per creare " vertici/punti cosmetici"](https://forum.freecadweb.org/viewtopic.php?f=28&t=53329) Forum Thread in Italian language
 
  {{TechDraw Tools navi}}
-
-
 
 ---
 ⏵ [documentation index](../README.md) > [TechDraw](Category_TechDraw.md) > Advanced TechDraw Tutorial

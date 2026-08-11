@@ -1,7 +1,7 @@
 # Artwork CAM
-These icons are in the indicated source path.
+ဤ အိုင်ကွန်များကို ဖော်ပြထားသည့် အရင်းအမြစ် ဖိုင်လမ်းကြောင်းတွင် တွေ့နိုင်ပါသည်။
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+အရင်းအမြစ် ဖိုင်သစ်လျား (source tree) အတွင်းရှိ အိုင်ကွန်အားလုံးကို ကြည့်ရန် [Artwork](Artwork.md) ကို လေ့လာပါ။
 
 ## src/Mod/CAM/
 
@@ -24,4 +24,4 @@ For all icons in the source tree, see [Artwork](Artwork.md).
 
 
 ---
-⏵ [documentation index](../README.md) > [Artwork](Category_Artwork.md) > [CAM](Category_CAM.md) > Artwork CAM
+⏵ [စာတမ်းညွှန်း](../README.md) > [ပုံအနုပညာ (Artwork)](Category_Artwork.md) > [CAM](Category_CAM.md) > Artwork CAM

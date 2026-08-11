@@ -4,77 +4,75 @@
    MenuLocation: 3D/BIM , Truss
    Workbenches: BIM_Workbench
    Version: 0.19
----
+---# အာခ်် ထရပ် (Arch Truss)
 
-# Arch Truss
+## ဖော်ပြချက်
 
-## Description
-
-The **Arch Truss** tool builds a [truss](https://en.wikipedia.org/wiki/Truss) object, either from a selected linear object (lie a [Draft Line](Draft_Line.md) or [Sketch](Sketcher_NewSketch.md)), or from scratch, if no object is selected when launching the command.
+**Arch Truss** ကိရိယာသည် [truss](https://en.wikipedia.org/wiki/Truss) အချက်အလက်ကို တည်ဆောက်ပေးသည်။ ၎င်းကို ရွေးထားသော စက်တစ်မျိုး (ဥပမာ [Draft Line](Draft_Line.md) သို့မဟုတ် [Sketch](Sketcher_NewSketch.md)) မှ ဖန်တီးနိုင်သလို၊ အသုံးပြုခေါင်းစဉ်ကို စတင်ချိန်တွင် မည်သည့် အရာမျှ မရွေးထားခဲ့ပါက အစမှ စ၍လည်း ဖန်တီးနိုင်သည်။
 
  <img alt="" src=images/Arch_Truss_example.png  style="width:600px;"> 
 
-## Usage
+## အသုံးပြုပုံ
 
-### Creating from a selected object 
+### ရွေးထားသော အရာမှ ဖန်တီးခြင်း
 
-1.  Use a workbench of your choice to create a single line
-2.  Select that line
-3.  Press the **<img src="images/Arch_Truss.svg" width=16px> [Truss](Arch_Truss.md)** button
-4.  Adjust the truss properties to your liking
+1.  သင်နှစ်သက်ရာ လုပ်ငန်းခွင် (Workbench) ကို အသုံးပြု၍ တစ်ခုသော လိုင်းတစ်ခု ဖန်တီးပါ
+2.  ထိုလိုင်းကို ရွေးပါ
+3.  **<img src="images/Arch_Truss.svg" width=16px> [Truss](Arch_Truss.md)** ခလုတ်ကို နှိပ်ပါ
+4.  သင်နှစ်သက်သလို ထရပ်၏ သတ်မှတ်ချက်များကို ချိန်ညှိပါ
 
-### Creating from scratch 
+### အစမှ စ၍ ဖန်တီးခြင်း
 
-1.  Make sure nothing is selected
-2.  Press the **<img src="images/Arch_Truss.svg" width=16px> [Truss](Arch_Truss.md)** button
-3.  Click in the 3D view to define a first point, or manually enter X, Y and Z coordinates
-4.  Click in the 3D view to define a second point, or manually enter X, Y and Z coordinates
-5.  Adjust the truss properties to your liking
+1.  မည်သည့် အရာမျှ ရွေးထားခြင်း မရှိကြောင်း သေချာစေပါ
+2.  **<img src="images/Arch_Truss.svg" width=16px> [Truss](Arch_Truss.md)** ခလုတ်ကို နှိပ်ပါ
+3.  ပထမအချက်ကို သတ်မှတ်ရန် 3D ကြည့်ရှုခန်း၌ နှိပ်ပါ၊ သို့မဟုတ် X, Y, Z ကို လက်ဖြင့် ထည့်သွင်းပါ
+4.  ဒုတိယအချက်ကို သတ်မှတ်ရန် 3D ကြည့်ရှုခန်း၌ နှိပ်ပါ၊ သို့မဟုတ် X, Y, Z ကို လက်ဖြင့် ထည့်သွင်းပါ
+5.  သင်နှစ်သက်သလို ထရပ်၏ သတ်မှတ်ချက်များကို ချိန်ညှိပါ
 
-## Properties
+## ပိုင်ဆိုင်မှုများ
 
 ### Data
 
--    **TrussAngle**: The angle of the truss
+-    **TrussAngle**: ထရပ်၏ ထောင့် (angle)
 
--    **SlantType**: The slant type of this truss
+-    **SlantType**: ထရပ်၏ အလျှော့ပုံစံ (slant type)
 
--    **Normal**: The normal direction of this truss
+-    **Normal**: ထရပ်၏ နိယာမယ် ဦးတည်ချက် (normal direction)
 
--    **HeightStart**: The height of the truss at the start position
+-    **HeightStart**: စတင်ရာနေရာရှိ ထရပ်အမြင့်
 
--    **HeightEnd**: The height of the truss at the end position
+-    **HeightEnd**: အဆုံးရာနေရာရှိ ထရပ်အမြင့်
 
--    **StrutStartOffset**: An optional start offset for the top strut
+-    **StrutStartOffset**: ထိပ်ပိုင်း strut အတွက် ရွေးချယ်ဆော့အော့ (start offset) — မလိုအပ်လျှင် မရှိနိုင်
 
--    **StrutEndOffset**: An optional end offset for the top strut
+-    **StrutEndOffset**: ထိပ်ပိုင်း strut အတွက် ရွေးချယ်ဆော့အော့ (end offset) — မလိုအပ်လျှင် မရှိနိုင်
 
--    **StrutHeight**: The height of the main top and bottom elements of the truss
+-    **StrutHeight**: ထရပ်၏ အဓိက ထိပ်နှင့် အောက် အစိတ်အပိုင်းများ၏ အမြင့်
 
--    **StrutWidth**: The width of the main top and bottom elements of the truss
+-    **StrutWidth**: ထရပ်၏ အဓိက ထိပ်နှင့် အောက် အစိတ်အပိုင်းများ၏ အနံ
 
--    **RodType**: The type of the middle element of the truss
+-    **RodType**: ထရပ်၏ အလယ်အစိတ်အပိုင်း (rod) ၏ အမျိုးအစား
 
--    **RodDirection**: The direction of the rods
+-    **RodDirection**: အရိုး (rods) များ၏ ဦးတည်ချက်
 
--    **RodSize**: The diameter or side of the rods
+-    **RodSize**: အရိုးများ၏ ဒိုင်ယာမီတာ သို့မဟုတ် ဘေးအရှေ့ (side)
 
--    **RodSections**: The number of rod sections
+-    **RodSections**: အရိုး အပိုင်းမ်ားပမာဏ (number of rod sections)
 
--    **RodEnd**: If the truss has a rod at its endpoint or not
+-    **RodEnd**: ထရပ်၏ အဆုံးနေရာတွင် အရိုး ရှိ/မရှိ ဟူသော သတ်မှတ်ချက်
 
--    **RodMode**: How to draw the rods
+-    **RodMode**: အရိုးများကို ရေးဆွဲပုံ (drawing mode)
 
-## Scripting
+## စာရင်းပေါင်း၍ အသုံးချခြင်း (Scripting)
 
-The Truss tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+Truss ကိရိယာကို [macros](Macros.md) များတွင် နှင့် [Python](Python.md) ကွန်ဆောလ်မှ အောက်ပါ function ကို အသုံးပြု၍ အသုံးပြုနိုင်သည်။
 
  
 ```python
 Truss = makeFence([baseobj])
 ```
 
-Example:
+ဥပမာအားဖြင့်:
 
  
 ```python

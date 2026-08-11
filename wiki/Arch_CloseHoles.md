@@ -4,34 +4,27 @@
    MenuLocation: Utils , Close holes
    Workbenches: BIM_Workbench
    SeeAlso: Arch_Check
----
+---# Arch CloseHoles
 
-# Arch CloseHoles
+## ဖော်ပြချက်
 
-## Description
+ဤကိရိယာသည် [ပုံသဏ္ဍာန် (Shape)](Part_Workbench.md) အရာတစ်ခုတွင် ရှိသည့် ပေါက်များ(ဝိုင်းပုံဖြစ်သော ဖွင့်ထားသော အနားများ၏ အစဉ်)ကို ခွဲခြားစိစစ်ပြီး အဆိုပါ အနားအစဉ်မှ ဖန်တီးထားသော မျက်နှာသစ်တစ်ခုကို ထည့်သွင်းခြင်းဖြင့် ပိတ်ပေးရန် ကြိုးပမ်းသည်။ သို့သော် ရလာသောအရာသည် ထူသော (solid) အရာဖြစ်ကြောင်းကို ကိုယ်တိုင် သေချာစစ်ဆေးရမည်ဖြစ်ပါသည်။
 
-This tool identifies holes (circular sequence of open edges) in a [Shape](Part_Workbench.md) object and attempts to close it by adding it a new face made from that edges sequence. You must still verify yourself that the result is a solid, though.
+## အသုံးပြုနည်း
 
-## Usage
+1.  [ပုံသဏ္ဍာန် (Shape)](Part_Workbench.md) အရာတစ်ခုကို ရွေးချယ်ပါ။
+2.  မီနူးမှ **Utils → <img src="images/Arch_CloseHoles.svg" width=16px> ပေါက်များ ပိတ်သိမ်းခြင်း (Close holes)** ကို ရွေးချယ်ပါ။
 
-1.  Select a [Shape](Part_Workbench.md) object.
-2.  Select the **Utils → <img src="images/Arch_CloseHoles.svg" width=16px> Close holes** option from the menu.
+## Script အသုံးပြုခြင်း
 
-## Scripting
-
-
-**See also:**
-
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
-
-This tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:  
+ဤကိရိယာကို [မက်ခရိုများ (macros)](Macros.md) မှာ နှင့် [Python](Python.md) ကွန်ဆိုးလ်မှ အောက်ပါ ဖင်ရှင်ကို အသုံးပြု၍ ခေါ်နိုင်သည်။  
 ```python
 solid = closeHole(shape)
 ```
 
--   Closes a hole in a `shape`, which is a `Part.Shape`, and returns the new `solid` object.
+- `shape` သည် `Part.Shape` ဖြစ်၍ အတွင်းရှိ ပေါက်တစ်ခုကို ပိတ်ပေးပြီး အသစ်သော `solid` အရာကို ပြန်လှန်ပေးမည်။
 
-Example:  
+ဥပမာ:  
 ```python
 import FreeCAD, Draft, Arch
 
@@ -53,7 +46,9 @@ FreeCAD.ActiveDocument.recompute()
 solid = Arch.closeHole(Wall.Shape)
 ```
 
+**ဆက်စပ် ဖတ်ရှုရန်:**
 
+[Arch API](Arch_API.md) နှင့် [ဖရီးကက် (FreeCAD) စကရစ်ရေး အခြေခံများ (FreeCAD Scripting Basics)](FreeCAD_Scripting_Basics.md)。
 
 ---
-⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch CloseHoles
+⏵ [စာရွက်စာတမ်း စာရင်း (documentation index)](../README.md) > [BIM](Category_BIM.md) > Arch CloseHoles

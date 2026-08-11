@@ -1,17 +1,17 @@
 # Arch DAE
-## Description
+## ဖော်ပြချက်
 
-The [Collada (DAE)](https://en.wikipedia.org/wiki/COLLADA) format is a standard file format for exchange of Mesh data. The [BIM Workbench](BIM_Workbench.md) can import meshes from .dae files, and export BIM and other [Shape](Part_Workbench.md)-based objects to the .dae format.
+[Collada (DAE) ဖိုင်ဖော်မက်](https://en.wikipedia.org/wiki/COLLADA) သည် မက်ရှ် ဒေတာ များကို လဲလှယ်ရန် စံသတ်မှတ်ထားသော ဖိုင်ဖော်မတ်တစ်ခု ဖြစ်သည်။ [BIM လုပ်ငန်းခွင် (BIM Workbench)](BIM_Workbench.md) သည် .dae ဖိုင်များမှ မက်ရှ် (Mesh) များကို ထည့်သွင်း (import) လုပ်နိုင်ပြီး၊ BIM နှင့် အခြား ပုံစံအခြေခံ (ပုံစံ (Shape)) အရာဝတ္ထုများကို .dae ဖော်မတ်သို့ ထုတ်ပေး (export) လုပ်နိုင်သည်။
 
-Note that imported objects will be [Mesh](Mesh_Workbench.md) objects, and will need to be turned into [Shapes](Shape.md) or BIM objects for optimal use. The [BIM Workbench](BIM_Workbench.md) has several tools to help you in performing that operation.
+သတိပြုရန် — ထည့်သွင်းထားသော အရာဝတ္ထုများမှာ [မက်ရှ် (Mesh)](Mesh_Workbench.md) အရာဝတ္ထုများအဖြစ် ဖြစ်မည်ဖြစ်ပြီး၊ အကောင်းဆုံး အသုံးချနိုင်ရန်အတွက် [ပုံစံများ (Shapes)](Shape.md) သို့မဟုတ် BIM အရာဝတ္ထုများအဖြစ် ပြောင်းလဲရန် လိုအပ်မည် ဖြစ်သည်။ [BIM လုပ်ငန်းခွင် (BIM Workbench)](BIM_Workbench.md) တွင် ဤ လုပ်ငန်းစဥ်ကို အကူအညီပေးနိုင်သည့် ကိရိယာများ ရှိသည်။
 
-The Collada import functionality in the BIM workbench depends on [pycollada](http://pycollada.github.io/). If it is not installed on your system, Collada import/export will be disabled.
+BIM လုပ်ငန်းခွင်တွင် Collada ထည့်သွင်းနိုင်မှုသည် [pycollada](http://pycollada.github.io/) ပက်ကေ့ချ်ပေါ် မူတည်သည်။ သင်၏ စနစ်တွင် ထိုပက်ကေ့ချ် မထည့်သွင်းထားပါက Collada ထည့်သွင်း/ထုတ်ပေးခြင်း (import/export) မရရှိနိုင်ပါ။
 
-## Links
+## လင့်ခ်များ
 
--   [Importing from Sketchup](Importing_From_Sketchup.md)
+-   [SketchUp မှ တင်သွင်းခြင်း](Importing_From_Sketchup.md)
 
 
 
 ---
-⏵ [documentation index](../README.md) > [File_Formats](Category_File_Formats.md) > [BIM](Category_BIM.md) > Arch DAE
+⏵ [စာရွက်စာတမ်း အညွှန်း](../README.md) > [ဖိုင်ဖော်မက် အမျိုးအစား (File Formats)](Category_File_Formats.md) > [BIM](Category_BIM.md) > Arch DAE

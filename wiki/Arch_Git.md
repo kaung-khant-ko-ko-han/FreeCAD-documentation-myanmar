@@ -1,7 +1,7 @@
 # Arch Git
-1.  REDIRECT [WebTools_Git](WebTools_Git.md)
+1. ပြန်လည်ညွှန်ကြားခြင်း (REDIRECT): [WebTools_Git](WebTools_Git.md)
 
 
 
 ---
-⏵ [documentation index](../README.md) > Arch Git
+⏵ [စာတမ်းညွှန်း (documentation index)](../README.md) > Arch Git

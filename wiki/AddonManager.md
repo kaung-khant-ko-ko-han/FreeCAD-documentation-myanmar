@@ -1,7 +1,7 @@
-# AddonManager
-1.  REDIRECT [Std AddonMgr](Std_AddonMgr.md)
+# Addon မန်နေဂျာ (AddonManager)
+1. REDIRECT [Std AddonMgr](Std_AddonMgr.md)
 
 
 
 ---
-⏵ [documentation index](../README.md) > AddonManager
+⏵ [စာတမ်းများ အညွှန်း](../README.md) > Addon မန်နေဂျာ (AddonManager)

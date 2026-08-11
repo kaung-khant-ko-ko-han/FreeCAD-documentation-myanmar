@@ -5,129 +5,127 @@
    Workbenches: BIM_Workbench
    Shortcut: **W** **A**
    SeeAlso: 
----
-
-# Arch Wall
+---# Arch Wall
 
 ## Description
 
-The **Arch Wall** tool builds a Wall object from scratch or on top of any other [shape](Part_Workbench.md)-based or [mesh](Mesh_Workbench.md)-based object. A wall can be built without any base object, in which case it behaves as a cubic volume, using length, width and height properties. When built on top of an existing shape, a wall can be based on:
+**Arch Wall** ကိရိယာသည် Wall အရာဝတ္ထုကို သစ်စဉ်ဖြင့် သို့မဟုတ် မည်သည့် [shape](Part_Workbench.md)-အခြေခံ သို့မဟုတ် [mesh](Mesh_Workbench.md)-အခြေခံ အရာဝတ္ထုပေါ်တွင်တည်၍ ဆောက်လုပ်ပေးသည်။ နံရံကို မည်သည့် အခြေခံအရာဝတ္ထုမရှိဘဲလည်း ဆောက်နိုင်ပြီး အဲဒီလျှင် အမြင့်၊ အနံနှင့် အထောင်ဖျာ (length, width, height) ကို အသုံးပြုသည့် ကုဘစ်အရွယ်အစားအဖြစ် ပြုလုပ်မည်ဖြစ်သည်။ មានပြီးသား shape ပေါ်တွင်တည်ဆောက်ပါက နံရံကို အောက်ပါအမျိုးအစားများအရ အခြေခံနိုင်သည်။
 
--   A **linear 2D object**, such as lines, wires, arcs or sketches, in which case you can change thickness, alignment (right, left or centered) and height. The length property has no effect.
--   A **flat face**, in which case you can only change the height. Length and width properties have no effect. If the base face is vertical, however, the wall will use the width property instead of height, allowing you to build walls from space-like objects or mass studies.
--   A **solid**, in which case length, width and height properties have no effect. The wall simply uses the underlying solid as its shape.
--   A **mesh**, in which case the underlying mesh must be a closed, manifold solid.
+-   **လျှောက်လမ်း 2D အရာဝတ္ထု** (လိုင်းများ၊ ဝိုင်ယာများ၊ အာခ်များ သို့မဟုတ် ပုံကြမ်း / စကစ် (Sketch) များ) အဖြစ်တည်ရှိပါက၊ သင့်အား အထူ (thickness), alignment (ညာ၊ ဘယ် သို့မဟုတ် အလယ်) နှင့် အမြင့်ကို ပြင်ဆင်နိုင်မည်ဖြစ်သည်။ length ပိုင်စားသက်ရောက်မှုမရှိပါ။
+-   **ထိပ်ပိုင်း မျက်နှာပြင် (flat face)** အဖြစ်တည်ရှိပါက အမြင့်ကိုသာ ပြင်ဆင်နိုင်ပြီး length နှင့် width ပိုင်ဆိုင်ချက်များ သက်ရောက်မှုမရှိပါ။ သို့သော် အခြေခံမျက်နှာပြင်သည် ထောင့်လျှောက် (vertical) ဖြစ်ပါက နံရံသည် width ပိုင်ဆိုင်ချက်ကို အမြင့်ထက် အစားထိုးအသုံးပြုမည်ဖြင့် အာကာသဆိုင်ရာ အရာများ (space-like objects) သို့မဟုတ် mass studies များမှ နံရံများ ဆောက်နိုင်မည်ဖြစ်သည်။
+-   **အစိုထည် (solid)** အဖြစ်တည်ရှိပါက length, width နှင့် height ပိုင်ဆိုင်ချက်များ သက်ရောက်မှုမရှိပါ။ နံရံသည် အောက်ခံ solid ကိုသာ ၎င်း၏ အပေါ်ယံပုံသဏ္ဌာန်အနေဖြင့် အသုံးပြုမည်ဖြစ်သည်။
+-   **mesh** အဖြစ်တည်ရှိပါက အောက်ခံ mesh သည် ပိတ်ထားသော၊ manifold solid ဖြစ်ရမည်။
 
  <img alt="" src=images/Arch_Wall_example.jpg  style="width:780px;">  
-*Walls built from a line, a wire, a face, a solid, and a sketch*
+*လိုင်း၊ ဝိုင်ယာ၊ မျက်နှာပြင်၊ solid နှင့် ပုံကြမ်း (Sketch) တို့မှ ဆောက်ထားသော နံရံများ*
 
-Walls can also have additions or subtractions. Additions are other objects whose shapes are joined in this Wall\'s shape, while subtractions are subtracted. Additions and subtractions can be added with the [Arch Add](Arch_Add.md) and [Arch Remove](Arch_Remove.md) tools. Additions and subtractions have no influence over wall parameters such as height and width, which can still be changed. Walls can also have their height automatic, if they are included into a higher-level object such as [floors](Arch_Floor.md). The height must be kept at 0, then the wall will adopt the height specified in the parent object.
+နံရံများတွင် ပေါင်းထည့်ခြင်း (additions) သို့မဟုတ် ဖြုတ်ခြင်း (subtractions) များကိုလည်း ပိုင်ဆိုင်နိုင်သည်။ ပေါင်းထည့်ခြင်းများမှာ အခြား အရာဝတ္ထုများ၏ ပုံသဏ္ဌာန်များကို ဤ Wall ၏ ပုံသဏ္ဌာန်နှင့် ပေါင်းစည်းခြင်းဖြစ်ပြီး၊ ဖြုတ်ခြင်းများသည် ဖြုတ်ခွဲခြင်းဖြစ်သည်။ ပေါင်းထည့်ခြင်းနှင့် ဖြုတ်ခြင်းကို [Arch Add](Arch_Add.md) နှင့် [Arch Remove](Arch_Remove.md) ကိရိယာများဖြင့် ထည့်/ဖယ်နိုင်သည်။ ပေါင်းထည့်ခြင်းနှင့် ဖြုတ်ခြင်းများသည် height နှင့် width ကဲ့သို့သော နံရံ၏ ပုံသတ်များပေါ် အကျိုးသက်ရောက်မှု မရှိသေးပါ; ထိုပင်ပိုင်ဆိုင်ချက်များကို ဆက်လက်ပြောင်းလဲနိုင်သည်။ နံရံများကို ထပ်မံအမြင့်ကို အလိုအလျောက် သတ်မှတ်နိုင်ပြီး [floors](Arch_Floor.md) ကဲ့သို့သော အထက်တန်းအရာဝတ္ထုထဲတွင် ထည့်သွင်းပါက height ကို 0 သတ်မှတ်ထားရမည်၊ ထိုနောက် နံရံသည် မိဘအရာဝတ္ထုတွင် သတ်မှတ်ထားသော အမြင့်ကို လက်ခံယူမည်ဖြစ်သည်။
 
-When several walls should intersect, you need to place them into a [floor](Arch_Floor.md) to have their geometry intersected.
+နံရံများအချို့ကို တတွဲငြိမ်းချင်း လှုံ့ဆော်ဆုံလျက် intersection လုပ်စေလို့လိုပါက အဲဒီနံရံများကို [floor](Arch_Floor.md) ထဲသို့ ထည့်ရမည်။
 
 ## Usage
 
 ### Drawing a wall from scratch 
 
-1.  There are several ways to invoke the tool:
-    -   Press the **<img src="images/Arch_Wall.svg" width=16px> [Wall](Arch_Wall.md)** button.
-    -   Select the **3D/BIM → <img src="images/Arch_Wall.svg" width=16px> Wall** option from the menu.
-    -   Use the keyboard shortcut: **W** then **A**.
-2.  Click a first point on the 3D view, or type coordinates.
-3.  Click a second point on the 3D view, or type coordinates.
+1.  ကိရိယာကို ခေါ်ရန် နည်းလမ်းများ အစုံရှိသည်။
+    -   ဖိပါ **<img src="images/Arch_Wall.svg" width=16px> [Wall](Arch_Wall.md)** ခလုတ်ကို။
+    -   မီနူးမှ **3D/BIM → <img src="images/Arch_Wall.svg" width=16px> Wall** ကို ရွေးချယ်ပါ။
+    -   ကီးဘုတ်ရShortcut အသုံးပြုပါ: **W** ထို့နောက် **A**။
+2.  3D ကြည့်မြင်မှုတွင် ပထမနေရာကို နှိပ်ပါ၊ သို့မဟုတ် ကိုဧကရာဇ်များကို ရိုက်ထည့်ပါ။
+3.  3D ကြည့်မြင်မှုတွင် ဒုတိယနေရာကို နှိပ်ပါ၊ သို့မဟုတ် ကိုဧကရာဇ်များကို ရိုက်ထည့်ပါ။
 
 ### Drawing a wall on top of a selected object 
 
-1.  Select one or more base geometry objects (Draft object, sketch, etc).
-2.  Invoke the tool as described above.
-3.  Adjust needed properties such as height or width.
+1.  အခြေခံ ဂျီယိုမက်ထရီ အရာဝတ္ထုတစ်ခု သို့မဟုတ် အများကို (Draft object, ပုံကြမ်း / စကစ် (Sketch), စသည်) ရွေးပါ။
+2.  အထက်ဖော်ပြထားသည့်အတိုင်း ကိရိယာအား ခေါ်ပါ။
+3.  အမြင့် သို့မဟုတ် အနံကဲ့သို့ လိုအပ်သည့် ပိုင်ဆိုင်ချက်များကို ကိုက်ညီအောင် ပြင်ဆင်ပါ။
 
 ## Options
 
--   Walls share the common properties and behaviours of all [Arch Components](Arch_Component.md)
--   The height, width and alignment of a wall can be set during drawing, via the task panel
--   When snapping a wall to an existing wall, both walls will be joined into one. The way the two walls are joined depends on their properties: If they have the same width, height and alignment, and if the option \"join base sketches\" is enabled in the Arch preferences, the resulting wall will be one object based on a sketch made of several segments. Otherwise, the latter wall will be added to the first one as addition.
--   Press **X**, **Y** or **Z** after the first point to constrain the second point on the given axis.
--   To enter coordinates manually, simply enter the numbers, then press **Enter** between each X, Y and Z component.
--   Press **R** or click the checkbox to check/uncheck the **Relative** button. If relative mode is on, the coordinates of the second point are relative to the first one. If not, they are absolute, taken from the (0,0,0) origin point.
--   Press **Shift** while drawing to [constrain](Draft_Constrain.md) your second point horizontally or vertically in relation to the first one.
--   Press **Esc** or the **Cancel** button to abort the current command.
--   Double-clicking on the wall in the tree view after it is created allows you to enter edit mode and access and modify its additions and subtractions
--   Multi-layer walls can be easily created by building several walls from the same baseline. By setting their Align property to either left or right, and specifying an Offset value, you can effectively construct several wall layers. Placing a window in such a wall layer will propagate the opening to the other wall layers based on the same baseline.
--   Walls can also make use of [Multi-Materials](Arch_MultiMaterial.md). When using a multi-material, the wall will become multi-layer, using the thicknesses specified by the multi-material. Any layer with a thickness of zero will have its thickness defined automatically by the remaining space defined by the Wall\'s Width value, after subtracting the other layers.
--   Walls can be made to display blocks, instead of one single solid, by turning their **Make Blocks** property on. The size and offset of blocks can be configured with different properties, and the amount of blocks is automatically calculated.
+-   နံရံများသည် [Arch Components](Arch_Component.md) အားလုံး၏ ပုံမှန် ပိုင်ဆိုင်ချက်များနှင့် အပြုအမူများကို မျှဝေသည်။
+-   နံရံ၏ အမြင့်၊ အနံနှင့် alignment ကို ပုံဆွဲချိန်တွင် လုပ်ငန်းတာဝန်ပြား (Task Panel) မှတစ်ဆင့် သတ်မှတ်နိုင်သည်။
+-   ရှိပြီးသား နံရံတစ်ခုကို snapping ဖြင့် တစ်ခြားနံရံသို့ ဆက်စပ်ပါက အဆိုပါ နံရံနှစ်ခုသည် တစ်ခုအဖြစ် ပေါင်းစည်းမည်။ နံရံ နှစ်ခုပေါင်းစပ်ပုံစံသည် ၎င်းတို့၏ ပိုင်ဆိုင်ချက်များပေါ် မူတည်သည်။ အကယ်၍ ၎င်းတို့တွင် တူညီသော width၊ height နှင့် alignment ရှိ၍ Arch အကြိုက်နှစ်ကြိမ်တွင် "join base sketches" ရွေးချယ်မှု ဖွင့်ထားပါက ရလဒ်နံရံသည် အပိုင်းအမျိုးမျိုးပါဝင်သည့် ပုံကြမ်းတစ်ခုအပေါ် အခြေခံထားသည့် တစ်ခုသော object ဖြစ်မည်။ မဟုတ်လျှင် နောက်နံရံသည် ပထမနံရံသို့ addition အဖြစ် ထည့်သွင်းမည်ဖြစ်သည်။
+-   ပထမချက်ကို နှိပ်ပြီးနောက် **X**, **Y** သို့မဟုတ် **Z** ကို ဖိ၍ ဒုတိယချက်ကို သတ်မှတ်ထားသည့် ဂဏန်းလျှောက် (axis) ပေါ်တွင် ကန့်သတ်နိုင်သည်။
+-   ကိုဧကရာဇ်များကို လက်ဖြင့် ထည့်ရန် X, Y နှင့် Z ကို အစီအစဉ်အတိုင်း နံပါတ်များကို ထည့်၍ အချင်းချင်း **Enter** ကို နှိပ်ရုံဖြင့်ရနိုင်သည်။
+-   **R** ကို နှိပ်ပါ သို့မဟုတ် **Relative** ခလုတ်ကို သင်မှတ်ခြင်း/ဖျက်ခြင်း ပြုလုပ်ရန် ခလုတ်ကို နှိပ်ပါ။ Relative မုဒ်ဖြစ်ပါက ဒုတိယချက်၏ ကိုဧကရာဇ်များသည် ပထမချက်နှင့် တွဲလျက် ပမာဏအနေဖြင့် ရှိသည်။ မဟုတ်ပါက ၎င်းများသည် အပြည့်အဝ (0,0,0) အစကွက်မှယူဆသော အတိုင်း ဖြစ်သည်။
+-   ပုံဆွဲစဉ်တွင် **Shift** ကို ဖိထားပါက သင်၏ ဒုတိယချက်ကို ပထမချက်နှင့် ညီအောင် အလျှိုင်း/ထောင့်သတ် (horizontal or vertical) အနေဖြင့် [constrain](Draft_Constrain.md) လုပ်နိုင်သည်။
+-   ပcurrent ကာမန်ဒ်ကို ငြင်းပယ်ရန် **Esc** သို့မဟုတ် **Cancel** ခလုတ်ကို ဖိပါ။
+-   တစ်ကြိမ်ဖန်တီးပြီးနောက် tree view တွင် နံရံပေါ်ကို ဒဘယ်လ်ကလစ်လုပ်ခြင်းဖြင့် ပြင်ဆင်မှုမုဒ်သို့ ဝင်ကာ ၎င်း၏ ပေါင်းထည့်မှုများနှင့် ဖြုတ်မှုများကို ပြင်ဆင်နိုင်သည်။
+-   မျိုးစုံ-စက် (multi-layer) နံရံများကို တူညီသော baseline မှ နံရံများ အတော်များများ ဆောက်ခြင်းဖြင့် လွယ်ကူစွာ ဖန်တီးနိုင်သည်။ ၎င်းတို့၏ Align ပိုင်ဆိုင်ချက်ကို ဘယ်သို့မဟုတ် ညာဖြစ်အောင် သတ်မှတ်ကာ Offset တန်ဖိုးကို သတ်မှတ်၍ နံရံအလွှာများကို တည်ဆောက်နိုင်သည်။ ထိုအလွှာတစ်ခု၌ ပြတင်းပေါက်တစ်ခုကို ထည့်သွင်းပါက အောက်ခံတူညီသော baseline ကို အခြေခံထားသည့် အခြား wall အလွှာများသို့ ဖွင့်ပေါက်ကို လျှောက်လွှာပေးမည်ဖြစ်သည်။
+-   နံရံများသည် [Multi-Materials](Arch_MultiMaterial.md) ကိုလည်း အသုံးပြုနိုင်သည်။ multi-material ကို အသုံးပြုပါက နံရံသည် multi-layer ဖြစ်လာပြီး multi-material မှ သတ်မှတ်ထားသော အထူများကို အသုံးပြုမည်။ အထူတန်ဖိုး သုညဖြစ်သော အလွှာများသည် Wall ၏ Width တန်ဖိုးဖြင့် သတ်မှတ်ထားသည့် အကွာအဝေးမှ ထိုအလွှာများကို ဖြုတ်ပစ်ပြီး ကျန်နေသော ရွေ့လျားသော နေရာအလိုက် အလိုအလျောက် အထူသတ်မှတ်ခံရမည်။
+-   နံရံများကို တစ်ခုတည်းသော solid တစ်ခု အစား block များအဖြစ် ပြသရန် **Make Blocks** ပိုင်ဆိုင်ချက်ကို ဖွင့်နိုင်သည်။ block များ၏ အရွယ်အစားနှင့် offset ကို ကွဲပြားသော ပိုင်ဆိုင်ချက်များဖြင့် ရေးဆွဲနိုင်ပြီး block အရေအတွက်ကို အလိုအလျောက်တွက်ချက်ပေးမည်။
 
 ## Snapping
 
-Snapping works a bit differently with Arch walls than other Arch and Draft objects. If a wall has a baseline object, snapping will anchor to the base object, instead of the wall geometry, allowing to easily align walls by their baseline. If, however, you specifically want to snap to the wall geometry, pressing **Ctrl** will switch snapping to the wall object.
+Arch နံရံများနှင့် သက်ဆိုင်သော snapping သည် အခြား Arch နှင့် Draft အရာဝတ္ထုများနှင့် နည်းနည်း ကွာခြားသည်။ နံရံတစ်ခုတွင် baseline object ရှိပါက snapping သည် နံရံပုံသဏ္ဌာန်အတွက်မဟုတ်ဘဲ အခြေခံ object သို့ သင်ခိုင်းတက်မည်ဖြစ်ပြီး baseline အား အလွယ်တကူ ကိုက်ညီစေသည်။ သို့သော် သင် တိကျစွာ နံရံ၏ ပုံသဏ္ဌာန်ကိုသာ snapping တင်လိုပါက **Ctrl** ကို ဖိ၍ snapping ကို နံရံ object သို့ ပြောင်းနိုင်သည်။
 
  <img alt="" src=images/Arch_wall_snap.jpg  style="width:780px;">  
-*Second wall snapping perpendicularly to the first one*
+*ဒုတိယနံရံသည် ပထမနံရံသို့ ထောင့်ဖြတ်သိပ်စေသည်*
 
 ## Properties
 
-Wall objects inherit the properties of [Part](Part_Workbench.md) objects, and also have the following extra properties:
+Wall objects များသည် [Part](Part_Workbench.md) objects များ၏ ပိုင်ဆိုင်ချက်များကို ရယူပြီး အောက်ပါ အပိုပိုင်ဆိုင်ချက်များကိုလည်း ပိုင်ဆိုင်သည်။
 
 ### Data
 
 
 {{TitleProperty|Blocks}}
 
--    **Block Height**: The height of each block.
+-    **Block Height**: ထို block တစ်ခုရှိ အမြင့်။
 
--    **Block Length**: The length of each block.
+-    **Block Length**: ထို block တစ်ခုရှိ အကွာအလတ် (length)။
 
--    **Count Broken**: The number of broken blocks (read-only).
+-    **Count Broken**: ဖျက်စီးထားသော block များ၏ အရေအတွက် (စာဖတ်သာသာ)။
 
--    **Count Entire**: The number of entire blocks (read-only).
+-    **Count Entire**: ပြီးပြည့်စုံသော block များ၏ အရေအတွက် (စာဖတ်သာသာ)။
 
--    **Joint**: The size of the joints, the empty space, between blocks.
+-    **Joint**: block များအကြား ရွှေ့ဖောက်ထားသော အလွှာ (joint) ၏ အရွယ်အစား။
 
--    **Make Blocks**: Enables block generation.
+-    **Make Blocks**: block များကို ထုတ်ပေးရန် ဖွင့်/ပိတ်ခြင်း။
 
--    **Offset First**: The horizontal offset of the first and every uneven line of blocks.
+-    **Offset First**: ပထမနှင့် မတူညီသော ကွက်တန်းတိုင်း၏ ထorizontal offset။
 
--    **Offset Second**: The horizontal offset of the second and every even line of blocks.
+-    **Offset Second**: ဒုတိယနှင့် စီတန်းအမျိုးမျိုး၏ ထorizontal offset။
 
 
 {{TitleProperty|Component}}
 
-See [Arch Component](Arch_Component#Properties.md).
+[Arch Component](Arch_Component#Properties.md) ကို ကြည့်ပါ။
 
 
 {{TitleProperty|IFC}}
 
-See [Arch Component](Arch_Component#Properties.md).
+[Arch Component](Arch_Component#Properties.md) ကို ကြည့်ပါ။
 
 
 {{TitleProperty|IFC Attributes}}
 
-See [Arch Component](Arch_Component#Properties.md).
+[Arch Component](Arch_Component#Properties.md) ကို ကြည့်ပါ။
 
 
 {{TitleProperty|Wall}}
 
--    **Align**: The alignment of the wall on its baseline: Left, Right or Center. The direction of the individual edges of the Base object (Sketch/ArchSketch) is taken into account, giving finer control over each wall segment. See diagram below. Arcs in sketches are always counter-clockwise. When a curved segment of a wall is left aligned, the inner edge of the segment matches the sketch arc. See also **Override Align**.
+-    **Align**: သူ၏ baseline ပေါ်တွင် နံရံ၏ တန်းတူမှု။ Left, Right သို့မဟုတ် Center အဖြစ် သတ်မှတ်နိုင်သည်။ Base object (Sketch/ArchSketch) ၏ တစ်ပုဒ်ချင်းစီ အကြောင်းပြချက်များ၏ ဦးတည်ချက်ကို ရယူပြီး နံရံ စိတ်ကြိုက် အပိုင်းများကို ပိုမိုထိန်းချုပ်နိုင်သည်။ ဤသည်အောက်တွင် ဖော်ပြထားသည်။ စကစ် (Sketch) များရှိသည့် အာချ်များ (arcs) သည် အမြဲအားဖြင့် counter-clockwise ဖြစ်သည်။ နံရံ၏ ချောင်းကွက်ပါသော အပိုင်းတစ်ခုကို left aligned ချိန်တွင် အပိုင်း၏ အတွင်းခိုင်းဘက် ကို ကွက်လပ် arc နှင့် ကိုက်ညီမည်။ **Override Align** ကိုလည်း ကြည့်ပါ။
 
--    **Area**: Area of the whole wall, separation into blocks makes no difference (read-only).
+-    **Area**: နံရံတစ်ခုလုံး၏ အယာဉ်မျာ (area)၊ block များအဖြစ်ခွဲခြားမှုသည် ကြာခြားမှု မရှိ (စာဖတ်သာသာ)။
 
--    **Face**: The index of the face from the base object to use. If the value is not set or 0, the whole object is used.
+-    **Face**: အောက်ခံ object မှ အသုံးပြုရန် မျက်နှာပြင်၏ အညွှန်းစဉ် (index)။ တန်ဖိုးမတစ်သတ်မှတ်ထားဘူး သို့မဟုတ် 0 ဖြစ်ပါက အwhole object ကို အသုံးပြုမည်။
 
--    **Height**: The height of the wall. Ignored if the wall is based on a solid. If set to zero, and the wall is inside a [floor](Arch_Floor.md) object with its height defined, the wall will automatically take the value of the floor height.
+-    **Height**: နံရံ၏ အမြင့်။ နံရံသည် solid အပေါ်တွင် အခြေခံထားပါက ဤတန်ဖိုးကို ဂရုပြုမထားပါ။ သတ်မှတ်ထားသော တန်ဖိုး သုညဖြစ်ပါက၊ အကယ်၍ နံရံသည် အမြင့် သတ်မှတ်ထားသော [floor](Arch_Floor.md) အတွင်းရှိပါက နံရံသည် ပြီးပြည့်သော floor အမြင့်ကို အလိုအလျောက် လက်ခံမည်။
 
--    **Length**: The length of the wall. The value can be edited if the wall is based on an unconstrained sketch with a single edge, or on a [Draft Wire](Draft_Wire.md) with a single edge, else the value is read-only. <small>(v1.0)</small>  The value when the property is read-only is more accurate. It is based on the medium of the wall if segments have different **Width**, **Align** and/or **Offset** properties. Note that there can still be inaccuracies if the wall is complex, for example if it has T-junctions or self-intersections. In such cases it is advisable to instead use the **Horizontal Area** property for further calculations.
+-    **Length**: နံရံ၏ အရှည်။ နံရံသည် အချိုးမဲ့ စကစ် (unconstrained sketch) တစ်ခုသာရှိသည့် တစ်လမ်းမကြီး edge တစ်ခု သို့မဟုတ် တစ်လမ်းမကြီး edge တစ်ခုပါသော [Draft Wire](Draft_Wire.md) ပေါ်တွင် အခြေခံထားပါက တန်ဖိုးကို ပြင်နိုင်သည်၊ မဟုတ်ပါက စာဖတ်သာသာ ဖြစ်သည်။ <small>(v1.0)</small> စာဖတ်သာသာ ဖြစ်သည့် အချိန်တွင် တန်ဖိုးသည် ပိုတိကျသည်။ ၎င်းသည် အပိုင်းများတွင် ကွာခြားသော **Width**, **Align** နှင့်/သို့မဟုတ် **Offset** ပိုင်ဆိုင်ချက်များ ရှိပါက နံရံ၏ medium ကို အခြေခံသည်။ နံရံသည် ရိုက်နှိပ်မှုများ (T-junctions) သို့မဟုတ် ကိုယ့်ကိုယ်ကို ဖြတ်မိခြင်း (self-intersections) များ တို့ပါရှိလျှင် ရှုပ်ထွေးနိုင်ပြီး အမှားယွင်းမှုများ ပေါ်လာနိုင်သည်။ အဲဒီကိစ္စများတွင် နောက်ဆက်တွင် သတ်မှတ်ချက်များတွက်ချက်ရန် **Horizontal Area** ပိုင်ဆိုင်ချက်ကို သုံးရန် အကြံပြုပါသည်။
 
--    **Normal**: The extrusion direction for the wall. If set to (0,0,0), the extrusion direction is automatic.
+-    **Normal**: နံရံအတွက် extrusion ဦးတည်ချက် (direction)။ (0,0,0) အဖြစ် သတ်မှတ်ပါက extrusion ဦးတည်ချက်ကို အလိုအလျောက် သတ်မှတ်မည်။
 
--    **Offset**: The distance between the wall and its baseline. Works only if the **Align** property is set to Right or Left. The direction of the individual edges of the Base object (Sketch/ArchSketch) is taken into account, giving finer control over each wall segment. See also **Override Offset**.
+-    **Offset**: နံရံနှင့် ၎င်း၏ baseline အကြား အကွာအဝေး။ **Align** ပိုင်ဆိုင်ချက်ကို Right သို့ Left သတ်မှတ်ထားသောအချိန်တွင်ပင် သာမက အလုပ်လုပ်သည်။ Base object (Sketch/ArchSketch) ၏ တစ်ပုဒ်ချင်း edge များ၏ ဦးတည်ချက်ကို သတိပြု၍ နံရံ၏ တစ်ပိုင်းချင်းစီကို ပိုမိုထိန်းချုပ်နိုင်သည်။ **Override Offset** ကိုလည်း ကြည့်ပါ။
 
--    **Override Align**: This overrides **Align** attribute to set align of each segment of wall. Ignored if Base object provides Aligns information, with getAligns() method (If a value is not \'Left, Right, Center\', the value of \'Align\' will be followed). ENHANCEMENT by ArchSketch: GUI \'Edit Wall Segment Align\' Tool is provided in the external <img alt="" src=images/SketchArch_Workbench.svg  style="width:16px;"> [SketchArch Add-on](https://github.com/paullee0/FreeCAD_SketchArch) to let users to set the values interactively. \'Toponaming-Tolerant\' if ArchSketch is used in Base (and SketchArch Add-on is installed). Warning: Not \'Toponaming-Tolerant\' if just Sketch is used.
+-    **Override Align**: ဤသည်သည် **Align** attribute ကို override လုပ်၍ နံရံ၏ တစ်ပိုင်းချင်းစီ alignment ကို သတ်မှတ်နိုင်သည်။ Base object သည် getAligns() မက်သက်ဒ်ဖြင့် Aligns အချက်အလက်များပေးထားပါက ဤသတ်မှတ်ချက်ကို မျက်နှာမဖုံးမီ (ignored)။ (တန်ဖိုးသည် 'Left, Right, Center' မဟုတ်ပါက 'Align' ၏ တန်ဖိုးကို လိုက်နာမည်) ArchSketch မှ တိုးတက်မှု (ENHANCEMENT) အနေဖြင့် user များကို အတူတကွ interactive ပုံစံဖြင့် တန်ဖိုးများကို သတ်မှတ်စေနိုင်သော GUI 'Edit Wall Segment Align' ကိရိယာ ကို အပြင်ပိုင်း <img alt="" src=images/SketchArch_Workbench.svg  style="width:16px;"> [SketchArch Add-on](https://github.com/paullee0/FreeCAD_SketchArch) တွင် ပံ့ပိုးထားသည်။ Base တွင် ArchSketch အသုံးပြုထားပြီး SketchArch Add-on ထည့်သွင်းထားပါက 'Toponaming-Tolerant' ဖြစ်သည်။ သတိပေးချက်: ကောက်ယူထားသော သာသနာအနေဖြင့် ကမ္ဘာ့ခုံမရှိပါက (Just Sketch) 'Toponaming-Tolerant' မဟုတ်ပါ။
 
--    **Override Width**: This overrides **Width** attribute to set width of each segment of wall. Ignored if Base object provides Widths information, with getWidths() method (if a value is zero, the value of \'Width\' will be followed). ENHANCEMENT by ArchSketch: GUI \'Edit Wall Segment Width\' Tool is provided in the external <img alt="" src=images/SketchArch_Workbench.svg  style="width:16px;"> [SketchArch Add-on](https://github.com/paullee0/FreeCAD_SketchArch) to let users to set the values interactively. \'Toponaming-Tolerant\' if ArchSketch is used in Base (and SketchArch Add-on is installed). Warning: Not \'Toponaming-Tolerant\' if just Sketch is used.
+-    **Override Width**: ဤသည်သည် **Width** attribute ကို override လုပ်၍ နံရံ၏ တစ်ပိုင်းချင်းစီ width ကို သတ်မှတ်ပေးသည်။ Base object သည် getWidths() မက်သက်ဒ်ဖြင့် Widths အချက်အလက်များ ပေးထားပါက ဤသည်ကို မျက်နှာမဖုံးမီ (ignored)။ (တန်ဖိုး သုညဖြစ်ပါက 'Width' ၏ တန်ဖိုးကို လိုက်နာမည်) ArchSketch ၏ အားဖြင့် GUI 'Edit Wall Segment Width' ကိရိယာကို အပြင်ပိုင်း <img alt="" src=images/SketchArch_Workbench.svg  style="width:16px;"> [SketchArch Add-on](https://github.com/paullee0/FreeCAD_SketchArch) တွင် ပံ့ပိုးထားသည်။ Base တွင် ArchSketch အသုံးပြု၍ SketchArch Add-on ထည့်သွင်းထားပါက 'Toponaming-Tolerant' ဖြစ်သည်။ သတိပေးချက်: ကျွန်ုပ်တို့ ပုံကြမ်းသာ (Just Sketch) အသုံးပြုပါက 'Toponaming-Tolerant' မဟုတ်ပါ။
 
--    **Override Offset**: (<small>(v1.0)</small> ) This overrides **Offset** attribute to set offset of each segment of wall. Ignored if Base object provides Offsets information, with getOffsets() method (If a value is zero, the value of \'Offset\' will be followed). ENHANCEMENT by ArchSketch: GUI \'Edit Wall Segment Offset\' Tool is provided in the external <img alt="" src=images/SketchArch_Workbench.svg  style="width:16px;"> [SketchArch Add-on](https://github.com/paullee0/FreeCAD_SketchArch) to let users to select the edges interactively. \'Toponaming-Tolerant\' if ArchSketch is used in Base (and SketchArch Add-on is installed). Warning: Not \'Toponaming-Tolerant\' if just Sketch is used. Property is ignored if Base ArchSketch provided the selected edges.
+-    **Override Offset**: (<small>(v1.0)</small>) ဤသည်သည် **Offset** attribute ကို override လုပ်၍ နံရံ၏ တစ်ပိုင်းချင်းစီ offset ကို သတ်မှတ်ပေးသည်။ Base object သည် getOffsets() မက်သက်ဒ်ဖြင့် Offsets အချက်အလက်များ ပေးထားပါက ဤသည်ကို မျက်နှာမဖုံးမီ (ignored)။ (တန်ဖိုး သုညဖြစ်ပါက 'Offset' ၏ တန်ဖိုးကို လိုက်နာမည်) ArchSketch မှ တိုးတက်မှုအနေဖြင့် GUI 'Edit Wall Segment Offset' ကိရိယာကို အပြင်ပိုင်း <img alt="" src=images/SketchArch_Workbench.svg  style="width:16px;"> [SketchArch Add-on](https://github.com/paullee0/FreeCAD_SketchArch) တွင် ပံ့ပိုးထားသည်။ Base တွင် ArchSketch အသုံးပြု၍ SketchArch Add-on ထည့်သွင်းထားပါက 'Toponaming-Tolerant' ဖြစ်သည်။ သတိပေးချက်: ပြီးပြည့်စုံသော Base ArchSketch မှ ရွေးချယ်ထားသော အရ้มများကို ထည့်ပေးခဲ့ပါက အဆိုပါ ပိုင်ဆိုင်ချက်သည် မျက်နှာမဖုံးမီ (ignored) ဖြစ်မည်။
 
--    **Width**: The width of the wall. Ignored if the wall is based on a face or a solid. See also **Override Width**.
+-    **Width**: နံရံ၏ အနံ (width)။ နံရံသည် မျက်နှာပြင် (face) သို့မဟုတ် solid ပေါ်တွင် အခြေခံထားပါက ဤကို ဂရုပြုမထားပါ။ **Override Width** ကိုလည်း ကြည့်ပါ။
 
  <img alt="" src=images/Sketch_vs_Wall.jpg  style="width:480px;"> 
 
@@ -138,20 +136,20 @@ See [Arch Component](Arch_Component#Properties.md).
 
 [Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
 
-The Wall tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+Wall ကိရိယာကို [macros](Macros.md) များတွင်နှင့် [Python](Python.md) console မှ အသုံးပြုနိုင်ပြီး အောက်ပါ function ကို အသုံးပြုနိုင်သည်။
 
  
 ```python
 Wall = makeWall(baseobj=None, length=None, width=None, height=None, align="Center", face=None, name="Wall")
 ```
 
--   Creates a `Wall` object from the given `baseobj`, which can be a [Draft object](Draft_Workbench.md), a [Sketch](Sketcher_Workbench.md), a face, or a solid.
-    -   If no `baseobj` is given, you can provide the numerical values for the `length`, `width` (thickness), and `height`.
-    -   If given, `face` can be used to give the index of a face from the underlying object, to build this wall on, instead of using the whole object.
+-   ပေးထားသော `baseobj` မှ Wall object တစ်ခုကို ဖန်တီးသည်၊ ၎င်းသည် [Draft object](Draft_Workbench.md), ပုံကြမ်း / စကစ် (Sketch) (Sketcher_Workbench.md), မျက်နှာပြင် သို့မဟုတ် solid တစ်ခု ဖြစ်နိုင်သည်။
+    -   `baseobj` မပေးပါက `length`, `width` (thickness) နှင့် `height` အတွက် ဂဏန်းတန်ဖိုးများကို ပေးနိုင်သည်။
+    -   ပေးထားပါက `face` သည် အောက်ခံ object မှ မျက်နှာပြင်တစ်ခု၏ အညွှန်းစဉ် (index) ကို သတ်မှတ်ရန် အသုံးပြုနိုင်ပြီး အရာဝတ္ထုတစ်ခုလုံးကို အသုံးမပြုဘဲ အဆိုပါ မျက်နှာပြင်ပေါ်၌ နံရံကို ဆောက်နိုင်သည်။
 
--    `align`can be `"Center"`, `"Left"` or `"Right"`.
+-    `align` သည် `"Center"`, `"Left"` သို့ `"Right"` ဖြစ်နိုင်သည်။
 
--   It returns `None` if the operation fails.
+-   လုပ်ဆောင်ချက်မအောင်မြင်ပါက `None` ကို ပြန်ပေးမည်ဖြစ်သည်။
 
 Example:
 

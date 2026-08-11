@@ -5,52 +5,47 @@
    Workbenches: BIM_Workbench
    Shortcut: **L** **V**
    SeeAlso: 
----
+---# Arch Floor
 
-# Arch Floor
+## ဖော်ပြချက်
 
-## Description
+**Arch Floor** ကိရိယာသည် ဖရီးကက် (FreeCAD) အုပ်စုအရာ (group object) အမျိုးအစား ထူးခြားသော တစ်မျိုးဖြစ်ပြီး အဆောက်အဦး ထပ် (storey) များအတွက် သင့်လျော်စွာ အသုံးပြုနိုင်သော ပိုမိုအပိုဆောင်းပိုင်ဆိုင်ချက်အချို့ကို ထည့်သွင်းထားသည်။ အထူးသဖြင့် အထက်မူန့် (height) ပိုင်ဆိုင်ချက်ရှိပြီး ၎င်း၏ ကလေး အရာများ ([walls](Arch_Wall.md) နှင့် [structures](Arch_Structure.md)) မှ သူတို့၏ အမြင့်ကို အလိုအလျောက် သတ်မှတ်နိုင်သည်။ များပြီးနောက်၎င်းတို့ကို မော်ဒယ် အစီအရင်ခံအဖြစ် စီမံခန့်ခွဲရန် အဓိက အသုံးပြုသည်။
 
-The **Arch Floor** tool is a special type of FreeCAD group object that has a couple of additional properties particularly suited for building floors. Particularly, they have a height property, that its children objects ([walls](Arch_Wall.md) and [structures](Arch_Structure.md)) can use to set their own height automatically. They are mostly used to organize your model.
+<small>(v0.18)</small> မှစ၍ Arch Floor သည် အပြည့်အစုံ [Arch BuildingPart](Arch_BuildingPart.md) အရာမှ ဆင်းသက်လာပြီး ၎င်းသည် ထပ်များ သို့မဟုတ် အလွှာများに ကန့်သတ်မထားသော အဆောက်အအုံ မော်ဒယ်ကို စီမံရန် အသုံးပြုနိုင်သည့် စုံထမ်းကွန်တိန်နာ (general container) တစ်ခုဖြစ်သည်။ ဟောင်းမ၍ရှိသည့် Floor အရာများကို မျက်နှာပြင်တွင် ညာ ကလစ် (right click) ပြုလုပ်၍ `Convert to BuildingPart` ကို ရွေးခြင်းဖြင့် အသစ်အမျိုးအစားသို့ ပြောင်းလဲနိုင်သည်။
 
-As of <small>(v0.18)</small>  the Arch Floor is derived entirely from the [Arch BuildingPart](Arch_BuildingPart.md) object, which is a general container to organize a building model not limited to floors or storeys. Older Floor objects can be converted to the new type by right clicking on them and choosing `Convert to BuildingPart`.
+## အသုံးပြုရန်
 
-## Usage
+1.  လိုအပ်ပါက သင့်ထပ် အသစ်သို့ ထည့်လိုသော အရာ တစ်ခု သို့မဟုတ် အချို့ကို ရွေးချယ်ပါ။
+2.  Arch Floor ကိရိယာကို အောက်ပါ နည်းလမ်းများဖြင့် ဖော်မြူလိတ်ပြုလုပ်နိုင်သည်။
+    -   ကိရိယာတန်း (Toolbar) တွင် **<img src="images/Arch_Floor.svg" width=16px> [Floor](Arch_Floor.md)** ခလုတ်ကို နှိပ်ခြင်း။
+    -   ခလုတ်များ **L** ထပ်မှ **V** အတိုင်း နှိပ်ခြင်း။
+    -   အထက်တွင်ရှိသည့် မီနူးမှ **3D/BIM → Floor** ကို အသုံးပြုခြင်း။
 
-1.  Optionally, select one or more objects to be included in your new floor.
-2.  Invoke the Arch Floor command several ways:
-    -   Pressing the **<img src="images/Arch_Floor.svg" width=16px> [Floor](Arch_Floor.md)** button on the toolbar.
-    -   Using the **L** then **V** keyboard keys.
-    -   Using the **3D/BIM → Floor** entry from the top menu.
+## ရွေးချယ်စရာများ
 
-## Options
+-   ထပ်ကို ဖန်တီးပြီးနောက်၌ Tree View (Tree View) အတွင်းသို့ ဆွဲထည့်ခြင်း (drag and drop) ဖြင့် သို့မဟုတ် **<img src="images/Arch_Add.svg" width=16px> [Arch Add](Arch_Add.md)** ကိရိယာကို အသုံးပြုပြီး အပိုအရာများ ထည့်နိုင်သည်။
+-   Tree View (Tree View) ထဲမှ ဆွဲထုတ်၍ ထွက်ရန် သို့မဟုတ် **<img src="images/Arch_Remove.svg" width=16px> [Arch Remove](Arch_Remove.md)** ကိရိယာကို အသုံးပြုပြီး ထပ်ထဲမှ အရာများ ဖယ်ရှားနိုင်သည်။
 
--   After creating a floor, you can add more objects to it by drag and dropping them in the Tree View or by using the **<img src="images/Arch_Add.svg" width=16px> [Arch Add](Arch_Add.md)** tool.
--   You can remove objects from a floor by drag and dropping them out of it the Tree View or by using the **<img src="images/Arch_Remove.svg" width=16px> [Arch Remove](Arch_Remove.md)** tool.
+## ပိုင်ဆိုင်ချက်များ
 
-## Properties
-
-An Arch Floor object shares all properties from an [Arch BuildingPart](Arch_BuildingPart.md), with the **Ifc Type** set to `"Building Storey"`.
+Arch Floor အရာသည် [Arch BuildingPart](Arch_BuildingPart.md) ၏ ပိုင်ဆိုင်ချက်များအားလုံးကို မျှဝေပြီး **Ifc Type** ကို `"Building Storey"` အဖြစ် သတ်မှတ်ထားသည်။
 
 ## Scripting
 
+**ကြည့်ရန်လည်းရှိသည်။**
 
-**See also:**
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) ကို ကြည့်ပါ။
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
+Floor ကိရိယာကို [macros](Macros.md) များတွင် သို့မဟုတ် [Python](Python.md) ကွန်ဆိုးမှ အောက်ပါ function ကို အသုံးပြု၍ ဖန်တီးနိုင်သည်။
 
-The Floor tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
-
- 
 ```python
 Floor = makeFloor(objectslist=None, baseobj=None, name="Floor")
 ```
 
--   Creates a `Floor` object from `objectslist`, which is a list of objects.
+-   `objectslist` သည် အရာများစာရင်းဖြစ်ပြီး ထိုသို့ `Floor` အရာကို ဖန်တီးသည်။
 
-Example:
+ဥပမာ -
 
- 
 ```python
 import FreeCAD, Draft, Arch
 
@@ -69,8 +64,6 @@ Building = Arch.makeBuilding([Floor])
 Site = Arch.makeSite(Building)
 FreeCAD.ActiveDocument.recompute() 
 ```
-
-
 
 ---
 ⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch Floor

@@ -4,77 +4,72 @@
    MenuLocation: Annotation , Grid
    Workbenches: BIM_Workbench
    SeeAlso: Arch_Axis, Arch_AxisSystem
----
+---# Arch Grid
 
-# Arch Grid
+## ဖော်ပြချက်
 
-## Description
+**Arch Grid** ကိရိယာသည် ထДокယုာတွင် ဂရစ်(tic) ဆိုင်ရာ ပုံစံမျိုးရှိအရာကို တင်ထားရန် အသုံးပြုနိုင်သည်။ ဤအရာကို ပြန်လည်ပြင်ဆင်၍ ပြုလုပ်နိုင်ပြီး ဒါက regular ဖြစ်ပေမယ့် ပိုမိုရှုပ်ထွေးသည့် ဖရိမ်လိုအပ်သည့် Arch အရာများ (ဥပမာ မျက်နှာပြင်ပျက်များ၊ မျက်နှာဖုံးနံရံများ၊ ကော်လံဂရစ်များ၊ လက်တံချစ်ဇယားများ စသည်) များကို တည်ဆောက်ရန် ကိုးကားအရင်းအမြစ်အဖြစ် သတ်မှတ်ထားသည်။ Grid ပစ္စည်းကို စာရင်းဇယား(spreadsheet) ကဲ့သို့ ပြင်ဆင်နိုင်ပြီး ကော်လံနှင့် ရေလိုင်းများထည့်/ဖယ်ရှားနိုင်၊ အတိုင်းအတာများ သတ်မှတ်နိုင်၊ ဆဲလ်များကို ပေါင်းစပ်/ခွဲနိုင်သည်။
 
-The **Arch Grid** tool allows you to place a grid-like object in the document. This object is meant to serve as a base to build Arch objects that need a regular but complex frame, such as windows, curtain walls, column grids, railings, etc. The Grid object is editable like a spreadsheet, where you can add or remove columns and rows, define their size, and merge cells.
-
-The Grid is a 2D object, and can therefore be used anywhere a 2D shape such as a [Draft](Draft_Workbench.md) or [Sketch](Sketcher_Workbench.md) is needed, but it can also behave as a [Arch AxisSystem](Arch_AxisSystem.md), and be used to propagate the placement of other Arch objects.
+ဂရစ်သည် 2D အရာဖြစ်သောကြောင့် [Draft](Draft_Workbench.md) သို့မဟုတ် [ပုံကြမ်း / စကစ် (Sketch)](Sketcher_Workbench.md) ကဲ့သို့ 2D ပုံစံမျိုးလိုအပ်သည့် နေရာတိုင်းတွင် အသုံးပြုနိုင်ပြီး၊ ထို့အပြင် [Arch AxisSystem](Arch_AxisSystem.md) အဖြစ်ပါ ကိုင်တွယ်နိုင်ပြီး အခြား Arch ပစ္စည်းများ၏ တည်နေရာများကို ပျံ့နှံ့စေရန် အသုံးပြုနိုင်သည်။
 
  <img alt="" src=images/Arch_Grid_example.jpg  style="width:600px;">  
-*An array of columns, a railing system, and a window, each based on an [Arch Grid](Arch_Grid.md) object.*
+*ကော်လံများတန်းစီထားခြင်း၊ လက်တံချစ်စနစ်နှင့် ပြတင်းပေါက် တစ်ခုစီသည် [Arch Grid](Arch_Grid.md) ပစ္စည်းတစ်ခုအား အခြေခံကာ ဖန်တီးထားသည်။*
 
-## Usage
+## သုံးနည်း
 
-1.  Press the **<img src="images/Arch_Grid.svg" width=16px> [Grid](Arch_Grid.md)** button.
-2.  Set the **Width** and **Height** of the grid in the properties.
-3.  Enter edit mode by double-clicking the grid object in the tree view.
-4.  Add rows and columns.
-5.  Set the desired width and height of rows and columns by double-clicking the row or column headers.
+1.  ခလုတ် **<img src="images/Arch_Grid.svg" width=16px> [Grid](Arch_Grid.md)** ကို နှိပ်ပါ။
+2.  ပရော်ပတ်တီများတွင် ဂရစ်၏ **Width** နှင့် **Height** ကို သတ်မှတ်ပါ။
+3.  ဂရစ်ပစ္စည်းကို tree view တွင် double-click ပြုလုပ်ကာ edit mode သို့ ဝင်ပါ။
+4.  အတန်းများ (rows) နှင့် ကော်လံများ (columns) ထည့်ပါ။
+5.  Row header သို့မဟုတ် Column header ကို double-click ပြုလုပ်ကာ row/column များ၏ လိုချင်သော အကျယ်နှင့် အမြင့်ကို သတ်မှတ်ပါ။
 
-## Options
+## ရွေးချယ်စရာများ
 
--   A column width or row height of 0 means its size will be adapted automatically to fit the total width/height of the grid.
--   Cells can be merged and unmerged by selecting them and clicking the appropriate button.
--   When used as the **Axis** property of other Arch objects, the grid will drive the positioning of these objects. The **Points Output** property defines how the other objects are placed on the grid: At vertices, edge midpoints or face centers.
--   By setting the **Auto Height** or **Auto Width** properties to a non-zero value, the total number of rows/columns and their individual heights/widths is ignored. Instead, the maximum number of columns or rows of the given auto width/height get automatically created.
+-   ကော်လံအကျယ် သို့မဟုတ် ရေလိုင်းအမြင့်ကို 0 သတ်မှတ်ထားပါက ဂရစ်၏ စုစုပေါင်း အကျယ်/အမြင့်ဖြင့် ကိုက်ညီအောင် အလိုအလျောက် ပြင်ဆင်သည်။  
+-   ဆဲလ်များကို ရွေးချယ်ပြီး သင့်သတ်မှတ်ချက်နှင့် ကိုက်ညီသော ခလုတ်ကို နှိပ်ခြင်းဖြင့် ပေါင်းစည်း/ခွဲနိုင်သည်။  
+-   အခြား Arch ပစ္စည်းများ၏ **Axis** property အဖြစ် ဤဂရစ်ကို သတ်မှတ်ပါက ဂရစ်က အဆိုပါပစ္စည်းများ၏ တည်နေရာကို ဦးတည်စေမည်။ **Points Output** property သည် အခြားပစ္စည်းများကို ဂရစ်ပေါ်တွင် မည်သည့်သဘောဖြင့် တည်နေရာထားမည်ကို သတ်မှတ်ပေးသည် — ဗိုက်(Vertices) များတွင်၊ အရှေ့နား(midpoints of edges) များတွင် သို့မဟုတ် မျက်နှာပြင်(ပေ့စ်) အလယ်နေရာများတွင် သတ်မှတ်နိုင်သည်။  
+-   **Auto Height** သို့မဟုတ် **Auto Width** property များကို သုညမဟုတ်သောတန်ဖိုးတစ်ခု သတ်မှတ်ပါက၊ စုစုပေါင်း rows/columns နှင့် တစ်ခုချင်းစီ၏ အမြင့်/အကျယ်ကို မစဉ်းစားတော့ဘဲ၊ ထိုသတ်မှတ်ထားသော auto width/height အားဖြင့် ထိပ်ဆုံး အလိုအလျောက် တည်ဆောက်နိုင်သည့် ကော်လံ/ရေလိုင်းအများဆုံးကို ဖန်တီးပေးလိမ့်မည်။
 
-## Properties
+## ပရော်ပတ်တီများ
 
--    **Rows**: The number of rows
+-    **Rows**: အတန်း(r rows) အရေအတွက်
 
--    **Columns**: The number of columns
+-    **Columns**: ကော်လံ(columns) အရေအတွက်
 
--    **Row Size**: The sizes for rows
+-    **Row Size**: အတန်းများ၏ အတိုင်းအတာများ
 
--    **Column Size**: The sizes of columns
+-    **Column Size**: ကော်လံများ၏ အတိုင်းအတာများ
 
--    **Points Output**: The type of 3D points produced by this grid object
+-    **Points Output**: ဤဂရစ်ပစ္စည်းက ထုတ်ပေးမည့် 3D အမှတ်(Points) の ပုံစံ
 
--    **Width**: The total width of this grid
+-    **Width**: ဤဂရစ်၏ စုစုပေါင်း အကျယ်
 
--    **Height**: The total height of this grid
+-    **Height**: ဤဂရစ်၏ စုစုပေါင်း အမြင့်
 
--    **Auto Width**: Creates automatic column divisions (set to 0 to disable)
+-    **Auto Width**: အလိုအလျောက် ကော်လံ ခွဲခြမ်းမှုများ ဖန်တီးသည် (ပိတ်ရန် 0 သတ်မှတ်ပါ)
 
--    **Auto Height**: Creates automatic row divisions (set to 0 to disable)
+-    **Auto Height**: အလိုအလျောက် အတန်း ခွဲခြမ်းမှုများ ဖန်တီးသည် (ပိတ်ရန် 0 သတ်မှတ်ပါ)
 
--    **Reorient**: When in edge midpoint mode, if this grid must reorient its children along edge normals or not
+-    **Reorient**: edge midpoint mode တွင် ဤဂရစ်သည် သေးငယ်သော အရာများကို edge normal များအတိုင်း ပြန်လှည့်ပေးရမည့်ဟုတ်မဟုတ်ကို သတ်မှတ်သည်
 
--    **Hidden Faces**: The indices of faces to hide
+-    **Hidden Faces**: ဖျောက်ရန် မျက်နှာပြင်များ၏ အညွှန်းစနစ်(ဒေါင်းဂဏန်းများ)
 
-## Scripting
+## စကရိပ်တင်း (Scripting)
 
+**ကြည့်ပါ:**
 
-**See also:**
+[Arch API](Arch_API.md) နှင့် [ဖရီးကက် (FreeCAD) စကရိပ်တင်း အခြေခံ](FreeCAD_Scripting_Basics.md)။
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
+Grid ကိရိယာကို [macros](Macros.md) များတွင်နှင့် [Python](Python.md) ကွန်ဆိုလ်မှ အောက်ပါ function ကို အသုံးပြု၍ ခေါ်သုံးနိုင်သည်။
 
-The Grid tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
-
- 
 ```python
 Grid = makeGrid(name="Grid")
 ```
 
--   Creates a `Grid` object.
+-   `Grid` အရာကို ဖန်တီးသည်။
 
-Its `Width`, `Height`, `Rows`, and `Columns` attributes can be changed directly to define the appearance of the grid.
+၎င်း၏ `Width`, `Height`, `Rows`, နှင့် `Columns` attribute များကို တိုက်ရိုက်ပြောင်းလဲ၍ ဂရစ်၏ ပုံစံကို သတ်မှတ်နိုင်သည်။
 
- 
 ```python
 import FreeCAD, Draft, Arch
 Grid = Arch.makeGrid()
@@ -91,7 +86,5 @@ Structure.Axis = Grid
 FreeCAD.ActiveDocument.recompute() 
 ```
 
-
-
 ---
-⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch Grid
+⏵ [စာရွက်စာတမ်း အညွှန်း](../README.md) > [BIM](Category_BIM.md) > Arch Grid

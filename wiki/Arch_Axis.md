@@ -5,69 +5,68 @@
    Workbenches: BIM_Workbench
    Shortcut: **A** **X**
    SeeAlso: Arch_AxisSystem, Arch_Grid
----
+---# Arch အက်စစ် (Arch Axis)
 
-# Arch Axis
+## ဖော်ပြချက်
 
-## Description
+The **<img src="images/Arch_Axis.svg" width=16px> [Arch အက်စစ်](Arch_Axis.md)** ကိရိယာသည် လက်ရှိစာရွက်တွင် အက်စစ်များစွာကို တည်ထားနိုင်သည်။ အက်စစ်တစ်ခုနှင့် အခြားအက်စစ်အကြား အကွာအဝေးနှင့် ထောင့်သည် စိတ်ကြိုက်ပြင်ဆင်နိုင်ပြီး၊ နံပါတ်ပြ ပုံစံကိုလည်း သတ်မှတ်နိုင်သည်။ အက်စစ်များကို များအားဖြင့် အရာဝတ္ထုများကို snap ဆိုင်ရာ အညွှန်းအဖြစ် အသုံးပြုကြပြီး၊ **<img src="images/Arch_AxisSystem.svg" width=16px> [Arch AxisSystems](Arch_AxisSystem.md)** နဲ့အတူလည်း အသုံးပြုနိုင်သည်။ အခြား Arch အရာဝတ္ထုများကနေ parametric array များ (ဥပမာ ဘီးံရိုက်များ သို့မဟုတ် ကော်လံများ) ပြုလုပ်လိုသော အချက်များအဖြစ်လည်း reference ပြုနိုင်သည်။ **<img src="images/Arch_Grid.svg" width=16px> [Arch Grids](Arch_Grid.md)** များကိုလည်း အက်စစ်များအစား အသုံးပြုနိုင်သည်။
 
-The **<img src="images/Arch_Axis.svg" width=16px> [Arch Axis](Arch_Axis.md)** tool allows you to place a series of axes in the current document. The distance and the angle between axes is customizable, as well as the numbering style. The axes serve mainly as references to snap objects onto, but can also be used together with **<img src="images/Arch_AxisSystem.svg" width=16px> [Arch AxisSystems](Arch_AxisSystem.md)**. They can also be referenced by other Arch objects to create parametric arrays, for example of beams or columns. **<img src="images/Arch_Grid.svg" width=16px> [Arch Grids](Arch_Grid.md)** can also be used in places of axes.
-
+ 
  <img alt="" src=images/Arch_Axis_example.jpg  style="width:600px;">  
-*Two axes objects positioned perpendicularly to each other to create a grid*
+*နှစ်ခုသော အက်စစ်အရာဝတ္ထုများကို တစ်ချောင်းထပ်တည့်စေ၍ grid တစ်ခု ဖန်တီးထားသော ဥပမာ*
 
-## Usage
 
-1.  Press the **<img src="images/Arch_Axis.svg" width=16px> [Axis](Arch_Axis.md)** button, or press **A** then **X** keys.
-2.  [Move](Draft_Move.md)/[rotate](Draft_Rotate.md) the axes system to the desired position.
-3.  Enter edit mode by double-clicking the axes system in the tree view to adjust its settings like number of axes, distances and angles between axes.
+## အသုံးပြုနည်း
 
-## Options
+1.  **<img src="images/Arch_Axis.svg" width=16px> [Axis](Arch_Axis.md)** ခလုတ်ကို နှိပ်ပါ၊ သို့မဟုတ် ကီး **A** ပြီး **X** ကို နှိပ်ပါ။
+2.  အက်စစ်စနစ်ကို [Move](Draft_Move.md)/[rotate](Draft_Rotate.md) ဖြင့် လိုလျောက်နေရာသို့ တိုး/လည်ပတ်ပါ။
+3.  သစ်ပင်ကြည့်ရှုမှု (tree view) တွင် အက်စစ်စနစ်ကို နှစ်ချက်နှိပ်၍ အယ်ဒီတ် မုဒ်သို့ ဝင်ကာ အက်စစ်အရေအတွက်၊ အကွာအဝေးများနှင့် ထောင့်များကဲ့သို့ အဆင့်ဆင့် ဆက်တင်များကို ဂရုစိုက်ပြင်ဆင်ပါ။
 
--   Each axis in the series has its own distance and angle in relation to the previous axis. This allows to do very complex systems such as non-orthogonal systems, polar systems or any kind of non-uniform system.
--   Double-clicking the axis in the tree view allows to edit the distances, angles and labels of each axis.
--   Axes length, size of the bubbles and numbering styles are customizable directly via the axes system\'s properties.
--   Each axis can also display a label, which is editable via the task panel dialog.
+## ရွေးချယ်စရာများ
 
-## Properties
+-   စီးရီးထဲရှိ အဲ့ဇ် (each axis) တစ်ခုချင်းစီတွင် ယခင်အက်စစ်နှင့် ဆက်နွယ်ပြီး မိမိ၏ ကိုယ်ပိုင် အကွာအဝေးနှင့် ထောင့်များ ရှိသည်။ ၎င်းက non-orthogonal စနစ်များ၊ polar စနစ်များ သို့မဟုတ် မတူညီသော စနစ်မျိုးစုံ ဖန်တီးရန် အလွန်ကောင်းမွန်စေသည်။
+-   သစ်ပင်ကြည့်ရှုမှု (tree view) တွင် အက်စစ်တစ်ခုကို နှစ်ချက်နှိပ်ခြင်းဖြင့် အက်စစ်တစ်ခုချင်းစီ၏ အကွာအဝေးများ၊ ထောင့်များနှင့် လိုင်ဘယ်များ (labels) ကို တည်းဖြတ်နိုင်သည်။
+-   အက်စစ်၏ အရှည်၊ ဘတ်ဘယ်အရွယ်အစား နှင့် နံပါတ်ပုံစံများကို အက်စစ်စနစ်၏ Properties မှတဆင့် တိုက်ရိုက်ပြင်ဆင်လိုက်နိုင်သည်။
+-   အက်စစ်တစ်ခုချင်းစီသည် Task Panel (လုပ်ငန်းတာဝန်ပြား) ဒိုင်ယာလော့ဂ်မှတဆင့် တည်းဖြတ်နိုင်သည့် အမှတ်တန်း (label) ကိုလည်း ပြသနိုင်သည်။
 
--    **Length**: The length of the axes
+## Properties (ပိုင်ဆိုင်မှုများ)
 
--    **Limit**: If greater than zero, each axis will be represented as two lines of the given length instead of one continuous line <small>(v0.20)</small> 
+-    **Length**: အက်စစ်၏ အရှည်
 
--    **Bubble Size**: The size of the axis bubbles
+-    **Limit**: အကယ်၍ တန်ဖိုးသည် သုညထက် ကြီးနေရင်၊ အက်စစ်တိုင်းကို တစ်ခုတည်း ဖြစ်သော ဆက်လက်လိုင်းတစ်ခုအစား ပေးထားသော အရှည်ရှိသော လိုင်းနှစ်ကြောင်းအဖြစ် ကိုယ်စားပြုမည် <small>(v0.20)</small> 
 
--    **Numeration style**: How the axes are numbered: 1,2,3, A,B,C, etc\...
+-    **Bubble Size**: အက်စစ် bubble (အမှတ်ပတ်) ၏ အရွယ်အစား
 
--    **Bubble Position**: Where the bubble is placed on the axis: At start point, endpoint, both or none.
+-    **Numeration style**: အက်စစ်များကို နံပါတ်ပေးသည့် ပုံစံ - 1,2,3, A,B,C စသဖြင့်
 
--    **Font Name**: A font to draw the bubble number and/or labels
+-    **Bubble Position**: ဘတ်ဘယ် (bubble) ကို အက်စစ်တည်နေရာပေါ်ကို ဘယ်နေရာမှာထားမည်နည်း - စတင်ချက်၊ အဆုံးချက်၊ နှစ်ဘက်လုံး သို့မဟုတ် မည်မျှမထည့်မိ
 
--    **Font Size**: The size of the label text only (bubble text is controlled by the bubble size)
+-    **Font Name**: ဘတ်ဘယ်နံပါတ်နှင့်/သို့မဟုတ် လိုင်ဘယ်(များ) ရေးဆွဲရန် အသုံးပြုမည့် အလုံးအရင်း font အမည်
 
--    **Show Labels**: Turns the display of the label texts on/off
+-    **Font Size**: လိုင်ဘယ် စာသား၏ အရွယ်အစားသာ (ဘတ်ဘယ်စာသားသည် ဘတ်ဘယ်အရွယ်အစားဖြင့် ထိန်းချုပ်သည်)
 
-## Use as section mark 
+-    **Show Labels**: လိုင်ဘယ် စာသားများကို ပြသမည်/ပိတ်မည် စီမံခန့်နိုင်သည်
 
-By setting the **Bubble Position** property to **Arrow left/right** or **Bar left/right**, the axis will display a filled arrow or bar instead of the bubble, so it can be used as a section mark. <small>(v0.20)</small> 
+## စက်ပိုင်းအဖြစ် အသုံးချရန် (Use as section mark)
+
+**Bubble Position** ပိုင်ဆိုင်မှုကို **Arrow left/right** သို့မဟုတ် **Bar left/right** သတ်မှတ်ခြင်းဖြင့်၊ အက်စစ်သည် ဘတ်ဘယ်အစား ပြည့်စုံသော မျှော်ပြသော အဲရေး (arrow) သို့မဟုတ် အတန်းပြား (bar) ကို ပြသမည်ဖြစ်၍ ထိုအင်္ဂါရပ်အား section mark အဖြစ် အသုံးပြုနိုင်သည်။ <small>(v0.20)</small> 
 
 ## Scripting
 
+**ကြည့်ရရန်:**
 
-**See also:**
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) များကို ကြည့်ပါ။
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
-
-The Axis tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+Axis ကိရိယာကို [macros](Macros.md) များတွင်နှင့် [Python](Python.md) console မှ တွတ်လိမ့်၍ အောက်ပါ function ဖြင့် အသုံးပြုနိုင်သည်။
 
  
 ```python
 Axes = makeAxis(num=5, size=1000, name="Axes")
 ```
 
--   Creates an `Axes` object from the given number (`num`) of axes, and `size`, the interval between each axis.
+-   ပေးထားသော အက်စစ် အရေအတွက် (`num`) နှင့် အက်စစ်တိုင်းအကြား အကွာအဝေး ဖြစ်သော `size` ကို အသုံးပြုပြီး `Axes` အရာဝတ္ထုကို ဖန်တီးသည်။
 
-Example:
+ဥပမာ:
 
  
 ```python
@@ -92,7 +91,6 @@ Draft.rotate(Axes2, -90)
 Draft.move(Axes2, FreeCAD.Vector(-1000, 2500, 0))
 FreeCAD.ActiveDocument.recompute()
 ```
-
 
 
 ---

@@ -6,116 +6,114 @@
    Shortcut: **P** **I**
    Version: 0.17
    SeeAlso: 
----
+---# Arch Pipe
 
-# Arch Pipe
+## ဖော်ပြချက်
 
-## Description
+**Arch Pipe** ကိရိယာသည် စိတ်တိုင်းမကျသည့်နေရာမှ သို့မဟုတ် ရွေးထားသော အရာများမှ ပို့လိုက်ကာ ပိုင်အိုင်များ (pipes) ဖန်တီးနိုင်သည်။ ရွေးထားသော အရာများသည် Part-based (Draft, Sketch စသည့်) ဖြစ်ရမည်၊ ထို့အပြင် ဖွင့်လှစ်ထားသော Wire တစ်ခုသာသာပါဝင်ရမည်။
 
-The **Arch Pipe** tool allows to create pipes from scratch, or from selected objects. The selected objects must be Part-based (Draft, Sketch, etc..) and contain one and only one open Wire.
+## အသုံးပြုနည်း
 
-## Usage
+1.  လိုအပ်လျှင် [Part](Part_Workbench.md) အမျိုးအစားရဲ ႔ အလျားလိုင်း ပုံအရောင်များ၊ ဥပမာ [Draft Line](Draft_Line.md), [Draft Wire](Draft_Wire.md) သို့မဟုတ် ဖွင့်လှစ်ထားသော [Sketch](Sketcher_NewSketch.md) တစ်ခုကို ရွေးပါ။
+2.  ဤအမိန့်ကို အမျိုးမျိုးသောနည်းလမ်းဖြင့် ခေါ်ယူနိုင်သည် -
+    -   ကိရိယာတန်း (Toolbar) ပေါ်ရှိ **<img src="images/Arch_Pipe.svg" width=16px> [Pipe](Arch_Pipe.md)** ခလုတ်ကို နှိပ်ခြင်း။
+    -   ကီးဘုတ်တွင် **P** နှင့် **I** ကို ဆက်တိုက် နှိပ်ခြင်း။
+    -   အပေါ်မီနူးမှ **3D/BIM → Pipe** ကို နှိပ်ခြင်း။
 
-1.  Optionally, select a linear [Part](Part_Workbench.md) shape such as a [Draft Line](Draft_Line.md), a [Draft Wire](Draft_Wire.md) or an open [Sketch](Sketcher_NewSketch.md).
-2.  Invoke this command using several methods:
-    -   Pressing the **<img src="images/Arch_Pipe.svg" width=16px> [Pipe](Arch_Pipe.md)** button on the toolbar.
-    -   Pressing the **P** then **I** keyboard shortcut.
-    -   Pressing the **3D/BIM → Pipe** entry from the top menu.
+## ရွေးချယ်မှုများ
 
-## Options
+-   Pipes များသည် [Arch Components](Arch_Component.md) အားလုံးတွင် ပါရှိသည့် ရိုးရိုးပိုင်ဆိုင်မှုများနှင့် အပြုအမူများကိုမျှဝေပါသည်။
 
--   Pipes share the common properties and behaviours of all [Arch Components](Arch_Component.md)
-
-## Properties
+## ပိုင်ဆိုင်မှုများ
 
 ### Data
 
 
 {{TitleProperty|Component}}
 
--    **Base|Link**: The base wire of this pipe, if any.
+-    **Base|Link**: ဤ pipe ၏ အခြေခံ wire ဖြစ်ပါက ၎င်းကို ဖေါ်ပြသည်။
 
-For the other properties in the group see [Arch Component](Arch_Component#Properties.md).
+အုပ်စုမှ အခြားပိုင်ဆိုင်မှုများအတွက် [Arch Component](Arch_Component#Properties.md) ကို ကြည့်ပါ။
 
 
 {{TitleProperty|Pipe}}
 
--    **Diameter|Length**: The diameter of this pipe, if its **Profile Type** is {{Value|Circle}}.
+-    **Diameter|Length**: ဤ pipe ၏ အချင်း (diameter) — **Profile Type** သတ်မှတ်ချက်သည် {{Value|Circle}} ဖြစ်သောအခါ အသုံးပြုမည်။
 
--    **Height|Length**: The height of this pipe, if its **Profile Type** is {{Value|Rectangle}}.
+-    **Height|Length**: ဤ pipe ၏ အမြင့် — **Profile Type** သတ်မှတ်ချက်သည် {{Value|Rectangle}} ဖြစ်သောအခါ အသုံးပြုမည်။
 
--    **Length|Length**: The length of this pipe, if not based on a wire.
+-    **Length|Length**: wire အပါမပါသော pipe ၏ အလျား (length)။
 
--    **Offset End|Length**: The offset from the end point of the pipe. Automatically set if an [Arch PipeConnector](Arch_PipeConnector.md) is added at this point to make the pipe fit the connector. See [Typical workflow](#Typical_workflow.md) below.
+-    **Offset End|Length**: pipe ၏ အဆုံးဧကမှ အရှည် မျှဝေမှု (offset)။ Arch PipeConnector တစ်ခုကို ထိုနေရာတွင် ထည့်သွင်း၍ connector နှင့် ကိုက်ညီစေရန် အလိုအလျောက် သတ်မှတ်မည်။ အောက်တွင် [Typical workflow](#Typical_workflow.md) အပိုဒ်တွင် ဖော်ပြထားသည်။
 
--    **Offset Start|Length**: The offset from the start point of the pipe. Idem.
+-    **Offset Start|Length**: pipe ၏ စစချိန်မှ အရှည် မျှဝေမှု (offset) — အထက်ပါအတိုင်း။
 
--    **Profile|Link**: The base profile of this pipe. If not set, the pipe profile is determined by **Profile Type**.
+-    **Profile|Link**: ဤ pipe ၏ အခြေခံ ပိုင်းနမူနာ (profile)။ မသတ်မှတ်ထားပါက **Profile Type** အရ pipe profile ကို ဆုံးဖြတ်မည်။
 
--    **Profile Type|Enumeration**: The profile of this pipe. Only used if **Profile** is not set. The options are: {{Value|Circle}}, {{Value|Square}} or {{Value|Rectangle}}.
+-    **Profile Type|Enumeration**: ဤ pipe ၏ ပေါ်ပုံစံ (profile) — **Profile** မသတ်မှတ်ထားလျှင်သာ အသုံးပြုသည်။ ရွေးချယ်မှုများမှာ: {{Value|Circle}}, {{Value|Square}} သို့မဟုတ် {{Value|Rectangle}} ဖြစ်သည်။
 
--    **Wall Thickness|Length**: The wall thickness of this pipe.
+-    **Wall Thickness|Length**: ဤ pipe ၏ မျက်နှာပြင် (နံရိုး) အထူ။
 
--    **Width|Length**: The width of this pipe, if its **Profile Type** is {{Value|Square}} or {{Value|Rectangle}}.
+-    **Width|Length**: ဤ pipe ၏ အကျယ် — **Profile Type** သည် {{Value|Square}} သို့မဟုတ် {{Value|Rectangle}} ဖြစ်သောအခါ သတ်မှတ်မည်။
 
-## Typical workflow 
+## ပုံမှန် လုပ်ဆောင်ပုံ (Typical workflow)
 
--   Start by placing sanitary/hydraulic appliance items (below is an imported step file). You turn these objects into Arch Equipments by selecting them, and pressing the [Arch Equipment](Arch_Equipment.md) button.
+-   အရင်ဆုံး ဆေးချော/ရေဒီဇိုင်း ဆိုင်ရာ အိမ်သုံးကိရိယာများ (sanitary/hydraulic appliance items) ကို တည်ထားပါ (အောက်မှာ imported step file ဥပမာ ကိုမြင်ရမည်)။ မိမိ ဤ အရာများကို ရွေးချယ်ပြီး [Arch Equipment](Arch_Equipment.md) ခလုတ်ကို နှိပ်ခြင်းဖြင့် Arch Equipments များအဖြစ် ပြောင်းလဲနိုင်သည်။
 
 ![](images/Arch_pipe_example_01.jpg )
 
--   Arch Equipments now have a new **SnapPoints** property, which is a list of 3D vectors. This allows you to add custom snap points, to which you can snap when the new [Draft Special](Draft_Snap_Special.md) snap button is turned on. Currently that property is only available to Python, though. In the case above I added a new snap point at the exit of the WC appliance. The vectors inside SnapPoints appear on the model as white dots:
+-   Arch Equipments များတွင် ယခု **SnapPoints** ဟူသော ပိုင်ဆိုင်မှုအသစ်တစ်ခု ရှိလာပြီး ၎င်းသည် 3D ဗက်တာ (vectors) များစာရင်းဖြစ်သည်။ ၎င်းက သင်လိုချင်သည့် custom snap points များကို ထည့်နိုင်ရန်နှင့် [Draft Special](Draft_Snap_Special.md) snap ခလုတ်ကို ဖွင့်ထားသောအခါ အဖြစ် snap လုပ်နိုင်ရန် အခွင့်အရေး ပေးသည်။ လက်ရှိတွင် ၎င်းပိုင်ဆိုင်မှုကို Python မှသာ အသုံးပြုနိုင်သည်။ အထက်ပါ ဥပမာတွင် WC ကိရိယာထွက်ပွါးနေသည့် အစွန်းတွင် အသစ်သော snap point တစ်ချက် ထည့်ထားသည်။ SnapPoints အတွင်းရှိ ဗက်တာများသည် မော်ဒယ်ပေါ်တွင် အဖြူနက်အမှတ်များအဖြစ် ပြသမည်။
 
 FreeCAD.ActiveDocument.Equipment.SnapPoints=\[FreeCAD.Vector(0,0,100)\]
 
 ![](images/Arch_pipe_example_02.jpg )
 
--   With the new [\"Snap Special\"](Draft_Snap_Special.md) Draft Snap, you can now snap to these custom points:
+-   အသစ်ထည့်ထားသော [\"Snap Special\"](Draft_Snap_Special.md) Draft Snap ဖြင့် သင်သည် အဆိုပါ custom point များသို့ snap လုပ်နိုင်ပါပြီ။
 
 ![](images/Arch_pipe_example_03.jpg )
 
--   Now we can draw our piping using Draft Lines, Draft Wires, or Sketches. The best way, though, is using only Draft Lines:
+-   ယခု သင်၏ ပိုက်လိုင်းများကို Draft Lines, Draft Wires သို့မဟုတ် Sketchs များကို အသုံးပြု၍ ဆွဲကြပါ။ အကောင်းဆုံးနည်းလမ်းမှာ များအားလုံးကို Draft Lines ဖြင့်သာ ဆွဲခြင်းဖြစ်သည်။
 
 ![](images/Arch_pipe_example_04.jpg )
 
--   There is now a new [Draft Slope](Draft_Slope.md) tool that allows to change the slope of Draft lines, to, for example, 5% (0.05). So we can quickly give our waste lines a correct slope. Only z coordinates are change by this tool, so we only need to snap them back to each other, the top projection will stay unchanged.
+-   ယခုအသစ်ထည့်ထားသော [Draft Slope](Draft_Slope.md) ကိရိယာက Draft lines များ၏ အမိုးထောင့် (slope) ကို ဥပမာ 5% (0.05) အထိ ပြောင်းလဲနိုင်စေသည်။ ထို့ကြောင့် ကျွန်ုပ်တို့သည် ဖျက်လိုင်း (waste lines) များကို လျင်မြန်စွာ သတ်မှတ် slope မှာယူနိုင်သည်။ ဤကိရိယာသည် z ကော်အရ်ဒနိတ်များကိုသာ ပြောင်းလဲသဖြင့်၊ lines များကို ပြန်လဲအောင် snap ပြုလုပ်လိုက်လျှင် ထိပ်ပိုင်း projection သည် မပြောင်းလဲဘဲ ရှိနေမည်။
 
 ![](images/Arch_pipe_example_05.jpg )
 
--   We now only have to select all our lines, and press the [Arch Pipe](Arch_Pipe.md) button. Arch Pipe works with any Part-based object that contains one and only one open wire.
+-   အခု ကျွန်ုပ်တို့သည် ကျွန်ုပ်တို့၏ lines အားလုံးကို ရွေးချယ်ကာ [Arch Pipe](Arch_Pipe.md) ခလုတ်ကို နှိပ်ရုံဖြင့် ပိုက်များ ဖန်တီးနိုင်ပါပြီ။ Arch Pipe သည် တစ်ခုသာဖြစ်ပြီး ဖွင့်လှစ်ထားသော wire ကို ထိန်းသိမ်းထားသော Part-based object များအတွက် အလုပ်လုပ်ပါသည်။
 
 ![](images/Arch_pipe_example_06.jpg )
 
--   We can now create connections by selecting 2 or 3 coincident tubes, and press the [Arch PipeConnector](Arch_PipeConnector.md) button. If 3 pipes are selected, two of them must be aligned in order to create a tee element:
+-   2 သို့မဟုတ် 3 ခုထိ ထပ်တူရှိသော အရိုးသားပေါက် ပိုင်းများ (coincident tubes) ကို ရွေးချယ်ပြီး [Arch PipeConnector](Arch_PipeConnector.md) ခလုတ်ကို နှိပ်ကာ ချိတ်ဆက်မှုများ (connections) ဖန်တီးနိုင်သည်။ ပိုက် 3 ခုပြောင်းရွေးထားပါက၊ tee element တစ်ခု ဖန်တီးရန် အနည်းဆုံး 2 ခုသည် တန်းတူ alignment ရှိရမည်။
 
 ![](images/Arch_pipe_example_07.jpg )
 
--   Changing the connectors radius doesn\'t change the length of the underlying base line, only the resulting tube (by changing their OffsetStart or OffsetEnd property). So you can still draw your line layout with only straight lines, without the need to care about curves and radius.
+-   connector ၏ radius ကို ပြောင်းလဲခြင်းသည် အခြေခံ base line ၏ အလျားကို မပြောင်းလဲပဲ ထွက်ရှိလာသော tube ကိုသာ (OffsetStart သို့မဟုတ် OffsetEnd ပိုင်ဆိုင်မှုများကို ပြောင်းလဲခြင်းဖြင့်) ပြောင်းလဲစေသည်။ ထို့ကြောင့် သင်သည် တိုရှည်ရှင်းသောလိုင်းများဖြင့်သာ ကိုယ့် line layout ကို ဆွဲ၍ ရှည်လျားမှုများ၊ ဖြာပရီများနှင့် စိတ်ပူစရာ မလိုဘဲ ဆောင်ရွက်နိုင်သည်။
 
-It is also possible to create Arch Pipes without a base line, in this case use its \"Length\" property to define the length.
+base line မပါဘဲ Arch Pipes များ ဖန်တီးခြင်းလည်း မဖြစ်နိုင်သောအရာ မဟုတ်ပါ — ဤအချိန်၌ pipe ၏ "Length" ပိုင်ဆိုင်မှုကို အသုံးပြု၍ အလျားကို သတ်မှတ်ပါ။
 
-## Scripting
+## စကရစ်တင် (Scripting)
 
 
-**See also:**
+**ကြည့်ရန်လည်းရှိသည်။**
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) ကို ကြည့်ပါ။
 
-The Pipe tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+Pipe ကိရိယာကို [macros](Macros.md) တွင် သို့မဟုတ် [Python](Python.md) console မှ အသုံးပြုလိုပါက အောက်ပါ function ကို အသုံးပြုနိုင်သည်။
 
  
 ```python
 pipe = makePipe(baseobj=None, diameter=0, length=0, placement=None, name="Pipe")
 ```
 
--   Creates a `pipe` object from the given `baseobj` and `diameter`.
+-   ပေးထားသော `baseobj` နှင့် `diameter` မှ `pipe` object ကို ဖန်တီးသည်။
     -   
         `baseobj`
         
-        is a [Draft Line](Draft_Line.md) or [Draft Wire](Draft_Wire.md).
+        သည် [Draft Line](Draft_Line.md) သို့မဟုတ် [Draft Wire](Draft_Wire.md) ဖြစ်ရမည်။
 
-    -   If `baseobj` is omitted, a straight pipe can be created with just the `diameter` and the `length` in the Z direction.
--   If a `placement` is given, it is used.
+    -   `baseobj` ကို မပေးပါက၊ `diameter` နှင့် `length` (Z ဂရပ်တောင်းဦး ကိုးဒ်) ကိုသာ အသုံးပြု၍ တည့်တည့် လျှောက်သော pipe တစ်ခု ဖန်တီးနိုင်သည်။
+-   `placement` တစ်ခု ပေးထားပါက ၎င်းကို အသုံးပြုမည်။
 
  
 ```python

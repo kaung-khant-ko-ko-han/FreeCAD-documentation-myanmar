@@ -1,30 +1,31 @@
-# Addon
-## Introduction
+# Addon (အပိုဆောင်း)
 
-In FreeCAD and in this documentation, an [addon](addon.md) is any component that is not part of the base installation, but that can be added to the system by certain methods.
+## အဖော်ပြချက်
 
-## Different types 
+ဖရီးကက် (FreeCAD) နှင့် ဤစာတမ်းတွင်၊ [addon](addon.md) ဆိုသည်မှာ အခြေခံတပ်ဆင်မှုထဲတွင် မပါသော အစိတ်အပိုင်း များကို အချို့သောနည်းလမ်းများဖြင့် စနစ်ထဲသို့ ထည့်သွင်းနိုင်သော အရာတိုင်းဖြစ်သည်။
 
-There are three types of addons:
+## အမျိုးအစားများ
 
--   [Macros](Macros.md): short snippet of [Python](Python.md) code that provides a new tool or functionality in a single file ending with `.FCMacro`.
--   [Workbenches](External_workbenches.md): collections of Python files that provide related [Gui Commands](Gui_Command.md) (tools) centered around a particular topic, for example, tools to design cabinets, or tools to work with architecture, or tools to design boats, etc. These workbenches usually define new toolbars where [commands](Gui_Command.md) are placed as buttons.
--   [Preference Packs](Preference_Packs.md): distributable collections of user preferences. <small>(v0.20)</small> 
+addon များတွင် အမျိုးအစားသုံးမျိုး ရှိပါသည်။
 
-## Installation
+-   [Macros](Macros.md): `.FCMacro` ဖြင့်ဆုံးသတ်ထားသော တစ်ဖိုင်တည်းထဲတွင် ရှိသော အတိုချုံး [Python](Python.md) ကုဒ်နည်းနည်း အပိုင်းဖြစ်ပြီး တစ်ခုသော ကိရိယာ သို့မဟုတ် လုပ်ဆောင်ချက်အသစ် တစ်ခုကို ပံ့ပိုးပေးသည်။ (Macros)
+-   [Workbenches](External_workbenches.md): ထူးခြားသတ်မှတ်ထားသော အရာရပ်တစ်ခုနှင့် စပ်လျဉ်းသော [Gui Commands](Gui_Command.md) (ကိရိယာ) များကို ပံ့ပိုးပေးသော Python ဖိုင်စုစည်းမှုများ ဖြစ်ပြီး၊ ဥပမာ - တစ်ချောင်အဝိုင်းဒီဇိုင်းလုပ်ရန် ကိရိယာများ၊ အင်ဂျင်နီယာဆောက်လုပ်ရေးနှင့် သက်ဆိုင်ရာကိရိယာများ၊ သင်္ဘောဒီဇိုင်းကိရိယာများ စသဖြင့် ဖြစ်နိုင်ပါသည်။ ဤလုပ်ငန်းခွင် (Workbench) များသည် မကြာခဏ သတ်မှတ်ထားသော ကိရိယာတန်း (Toolbar) များကို သတ်မှတ်ပြီး အဲ့ဒီ [commands](Gui_Command.md) များကို ခလုတ်များအဖြစ် ထည့်ထားသည်။
+-   [Preference Packs](Preference_Packs.md): အသုံးပြုသူတို့၏ အကြိုက်များခြင်းဆက်တင်များကို ဖြန့်ချိနိုင်သော စုစည်းမှုများ။ <small>(v0.20)</small>
 
-The recommended way to install addons is with the <img alt="" src=images/Std_AddonMgr.svg  style="width:24px;"> [Addon Manager](Std_AddonMgr.md).
+## တပ်ဆင်ခြင်း
 
-But for macros and workbenches manual installation is also possible:
+Addon များကို တပ်ဆင်ရန် အကြံပြုသော နည်းလမ်းမှာ <img alt="" src=images/Std_AddonMgr.svg  style="width:24px;"> [Addon Manager](Std_AddonMgr.md) ကို အသုံးပြုခြင်းဖြစ်သည်၊ (Addon မန်နေဂျာ)။
+
+သို့သော် macros နှင့် workbenches များအတွက် သတ်မတ်လက်လှမ်းညှိ၍ တပ်ဆင်ခြင်းလည်း မဖြစ်မနေ ဆောင်ရွက်နိုင်ပါသည်။
 
 -   [How to install macros](How_to_install_macros.md)
 -   [Installing more workbenches](Installing_more_workbenches.md)
 
-## Information for developers 
+## ဖွံ့ဖြိုးရေးသူများအတွက် အချက်အလက်
 
-If you have developed a macro or workbench, and want to see it included in the Addon manager, read how to do so on the repository pages: ([FreeCAD-addons](https://github.com/FreeCAD/FreeCAD-addons/) and [FreeCAD-macros](https://github.com/FreeCAD/FreeCAD-macros/)). If you add your macro to the [Macros recipes](Macros_recipes.md) page, there is nothing else to do, it will automatically be picked up by the Addon manager.
+ကာလပတ်လမ်းမှာ macro သို့မဟုတ် workbench တစ်ခု ဖန်တီးပြီးသားဖြစ်ကာ Addon manager တွင် ပါဝင်စေလိုပါက၊ ရရှိရန်လိုအပ်သည့် နည်းလမ်းများကို repository စာမျက်နှာများတွင် ဖတ်ရှုနိုင်ပါသည်။ (ဥပမာ - https://github.com/FreeCAD/FreeCAD-addons/ နှင့် https://github.com/FreeCAD/FreeCAD-macros/)။ သင်၏ macro ကို [Macros recipes](Macros_recipes.md) စာမျက်နှာတွင် ထည့်သွင်းပါက အခြားဘာမှ မလိုတော့ပဲ Addon manager မှ အလိုအလျောက် ရရှိသွားပါလိမ့်မည်။
 
-See also:
+ကြည့်ရှုရန်လည်း -
 
 -   [Distribution of a Python workbench](Workbench_creation#Distribution.md)
 -   [Distribution of a C++ workbench](Workbench_creation#Distribution_2.md)

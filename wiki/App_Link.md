@@ -1,25 +1,21 @@
 # App Link
-## Introduction
+## နိဒါန်း
 
 <img alt="" src=images/Link.svg  style="width:32px;">
 
-An [App Link](App_Link.md), or formally an `App::Link`, is a type of object that references or links to another object, in the same document, or in another document. It is especially designed to efficiently duplicate a single object multiple times, which helps with the creation of complex [assemblies](assembly.md) from smaller subassemblies, and from multiple reusable components like screws, nuts, and similar fasteners.
+An [App Link](App_Link.md), or formally an `App::Link`, သည် အရာဝတ္ထုတစ်မျိုးဖြစ်ပြီး တူညီသော စာရွက် (document) ထဲတွင် သို့မဟုတ် အခြားစာရွက်တစ်ခုတွင် ရှိသော အခြားအရာဝတ္ထုတစ်ခုကို ရည်ညွှန်းကာ လင့်ခ်ချနိုင်သော အမျိုးအစားဖြစ်သည်။ ဤအရာသည် တစ်ခုတည်းသော အရာဝတ္ထုကို ထိရောက်စွာ များစွာ ထပ်တူကူးယူရန် အထူးပြု၍ ဒီဇိုင်းရေးဆွဲထားခြင်းဖြစ်ပြီး၊ ၎င်းကြောင့် သေးငယ်သော subassemblies များမှ စုပေါင်း၍ ဖန်တီးထားသည့် ရှုပ်ထွေးသော [assemblies](assembly.md) (အစိတ်အပိုင်းများ တပ်ဆင်စုစည်းမှု) များကို ဖန်တီးရာတွင်၊ ဥပမာ သော့များ၊ နတ်များနှင့် ဆင်တူ ချိတ်ဆက်ပစ္စည်းများကဲ့သို့ ပြန်လည်အသုံးပြုနိုင်သော အစိတ်အပိုင်းများကို အထောက်အကူပြုနိုင်သည်။
 
 <img alt="" src=images/FreeCAD_core_objects.svg  style="width:800px;">
 
+*ဖရီးကက် (FreeCAD) တွင် အခြေခံ အရာဝတ္ထုများအကြား ဆက်နွယ်မှုများကို ရိုးရှင်းစွာ ဖော်ပြထားသော ပုံစံ*
 
+## အသုံးပြုနည်း
 
-*Simplified diagram of the relationships between the core objects in FreeCAD*
+အသေးစိတ်အတွက် [Std LinkMake](Std_LinkMake#Usage.md) ကို ကြည့်ပါ။
 
-## Usage
+## ပိုင်ဆိုင်မှုများ
 
-See [Std LinkMake](Std_LinkMake#Usage.md).
-
-## Properties
-
-See [Std LinkMake](Std_LinkMake#Properties.md).
-
-
+အသေးစိတ်အတွက် [Std LinkMake](Std_LinkMake#Properties.md) ကို ကြည့်ပါ။
 
 ---
 ⏵ [documentation index](../README.md) > App Link

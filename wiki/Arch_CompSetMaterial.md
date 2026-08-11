@@ -4,4 +4,4 @@
 
 
 ---
-⏵ [documentation index](../README.md) > Arch CompSetMaterial
+⏵ [စာတမ်း အညွှန်း](../README.md) > Arch CompSetMaterial

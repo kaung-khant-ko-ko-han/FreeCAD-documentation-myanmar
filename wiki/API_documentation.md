@@ -1,5 +1,6 @@
-# API documentation
-1.  REDIRECT [:Category:API](:Category_API.md)
+# API စာတမ်း
+
+1.  ပြောင်းလဲပို့ရန် [:Category:API](:Category_API.md)
 
 
 

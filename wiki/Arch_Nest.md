@@ -5,43 +5,39 @@
    Workbenches: BIM_Workbench
    Version: 0.17
    SeeAlso: Arch_Panel, Arch_Panel_Sheet
----
+---# Arch Nest
 
-# Arch Nest
+## ဖော်ပြချက်
 
-## Description
+**Arch Nest** ကိရိယာသည် အထည်ဖန်တီးရန် တစ်ခါတည်းအနည်းငယ်ပုံစံရှိသော ကုန်ပစ္စည်းတစ်ခုအား ကွန်တိန်နာ (container) အဖြစ် ရွေးချယ်ပြီး၊ အဲဒီ ကွန်တိန်နာပုံစံ သတ်မှတ်ထားသော အတွင်းပိုင်း အကျယ်အနံအတွင်း သတ်မှတ်စီစဉ်မည့် အခြားတစ်စုထပ်သော ဖလက်ပုံများကို ထည့်သွင်း စီစဉ်နိုင်ရန် အထောက်အကူပြုသည်။ ၎င်းကို 通常 CNC လုပ်ငန်းများတွင် အသုံးပြုသည် — အခြေပြား(panel) မှ အပိုင်းများစုံကို ဖြတ်ထုတ်လိုသော အခါ၊ ထိုအပိုင်းများကို panel ပေါ်တွင် နေရာအကြီးအကျယ် ယခင်ထက် သက်သာစွာ ဒေါင်လိုက် စီစဉ်ရန်လိုအပ်လေ့ရှိသည်။
 
-The **Arch Nest** tool allows to select a flat shape to be a container, and a series of other flat shapes to be organized inside the space defined by the container shape. This is typically needed for CNC operations, where you want to cut a series of pieces out of a base panel, and need to organize those pieces in the best possible compact way so they occupy less space on the panel.
-
-The algorithm behind the Nest tool is in constant evolution, and is currently not fully optimized. In the future the performance of this tool should become much better.
+Nest ကိရိယာ၏ အောက်ခံ အင်္ဂါရပ်များသည် မကြာခဏ တိုးတက်နေပြီး ယခုအချိန်တွင် အပြည့်အဝ အ ကျိုးမြှင့် ပြီးစီးထားခြင်း မရှိသေးပါ။ အနာဂတ်တွင် ဤကိရိယာ၏ အလုပ်လုပ်ဆောင်ချက်နှင့် စွမ်းဆောင်ရည်များ များစွာ မြှင့်တင်သွားမည် ဖြစ်သည်။
 
 <img alt="" src=images/Arch_Nest_example.jpg  style="width:600px;">
 
-*The image above shows a series of shapes before and after the nesting operation.*
+*အထက်ပါပုံတွင် nesting လုပ်ဆောင်မှုမပြုမီနှင့် ပြုလုပ်ပြီးနောက် အစီအစဉ်များကို ကိုပြထားသည်။*
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Select the **Utils → Panel tools → <img src="images/Arch_Nest.svg" width=16px> Nest** option from the menu.
-2.  Select an object to be the container. This object must be flat, and, at the moment, rectangular.
-3.  Click the **Pick selected** button to use that object as the container.
-4.  Select a series of other flat objects that you wish to place inside the container. These objects must all be flat and in the same plane as the container.
-5.  Adjust desired options below.
-6.  Start the calculation process.
-7.  At the end of the calculation, click the **Preview** button to create a temporary preview of the result.
-8.  If you wish to apply the result (move and rotate the actual shapes into place), click **OK**.
+1.  မီနူးမှ **Utils → Panel tools → <img src="images/Arch_Nest.svg" width=16px> Nest** ကို ရွေးချယ်ပါ (Nest ကိရိယာ)။
+2.  ကွန်တိန်နာအဖြစ် သတ်မှတ်လိုသည့် အရာကို ရွေးချယ်ပါ။ ဒီအရာသည် တန်းတူမျက်နှာပြင် (flat) ဖြစ်ရမည်၊ လောလောဆယ်တွင် အထောင့်ဆိုင်သော လေးဖက်ပုံ (rectangular) ဖြစ်ရပါမည်။
+3.  အဆိုပါ အရာကို ကွန်တိန်နာအဖြစ် အသုံးပြုရန် **Bold ဖော်ပြထားသော ခလုတ်** အထဲမှ **Pick selected** ကိုနှိပ်ပါ (ရွေးပြီး ရယူမည့် ခလုတ်)။
+4.  ကွန်တိန်နာအတွင်း ထည့်သွင်းလိုသည့် အခြား ဖလက်ပုံ (flat) အရာများကို အစုလိုက် ရွေးချယ်ပါ။  ၎င်းအရာများသည် အားလုံး တန်းတူမျက်နှာပြင်ရှိရမည်နှင့် ကွန်တိန်နာနှင့် တူညီသော ဧရိယာပျဉ်း၌ရှိရပါမည်။
+5.  အောက်တွင် ပြထားသော ရွေးချယ်စရာများကို ဆက်ပြင်ဆင်ပါ။
+6.  တွက်ချက်မှု လုပ်ငန်စတင်ပါ။
+7.  တွက်ချက်ခြင်း ဖျော်ဖြေမှု ပြီးဆုံးသည့်အခါ၊ ရလဒ်ကို အချိန်ဇယား ရှုမြင်ရန် **Preview** ခလုတ်ကိုနှိပ်ပါ (Preview အကြမ်းဖျဉ်းရှူရန် ခလုတ်)။
+8.  ရလဒ်ကို အတည်ပြု၍ (ပစ္စည်းများကို စစ်မှန်သော နေရာသို့ ရွှေ့နှင့် အဝိုင်းခြင်းများကို လုပ်ဆောင်ရန်) အသုံးချလိုပါက **OK** ကိုနှိပ်ပါ (OK ခလုတ်)။
 
 <img alt="" src=images/Arch_Nest_panel.jpg  style="width:800px;"> 
-*Taskview panel for the [Arch Nest](Arch_Nest.md) tool*
+* [Arch Nest](Arch_Nest.md) ကိရိယာအတွက် လုပ်ငန်းတာဝန်ပြား (Task Panel)*
 
-## Notes
+## မှတ်စုများ
 
--   All objects must have a face
--   At the moment the tool will only work with flat objects that all have the same orientation.
--   At the moment, the container must be rectangular.
--   At the moment, margin / spacing between the pieces is not implemented yet
--   The calculation can take a lot of time with many objects. That will be optimized in the future
-
-
+-   အရာအားလုံးတွင် မျက်နှာပြင် (face) တစ်ခု သို့မဟုတ် ပို၍ ရှိရမည်။
+-   လောလောဆယ်တွင် ကိရိယာသည် orientation တူညီသော ဖလက်ပုံများနှင့်ပင်သာ အလုပ်လုပ်နိုင်သည်။
+-   လောလောဆယ်တွင် ကွန်တိန်နာသည် လေးထောင့်ပုံ (rectangular) ဖြစ်ရမည်။
+-   လောလောဆယ်တွင် အပိုင်းများအကြား အကွာအဝေး/ရွံရှာ (margin / spacing) ကို မထည့်သွင်းထားသေးပါ။
+-   အရာများများလျှင် တွက်ချက်မှုသည် အချိန်များစွာယူနိုင်သည်။ ထိုကိစ္စကို အနာဂတ်တွင် အကောင်းမြင့်စေရန် အပြင်အဆင် ပြုလုပ်သွားမည်ဖြစ်သည်။
 
 ---
 ⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch Nest

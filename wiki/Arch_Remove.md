@@ -4,53 +4,47 @@
    MenuLocation: Modify , Remove component
    Workbenches: BIM_Workbench
    SeeAlso: Arch_CutPlane, Arch_Add
----
+---# Arch Remove
 
-# Arch Remove
+## ဖော်ပြချက်
 
-## Description
+**Arch Remove** ကိရိယာသည် အောက်ပါနည်းလမ်း ၂ မျိုးကို လုပ်ဆောင်နိုင်စေသည်။
 
-The **Arch Remove** tools allows you to do 2 kinds of operations:
+-   Arch အရာဝတ္ထုတစ်ခုထဲမှ ဒုတိယအစိတ်အပိုင်း (subcomponent) တစ်ခုကို ဖယ်ရှားခြင်း — ဥပမာ နံရံ (wall) ထဲသို့ ပေါင်းထည့်ထားသော ဘောက်စ်တစ်ခုကို ဖယ်ရှားခြင်းကဲ့သို့၊ **<img src="images/Arch_Add.svg" width=16px> [Arch Add](Arch_Add.md)** ဥပမာအတိုင်း။
+-   [shape](Part_Workbench.md)-အခြေခံ အရာဝတ္ထုတစ်ခုကို Arch အစိတ်အပိုင်းတစ်ခု (ဥပမာ **<img src="images/Arch_Wall.svg" width=16px> [Arch Wall](Arch_Wall.md)** သို့မဟုတ် **<img src="images/Arch_Structure.svg" width=16px> [Arch Structure](Arch_Structure.md)**) မှ လျော့ချခြင်း။
 
--   Remove a subcomponent from an Arch object, for example remove a box that has been added to a wall, like in the **<img src="images/Arch_Add.svg" width=16px> [Arch Add](Arch_Add.md)** example.
--   Subtract a [shape](Part_Workbench.md)-based object from an Arch component such as a **<img src="images/Arch_Wall.svg" width=16px> [Arch Wall](Arch_Wall.md)
-** or **<img src="images/Arch_Structure.svg" width=16px> [Arch Structure](Arch_Structure.md)**
-
-The counterpart of this tool is the **<img src="images/Arch_Add.svg" width=16px> [Arch Add](Arch_Add.md)** tool.
+ဤကိရိယာ၏ ဆန့်ကျင်ဘက် ကိရိယာမှာ **<img src="images/Arch_Add.svg" width=16px> [Arch Add](Arch_Add.md)** ဖြစ်သည်။
 
  <img alt="" src=images/Arch_Remove_example.jpg  style="width:600px;">  
-*A box subtracted from a wall, leaving a hole in it.*
+*နံရံမှ ဘောက်စ်ကို ဖြုတ်၍ အပေါက်တစ်ခု ကျန်ရှိနေသည်။*
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Select a subcomponent inside an Arch object.
-2.  Press the **<img src="images/Arch_Remove.svg" width=16px> [Remove component](Arch_Remove.md)** button, or **Modify → <img src="images/Arch_Remove.svg" width=16px> Remove component** from the top menu.
+1.  Arch အရာဝတ္ထုအတွင်းရှိ ဒုတိယအစိတ်အပိုင်းတစ်ခုကို ရွေးချယ်ပါ။
+2.  **<img src="images/Arch_Remove.svg" width=16px> [Remove component](Arch_Remove.md)** ခလုတ်ကို နှိပ်ပါ၊ သို့မဟုတ် ထိပ်တန်းမီနူးတွင် **Modify → <img src="images/Arch_Remove.svg" width=16px> Remove component** ကိုရွေးပါ။
 
-Or
+သို့မဟုတ်
 
-1.  Select objects to be subtracted, the last object selected must the Arch object from which the other objects will be subtracted.
-2.  Press the **<img src="images/Arch_Remove.svg" width=16px> [Remove component](Arch_Remove.md)** button, or **Modify → <img src="images/Arch_Remove.svg" width=16px> Remove component** from the top menu.
+1.  လျော့ချရန် ဩဘျက်များကို ရွေးချယ်ပါ၊ နောက်ဆုံးရွေးချယ်ထားသော ဩဘျက်မှာ အခြား ဩဘျက်များကို လျော့ချပေးမည့် Arch အရာဝတ္ထု ဖြစ်ရပါမည်။
+2.  **<img src="images/Arch_Remove.svg" width=16px> [Remove component](Arch_Remove.md)** ခလုတ်ကို နှိပ်ပါ၊ သို့မဟုတ် ထိပ်တန်းမီနူးတွင် **Modify → <img src="images/Arch_Remove.svg" width=16px> Remove component** ကိုရွေးပါ။
 
-## Scripting
+## စက္ရစ်ရေးခြင်း (Scripting)
 
+**ကြည့်ရန် —**
 
-**See also:**
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) ကိုလည်း ရှာဖတ်ပါ။
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
+Remove ကိရိယာကို [macros](Macros.md) များ၌ သုံးနိုင်ပြီး [Python](Python.md) console မှ အောက်ပါ function ကို အသုံးပြု၍ ကြိုတင်သတ်မှတ်နိုင်သည်။
 
-The Remove tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
-
- 
 ```python
 removeComponents(objectsList, host=None)
 ```
 
--   Removes the given objects in `objectsList` from their parents.
--   If a `host` object is specified, this function will try adding the objects in `objectsList` as holes to the `host`.
+-   `objectsList` တွင် ဖော်ပြထားသော ဩဘျက်များကို သူတို့၏ parent များမှ ဖယ်ရှားသည်။
+-   `host` ဩဘျက်ကို သတ်မှတ်ပါက၊ ဤ function သည် `objectsList` ထဲရှိ ဩဘျက်များကို `host` သို့ အပေါက် (holes) အဖြစ် ထည့်ရန် ကြိုးပမ်းပါမည်။
 
-Example:
+ဥပမာ:
 
- 
 ```python
 import FreeCAD, Draft, Arch
 
@@ -69,8 +63,6 @@ Draft.move(Box, FreeCAD.Vector(1000, 700, 0))
 Arch.removeComponents(Box, Wall)
 FreeCAD.ActiveDocument.recompute()
 ```
-
-
 
 ---
 ⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch Remove

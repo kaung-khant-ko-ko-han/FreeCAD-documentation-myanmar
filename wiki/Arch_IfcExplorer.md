@@ -1,7 +1,7 @@
 # Arch IfcExplorer
-1.  REDIRECT [BIM_IfcExplorer](BIM_IfcExplorer.md)
+1. ပြန်လည် ညွှန်ပြရန် [BIM_IfcExplorer](BIM_IfcExplorer.md)
 
 
 
 ---
-⏵ [documentation index](../README.md) > Arch IfcExplorer
+⏵ [စာရွက်စာတမ်း အညွှန်း](../README.md) > Arch IfcExplorer

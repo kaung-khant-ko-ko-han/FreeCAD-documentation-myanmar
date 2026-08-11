@@ -6,193 +6,188 @@
    Author: User:HarryvL   HarryvL, https://forum.freecadweb.org/memberlist.php?mode: viewprofile&u=18062 HarryvL
    FCVersion:  0.19 or newer
    Files: 
----
+---# Analysis of reinforced concrete with FEM
 
-# Analysis of reinforced concrete with FEM
+## နောက်ခံ
+
+[FEM လုပ်ငန်းခွင် (FEM Workbench)](FEM_Workbench.md) သည် ကွန်ကရစ်အဆောက်အအုံတစ်ခုတွင် တင်းချပ်မှု (tension) သို့မဟုတ် ရှီးယာ (shear) အောက်တွင် ခဲပြုတ်တတ်သော ပျက်စီးမှု (brittle failure) ကိုကာကွယ်ရန် လိုအပ်သည့် သံဘား (reinforcement) အဆင့်ကို ခန့်မှန်းပေးနိုင်သည်။
 
  
-
-
-
-## Background
-
-The [FEM Workbench](FEM_Workbench.md) has the capability of estimating the level of reinforcement required in a concrete structure to prevent brittle failure under tension or shear.
-
  <img alt="" src=images/Femconcrete_Wall_3D_rx_PSS.png  style="width:700px;"> 
 
-This is done with the method described in [\"Computation of reinforcement for solid concrete\", P.C.J. Hoogenboom and A. de Boer, HERON Vol. 53 (2008) No. 4](http://heronjournal.nl/53-4/3.pdf). In essence, it is a post-processing routine for CalculiX, which calculates the principal tensile stresses in the concrete from an elastic analysis and uses those to determine the minimum reinforcement in the three coordinate directions required to prevent failure. In the analysis, it is assumed that the concrete material cannot carry tensile stresses, whereas the steel is utilized to its maximum capacity (i.e. reaches yield).
+ဤကိစ္စကို [“Computation of reinforcement for solid concrete”, P.C.J. Hoogenboom and A. de Boer, HERON Vol. 53 (2008) No. 4](http://heronjournal.nl/53-4/3.pdf) တွင် ဖော်ပြထားသည့်နည်းလမ်းအတိုင်း ဆောင်ရွက်သည်။ အကျဉ်းချုပ်အားဖြင့်၊ ၎င်းသည် CalculiX ဖြင့် ဆက်လက်ပြုလုပ်သော အလျှော့ပုံစံ (elastic) စစ်ဆေးမှုအပေါ်တွင် post-processing routine တစ်ခုဖြစ်ကာ ကွန်ကရစ်တွင် ဖြစ်ပေါ်နေသည့် အဓိက တင်းချပ်ဖိအားများ (principal tensile stresses) ကိုတွက်ချက်ပြီး ထိုဖိအားများအား အခြေခံ၍ (x, y, z) သုံးဦးပိုင်း ဗဟိုဦးလျားတိုင်းတွင် ပျက်စီးမှုမဖြစ်စေရန် လိုအပ်သည့် မျှနည်းဆုံး သံဘား အချိုး (reinforcement ratio) ကို သတ်မှတ်ပေးသည်။ သန်းခြောက်သေတ္တာအနေအထားတွင် လေ့လာချက်တွင် ကွန်ကရစ်ပစ္စည်းသည် တင်းချပ်ဖိအားကို ခံနိုင်စွမ်းမရှိကြောင်း ဆင်ခြင်ထားပြီး သံပစ္စည်း (steel) ကိုတော့ ၎င်း၏အများဆုံးစွမ်းအား (ပုံမှန်အားဖြင့် yield အဆင့်ထိ) အသုံးချသတ်မှတ်ထားသည်။
 
-The required reinforcement is expressed in terms of a reinforcement ratio. This is the ratio of steel to concrete area. For example, a reinforcement ratio of 0.01 in the x direction (rx=0.01) means that the total cross-sectional area of reinforcement bars running in the x direction should be 1% of the concrete cross-sectional area they are passing through. A hypothetical cross-section of 1mx1m should in that case contain 0.01 m2 steel, which could be achieved by using 90 reinforcement bars of 12mm diameter each (steel area = 90\*PI\*(0.012)\^2/4=0.0102 m\^2). If the required reinforcement ratio over this concrete cross section is uniform then the bars could be placed at an equidistance 9x10 grid with a center-to-center distance of approximately 10cm. This is still a practical number where sufficient space between bars is left for the concrete to pass through and ensure a high-quality cover. Much higher values would lead to a very dense reinforcement grid with potential quality issues, whereas much lower values could lead to large tension cracks in the cross-section between the bars. A typical range in practice is from 0.002 to 0.02 (= 0.2% to 2%). Further guidance can be found in design codes.
+လိုအပ်သည့် သံဘားအချိုးကို သံပစ္စည်းဧရိယာနှင့် ကွန်ကရစ်ဧရိယာ၏ အချိုးအတွက် တာဝန်ခံသည်ဟု ဖော်ပြထားသည်။ ဥပမာအားဖြင့် x စဉ်းလျားတွင် သံဘားအချိုး rx=0.01 ဆိုပါက x လမ်းကြောင်းဖြင့် လမ်းလျှောက်သည့် သံဘားများ၏ စုစုပေါင်း အနိုင်ဧရိယာသည် သူတို့ဖြတ်သန်းသည့် ကွန်ကရစ်၏ အပြတ်အရေးဧရိယာ၏ 1% ဖြစ်ရမည်ကို ဆိုလိုသည်။ မဟုတ်မဖြစ် 1m x 1m ဖြတ်ပိုင်းတန်ဖိုးအတွက် 0.01 m^2 သံပစ္စည်းလိုအပ်၍ ၎င်းကို 12mm အချင်းရှိ သံဘား 90 လုံး အသုံးပြု၍ ဆောင်ရွက်နိုင်သည် (သံဧရိယာ = 90 * PI * (0.012)^2 / 4 = 0.0102 m^2)။ သံဘားအချိုး လုံးဆိုင်ရာ ဤဖြတ်ပိုင်းအတွင်း တစ်ခုပုံစံတူနေရပါက သံဘားများကို အလယ်စင်-အလယ်စင် အကွာအကွာ သတ်မှတ်ပြီး 9x10 ကြက်သိမ်းကွက်တစ်ခုအဖြစ် ထားနိုင်ပြီး အလယ်မှအလယ် အကွာခန့် မူလတန်ဖိုးမှာ ~10cm ဖြစ်နိုင်သည်။ ၎င်းသည် သံဘားများအကြား သ کافی ကွန်ကရစ် ဖြတ်ကျပါခွင့်နှင့် ကာကွယ်မှု (cover) အရည်အသွေးကို သေချာစေရန် လုံလောက်သည့် နေရာရှိသေးသော ပိုင်းဖြစ်သည်။ ပိုမိုမြင့်မားသော တန်ဖိုးများသည် သံဘား ကြိုးကာကွယ်ခိုင်မာမှုနည်းလာနိုင်သည့် ကြိမ်နှုန်းမြင့် ကြက်တိတန်းကျောက်စနစ် ဖြစ်လာနိုင်ပြီး အရည်အသွေးပြဿနာရှိနိုင်သည်။ တန်ဖိုးများ လွန်စွာနည်းပါက သံဘားကြားရှိ ဖြတ်ပိုင်းတွင် တင်းချပ်ထားသော ကြမ်းလာသော မျက်နှာကြီးကျိုးများ (large tension cracks) ဖြစ်ပေါ်စေနိုင်သည်။ လက်တွေ့တွင် သံဘားအချိုး အစက 0.002 မှ 0.02 (0.2% မှ 2%) အတွင်းဖြစ်တတ်သည်။ ဒီနှုန်းအကြောင်းပိုမိုသိရှိလိုပါက ဒီဇိုင်းကုဒ်များကို ကိုးကားပါ။
 
-If the required reinforcement ratio is not uniform over the full cross-section then the cross-section can be divided into pragmatic sub-sections with more or less uniform ratio and reinforcement applied to those cross-sections. An example will be given later on.
+လိုအပ်သည့် သံဘားအချိုးသည် စုစုပေါင်း ဖြတ်ပိုင်းတစ်လျှောက် မတူညီပါက အဆိုပါ ဖြတ်ပိုင်းကို စကားဝိုင်းတိုက် ဆုံးဖြတ်ထားသော အပိုင်းငယ်များ (pragmatic sub-sections) သို့ ခွဲ၍ ထိုအပိုင်းများအလိုက် သံဘားများကို လက်တွင်တပ်ဆင်နိုင်သည်။ ဥပမာတစ်ခုကို အောက်ပိုင်းတွင် ဖော်ပြမည်။
 
-As a word of caution, it takes much more to design a safe and durable concrete structure than what the FEM Workbench can currently provide. For example, the method does not calculate crack width (important for durability and functionality), accurate deformations (FEM results for concrete are simply linear-elastic) or take account of reinforcement anchoring requirements (causing an increase of required reinforcement ratios in anchoring zones). It also doesn't predict concrete crushing (although an indication of that can be obtained by plotting the Mohr-Coulomb stress - see further), which could mean that the concrete fails before the reinforcement yields, causing brittle failure of the overall structure. These and other limitations mean that the FEM concrete functionality can only be used to assess conceptual designs, whereas detailed design decisions critical to safety and performance should be left to qualified professionals.
+ဂရုစိုက်ရန် စကား — FEM လုပ်ငန်းခွင်က ယခုအချိန်တွင် ပေးနိုင်သည့် အချက်အလက်များသာဖြင့် သေချာကျရှုံးခြင်းမဖြစ်စေရန် လုံခြုံနိုင်ပြီး ခိုင်ခံ့ခံနိုင်မှုရှိသည့် ကွန်ကရစ်ဒီဇိုင်း တစ်ခုကို တစ်လျှောက်လုံး ဒီဇိုင်းဆောင်ရွက်ဖို့ မလုံလောက်ပါ။ ဥပမာ၊ ဤနည်းလမ်းသည် ချောကွဲပမာဏ (crack width) ကို တွက်ချက်ပေးမှုမရှိ (၎င်းသည် တာရှည်ခံမှုနှင့် လုပ်ဆောင်နိုင်မှုအတွက် အရေးကြီးသည်)၊ မှန်ကန်သော ပြောင်းလဲမှုများ (concrete အတွက် FEM ရလဒ်များသည် ရိုးရိုး linear-elastic ဖြစ်သည်) ကို မတွက်ချက်ပေးနိုင်သလို သံဘား ဗဟိုချုပ်စည်းရန် (anchoring) ဆိုင်ရာလိုအပ်ချက်များကိုလည်း ထည့်သွင်းစဉ်းစားခြင်းမရှိ (ဤကိစ္စသည် anchoring ခေရာများတွင် လိုအပ်သည့် သံဘားအချိုးများ တိုးလာစေနိုင်သည်)။ ထို့ပြင် ကွန်ကရစ် ကျဴးမှု (crushing) ကို မျှော်မှန်းဖော်ပြပေးနိုင်သေးသောမဟုတ်ပေမယ့် Mohr-Coulomb ဖိအားကို တင်ပြခြင်းဖြင့် အချက်အလက်အချို့ရနိုင်သည် — ၎င်းသည် သံဘား ရှေ့တိုင်မတိုင်မီ ကွန်ကရစ်ပျက်စီးနိုင်ခြေ ရှိမရှိကို ပြသနိုင်သည်။ ဤကဲ့သို့ အကန့်အသတ်များကြောင့် FEM ကွန်ကရစ်လုပ်ဆောင်ချက်များကို အ概念အဆင့်သတ်မှတ်ချက်များကိုသာ သုံးစွဲရန်သီးသန့် သတ်မှတ်ပြီး လုံခြုံမှုနှင့် စွမ်းဆောင်ရည်အရေးကြီးသည့် အသေးစိတ်ဒီဇိုင်းဆောင်ရွက်ချက်များကို အရည်အချင်းပြည့်မီသည့် ပရော်ဖက်ရှင်နယ်များထံ ပဲ မျှင့်ဖို့ လိုအပ်သည်။
 
-## Model geometry, loads and supports 
+## မော်ဒယ် ဂျီယိုမက်ထရီ၊ အလေးချိန် (.loads) နှင့် ထောက်ပံ့ချက်များ
 
-Although the FEM concrete routine does not have any additional requirements for geometry, loads and supports, it should be borne in mind that sharp corners and supports on edges or vertices can introduce stress concentrations that will lead to extremely high and unrealistic reinforcement ratios at or near those locations.
+FEM ကွန်ကရစ် routine တွင် ဂျီယိုမက်ထရီ၊ အလေးချိန်နှင့် ထောက်ပံ့ချက်များအတွက် အပိုထည့်စရာ မလိုပေမယ့် ကိုက်ညီမှုနံပါတ်များနှင့် ထောင်ချွန်တက်သောထောင့်များ (sharp corners) သို့မဟုတ် အနားများ (edges) သို့ ဗတ်စ်များ (vertices) ပေါ်တွင် ထောက်ပံ့ချက်တပ်ထားခြင်းသည် ဖိအားစုဆောင်းမှုကို ပေါင်းထည့်ပေးနိုင်၍ ထိုနေရာများတွင် အလွန်မြင့်မားပြီး အကျိုးမရှိသည့် သံဘားအချိုးများ ဖြစ်ပေါ်စေနိုင်ကြောင်း သတိထားရမည်။
 
-## Material Parameters 
+## ပစ္စည်း ပါရာမီတာများ
 
-FEM Workbench has a special material object for reinforced materials, which combines a matrix material (e.g. concrete) and a reinforcement material (e.g. steel). For the analysis of reinforced concrete with FEM, the following parameters need to be specified, as a minimum:
+FEM လုပ်ငန်းခွင်တွင် reinforced materials များအတွက် တိုက်ရိုက် သီးခြား material object တစ်ခုရှိပြီး ၎င်းသည် matrix material (ဥပမာ ကွန်ကရစ်) နှင့် reinforcement material (ဥပမာ သံ) ကို ပေါင်းစပ်ထားသည်။ FEM ဖြင့် လူဆောင်အဖြစ် ကွန်ကရစ်ကို ချုပ်ယူစစ်ဆေးရာတွင် အနည်းဆုံး အောက်ပါ ပါရာမီတာများကို သတ်မှတ်ထားရမည်။
 
-for concrete:
+ကွန်ကရစ်အတွက်
 
--   Young's modulus (used in the CalculiX analysis to calculate elastic deformations and stresses)
--   Poisson ratio (same)
--   uniaxial compressive strength (used during post-processing in FEM to calculate the Mohr-Coulomb stress as an indicator for crushing or shear failure in concrete)
--   friction angle (same)
+- Young's modulus (CalculiX စစ်ဆေးမှုတွင် elastic ပြောင်းလဲမှုများနှင့် ဖိအားများကိုတွက်ချက်ရာတွင် အသုံးပြုသည်)
+- Poisson ratio (အထက်ပါအတိုင်း)
+- uniaxial compressive strength (post-processing တွင် Mohr-Coulomb ဖိအားကို ကွန်ကရစ်တွင် ကျဴးခြင်း (crushing) သို့မဟုတ် ရှီးယာ ပျက်စီးမှုများကို အညွှန်းပြရန် အသုံးပြုသည်)
+- friction angle (အထက်ပါအတိုင်း)
 
-for steel:
+သံအတွက်
 
--   yield strength (used during post-processing in FEM to calculate reinforcement ratios)
+- yield strength (post-processing တွင် သံဘားအချိုးများ (reinforcement ratios) ကိုတွက်ချက်ရာတွင် အသုံးပြုသည်) — ပိုဖော်ပြရန် ဥပမာ: ပေါက်ချိန်စွမ်းအား (ပျက်ကွက်မတိုင်ခင်)။
 
-Please note that three types of analysis are performed:
+သတိပေးချက် — သုံးမျိုးသော စစ်ဆေးမှုများကို ဆောင်ရွက်သည်။
 
-1.  An elastic analysis using CalculiX (only utilizing the elastic parameters for concrete)
-2.  A post-processing step to analyze the required reinforcement (only utilizing the yield strength of steel)
-3.  Calculation of the Mohr-Coulomb stress (only using the strength parameters of concrete, i.e. uniaxial compressive strength and friction angle). The Mohr-Coulomb stress can be reviewed in the VTK pipeline.
+1. CalculiX အသုံးပြုသည့် elastic စစ်ဆေးမှု (ကွန်ကရစ်အတွက် elastic ပါရာမီတာများကိုသာ အသုံးပြုသည်)
+2. လိုအပ်သည့် သံဘားများကို သုံးသပ်ရန် post-processing အဆင့် (သံပစ္စည်း၏ yield strength ကိုသာ အသုံးပြုသည်)
+3. Mohr-Coulomb ဖိအားတွက်ချက်ချက် (ကွန်ကရစ်၏ အင်အား ပါရာမီတာများဖြစ်သည့် uniaxial compressive strength နှင့် friction angle ကိုသာ အသုံးပြုသည်) — Mohr-Coulomb ဖိအားကို VTK pipeline တွင် ကြည့်ရှုနိုင်သည်။
 
-## Application
+## အသုံးချနည်း
 
-In the remainder of this article, a few practical cases will be analyzed to discuss the application of the method.
+ဤဆောင်းပါး၏ အရှေ့ပိုင်းတွင် နည်းလမ်း၏ အသုံးချမှုကို ဆွေးနွေးရန် အချို့လက်တွေ့ အမှုများကို စမ်းသပ်ဆန်းစစ်မည်။
 
-### Simply supported beam with uniform load 
+### တန်းတူထောက်ခံထားသည့် beam (Simply supported beam) နှင့် တန်းတူ ဖြန့်ချိထားသော အလေးချိန်
 
-A 4.0x0.1x0.3m concrete beam is loaded by self-weight and a 100kN (25kN/m) distributed load.
+4.0 x 0.1 x 0.3 m အရွယ်အစားရှိ ကွန်ကရစ်ဘေးမ် (beam) ကို ကိုယ်ကိုယ်အလေးချိန်နှင့် 100 kN (25 kN/m) ဖြန့်ချိထားသော အလေးချိန်ဖြင့် သံပ်ခံထားသည်။
 
-The material parameters are as follows:
+ပစ္စည်း ပါရာမီတာများမှာ အောက်ပါအတိုင်းဖြစ်သည်။
 
-for concrete:
+ကွန်ကရစ်အတွက်
 
--   Young's modulus = 32 GPa (as per CalculiX default for concrete)
--   Poisson ratio = 0.17 (as per CalculiX default for concrete)
--   uniaxial compressive strength = 30 MPa (concrete type C30/37)
--   friction angle = 30 degrees
+- Young's modulus = 32 GPa (CalculiX ၏ ကွန်ကရစ်အတွက် default)
+- Poisson ratio = 0.17 (CalculiX default)
+- uniaxial compressive strength = 30 MPa (ခေတ်မီ concrete type C30/37)
+- friction angle = 30 ဒီဂရီ
 
-for steel:
+သံအတွက်
 
--   yield strength = 500 MPa
+- yield strength = 500 MPa
 
-The specific weight of the concrete is taken as 24kN/m\^3
+ကွန်ကရစ်၏ အသီးသီးအရှည်အလေးချိန်ကို 24 kN/m^3 အဖြစ်ယူထားသည်။
 
-The required reinforcement in the x direction is very high (5.4%) and exceeds the typical maximum percentages allowed by code to prevent brittle failure. The high shear stresses at the supports also lead to a requirement of high reinforcement:
+x ဂျိမ်းရှေ့လာမှုအတွက် လိုအပ်သည့် သံဘားအချိုးသည် အလွန်မြင့် (5.4%) ဖြစ်ပြီး brittle failure ကို ကာကွယ်ရန် ကုဒ်များက ခွင့်ပြုထားသည့် အမြင့်ဆုံးရာခိုင်နှုန်းကို ကျော်လွန်သွားသည်။ ထို့အပြင် ထောက်ပံ့ချက်များရှိရာတွင် ဖြစ်ပေါ်သည့် shear ဖိအားများကြောင့်လည်း သံဘားအချိုး မြင့်မားရန် လိုအပ်လာသည်။
 
  <img alt="" src=images/Pre_Stressed_Beam_2_Weight_Load_RR_x_0.054.jpg  style="width:700px;"> 
 
-The Mohr-Coulomb plot shows that the beam is indeed prone to crushing on the compression side (Mohr-Coulomb stress \> 0.0), as would be expected with a very high reinforcement percentage:
+Mohr-Coulomb ပလော့တ်တွင်လည်း ဘီးမ်သည် ဖိအားဘက်တွင် အမှိုက်ကျဴး (crushing) ဖြစ်နိုင်ခြေ ရှိကြောင်းတွေ့ရသည် (Mohr-Coulomb ဖိအား \> 0.0) — ၎င်းသည် သံဘားအချိုး အလွန်မြင့်မားသောအခြေအနေတွင် တွေ့ရသလို ဖြစ်သည်။
 
  <img alt="" src=images/Pre_Stressed_Beam_2_Weight_Load_MC.jpg  style="width:700px;"> 
 
-Both the reinforcement ratio and Mohr-Coulomb stress indicate that we have an issue and that we need to rethink our conceptual design. Potential solutions are to increase the beam dimensions or use pre-stressed concrete. Further details can be found in the following post:
+သံဘားအချိုးနှင့် Mohr-Coulomb ဖိအားနှစ်ခုလုံး ပရောဘလမ်းရှိကြောင်း အတည်ပြုထားပြီး ကျွန်ုပ်တို့၏ အကြံပြု စိတ်ကောက်ချက်ကိုပြန်လည်စဉ်းစားရန် လိုအပ်ကြောင်း ပြသနေသည်။ ဖြေရှင်းနည်းများအနေနှင့် ဘီးမ်၏ အတိုင်းအတာများကို တိုးမြှင့်ခြင်း သို့မဟုတ် pre-stressed concrete အသုံးပြုခြင်းတို့ကို စဥ်းစားနိုင်သည်။ အသေးစိတ်အချက်အလက်များကို အောက်ပါ ပို့စ်တွင် ဖတ်ရှုနိုင်ပါသည်။
 
  <https://forum.freecadweb.org/viewtopic.php?f=18&t=28821&start=10#p235003> 
 
-### Beam with mid-span support 
+### အလယ်ဗဟိုထောက်ပံ့ချက်ပါသော beam
 
-A 8.0x0.2x0.4m concrete beam is loaded by self-weight and a 160kN (20kN/m) distributed load.
+8.0 x 0.2 x 0.4 m အရွယ်အစားရှိ ကွန်ကရစ်ဘီးမ်ကို ကိုယ်ကိုယ်အလေးချိန်နှင့် 160 kN (20 kN/m) ဖြန့်ချိထားသော အလေးချိန်ဖြင့် ထားရှိသည်။
 
-The material parameters are as follows:
+ပစ္စည်း ပါရာမီတာများမှာ အောက်ပါအတိုင်းဖြစ်သည်။
 
-for concrete:
+ကွန်ကရစ်အတွက်
 
--   Young's modulus = 32 GPa (as per CalculiX default for concrete)
--   Poisson ratio = 0.17 (as per CalculiX default for concrete)
--   uniaxial compressive strength = 25 MPa (concrete type B25)
--   friction angle = 30 degrees
+- Young's modulus = 32 GPa (CalculiX default)
+- Poisson ratio = 0.17 (CalculiX default)
+- uniaxial compressive strength = 25 MPa (concrete type B25)
+- friction angle = 30 ဒီဂရီ
 
-for steel:
+သံအတွက်
 
--   yield strength = 286 MPa (reduced from 500 MPa to account for a safety factor of 1.75)
+- yield strength = 286 MPa (500 MPa မှ လုံခြုံမတည်ချက်အတွက် safety factor 1.75 သက်ရောက်မှုကို ထည့်၍ လျော့ချထားသည်)
 
-The specific weight of the concrete is taken as 24 kN/m\^3
+ကွန်ကရစ်၏ အထူးအလေးချိန်ကို 24 kN/m^3 အဖြစ်ယူထားသည်။
 
-The ParaView plot of the exported VTK file shows that the reinforcement requirement is largest at the top of the beam near the central support. Here the highest bending moment occurs. The maximum reinforcement ratio of 0.02 is at the high end of the practical range quoted earlier:
+Export လုပ်ထားသော VTK ဖိုင်ကို ParaView တွင် ကြည့်ရှုရာတွင် သံဘားလိုအပ်ချက်သည် ဘီးမ်၏ အပေါ်ဘက် အလယ်ဗဟိုထောက်ပံ့ချက်အနီး၌ အများဆုံး ဖြစ်ကြောင်း တွေ့ရသည်။ ဤနေရာတွင် အပေါ်ဘက်၌ အဓိက bending moment အများဆုံး ဖြစ်သည်။ အများဆုံး သံဘားအချိုး 0.02 သည် အထက်၌ ပြောခဲ့သည့် လက်တွေ့ ရာခိုင်နှုန်းအတွင်း အပေါ်ဆုံးတန်ဖိုးဖြစ်သည်။
 
  <img alt="" src=images/Beam_with_Central_Support_rx_full.png  style="width:700px;"> 
 
-The required area of steel at the central support can be obtained with a ParaView integration filter applied to the mid-section of the beam:
+အလယ်ဗဟိုထောက်ပံ့ချက်တွင် လိုအပ်သည့် သံပစ္စည်းဧရိယာကို ParaView ၏ integration filter ကို ဘီးမ်၏ အလယ်ဖြတ်ပိုင်း (mid-section) တွင် အသုံးပြုပီး ရရှိနိုင်သည်။
 
  <img alt="" src=images/CoG_Reinforcement.png  style="width:700px;"> 
 
-The panel at the bottom of this picture shows that the total required steel area at this cross section is 389.6 mm\^2. As one reinforcement bar of diameter 12mm has a cross-sectional area of 113mm\^2, it means that 4 bars would be required, giving a cross-sectional area of 452 mm\^2. These would need to be placed near the top of the beam while maintaining sufficient concrete cover. The theoretical center of gravity for the reinforcement can be found by integration:
+ဤပုံ၏ အောက်ခြေ panel တွင် ထိုဖြတ်ပိုင်းတွင် စုစုပေါင်းလိုအပ်သည့် သံဧရိယာမှာ 389.6 mm^2 ဖြစ်ကြောင်း ပြထားသည်။ သံဘား 12 mm အချင်းတစ်လုံး၏ ဖြတ်ပိုင်းဧရိယာမှာ 113 mm^2 ဖြစ်သောကြောင့် 4 လုံးလိုအပ်မည်ဟု ဆိုနိုင်ပြီး ၄လုံး၏ စုစုပေါင်းဧရိယာမှာ 452 mm^2 ဖြစ်မည်။ ၎င်းတို့ကို ဘီးမ်၏ အပေါ်ဘက် အနီးမှာ တပ်ဆင်သင့်ပြီး ကွန်ကရစ် cover အတွက် လုံလောက်သောအကွာအကွာကို ထိန်းသိမ်းရမည်။ သံဘားများ၏ အထက်ဖော်ပြသော reinforcement center of gravity (CoG) ကို အောက်ပါ အချက်အလက်ဖြင့် အင်တင်ဂရလေးရှင်းဖြင့် ရယူနိုင်သည်။
 
-CoG_y = Integrate (rx \* y dy dz) / Integrate (rx dy dz)
+CoG_y = Integrate (rx * y dy dz) / Integrate (rx dy dz)
 
-CoG_z = Integrate (rx \* z dy dz) / Integrate (rx dy dz)
+CoG_z = Integrate (rx * z dy dz) / Integrate (rx dy dz)
 
-These integrals can also be determined with ParaView and give for the present case (see bottom panels in the above picture):
+ဤစုပေါင်းသင်္ချာများကို ParaView ဖြင့်လည်း တွက်ချက်နိုင်ပြီး ယခုအတွက် ရလဒ်များ (အပေါ်ပုံ၏ အောက်ပိုင်း panel များ) သည် -
 
 CoG_y = 38961 / 389.6 = 100.0 mm
 
 CoG_z = 134917 / 389.6 = 346.3 mm
 
-which is, as expected, center-width and near the top.
+ဖြစ်ပြီး မျှော်မှန်းထားသလို အလယ်အနံနှင့် အပေါ်ဘက်နီးနီးတွင် တည်ရှိသည်။
 
-The reinforcement requirement found above agrees well with that obtained using traditional methods:
+အထက်ဖော်ပြထားသည့် သံဘားလိုအပ်ချက်သည် ရိုးရာ စံနစ်များဖြင့် ရရှိသော အဖြေများနှင့် ကောင်းစွာ ကိုက်ညီသည်။
 
  <https://forum.freecadweb.org/viewtopic.php?f=18&t=28821&start=20#p235063> 
 
-Finally, a Mohr-Coulomb stress check should be performed to check the potential crushing of the concrete. For this check, the characteristic compressive strength of concrete (25MPa) should be divided by an appropriate material factor (\>1.0).
+နောက်ဆုံးတွင်၊ ကွန်ကရစ်ပေါက်ကျ (crushing) ဖြစ်နိုင်ခြေကို စစ်ဆေးရန် Mohr-Coulomb ဖိအား စစ်ဆေးမှုကို ပြုလုပ်သင့်သည်။ ဤစစ်ဆေးမှုအတွက် ကွန်ကရစ်၏ characteristic compressive strength (25 MPa) ကို သင့်လျော်သည့် ပစ္စည်း အားကန့်သတ်ချက် (material factor > 1.0) ဖြင့် ညှိနှိုင်း၍ အသုံးပြုရမည်။
 
-### Shear wall with uniform load 
+### တန်းတူဖြန့်ချိထားသော အလေးချိန်ရှိ သာယာ့ရောင့် (Shear wall) 
 
-A 4.0x2.0x0.15m wall is supported by two 0.5m wide columns. The wall is loaded by self-weight and a 1.0MN distributed load at the top.
+4.0 x 2.0 x 0.15 m အရွယ်အစားရှိ နံရံတစ်ခုကို 0.5 m အနံရှိ ကော်လံနှစ်ခုဖြင့် ထောက်ပံ့ထားသည်။ နံရံအပေါ်ဘက်တွင် ကိုယ်ကိုယ်အလေးချိန်နှင့် 1.0 MN ဖြန့်ချိထားသော အလေးချိန်တစ်ခုအား ထည့်ထားသည်။
 
-The material parameters are as follows:
+ပစ္စည်း ပါရာမီတာများမှာ အောက်ပါအတိုင်းဖြစ်သည်။
 
-for concrete:
+ကွန်ကရစ်အတွက်
 
--   Young's modulus = 32 GPa (as per CalculiX default for concrete)
--   Poisson ratio = 0.17 (as per CalculiX default for concrete)
--   uniaxial compressive strength = 20 MPa
--   friction angle = 30 degrees
+- Young's modulus = 32 GPa (CalculiX default)
+- Poisson ratio = 0.17 (CalculiX default)
+- uniaxial compressive strength = 20 MPa
+- friction angle = 30 ဒီဂရီ
 
-for steel:
+သံအတွက်
 
--   yield strength = 286 MPa
+- yield strength = 286 MPa
 
-The specific weight of the concrete is taken as 24 kN/m\^3
+ကွန်ကရစ်၏ အထူးအလေးချိန်ကို 24 kN/m^3 အဖြစ်ယူထားသည်။
 
-The horizontal reinforcement ratio peaks at 0.014 (1.4%) near the bottom center section of the wall and the vertical reinforcement ratio is at a maximum 0.008 (0.8%) near the corners of the wall with the columns, where the shear stresses are highest:
+အဖက်ဘက်တွင် ngang (horizontal) သံဘားအချိုးအနည်းဆုံးအများဆုံး 0.014 (1.4%) ကို ကွန်ကရစ်နံရံ၏ အောက်ပိုင်း အလယ်ပိုင်းတွင် တွက်ချက်ရသည်။ အလျားလိုက် (vertical) သံဘားအချိုးများ အများဆုံး 0.008 (0.8%) ကို ကော်လံများနှင့် တွဲနေသော နံရံ၏ မျဉ်းနားတွင် တွက်ချက်ရသည်၊ ယင်းနေရာများတွင် shear ဖိအားများ အများဆုံးဖြစ်ကြသည်။
 
  <img alt="" src=images/Wall_3D.jpg  style="width:1000px;"> 
 
-The above picture shows possible zones of constant reinforcement ratio for the design of reinforcement. Although a minimum reinforcement percentage of 0.2% is chosen, it will be hard to achieve such a low value in practice, given that the spacing should not exceed a practical limit (say 300mm). Even with a light reinforcement grid of 10mm bars (cross-sectional area = 78mm\^2), the reinforcement ratio would then be 2 \* 78 / (150 \* 300) = 0.0035 (0.35%). (Note: factor 2 stems from the fact that the grid will be placed at both faces of the wall). If we add one more bar to the grid (halving the distance) the reinforcement ratio would double to 0.7% and one more would give approximately 1%. So most of the reinforcement requirement could be achieved by starting with a grid of d=10mm at 300x300mm spacing and adding bars in horizontal or vertical direction, as required. This would cover all but the requirement at the bottom of the wall, where we could add 3 bars d=12mm, giving a horizontal reinforcement ratio of 3 \* 113mm\^2 / (150mm \* 150mm) = 0.015 (1.5%). Here it is assumed that the height of the bottom zone is 150mm. Alternatively, we could choose 2 bars of 16mm diameter, achieving the same reinforcement ratio for a zone of 180mm height.
+အထက်ပါပုံသည် ဒီဇိုင်းအတွက် သံဘားအချိုးတူညီသော ဇုန်များ (zones of constant reinforcement ratio) ကို ဖော်ပြထားသည်။ အနည်းဆုံး သံဘားရာခိုင်နှုန်းကို 0.2% ရွေးချယ်ထားပေမယ့် လက်တွေ့တွင် စိတ်ကြိုက်အတိအကျ လုပ်ဆောင်ရန် ခက်ခဲနိုင်ပြီး အကွာအဝေးသည် မက်ရှင်နှုန်းတစ်ခု (ဥပမာ 300 mm) ထက် မကျော်သင့်ကြောင်း သိရှိရသည်။ 10 mm သံဘား (ဖြတ်ပိုင်းဧရိယာ = 78 mm^2) များဖြင့် အနိမ့် grid တစ်ခု (နှစ်ဖက်စွယ်လျင်) တည်ဆောက်ပါက သံဘားအချိုးဟာ 2 * 78 / (150 * 300) = 0.0035 (0.35%) ဖြစ်ပါလိမ့်မယ် (မှတ်ချက်: factor 2 သည် grid ကို နံရံ၏ နှစ်ဖက်တွင်တပ်ဆင်မည်ဖြစ်သောကြောင့် ဖြစ်သည်)။ ဘယ်လိုဆက်လက်လုပ်မည်ဆိုရင် grid တွင် တစ်လုံး ပိုထည့်ခြင်းအားဖြင့် အကွာကို ပြိုလဲ၍ သံဘားအချိုး ကိုနှစ်ဆမြှင့်နိုင်ပြီး တစ်လုံးထပ်ထည့်ခြင်းက ခန့်မှန်း၍ 1% ခန့်ရပါမည်။ ထို့ကြောင့် များသော သံဘားလိုအပ်ချက်များကို d=10 mm နှင့် 300 x 300 mm spacing ဖြင့် စတင်ပြီး လိုအပ်သလို အလျားလိုက် သို့မဟုတ် အနံလိုက် အပို သံဘားများထည့်သွင်းခြင်းဖြင့် ဖြေရှင်းနိုင်သည်။ ၎င်းသည် နံရံ၏ အောက်ပိုင်းတွင် လိုအပ်ချက်များကို ဖုံးလွှမ်းပေးနိုင်ရန် မလုံလောက်နိုင်ပါက အောက်ပိုင်းဇုန်အတွက် d=12 mm သံဘား 3 လုံးထည့်၍ horizontal reinforcement ratio = 3 * 113 mm^2 / (150 mm * 150 mm) = 0.015 (1.5%) ရရှိစေနိုင်သည်ဟု တွက်ချက်နိုင်သည်။ ဤကို လျှောက်လွှာသင်္ချာမှာ အောက်ဇုန်၏ အမြင့်ကို 150 mm ဟု သတ်မှတ်ထားခြင်းဖြစ်သည်။ အခြားရွေးချယ်မှုအဖြစ် d=16 mm သံဘား 2 လုံးကို ရွေးခြင်းဖြင့် 180 mm အမြင့် ζုန်တစ်ခုအတွက် တူညီသည့် reinforcement ratio ရရှိစေနိုင်သည်။
 
-Finally, a review of the Mohr-Coulomb stress shows that no concrete crushing is expected in the wall.
+နောက်ဆုံးတွင် Mohr-Coulomb ဖိအားအား ပြန်လည်စစ်ဆေးလျှင် နံရံတွင် ကွန်ကရစ်ပေါက်ကျခြင်း မမျှော်လင့်ရကြောင်း တွေ့ရသည်။
 
  <https://forum.freecadweb.org/viewtopic.php?f=18&t=28821&start=10#p234673> 
 
-### Deep beam with opening 
+### ဖွင့်ခေါက်ပါသော အနက်ကြီး (Deep beam with opening)
 
-The FIB Practitioners\' Guide to Finite Element Modelling of Reinforced Concrete Structures contains a design example of a deep concrete beam with an opening. The example is used in that report to demonstrate the \"Strut-and-Tie\" method. Here the results will be compared to those obtained with the FreeCAD FEM Workbench.
+FIB Practitioners' Guide to Finite Element Modelling of Reinforced Concrete Structures တွင် ဖွင့်ခေါက်ပါသော အနက်ကြီး ကွန်ကရစ်ဘီးမ် တစ်ခုကို ဒီဇိုင်းဥပမာအဖြစ် ထည့်သွင်းထားသည်။ ဤဥပမာကို "Strut-and-Tie" နည်းလမ်းကို ဖော်ပြရန် အသုံးပြုထားပြီး ဤနေရာ၌ FreeCAD FEM လုပ်ငန်းခွင်ဖြင့် ရရှိသည့် ရလဒ်များနှင့် နှိုင်းယှဉ်ပြမည်။
 
-The beam dimensions are 11.0x4.0x0.6m and it is loaded at the top by a distributed load of 120kN/m and a load of 5000kN introduced by a 1m wide column. The factored compressive strength of the concrete is 0.75 x 0.6 x fc = 0.45 \* 35 = 15.8MPa and the factored yield strength of the reinforcement steel is 315MPa.
+ဘီးမ် အရွယ်အစားမှာ 11.0 x 4.0 x 0.6 m ဖြစ်ပြီး အပေါ်ဘက်တွင် 120 kN/m ဖြန့်ချိထားသော အလေးချိန်နှင့် 1 m အနံရှိ ကော်လံတစ်ခုမှ မျာထားသော 5000 kN အလေးချိန်ကို ထည့်ထားသည်။ ကွန်ကရစ်၏ factored compressive strength သည် 0.75 x 0.6 x fc = 0.45 * 35 = 15.8 MPa ဖြစ်ပြီး သံပစ္စည်း၏ factored yield strength သည် 315 MPa ဖြစ်သည်။
 
-The reinforcement ratios and principal concrete stresses (compression only) derived with FreeCAD are shown below:
+FreeCAD ဖြင့် ရရှိသည့် reinforcement ratios နှင့် ကွန်ကရစ်၏ အဓိကဖိအားများ (compression မှသာ ပြထားသည်) ကို အောက်တွင် ဖော်ပြထားသည်။
 
  <img alt="" src=images/FIB_Deep_Concrete_Beam_1.png  style="width:1000px;"> 
 
-The required horizontal reinforcement (below in red) is determined by integration of the horizontal reinforcement ratio over the vertical cuts of interest (below in black). This is done using a Paraview integration filter.
+အနံလိုက် လိုအပ်သည့် သံဘား (အနီရောင်ဖြင့် အောက်တွင် ဖော်ပြထားသည်) ကို vertical ဖြတ်ပိုင်းများ (အောက်တွင် မဲရောင်) ပေါ်မှ horizontal reinforcement ratio ကို ပေါင်းခြင်း (integration) ဖြင့် သတ်မှတ်ထားသည်။ ၎င်းကို ParaView integration filter ဖြင့် ဆောင်ရွက်သည်။
 
  <img alt="" src=images/FIB_Reinforcement(2).jpg  style="width:700px;"> 
 
-The insert to the above figure shows a comparison of reinforcement requirements (in mm\^2 of steel) determined with FreeCAD to those in the FIB report.
+အထက်ပါ ပုံတွင် ထည့်သွင်းထားသော ရုပ်ပုံဆီတွင် FreeCAD နှင့် FIB 보고서ရှိ ရလဒ်များ (သံဧရိယာ mm^2 အဖြစ်) အား နှိုင်းယှဉ်ပြထားသည်။
 
-The following shows how the integration over lines of interest works in Paraview:
+အောက်တွင် ParaView တွင် လိုအပ်သော ရင်ကြားလိုင်းများ (lines of interest) အပေါ် ဗဟိုပေါင်းခြင်း (integration) ဘယ်လို ဆောင်ရွက်သည်ကို ဖော်ပြထားသည်။
 
  <img alt="" src=images/FIB_Reinforcement_ry.jpg  style="width:700px;"> 
 
-Finally, a plot of compressive and tensile principal stresses to demonstrate how stresses flow through the beam.
+နောက်ဆုံးတွင် ဖွဲ့စည်းထားသော ဖိအား (compressive) နှင့် တင်းချပ်ဖိအား (tensile principal stresses) ပလော့တ်များကို ဘီးမ်တစ်လျှောက် stress flow အဖြစ် ပြသထားသည်။
 
  <img alt="" src=images/FIB_Beam_Stresses_and_Cables.jpg  style="width:700px;"> 
 
-The tensile stress pattern suggests an alternative design concept using pre-stressing cables (superimposed in white). This concept is further elaborated in the following post: <https://forum.freecadweb.org/viewtopic.php?f=18&t=33049>
+တင်းချပ်ဖိအားပုံစံသည် pre-stressing cables အသုံးပြုသည့် အခြားဒီဇိုင်းအယူအဆတစ်ခုကို အကြံပြုနိုင်သည် (အဖြူရောင်ဖြင့် ညွှန်ထားသည်)။ ဤအယူအဆကို အောက်ပါ ပို့စ်တွင် ထပ်မံ ရှင်းလင်းထားသည်။ <https://forum.freecadweb.org/viewtopic.php?f=18&t=33049>
 
-## Related
+## ဆက်စပ်
 
--   [FEM Concrete](FEM_Concrete.md)
+- [FEM Concrete](FEM_Concrete.md)
 
  {{FEM Tools navi}}
 

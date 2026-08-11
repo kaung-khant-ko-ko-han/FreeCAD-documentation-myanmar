@@ -1,51 +1,51 @@
 # Advanced FreeCAD test system
-This page is dedicated to the Google Summer of Code project regarding the enhancement of FreeCAD\'s test system.
+ဤစာမျက်နှာသည် ဖရီးကက် (FreeCAD) ၏ စမ်းသပ်စနစ်အား တိုးမြှင့်ရန် Google Summer of Code ပရောဂျက်နှင့် ဆိုင်သော အကြောင်းအရာများအတွက် သီးသန့်ဖတ်ရှုရန်ဖြစ်သည်။
 
-**Obsolete**: This page has been moved to <https://github.com/FreeCAD/FreeCAD/issues/8560>
+**အသက်ဝင်မှုမရှိတော့ပါ**: ဤစာမျက်နှာကို <https://github.com/FreeCAD/FreeCAD/issues/8560> သို့ ရွှေ့ထားပြီး ဖြစ်ပါသည်။
 
-## Outline
+## အကျဉ်းချုပ်
 
-FreeCAD as a CAE application has a high level of complexity, both in its source code and also in its user interaction. To ensure a certain level of quality automatic testing is essential. However, as an open source application with spare time coders only this part of the project has not seen very much attention. One of the major reasons is the low-level handling required to write test cases. All actions to trigger, every result fetching and every single comparison needs to be hand coded. This makes it cumbersome to provide a test for every created functionality and possibly impossible to do so if deep document comparisons are needed. For example the Part and PartDesign workbench: An automated test for document objects require the resulting topology shape to be analysed. This is a tremendous part and cannot be handled on a per test basis.
+ဖရီးကက် (FreeCAD) သည် CAE အက်ပလီကေးရှင်းတစ်ခုအနေနဲ့၊ ကိုးကားရမည့် ဆော့ဝဲကုဒ်နှင့် အသုံးပြုသူ အပြုအမူတို့တွင် အဆင့်မြင့် ရိုးရှင်းမဟုတ်သော پيပါတ်ရှိသည်။ သတ်မှတ်ထားသော အရည်အသွေးအဆင့်ကို ထိန်းသိမ်းရန်အတွက် မော်တော်လက်ထောက် စမ်းသပ်မှုများ (automatic testing) လိုအပ်သည်။ သို့သော် အဖွဲ့အစည်းအဖြစ် အချိန်ကျန် ကုတ်ရေးသူများသာ ရှိသော အဖွဲ့အစည်းတစ်ခုဖြစ်သောကြောင့် ဤအစိတ်အပိုင်းတွင် အလွန်နည်းပါးသော အာရုံစူးစိုက်မှုသာ ရှိခဲ့သည်။ အဓိကအကြောင်းအရင်းတစ်ရပ်မှာ စမ်းသပ်မှုအမှုမွမ်းမံရေးရာတွင် လက်ဖြင့် အောက်မှ အဆင့်များကို ကိုင်တွယ်ရရိပ်သော အလုပ်အမျိုးမျိုး ဖြစ်သည်။ အဲ့ဒီပုံစံအတိုင်း လှုပ်ရှားချက်တိုင်းကို ထိန်းချုပ်ရမည်၊ ရလဒ်ထုတ်ယူမှုတိုင်းကို ရေးသားရမည်နှင့် နှိုင်းယှဉ်မှုတိုင်းကို လက်ဖြင့် ကုဒ်ရေးရမည်။ ထို့ကြောင့် ဖန်တီးထားသော အင်္ဂါရပ်တစ်ခုချင်းစီအတွက် စမ်းသပ်ချက်ရေးသားရန် မလွယ်ကူဘဲ အချို့အနေအထားများတွင် အနက်ရှိုင်းသော စာရွက် (document) နှိုင်းယှဉ်မှုများ လိုအပ်ပါက မဖြစ်နိုင်နိုင်လောက်သည်။ ဥပမာအားဖြင့် Part နှင့် အစိတ်အပိုင်း ဒီဇိုင်း (Part နှင့် Part Design) လုပ်ငန်းခွင်များတွင်၊ စာရွက်အရာဝတ္ထုများအတွက် အလိုအလျောက် စမ်းသပ်ချက်တစ်ခု ဖန်တီးရန်ဖြစ်ပါက ရလာဒ် Topology shape ကို ခွဲခြမ်းစိတ်ဖြာရန် လိုအပ်သည်။ ၎င်းသည် များပြားသော အလုပ်နှင့် ပတ်သက်ပြီး တစ်စမ်းသပ်ချက်ချင်းစီအတွက် ကိုင်တွယ်နိုင်ရန် မဖြစ်နိုင်သော အမှုပါ။
 
-This project aims at reducing the work required to write meaningful tests. This should be accomplished by providing a infrastructure for result file storage and special \"comparators\" which compare the stored result files with the test result for equality.
+ဤပရောဂျက်၏ ရည်ရွယ်ချက်မှာ အဓိပ္ပါယ်ရှိသော စမ်းသပ်ချက်များကို ရေးသားရန် လိုအပ်သည့် အလုပ်များကို လျော့ပါးစေခြင်းဖြစ်သည်။ ၎င်းကို ရလဒ်ဖိုင်ထိန်းသိမ်းမှုအတွက် အခြေခံအဆောက်အအုံ (infrastructure) တစ်ခု နှင့် စမ်းသပ်ရလဒ်များနှင့် သိမ်းဆည်းထားသော ရလဒ်ဖိုင်များကို တန်းတူညီမျှမှုအရ နှိုင်းယှဥ်ပေးနိုင်သည့် သီးသန့် "နှိုင်းယှဥ်ကိရိယာ" (comparators) များကို ပံ့ပိုးပေးခြင်းမှ အောင်မြင်စေမည်ဖြစ်သည်။
 
-## Details
+## အသေးစိတ်
 
-1.  Create a result file infrastructure for the test system. It should allow to save an arbitrary number of files together with the test itself where the expected results are stored. It is intended to have one result file for each comparator used. The infrastructure should make the storage (file structure), loading and handling easy. It furthermore should define a specification for the generic file content, e.g. which comparator to use for it etc.
-2.  Create a infrastructure for comparators and provide a few important ones. The comparators should be able to read in a result file and compare the available test output with it. As every workbench requires different types of comparisons the comparators need to be provided by the workbench itself, as well as possible top-level ones. The test infrastructure needs to be adopted to work with such workbench specific types. Furthermore there needs to be a way to generate result files for comparators. this can be done either by themselves or by a different class.
-    1.  Implement a global comparator for the document structure: It stores the Document object structure with all properties in a result file and compares the available document after a test run with it
-    2.  Implement a Part workbench comparator for shapes: It stores data about a certain TopoShape in a result file suitable for comparison, e.g. number of edges/vertices/faces, properties like area, mass, center of gravity.
-    3.  Advanced: Create a global comparator for the 3D output based on picture comparison. This is marked as advanced as this comparator needs to be tolerant to slight changes due to driver differences (see VTK for example) and also needs to somehow ensure the same display settings used for the comparators every time
-3.  Create a wizard or GUI for test creation in the Test workbench. This would work like macro recording: the user starts the test recording, and everything plotted in the python console would be the test procedure. When hitting stop the user gets a dialog where he can choose which comparators to apply. The wizard than creates the appropriate test structure with the test itself, all needed result files etc.
-4.  Create a Wiki page describing the working of the test system and how to create tests and new comparators
+1.  စမ်းသပ်စနစ်အတွက် ရလဒ်ဖိုင် အခြေခံအဆောက်အအုံတစ်ခု ဖန်တီးပါ။ ၎င်းသည် စမ်းသပ်ချက်နှင့်ချိတ်ဆက်၍ မည်သည့်အရေအတွက်ရှိသည့် ဖိုင်များကိုမဆို သိမ်းဆည်းနိုင်ရမည်။ မျှော်မှန်းထားသော ရလဒ်များအား ထည့်သွင်းထားမည့် ဖိုင်တစ်ခုကို နှိုင်းယှဉ်ကိရိယာ (comparator) တစ်ခုချင်းစီအတွက် သတ်မှတ်ထားရန် ရည်ရွယ်ပါသည်။ အဆောက်အအုံအနေဖြင့် ဖိုင်ဖွဲ့စည်းမှု (file structure), ဖိုင်ဖွင့်ယူရေးရာနှင့် ကိုင်တွယ်ရေးအလွယ်အလယ်ဖြစ်စေရန် အလွယ်တကူဖြစ်ရမည်။ ထို့ပြင် ယေဘုယျ ဖိုင်အကြောင်းအရာအတွက် ပြင်ပ သတ်မှတ်ချက်တစ်ခုကို (မည်သည့် comparator ကို အသုံးပြုမည်၊ စသည်) သတ်မှတ်ပေးရမည်။
+2.  နှိုင်းယှဉ်ကိရိယာ (comparators) များအတွက် အဆောက်အအုံတည်ဆောက်ပြီး အရေးကြီးသော ဒေတာနှိုင်းယှဉ်ကိရိယာ အချို့ကို ပံ့ပိုးပေးပါ။ နှိုင်းယှဉ်ကိရိယာများသည် ရလဒ်ဖိုင်ကို ဖတ်ယူ၍ စမ်းသပ်မှုထုတ်လွှတ်ချက်နှင့် နှိုင်းယှဉ်နိုင်ရမည်။ လုပ်ငန်းခွင် (Workbench) မျိုးစုံအလိုက် နှိုင်းယှဉ်စနစ် အမျိုးအစားများကွဲပြားသဖြင့်၊ ဤနှိုင်းယှဉ်ကိရိယာများကို လုပ်ငန်းခွင်ခုံရုံးများမှ တိုက်ရိုက် ပံ့ပိုးပေးရမည်နှင့် အဆင့်မြင့် (top-level) နှိုင်းယှဉ်ကိရိယာများကိုလည်း ထည့်သွင်းနိုင်ရမည်။ စမ်းသပ်အခြေခံအဆောက်အအုံကို လုပ်ငန်းခွင်ဆိုင်ရာ အမျိုးအစားများနှင့် အလုပ်လုပ်နိုင်ရန် ကိုက်ညီအောင် ပြင်ဆင်ရမည်။ ထို့အပြင် နှိုင်းယှဉ်ကိရိယာများအတွက် ရလဒ်ဖိုင်များကို ထုတ်လုပ်ပေးနိုင်သည့် နည်းလမ်းတစ်ခုရှိရမည်။ ၎င်းကို ကိုယ်တိုင်ဖန်တီးနိုင် သို့မဟုတ် မတူညီသော ကဏ္ဍတစ်ခုမှ ဖန်တီးပေးနိုင်သည်။
+    1.  စာရွက်ဖွဲ့စည်းမှု (Document structure) အတွက် အထွေထွေ နှိုင်းယှဉ်ကိရိယာတစ်ခု ကို အကောင်အထည်ဖော်ပါ။ ၎င်းသည် Document အရာဝတ္ထု၏ ဖွဲ့စည်းမှုကို အခြားပိုင်ဆိုင်ချက်များအပါအဝင် ရလဒ်ဖိုင်တစ်ခုအဖြစ် သိမ်းဆည်းပြီး စမ်းသပ်လည်ပတ်စဉ်၌ ရရှိသည့် စာရွက်ကို ထိုဖိုင်နှင့် နှိုင်းယှဉ်ပါလိမ့်မည်။
+    2.  Part လုပ်ငန်းခွင် (Part workbench) အတွက် ပုံသဏ္ဍာန်များကို နှိုင်းယှဉ်နိုင်သော နှိုင်းယှဉ်ကိရိယာတစ်ခု အကောင်အထည်ဖော်ပါ။ ၎င်းသည် TopoShape (သို့) topological shape တစ်ခုနှင့်ဆိုင်သော ဒေတာများကို နှိုင်းယှဉ်ရန် သင့်လျော်သည့် ရလဒ်ဖိုင်အဖြစ် သိမ်းဆည်းပါမည်၊ ဥပမာ - အနား (edges)/ ထောင့်များ (vertices)/ မျက်နှာပြင်များ (faces) အရေအတွက်၊ အလျားဖျော့ (area), ဒဏ်ချိန် (mass), ဗဟိုဂဏန်း (center of gravity) ကဲ့သို့သော ပိုင်ဆိုင်ချက်များ။
+    3.  အဆင့်မြင့်: ပုံနှိပ်ခြင်း (picture) အခြေခံ၍ 3D ထွက်ပေါ်မှုကို နှိုင်းယှဉ်နိုင်သည့် အထွေထွေ နှိုင်းယှဉ်ကိရိယာတစ်ခု ဖန်တီးပါ။ ၎င်းကို အဆင့်မြင့်ဟု သတ်မှတ်ထားခြင်းမှာ၊ ဤနှိုင်းယှဉ်ကိရိယာသည် ဒရိုင်ဘာများကြောင့် ဖြစ်ပေါ်မည့် နည်းနည်း ပြောင်းလဲမှုများ (ဥပမာ VTK) ကို သည်းခံနိုင်ရန် နှင့် နှိုင်းယှဉ်မှုတိုင်း အတွက် အမြဲတမ်း အသုံးပြုသည့် ပြသမှု စက်တင်များကို အတည်ပြုထားနိုင်ရန် လိုအပ်ခြင်းတို့ကြောင့် ဖြစ်ပါသည်။
+3.  Test လုပ်ငန်းခွင် (Test workbench) တွင် စမ်းသပ်မှု ဖန်တီးရာ wizard (လမ်းပြကိရိယာ) သို့မဟုတ် GUI တစ်ခုကို ဖန်တီးပါ။ ၎င်းသည် macro recording ကဲ့သို့ လုပ်ဆောင်မည်။ အသုံးပြုသူသည် စမ်းသပ်မှု မှတ်တမ်းတင်ခြင်းကို စတင်ပြီး Python console (Python ကွန်ဆိုး) တွင် ပုံဖော်သည့် အရာအားလုံးကို စမ်းသပ်နည်းလမ်းလည်း ဖြစ်မည်။ မှတ်တမ်းရပ်သောအချိန်၌ အသုံးပြုသူသည် မည်သည့် နှိုင်းယှဉ်ကိရိယာများကို အသုံးပြုလိုသည်ကို ရွေးချယ်နိုင်သည့် dialog တစ်ခုကို ရရှိမည်။ ထို့နောက် wizard သည် ကိုက်ညီသည့် စမ်းသပ် ဖွဲ့စည်းမှု (test structure) ကို စမ်းသပ်ချက်ကိုယ်တိုင်နှင့် လိုအပ်သည့် ရလဒ်ဖိုင်များအားလုံးဖြင့် ဖန်တီးပေးမည်။
+4.  စမ်းသပ်စနစ်၏ အလုပ်လုပ်ပုံနှင့် စမ်းသပ်ချက်များ၊ နှိုင်းယှဉ်ကိရိယာအသစ်များ ဖန်တီးပုံကို ဖော်ပြသည့် Wiki စာမျက်နှာတစ်ခု ပြုစုပါ။
 
-## Expected Outcome 
+## မျှော်မှန်းထားသော ရလဒ်
 
-1.  Mergable code for a result file based comparator system
-2.  A GUI for simplified test generation based on macro recording
-3.  A Wiki page describing the procedure for the user to create tests and the developer to create new comparators
-4.  Tests which utilize the created comparators and show their use
+1.  ရလဒ်ဖိုင်အခြေခံသော နှိုင်းယှဉ်စနစ်ကို ပေါင်းထည့်နိုင်သော (mergable) ကုဒ်
+2.  macro မှတ်တမ်းတင်ခြင်းအပေါ် အခြေခံ၍ စမ်းသပ်မှု ထုတ်လုပ်မှု လွယ်ကူစေရန် GUI
+3.  အသုံးပြုသူများအတွက် စမ်းသပ်ချက် ဖန်တီးပုံနှင့် ဖန်တီးသူများအတွက် နှိုင်းယှဉ်ကိရိယာအသစ်များ စတင်ရေးဆွဲပုံကို ဖော်ပြသည့် Wiki စာမျက်နှာ
+4.  ဖန်တီးထားသည့် နှိုင်းယှဉ်ကိရိယာများကို အသုံးပြုသည့် စမ်းသပ်ချက်များနှင့် ၎င်းတို့၏ အသုံးပြုမှုကို ပြသနိုင်သော စမ်းသပ်ချက်များ
 
-## Future Possibilities 
+## အနာဂတ် အလားအလာများ
 
-Future contributions can include new comparators, e.g. for meshes. Also creating tests for existing functionality has a high priority and can be achieved with the new system. Futhermore a GUI based system can be created, where a test is defined by recorded UI events, see [Record and replay events](http://algoholic.eu/recording-and-replaying-qt-input-events/). This could also be a new GSoC project.
+အနာဂတ်တွင် mesh များအတွက် နှိုင်းယှဉ်ကိရိယာအသစ်များကဲ့သို့ novel comparators များ ထည့်သွင်းနိုင်သည်။ ရှိပြီးသား လုပ်ဆောင်ချက်များအတွက် စမ်းသပ်ချက်များ ဖန်တီးခြင်းကိုလည်း ဤစနစ်နှင့် အလွန် မြန်ဆန်ပြီး အကျိုးရှိစေမည်။ ထို့ပြင် UI အဖြစ်မှတ်တမ်းတင်ထားသော နောက်ပြန်ဖျက်/ပြန်လည်ဖျက် event များအား အခြေခံ၍ စမ်းသပ်ချက်တစ်ခုပြုလုပ်နိုင်သော GUI အခြေခံစနစ်တစ်ခုကိုလည်း ဖန်တီးနိုင်သည်၊ [Record and replay events](http://algoholic.eu/recording-and-replaying-qt-input-events/) ကို လေ့လာပါ။ ၎င်းသည် GSoC အသစ်တစ်ခုအဖြစ်လည်း စဉ်းစားနိုင်သည်။
 
-## Project Properties 
+## ပရောဂျက်အင်္ဂါရပ်များ
 
-### Skills
+### ကျွမ်းကျင်မှုများ
 
--   Programming language mainly Python, some comparators may need C++ code.
--   Understand and use APIs from FreeCAD and external libraries (OCC for Part comparator)
+-   အဓိကအားဖြင့် Python ဆော့ဝဲရေးရာ ကျွမ်းကျင်မှု, အချို့သော နှိုင်းယှဉ်ကိရိယာများအတွက် C++ ကုဒ်လိုအပ်နိုင်သည်။
+-   ဖရီးကက် (FreeCAD) နှင့် ပြင်ပ စာကြောင်းများ၏ API များကို နားလည်ပြီး အသုံးပြုနိုင်မှု (ဥပမာ Part comparator အတွက် OCC)
 
-### Difficulty
+### သက်ကားလွယ်ကူမှု
 
-Medium
+အလတ်စား (Medium)
 
-### Project size 
+### ပရောဂျက် အရွယ်အစား
 
-175h
+175 နာရီ
 
-### Additional Information
+### ထပ်ဆင့် အချက်အလက်
 
 
 

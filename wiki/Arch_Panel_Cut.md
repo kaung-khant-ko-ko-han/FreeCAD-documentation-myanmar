@@ -5,68 +5,65 @@
    Workbenches: BIM_Workbench
    Version: 0.17
    SeeAlso: Arch_Panel, Arch_Panel_Sheet, Arch_Nest
----
+---# Arch Panel Cut (Arch Panel ဖြတ်တောက်ခြင်း)
 
-# Arch Panel Cut
+## ဖော်ပြချက်
 
-## Description
-
-The **Arch Panel Cut** tool creates, in the 3D document, a flat, 2D view of an [Arch Panel](Arch_Panel.md), to be included in an [Arch Panel Sheet](Arch_Panel_Sheet.md) or directly exported to [DXF](Draft_DXF.md). The Panel Cut objects are also supported by the [CAM Workbench](CAM_Workbench.md).
+**Arch Panel Cut** ကိရိယာသည် 3D စာရွက်ထဲတွင် [Arch Panel](Arch_Panel.md) တစ်ခု၏ ပလတ်ဖောင်း၊ 2D ကြည့်မြင်ချက်ကို ဖန်တီးပေးသည်။ ထိုကြည့်မြင်ချက်ကို [Arch Panel Sheet](Arch_Panel_Sheet.md) ထဲသို့ ထည့်သွင်းနိုင်ပြီး တိုက်ရိုက် [DXF](Draft_DXF.md) အဖြစ် ထုတ်ယူနိုင်သည်။ Panel Cut အရာဝတ္ထုများကို [CAM Workbench](CAM_Workbench.md) (CAM လုပ်ငန်းခွင်) မှလည်း ထောက်ပံ့စွမ်းဆောင်နိုင်သည်။
 
 <img alt="" src=images/Arch_Wikihouse_02.jpg  style="width:1024px;">
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Select one or more [Arch Panel](Arch_Panel.md) objects.
-2.  Select the **Utils → Panel tools → <img src="images/Arch_Panel_Cut.svg" width=16px> Panel Cut** option from the menu.
-3.  Adjust the desired properties.
+1.  တစ်ခု သို့မဟုတ် အကျယ်ကျယ်သော [Arch Panel](Arch_Panel.md) အရာဝတ္ထု(များ) ကို ရွေးပါ။
+2.  မီနူးထဲမှ **Utils → Panel tools → <img src="images/Arch_Panel_Cut.svg" width=16px> Panel Cut** ကို ရွေးချယ်ပါ။
+3.  လိုအပ်သလို ပိုင်ရှင်များ (properties) ကို ပြင်ဆင်ပါ။
 
-## Options
+## ရွေးချယ်စရာများ
 
--   If the panel is not flat (corrugated, for example), the relief won\'t appear in the Panel cut. This tool is useful mainly for flat panels
--   The panel cut can display a tag. This tag can be a custom line of text or can automatically show the Tag, Label or Description of its linked Panel.
--   To be useful for CNC machining, the tag should be written using a stick font, where letters are simple polylines that are easy for the machine to follow. Upon creation, the Panel Cut object will automatically use the font specified in Edit → Preferences → Draft → Texts and Dimensions → Default ShapeString font file
--   Double-clicking on the panel cut in the tree view after it is created allows you to enter edit mode and modify the position of the tag
--   When you need to layout different Panel Cuts together, Panel Cuts can display a margin, that is useful to make sure a certain space is always present between a cut and another
+-   Panel が ပလပ်ဖောင်းမဟုတ်ပါက (ဥပမာ ဝါယာကြိုးပုံစံ / corrugated)၊ အနက်ရှင်းမှု (relief) သို့မဟုတ် ဖျက်ထွက်မှုသည် Panel Cut တွင် မပြနိုင်ပါ။ ဤကိရိယာသည် ပထမဦးဆုံးပလတ်ဖောင်း Panels များအတွက် အသုံးဝင်သည်။
+-   Panel Cut သည် tag တစ်ခုကို ပြသနိုင်သည်။ ထို tag သည် ကိုယ်ပိုင် စာကြောင်းတစ်ကြောင်း ဖြစ်နိုင်ပြီး သို့မဟုတ် ဆက်စပ်ထားသော Panel ၏ Tag, Label သို့မဟုတ် Description ကို အလိုအလျောက် ပြသနိုင်သည်။
+-   CNC သုံးရန် အသုံးဝင်စေရန် tag ကို ဂရပ်ဖက်ဖတ်ရလွယ်သော stick font ဖြင့် ရေးထားသင့်သည်၊ စာလုံးများသည် စက်အတွက် လမ်းကြောင်းလွယ်ကူစေရန် ရိုးရှင်းသော polyline များ ဖြစ်သင့်သည်။ ဖန်တီးချိန်တွင် Panel Cut အရာဝတ္ထုသည် Edit → Preferences → Draft → Texts and Dimensions → Default ShapeString font file တွင် သတ်မှတ်ထားသော ဖောင့်ကို အလိုအလျောက် အသုံးပြုမည်။
+-   Panel Cut ကို ဖန်တီးပြီးနောက် Tree view ထဲတွင် double-click လုပ်ခြင်းဖြင့် edit mode သို့ ဝင်ကာ tag ၏ နေရာကို ပြင်ဆင်နိုင်သည်။
+-   မတူညီသော Panel Cuts များကို အတူတကွ ပုံဆွဲစီတန်းချင်သည်ဆိုပါက၊ Panel Cuts များတွင် margin (နယ်နိမိတ်) ပြသနိုင်သည်။ ၎င်းသည် ဖြတ်နှိပ်မှုနှင့် တခြားအရာတစ်ခုအကြား စိတ်ချယုံနေလေအောင် သတ်မှတ်ထားသော နေရာကို အမြဲဖြစ်စေသည်။
 
-## Properties
+## ပိုင်ဆိုင်မှုများ (Properties)
 
 ### Data
 
--    **Source**: The [Arch Panel](Arch_Panel.md) object shown by this Cut
+-    **Source**: ဤ Cut မှ ပြသပေးသည့် [Arch Panel](Arch_Panel.md) အရာဝတ္ထု
 
--    **Tag Text**: The text to display. Can be %tag%, %label% or %description% to display the panel tag or label
+-    **Tag Text**: ပြသလိုသော စာတန်း။ %tag%, %label% သို့မဟုတ် %description% ကို သုံး၍ panel ၏ tag သို့ label ကို ပြသနိုင်သည်။
 
--    **Tag Size**: The size of the tag text
+-    **Tag Size**: tag စာလုံးအရွယ်အစား
 
--    **Tag Position**: The position of the tag text. Keep (0,0,0) for automatic center position
+-    **Tag Position**: tag ၏ တည်နေရာ။ automatic center position အတွက် (0,0,0) ထားပါ
 
--    **Tag Rotation**: The rotation of the tag text
+-    **Tag Rotation**: tag ၏ ပတ်လမ်းဆလှည့်မှု
 
--    **Font File**: The font of the tag text
+-    **Font File**: tag စာသားအတွက် အသုံးပြုမည့် ဖောင့်ဖိုင်
 
--    **Make Face**: If True, the panel is a Part Face, otherwise a Part Wire
+-    **Make Face**: True ဖြစ်ပါက panel သည် Part Face (Part မျက်နှာပြင်) ဖြစ်မည်၊ မဟုတ်ပါက Part Wire (Part ကြိုး) ဖြစ်မည်
 
 ### View
 
--    **Margin**: A margin that can be displayed outside the panel cut shape
+-    **Margin**: panel cut အပေါ်မှာ ပြသနိုင်သော နယ်နိမိတ်
 
--    **Show Margin**: Turns the display of the margin on/off
+-    **Show Margin**: margin ကို ပြသ/မပြသ ချိန်ညှိရန်
 
 ## Scripting
 
+**လေ့လာရန်:**
 
-**See also:**
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md)။
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
-
-The Panel Cut tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:  
+Panel Cut ကိရိယာကို [macros](Macros.md) များနှင့် [Python](Python.md) console မှာအောက်ပါ function ဖြင့် သုံးနိုင်သည်။  
 ```python
 View = makePanelCut(panel, name="PanelView")```
 
--   Creates a `View` object (2D projection) from the existing `panel`.
+-   ရှိပြီးသား `panel` မှ `View` အရာဝတ္ထု (2D projection) တစ်ခုကို ဖန်တီးသည်။
 
-Example:  
+ဥပမာ:  
 ```python
 import FreeCAD, Draft, Arch
 
@@ -93,7 +90,7 @@ View.ViewObject.LineWidth = 3
 FreeCAD.ActiveDocument.recompute()
 ```
 
-## Tutorials
+## သင်ကြားမှုများ (Tutorials)
 
 -   [Wikihouse porting tutorial](Wikihouse_porting_tutorial.md)
 

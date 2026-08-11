@@ -5,36 +5,36 @@
    Workbenches: BIM_Workbench
    Shortcut: **I** **P**
    SeeAlso: Arch_IFC
----
+---# Arch IfcSpreadsheet
 
-# Arch IfcSpreadsheet
+## ဖော်ပြချက်
 
-## Description
+ဤကိရိယာသည် အရာဝတ္ထုတစ်ခု၏ [IFC](Arch_IFC.md) အင်္ဂါရပ်များ (properties) ကို သိမ်းဆည်းရန် စာရွက်ဇယား (spreadsheet) တစ်ခု ဖန်တီးပေးသည်။
 
-This tool creates a spreadsheet to store [IFC](Arch_IFC.md) properties of an object.
+(FreeCAD: ဖရီးကက်)
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Select an object.
-2.  There are several ways to invoke the tool:
-    -   Select the **Utils → <img src="images/Arch_IfcSpreadsheet.svg" width=16px> Create IFC spreadsheet...** option from the menu.
-    -   Use the keyboard shortcut: **I** then **P**.
+1.  အရာဝတ္ထုတစ်ခုကို ရွေးချယ်ပါ။
+2.  ဤကိရိယာကို ခေါ်ယူရန် အမျိုးမျိုးသော နည်းလမ်းများ ရှိသည်။
+    -   မီနူးမှ **Utils → <img src="images/Arch_IfcSpreadsheet.svg" width=16px> Create IFC spreadsheet...** ကို ရွေးချယ်ပါ။
+    -   ကီးဘုတ် အတိုကောက်အဖြစ် **I** ကို နှိပ်ပြီး **P** ကို အစဉ်လိုက် နှိပ်ပါ။
 
-## Scripting
+## Script အသုံးပြုမှု (Scripting)
 
 
-**See also:**
+**ကြည့်ရှုရန်လည်းရှိသည့် အရင်းအမြစ်များ:**
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) ကိုလည်း ကြည့်ပါ။
 
-This tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:  
+ဤကိရိယာကို [macros](Macros.md) များတွင် သို့မဟုတ် [Python](Python.md) console မှာ အောက်ပါ function ကို အသုံးပြု၍ ခေါ်ယူနိုင်ပါသည်။  
 ```python
 spreadsheet = makeIfcSpreadsheet(archobj=None)
 ```
 
--   Creates a `spreadsheet` object. Optionally an `archobj` can be given.
+-   `spreadsheet` အရာဝတ္ထုပစ္စည်း တစ်ခုကို ဖန်တီးပေးသည်။ လိုလျှင် `archobj` ကို ပေးနိုင်သည်။
 
-Example:  
+ဥပမာ:  
 ```python
 import FreeCAD, Draft, Arch
 

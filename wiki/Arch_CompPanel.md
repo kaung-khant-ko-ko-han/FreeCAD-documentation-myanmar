@@ -1,7 +1,7 @@
 # Arch CompPanel
-1.  REDIRECT [BIM_Workbench](BIM_Workbench.md)
+1.  ပြန်လည်လမ်းညွှန် (REDIRECT) [BIM_Workbench](BIM_Workbench.md)
 
 
 
 ---
-⏵ [documentation index](../README.md) > Arch CompPanel
+⏵ [စာတမ်း အညွှန်း](../README.md) > Arch CompPanel

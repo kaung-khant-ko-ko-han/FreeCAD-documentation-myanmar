@@ -4,38 +4,33 @@
    MenuLocation: Utils , Check
    Workbenches: BIM_Workbench
    SeeAlso: Arch_CloseHoles
----
+---# Arch Check
 
-# Arch Check
+## ဖော်ပြချက်
 
-## Description
+ဤကိရိယာသည် လက်ရှိစာရွက်စာတမ်း သို့မဟုတ် ရွေးထားသော အရာများကို non-solid အနေဖြင့် ရှိနေသော [Part](Part_Workbench.md) (အစိတ်အပိုင်း) သို့မဟုတ် [BIM](BIM_Workbench.md) အရာများ မရှိကြောင်း စစ်ဆေးပေးသည်။ အကြောင်းမှာ BIM လုပ်ငန်းခွင် (BIM Workbench) ၏ လုပ်ငန်းအများအပြားသည် တွက်ချက်မှုများအတွက် စုစည်းပြည့်စုံသော (solid) အရာများကိုသာ လိုအပ်သည်။
 
-This tool checks the current document or the selected objects for non-solid [Part](Part_Workbench.md) or [BIM](BIM_Workbench.md) objects, that might give problems, since most operations of the BIM Workbench require solid objects.
+## အသုံးပြုနည်း
 
-## Usage
+1. မီနူးမှ **Utils → <img src="images/Arch_Check.svg" width=16px> Check** ကို ရွေးချယ်ပါ။
 
-1.  Select the **Utils → <img src="images/Arch_Check.svg" width=16px> Check** option from the menu.
+## Scripting (စက္ရိပ်ရေးသားခြင်း)
 
-## Scripting
+**See also:**  
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) (ဖရီးကက် (FreeCAD) စက်ရိုက်ရေးသားခြင်း အခြေခံအကြောင်းအရာ) ကိုလည်း ကြည့်ပါ။
 
-
-**See also:**
-
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
-
-This tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:  
+ဤကိရိယာကို [macros](Macros.md) များတွင် သို့မဟုတ် [Python](Python.md) console ကနေ အောက်ပါ function ကို အသုံးပြု၍ ခေါ်ယူနိုင်သည်။  
 ```python
 list_bad = check(objectslist, includehidden=False)
 ```
 
--   Checks if the given objects in `objectslist` contain only solids.
--   If `includehidden` is `True` it will include all hidden objects, otherwise it will omit them from the search.
--   Returns `list_bad`, a list with the objects that are not derived from a `Part::Feature`, or components that are not closed, not valid, don\'t contain solids, or that contain faces that are not part of any solid. This is used to detect [BIM](BIM_Workbench.md) or [Draft](Draft_Workbench.md) wires and profiles that aren\'t solids.
-    -   Each element in `list_bad` is another list `[object, message]`, where `object` is the detected non-solid, and `message` indicates the reason why it was included in this list.
+- `objectslist` ထဲ သတ်မှတ်ပေးထားသော အရာများသည် တစ်ခုချင်းစီမှာ ပြည့်စုံသော အရာများ (solid objects) သာဖြစ်မည့်မဟုတ်ကို စစ်ဆေးပေးသည်။  
+- `includehidden` ကို `True` အဖြစ် သတ်မှတ်ပါက ဖုံးအက်ထားသော (hidden) အရာများကိုလည်း ထည့်စစ်ဆေးမည်ဖြစ်ပြီး၊ မဟုတ်ပါက ထိုအရာများကို ရှာဖွေမှုပြုစရာမှ ထားပါမည်။  
+- ဖန်တီးပြီးရရှိသည့် `list_bad` သည် non-solid ဖြစ်နေသော အရာများကို အစုအဝေးတစ်ခုအဖြစ် ပြန်လည်ပေးဆပ်သည်။ ၎င်းတွင် `Part::Feature` မှ ဆင်းသက်သော မဟုတ်သော objects၊ ပိတ်မထားသော (not closed) components၊ တရားဝင်မဟုတ်သော (not valid) အရာများ၊ solid မပါဝင်သော အရာများ၊ သို့မဟုတ် မည်သည့် solid မှာပါဝင်သော မျက်နှာမျိုးမျိုး (faces) မဟုတ်သော မျက်နှာများကိုထည့်ထားသော အရာများကို တွေ့ရှိနိုင်သည်။ ၎င်းသည် [BIM](BIM_Workbench.md) သို့မဟုတ် [Draft](Draft_Workbench.md) wire များနှင့် profile များ (solids မဟုတ်သော) ကို ဖော်ထုတ်ရန် အသုံးပြုသည်။  
+    - `list_bad` ၏ element တစ်ခုစီသည် `[object, message]` ဆိုသည့် အခြား list တစ်ခုဖြစ်ပြီး၊ `object` သည် ရှာဖွေတွေ့ရှိထားသော non-solid object ကို ကိုယ်စားပြုသည်။ `message` သည် အရာအားထည့်ထားရခြင်း၏ အကြောင်းအရင်းကို ဖော်ပြပေးသည်။
 
-Example:
+ဥပမာ:
 
- 
 ```python
 import FreeCAD, Draft, Arch
 
@@ -54,8 +49,6 @@ Wire = Draft.makeWire([FreeCAD.Vector(1000, 0, 0), FreeCAD.Vector(1500, 1000, 0)
 list_bad = Arch.check([Wall1, Wall2, Circle, Wire], includehidden=True)
 print(list_bad)
 ```
-
-
 
 ---
 ⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch Check

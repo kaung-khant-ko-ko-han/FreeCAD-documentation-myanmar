@@ -4,43 +4,39 @@
    MenuLocation: Utils , Merge Walls
    Workbenches: BIM_Workbench
    SeeAlso: Arch_Wall
----
+---# Arch MergeWalls
 
-# Arch MergeWalls
+## ဖော်ပြချက်
 
-## Description
+**Arch MergeWalls** က [Arch Walls](Arch_Wall.md) များကို ပေါင်းစည်းပေးသည့် ကိရိယာ ဖြစ်သည်။
 
-The **Arch MergeWalls** tool merges [Arch Walls](Arch_Wall.md).
+(Arch MergeWalls သည် နံရံများကို တစ်ခုတည်း စုစည်းပေးသည်။)
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Do one of the following:
-    -   Select a single wall with one or more [additions](Arch_Add.md) that are also walls.
-    -   Select two or more walls.
-2.  In both cases the walls must have the same **Height**, **Width** and **Align** properties.
-3.  Select the **Utils → <img src="images/Arch_MergeWalls.svg" width=16px> Merge Walls** option from the menu.
+1. အောက်ပါအရာများထဲမှ တစ်ခုကို ပြုလုပ်ပါ။
+    -  တစ်ခု သို့မဟုတ် အပိုများပါသည့် နံရံ တစ်ခုကိုရွေးပါ (အဆိုပါ အပိုများမှာ [additions](Arch_Add.md) ဖြစ်ပြီး ထိုအပိုများလည်း နံရံပဲ့ဖြစ်ရမည်)။
+    -  နံရံနှစ်ခု သို့မဟုတ် အထက်ပိုင်းနှစ်ခု ထက်ပိုသော နံရံများကိုရွေးချယ်ပါ။
+2.  နှစ်ဖက်စလုံးရဲ့ နံရံများသည် **Height** (အမြင့်), **Width** (အနံ) နှင့် **Align** (တန်းစီမှု) အင်္ဂါရပ်များသည် တူညီရမည်။
+3.  မီနူးမှ **Utils → <img src="images/Arch_MergeWalls.svg" width=16px> Merge Walls** ကို ရွေးချယ်ပါ။ (Merge Walls = နံရံပေါင်းစည်းခြင်း)
 
-## Notes
+## မှတ်ချက်များ
 
--   [Arch Add](Arch_Add.md) can merge walls even if they have different heights, widths and alignments.
+-   [Arch Add](Arch_Add.md) သည် နံရံများ၏ အမြင့်၊ အနံ နှင့် တန်းစီမှု မတူပါကမျှ ပေါင်းစည်းနိုင်သည်။
 
 ## Scripting
 
+**ကြည့်ရှုရန်လည်းရှိသည်။**
 
-**See also:**
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) ကို参照ပါ။  
+ဤကိရိယာကို [macros](Macros.md) တွင် သို့မဟုတ် [Python](Python.md) ကွန်ဆောလ်မှ အောက်ပါ function ကို အသုံးပြု၍ အသုံးပြုနိုင်သည်။
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
-
-This tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
-
- 
 ```python
 base = joinWalls(walls, delete=False)
 ```
 
-Example:
+ဥပမာ:
 
- 
 ```python
 import FreeCAD, Draft, Arch
 
@@ -55,8 +51,6 @@ FreeCAD.ActiveDocument.recompute()
 
 base = Arch.joinWalls([Wall1, Wall2])
 ```
-
-
 
 ---
 ⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch MergeWalls

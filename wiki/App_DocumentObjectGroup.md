@@ -1,31 +1,30 @@
 # App DocumentObjectGroup
-## Introduction
+## အနိဒါန်း
 
  <img alt="" src=images/Folder.svg  style="width:32px;"> 
 
-An [App DocumentObjectGroup](App_DocumentObjectGroup.md) object, or formally an `App::DocumentObjectGroup`, is a simple element that allows grouping any type of [App DocumentObject](App_DocumentObject.md) in the [tree view](Tree_view.md) no matter its type of data.
+An [App DocumentObjectGroup](App_DocumentObjectGroup.md) object, or formally an `App::DocumentObjectGroup`, သည် ရိုးရွင်းသော အစိတ်အပိုင်းတစ်ခုဖြစ်ပြီး၊ အသုံးပြုသူအနေဖြင့် မည်သည့်ဒေတာအမျိုးအစားမဆို [App DocumentObject](App_DocumentObject.md) များကို [tree view](Tree_view.md) တွင် အုပ်စုဖွဲ့ရန် (grouping) ခွင့်ပြုသည်။
 
-It was developed to organize the objects in the [tree view](Tree_view.md) in a way that is logical for the user.
+ဤအရာကို အသုံးပြုသူ၏ အမြင်အရ သာမန်နှင့် منطقي သတ်မှတ်ထားသော နည်းလမ်းဖြင့် [tree view](Tree_view.md) တွင် အရာဝတ္ထုများကို စနစ်တကျ စီထိန်းရန် ဖန်တီးထားခြင်းဖြစ်သည်။
 
 <img alt="" src=images/FreeCAD_core_objects.svg  style="width:800px;">
 
 
+*အစီအစဉ်အတွင်း အခြေခံ objects များအကြား ဆက်နွယ်မှုများကို ရိုးရှင်းစွာ ဖော်ပြထားသည်။ `App::DocumentObjectGroup* class has an extension that allows it to group any type of object; the Group itself doesn't have many properties.`*
 
-*Simplified diagram of the relationships between the core objects in the program. The `App::DocumentObjectGroup* class has an extension that allows it to group any type of object; the Group itself doesn't have many properties.`
+## အသုံးပြုပုံ
 
-## Usage
+1.  ဖွဲ့စည်းမှု ကိရိယာတန်း (structure toolbar) ထဲရှိ **[<img src=images/Std_Group.svg style="width:16px"> [Std Group](Std_Group.md)** ခလုတ်ကို နှိပ်ပါ။ အလွတ် အုပ်စု (Group) တစ်ခု ဖန်တီးလိမ့်မည်။
+2.  အရာဝတ္ထုများကို အုပ်စု (Group) ထဲသို့ ထည့်ရန်အတွက် [tree view](Tree_view.md) တွင် ထိုအရာဝတ္ထုများကို ရွေးချယ်ပြီး Group အပေါ်သို့ အရှုတ်အထုတ် (drag and drop) ဆောင်ရွက်ပါ။
+3.  အုပ်စုထဲမှ အရာဝတ္ထုများကို ဖယ်ရှားလိုပါက၊ အရာဝတ္ထုကို Group အပေါ်မှ ထုတ်၍ [tree view](Tree_view.md) အထိပ်ရှိ စာရွက်အမှတ်တံဆိပ် (document label) အပေါ်သို့ ဆွဲထုတ်ပစ်ပါ။
 
-1.  Press the **[<img src=images/Std_Group.svg style="width:16px"> [Std Group](Std_Group.md)** button in the structure toolbar. An empty Group is created.
-2.  To add objects to a Group, select them in the [tree view](Tree_view.md), and then drag and drop them over the Group.
-3.  To remove objects from a Group, drag them out of the Group, and onto the document label at the top of the [tree view](Tree_view.md).
+ပြည့်စုံသော အသေးစိတ်အချက်အလက်များနှင့် [Scripting](Std_Group#Scripting.md) သို့မဟုတ် အသုံးပြုပုံများအတွက် [Std Group](Std_Group.md) စာမျက်နှာကို ကြည့်ပါ။
 
-See the [Std Group](Std_Group.md) page for the complete information, including its use in [Scripting](Std_Group#Scripting.md).
+## ပိုင်ဆိုင်ချက်များ
 
-## Properties
+An [App DocumentObjectGroup](App_DocumentObjectGroup.md) (`App::DocumentObjectGroup` class) သည် အခြေခံ [App DocumentObject](App_DocumentObject.md) (`App::DocumentObject` class) မှ ဆင်းသက်လာသောကြောင့်၊ နောက်ခံ [App DocumentObject] တွင် ရှိသော ပိုင်ဆိုင်ချက် (properties) အားလုံးကို မျှဝေပါသည်။
 
-An [App DocumentObjectGroup](App_DocumentObjectGroup.md) (`App::DocumentObjectGroup` class) is derived from the basic [App DocumentObject](App_DocumentObject.md) (`App::DocumentObject` class), therefore it shares all the latter\'s properties.
-
-See the properties in the [Std Group](Std_Group.md) page.
+ပိုင်ဆိုင်ချက်များအားလုံးကို ကြည့်ရန် [Std Group](Std_Group.md) စာမျက်နှာကို ရယူပါ။
 
  {{Std Base navi}} {{Document objects navi}}
 

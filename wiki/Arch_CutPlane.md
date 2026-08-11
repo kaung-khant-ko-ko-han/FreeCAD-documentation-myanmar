@@ -3,64 +3,57 @@
    Name: Arch CutPlane
    MenuLocation: Modify , Cut with plane
    Workbenches: BIM_Workbench
----
+---# Arch CutPlane
 
-# Arch CutPlane
+## ဖော်ပြချက်
 
-## Description
-
-The **Arch CutPlane** tool cuts a solid Arch object like an [Arch Wall](Arch_Wall.md) or [Arch Structure](Arch_Structure.md) with a planar face.
-
- <img alt="" src=images/Arch_CutPlane_example.jpg  style="width:400px;">  
-*Left: Before applying the CutPlane tool. Middle: resulting wall after the cut is done. Right: yet another optional result*
-
-## Usage
-
-1.  If the cutting plane is to be derived from a straight edge (<small>(v1.0)</small> ) optionally align the [working plane](Draft_SelectPlane.md):
-    -   The selected edge cannot be parallel to the normal of the working plane.
-    -   The generated cutting face will be perpendicular to the working plane.
-2.  Select the object to be cut.
-3.  Do one of the following:
-    -   Select an object with a single planar face. <small>(v1.0)</small> 
-    -   Select a planar face in the [3D view](3D_view.md).
-    -   Select an object with a single straight edge. <small>(v1.0)</small> 
-    -   Select a straight edge in the [3D view](3D_view.md). <small>(v1.0)</small> 
-4.  There are several ways to invoke the command:
-    -   Press the **<img src="images/Arch_CutPlane.svg" width=16px> [Cut with plane](Arch_CutPlane.md)** button.
-    -   Select the **Modify → <img src="images/Arch_CutPlane.svg" width=16px> Cut with plane** option from the menu.
-5.  Choose **Behind** or **Front** to indicate on which side of the cutting face material should be removed.
-6.  Press the **OK** button.
-
-## Scripting
-
-
-**See also:**
-
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
-
-The CutPlane tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+**Arch CutPlane** ကိရိယာသည် [Arch Wall](Arch_Wall.md) သို့မဟုတ် [Arch Structure](Arch_Structure.md) ကဲ့သို့ တစ်ခုလုံးပုံသဏ္ဍာန်ရှိသော (solid) Arch အရာဝတ္ထုကို တန်းမျက်နှာပြင် (planar face) ဖြင့် ဖြတ်တောက်ပေးသည်။
 
  
+ <img alt="" src=images/Arch_CutPlane_example.jpg  style="width:400px;">  
+*ဘယ်ဘက်: CutPlane ကိရိယာကို အသုံးမပြုခင်။ အလယ်: ဖြတ်တောက်ပြီးနောက်ရလာသော နံရံ (wall)။ ညာဘက်: နောက်ထပ် ရွေးစရာ ရလဒ်များထဲမှ တစ်ခု။*
+
+## အသုံးပြုနည်း
+
+1.  ဖြတ်တောက်မည့် တန်း (cutting plane) ကို တစ်လျှောက်တည်းရှိသော တိုက်ရိုက် အနံ့ဖောင်းခြစ်နှင့် (straight edge) မှ ဦးတည်ပြုမည်ဆိုလျှင် ( <small>(v1.0)</small> ) လိုအပ်ပါက [working plane](Draft_SelectPlane.md) ကို ညီအောင် ပြင်ဆင်နိုင်သည်။
+    -   ရွေးချယ်ထားသော အတိုင်းအတာ (edge) သည် working plane ၏ normal နှင့် 병렬 (parallel) မဖြစ်ရပါ။
+    -   ထုတ်လွှတ်မည့် ဖြတ်တောက်မည့် မျက်နှာပြင် (cutting face) သည် working plane に対して လျှာရှိသော (perpendicular) အနေဖြင့် ဖန်တီးမည်။
+2.  ဖြတ်လိုသော အရာဝတ္ထုကို ရွေးချယ်ပါ။
+3.  အောက်ပါအရာများထဲမှ တစ်ခုကို ပြုလုပ်ပါ။
+    -   တစ်ခုသာရှိသော စတိက မျက်နှာပြင် (single planar face) ပါသော အရာဝတ္ထုကို ရွေးချယ်ပါ။ <small>(v1.0)</small> 
+    -   [3D view](3D_view.md) တွင် တန်းမျက်နှာပြင် (planar face) မှ တစ်ခုကို ရွေးပါ။
+    -   တစ်ခုသာရှိသော တိုက်ရိုက် အနံ့ဖောင်းခြစ် (single straight edge) ပါသော အရာဝတ္ထုကို ရွေးပါ။ <small>(v1.0)</small> 
+    -   [3D view](3D_view.md) တွင် တိုက်ရိုက် အနံ့ဖောင်းခြစ် (straight edge) ကို ရွေးချယ်ပါ။ <small>(v1.0)</small> 
+4.  အမိန့်ကို ဖော်ဆောင်နိုင်သည့် နည်းလမ်း အနည်းငယ်ရှိပါသည် -
+    -   **<img src="images/Arch_CutPlane.svg" width=16px> [Cut with plane](Arch_CutPlane.md)** ခလုတ်ကို နှိပ်ပါ။
+    -   မီနူးမှ **Modify → <img src="images/Arch_CutPlane.svg" width=16px> Cut with plane** ရွေးချယ်ပါ။
+5.  ဖြတ်တောက်မည့် မျက်နှာပြင်၏ ဘက်တစ်ဖက်မှ ပစ္စည်းကို ဖြုတ်ဖျတ်မည်ကို ဖော်ပြရန် **Behind** (အနောက်) သို့မဟုတ် **Front** (ရှေ့) ကို ရွေးချယ်ပါ။
+6.  **OK** ခလုတ်ကို နှိပ်ပါ။
+
+## စကရပ်တင်း (Scripting)
+
+**ကြည့်ရန်လဲ:**  
+[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md)။
+
+CutPlane ကိရိယာကို [macros](Macros.md) များ၌ သို့မဟုတ် [Python](Python.md) console မှ အသုံးပြုနိုင်ပြီး အောက်ပါ function ကို အသုံးပြုပါသည်။
+
 ```python
 cutObj = cutComponentwithPlane(archObject, cutPlane, sideFace)
 ```
 
--   Creates a `cutObj` object from the given `archObject`, which is cut by `cutPlane`, which is the face of another object.
+-   ပေးထားသော `archObject` ကို `cutPlane` သည် တခြား အရာဝတ္ထု၏ မျက်နှာပြင်ဖြင့် ဖြတ်တောက်ပြီး `cutObj` အဖြစ် ဖန်တီးပေးသည်။
     -   
         `archObject`
         
-        should be a `SelectionObject` obtained from `FreeCADGui.Selection.SelectionEx()[0]`.
-
+        သည် `FreeCADGui.Selection.SelectionEx()[0]` ထံမှ ရရှိသော `SelectionObject` ဖြစ်ရမည်။
     -   
         `cutPlane`
         
-        should be a `FaceObject` obtained from `FreeCADGui.Selection.SelectionEx()[0].SubObjects[0]`.
+        သည် `FreeCADGui.Selection.SelectionEx()[0].SubObjects[0]` ထံမှ ရရှိသော `FaceObject` ဖြစ်ရမည်။
+-    `sideFace` သည် `FaceObject` ၏ ဘယ်ဘက် သို့မဟုတ် ညာဘက်၌ အရွယ်အစား (volume) ကို ဖန်တီးမည်ကို သတ်မှတ်သည်။ ထိုအရွယ်အစားကို နောက်ထပ် `archObject` မှ လျှော့ချရာတွင် အသုံးပြုမည်ဖြစ်သည်။ `sideFace` が `0` ဖြစ်ပါက မျက်နှာပြင်၏ အနောက်ဘက်တွင် အရွယ်အစားတစ်ခုကို ဖန်တီးမည်၊ မဟုတ်ပါက မျက်နှာပြင်၏ ရှေ့ဘက်တွင် ဖန်တီးမည်။
 
--    `sideFace`specifies on which side of the `FaceObject` a volume will be created; this volume will then be used to subtract from the `archObject`. If `sideFace` is `0` it will create a volume in the rear of the face, otherwise it create it in front of the face.
+ဥပမာ:
 
-Example:
-
- 
 ```python
 import FreeCAD, FreeCADGui, Draft, Arch
 
@@ -101,8 +94,6 @@ cut_face2 = selection2.SubObjects[0]
 cutObj2 = Arch.cutComponentwithPlane(main_object2, cut_face2, 1)
 FreeCAD.ActiveDocument.recompute()
 ```
-
-
 
 ---
 ⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch CutPlane

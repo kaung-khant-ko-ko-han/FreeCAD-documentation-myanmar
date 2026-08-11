@@ -6,65 +6,45 @@
    Author: User:M42kus
    FCVersion: 
    Files: 
----
+---# Add FEM Constraint Tutorial
 
-# Add FEM Constraint Tutorial
+## အနှစ်ချုပ်
 
- 
+ဤသင်ခန်းစာတွင် ဖရီးကက် (FreeCAD) အတွက် စီးဆင်းမှု အရှိန် ကန့်သတ်ချက် (flow velocity constraint) ကို ထည့်သွင်းပြီး Elmer ဖြေရှင်းသူ (Elmer solver) အတွက် ထပ်မံထောက်ပံ့မှုကို အကောင်အထည်ဖော်သွားမည် ဖြစ်သည်။ ဤသင်ခန်းစာကိုဖတ်ရှုမည်မတိုင်မီ [Extend FEM Module](Extend_FEM_Module.md) ကို ဖတ်ရှု၍ နားလည်ထားကြောင်း သေချာပါစေ။
 
+ဤသင်ခန်းစာတွင် Python ဖြင့် ကန့်သတ်ချက်များအား မည်သို့ အကောင်အထည်ဖော်ရမည်ကိုသာ ဖော်ပြထားသည်။ ဖြေရှင်းသူ (solver) နှင့် ဆမီကာလခြေလှမ်းများ (equations) နှင့် မတူသည့်အနေဖြင့် ကန့်သတ်ချက်များသည် FEM မော်ဂျူး၏ ရိုးရာဖွဲ့စည်းပုံကို လိုက်နာသည်။ အဆိုပါ ကန့်သတ်ချက်၏ မော်ဂျူးများအားလုံးကို {{Incode|femobjects}} သို့မဟုတ် {{Incode|femviewprovider}} package တွင် တည်ရှိစေရမည်။
 
+## အကျဉ်းချုံး
 
-## Introduction
+1.  စာရွက်စာတမ်း အရာဝတ္ထု တည်ဆောက်ခြင်း — အဆိုပါ အရာဝတ္ထုသည် analysis အတွင်းမှာ တည်ရှိပြီး ကန့်သတ်ချက်အား ပါရာမီတာပြုလုပ်၍ ရှေ့နားများ (boundaries) နှင့် ချိတ်ဆက်ရန် အသုံးပြုမည်ဖြစ်သည်။
+2.  GUI command တည်ဆောက်ခြင်း — FEM လုပ်ငန်းခွင် (Workbench) တွင် ရှိသော active analysis သို့ စီးဆင်းမှု ကန့်သတ်ချက်ကို ထည့်သွင်းသည့် command ကို ထည့်ရန်။
+3.  Task panel တည်ဆောက်ခြင်း — အသုံးပြုသူက ကန့်သတ်ချက်ကို သတ်မှတ်လိုသော ရှေ့နားများကို သတ်မှတ်နိုင်ရန် Task Panel (လုပ်ငန်းတာဝန်ပြား) လိုအပ်သည်။ ထိုအပြင် ပါရာမီတာများကို ထည့်သွင်းရလွယ်ကူစေရန်လည်း အထောက်အကူပြုသည်။
+4.  Elmer ၏ writer ကို မြှင့်တင်ခြင်း — sif ဖိုင် တင်ပို့သူကို တိုးချဲ့၍ အသစ်ထည့်သော ကန့်သတ်ချက်ကို Elmer အတွက် ထောက်ပံ့စေရန်။
 
-In this tutorial, we are going to add the flow velocity constraint to FreeCAD and implement support for the Elmer solver. Please make sure you have read and understood [Extend FEM Module](Extend_FEM_Module.md) before reading this tutorial.
+## စာရွက်စာတမ်း အရာဝတ္ထု (document object) တည်ဆောက်ခြင်း
 
-This tutorial only covers how to implement constraints in Python. In contrast to solver and equations, constraints follow the classic FEM module structure. That is, all modules of a constraint have their place in either the {{Incode|femobjects}} or {{Incode|femviewprovider}} package.
-
-## Summary
-
-1.  **Create document object:** The document object that resides inside the analysis and through which the constraint can be parametrized and attached to boundaries.
-2.  **Create GUI command:** Add a command to the FEM workbench that adds a flow constraint to the active analysis.
-3.  **Create a task panel:** The task panel is necessary to allow the user to set the boundaries at which he wants to set the velocity constraint. It also makes entering the parameters a little more user-friendly.
-4.  **Extend Elmer\'s writer:** Add support for the new constraint to Elmer by extending its sif file exporter.
-
-## Create document object 
-
-In this step we are going to modify the following files: 
+ဤခြေလှမ်းတွင် အောက်ပါ ဖိုင်များကို ပြင်ဆင်ပါမည်။
 
 -    **src/Mod/Fem/CMakeLists.txt**
-    
 
 -    **src/Mod/Fem/App/CMakeLists.txt**
-    
 
 -    **src/Mod/Fem/ObjectsFem.py**
-    
 
-
-
-And add the following files: 
+နှင့် အောက်ပါ ဖိုင်များကို အသစ်ထည့်ပါမည်။
 
 -    **src/Mod/Fem/femobjects/constraint_flowvelocity.py**
-    
 
 -    **src/Mod/Fem/femviewprovider/view_constraint_flowvelocity.py**
-    
 
-
-
-A document proxy and a view proxy are required for the new constraint. Those reside in separate modules. The document proxy in femobjects and the view proxy in femviewprovider. Just copy the modules from an existing constraint e.g.: 
+အသစ်ထည့်မည့် ကန့်သတ်ချက်အတွက် document proxy နှင့် view proxy တို့လိုအပ်သည်။ ၎င်းတို့ကို အခြား ရှိပြီးသား ကန့်သတ်ချက် မော်ဂျူးများမှ ကူးယူနိုင်သည် (ဥပမာ):
 
 -    **femobjects/constraint_selfweight.py**
-    
 
 -    **femviewprovider/view_constraint_selfweight.py**
-    
 
+Type သတ်မှတ်ချက်နှင့် property များကို အလိုလို ပြင်ဆင်နိုင်သည်။ flow ကန့်သတ်ချက်၏ document proxy သည် အောက်ပါအတိုင်း ဖြစ်နိုင်သည်။
 
-
-Adjust the Type variable and the properties to your needs. The document proxy of the flow constraint looks like the following:
-
- 
 ```python
 class Proxy(FemConstraint.Proxy):
     Type = "Fem::ConstraintFlowVelocity"
@@ -93,20 +73,18 @@ class Proxy(FemConstraint.Proxy):
             "Parameter", "Body heat flux")
 ```
 
-The module containing the view proxy might look a little more complicated. But for now just adjust the icon path. We are going to come back to this file in later steps of the tutorial.
+view proxy ပါဝင်သည့် မော်ဂျူးသည် အနည်းငယ်ရှုပ်ထွေးနိုင်ပါသည်။ ယခုအချိန်တွင် သင်ရိုက်ထည့်ရမည့် icon လမ်းကြောင်းကိုသာ ပြင်ပါ။ နောက်ပိုင်း အဆင့်များတွင် ဤဖိုင်သို့ ပြန်သွားလုပ်ဆောင်မည်ဖြစ်သည်။
 
- 
 ```python
 class ViewProxy(FemConstraint.ViewProxy):
     def getIcon(self):
         return ":/icons/fem-constraint-flow-velocity.svg"
 ```
 
-Add the two new modules to the build system as described in [Extend FEM Module](https://www.freecadweb.org/wiki/Extend_FEM_Module). Locate the correct list by searching for constraint modules.
+[Extend FEM Module](https://www.freecadweb.org/wiki/Extend_FEM_Module) တွင် ဖော်ပြထားသည့်အတိုင်း ဖိုင်နှင့် မော်ဂျူးများအား build system သို့ ထည့်ပါ။ constraint မော်ဂျူးများအတွက် သတ်မှတ်ထားသော စာရင်းကို ရှာဖွေရန်။
 
-As all objects of the FEM workbench, the velocity constraint must be registered in {{Incode|ObjectsFem.py}}. The following method adds a velocity constraint to the active document. This method will be used by the GUI command to add the constraint. It must be inserted somewhere in {{Incode|ObjectsFem.py}}.
+FEM လုပ်ငန်းခွင် (Workbench) ၏ အရာဝတ္ထုအားလုံးကဲ့သို့ velocity ကန့်သတ်ချက်ကို {{Incode|ObjectsFem.py}} တွင် မှတ်ပုံတင်ရမည်။ အောက်ပါ method သည် active document သို့ velocity ကန့်သတ်ချက်ကို ထည့်သွင်းသည်။ GUI command မှ အသုံးပြုမည့် method ဖြစ်ပြီး {{Incode|ObjectsFem.py}} အတွင်း သင့်တော်သည့်နေရာတွင် ထည့်သွင်းရမည်။
 
- 
 ```python
 def makeConstraintFlowVelocity(name="FlowVelocity"):
     obj = FreeCAD.ActiveDocument.addObject("Fem::ConstraintPython", name)
@@ -118,31 +96,22 @@ def makeConstraintFlowVelocity(name="FlowVelocity"):
     return obj
 ```
 
-## Create GUI command 
+## GUI command တည်ဆောက်ခြင်း
 
-In this step we are going to modify the following files: 
+ဤခြေလှမ်းတွင် အောက်ပါ ဖိုင်များကို ပြင်ဆင်ပါမည်။
 
 -    **src/Mod/Fem/CMakeLists.txt**
-    
 
 -    **src/Mod/Fem/App/CMakeLists.txt**
-    
 
 -    **src/Mod/Fem/Gui/Workbench.cpp**
-    
 
-
-
-And add the following new file: 
+နှင့် အသစ်ထည့်ရန် ဖိုင်အတိုင်း:
 
 -    **src/Mod/Fem/femobjects/constraint_flowvelocity.py**
-    
 
+command သည် အသုံးပြုသူကို active analysis သို့ ကန့်သတ်ချက်ကို တကယ့်ထည့်ပေးရန် ခွင့်ပြုသည်။ ရှိပြီးသား ကန့်သတ်ချက်မှ command ကို ကူးယူနိုင်သည်။ command များကို {{Incode|femviewprovider}} package ထဲတွင် ထားရှိသည်။ resources attribute နှင့် Activated တွင် အသုံးပြုသော make method ကို သင့်လိုအပ်ချက်အတိုင်း ပြင်ဆင်ပါ။ module အောက်ခြေတွင် addCommand ကို ချိန်း၍ မူလ command id ကို အခြားထည့်ပေးရမည်။ အောက်ပါ class သည် velocity ကန့်သတ်ချက်၏ command class ဖြစ်သည်။
 
-
-The command allows the user to actually add the constraint to the active analysis. Just copy a command from an existing constraint. Commands reside in the {{Incode|femviewprovider}} package. Adjust the resources attribute and the make method called in Activated to your needs. Also use a different command id in the addCommand call on the bottom of the module. The following class is the command class of the velocity constraint.
-
- 
 ```python
 class Command(FemCommands.FemCommands):
 
@@ -169,26 +138,22 @@ class Command(FemCommands.FemCommands):
 Gui.addCommand('FEM_AddConstraintFlowVelocity', Command())
 ```
 
-Add the new command file to the build system as decripted in [Extend FEM Module](https://www.freecadweb.org/wiki/Extend_FEM_Module). Locate the correct list be searching for existing command modules.
+[Extend FEM Module](https://www.freecadweb.org/wiki/Extend_FEM_Module) တွင် ဖော်ပြထားသလို အသစ်ထည့်သည့် command ဖိုင်ကို build system ထဲသို့ ထည့်ပါ။ ရှိပြီးသား command မော်ဂျူးများကို ရှာဖွေရန်။
 
-Put the command into Gui/Workbench.cpp to add it to the toolbar and menu. Search for an existing constraint of the same category as the new one (e.g. Flow) copy-paste it and adjust the command id. This should be done two times. Once for the menu and again for the toolbar.
+Gui/Workbench.cpp တွင် command ကို ထည့်၍ toolbar နှင့် မီနူးတွင် ပြသပါ။ သက်ဆိုင်ရာ ကဏ္ဍရှိ ရှိပြီးသား constraint တစ်ခု (ဥပမာ Flow) ကို ရှာဖွေရန်၊ ကူးယူပြီး command id ကို ပြောင်းထည့်ရန် ဆောင်ရွက်ပါ။ ဤလုပ်ငန်းကို မီနူးအတွက် တစ်ကြိမ်၊ ကိရိယာတန်း (toolbar) အတွက် တစ်ကြိမ် ဆိုပြီး နှစ်ကြိမ် ပြုလုပ်ရမည်။
 
-## Create a task panel 
+## Task panel တည်ဆောက်ခြင်း
 
-In this step, we are going to modify the following file: 
+ဤခြေလှမ်းတွင် အောက်ပါ ဖိုင်ကို ပြင်ဆင်မည်။
 
 -    **src/Mod/Fem/femviewprovider/view_constraint_flowvelocity.py**
-    
 
+ဖရီးကက် (FreeCAD) တွင် ကန့်သတ်ချက်အရာဝတ္ထုများသည် Task Panel (လုပ်ငန်းတာဝန်ပြား) အား အသုံးချခြင်းအားဖြင့် အကျိုးရှိသော အကျိုးခံစားမှုများရရှိသည်။ Task panel များအနေဖြင့် ယူနစ် (unit) ကို အသုံးပြုသူထံ တိုက်ရိုက်ပြသနိုင်သည့် ပိုမိုအင်အားပြင်းသော input widget များကို အသုံးပြုနိုင်သည်။ velocity ကန့်သတ်ချက်တွင် တကယ့်တည့်တည့် Task panel လိုအပ်သည်၊ အကြောင်းမှာ ရှေ့နား (face) များကို သတ်မှတ်ပေးရန် Task panel တစ်ခုဖြင့်သာ အလုပ်ဖြစ်နိုင်သည်။
 
+Task panel အတွက် ရေးသားထားသည့် module ၏ တည်နေရာမှာ တင်းကြပ်စွာ သတ်မှတ်ထားခြင်း မရှိပါ။ velocity ကန့်သတ်ချက်အတွက် ကျွန်ုပ်တို့သည် view proxy ထည့်ထားသည့် module နဲ့ တစ်နေရာပေါ်မှာ Task panel ကို ထည့်သွင်းမည်။ Task panel သည် အလွန်ရှုပ်ထွေးပြီး FemSelectionWidgets.BoundarySelector() ကို အသုံးပြုသည်။ ၎င်းသည် အသုံးပြုသူအား ကန့်သတ်ချက်ကို ချိတ်ဆက်လိုသည့် ရှေ့နားများကို ရွေးချယ်ခွင့်ပေးသည့် Qt widget တစ်ခုဖြစ်သည်။ ၎င်း widget အပြင် velocity ကိန်းကဏ္ဍ vector ကို သတ်မှတ်နိုင်ရန် အထူး UI ဖိုင်တစ်ခုကို ဖတ်ပြီး ဆောက်ထားသော widget တစ်ခုကိုလည်း ထုတ်ယူသည်။
 
-In FreeCAD, constraint objects benefit greatly from task panels. Task panels can make use of more powerful input widgets that expose the unit of entered values directly to the user. The velocity constraint even requires the use of a task panel since a task panel is the only way of specifying the face(s) on which the constraint shall be applied.
+သိပ်ပို၍ မလိုအပ်ပါက အများအားဖြင့် ယခု class ကို ကူးယူ၍ သေသေချာချာ UI ဖိုင်တစ်ခုကို (TaskPanelFemFlowVelocity.ui အစား) အသုံးပြုပြီး \_initParamWidget() နှင့် \_applyWidgetChanges() ကို စိတ်ကြိုက်ပြင်ဆင်ခြင်းဖြင့် လုံလောက်သည်။ သို့သော် အသစ်ထည့်မည့် ကန့်သတ်ချက်တွင် boundary များမဟုတ်ဘဲ body (solid) များကို ရည်ညွန်ရန် လိုအပ်ပါက BoundarySelector ကို SolidSelector သို့ အစားထိုးလိုက်ပါ။
 
-The location of the module in which task panels are implemented is not strictly defined. For the velocity constraint, we are just going to put the task panel in the same module where we put the view proxy. The task panel is quite complicated. It makes use of the FemSolectionWidgets.BoundarySelector(). That\'s a qt widget that allows the user to select the boundaries on which the constraint shall be applied. In addition to this widget, it generates another one by loading a UI file specifically created for the velocity constraint. Via this widget, the velocity vector can be specified.
-
-Most of the time it should be sufficient to just copy this class, use a suitable UI file (instead of TaskPanelFemFlowVelocity.ui) and adjust \_initParamWidget() as well as \_applyWidgetChanges(). If the new constraint requires bodies as references instead of boundaries just replace the BoundarySelector object with the SolidSelector.
-
- 
 ```python
 class _TaskPanel(object):
 
@@ -274,9 +239,8 @@ class _TaskPanel(object):
         self._obj.NormalToBoundary = self._paramWidget.normalBox.isChecked()
 ```
 
-The view proxy must be extended to support the task panel we just implemented. The following extended view proxy opens the task panel when the user makes a double-click on the constraint object in the tree view.
+view proxy ကို ယခု implement ပြုလုပ်ထားသည့် Task panel ကို သုံးစွဲနိုင်ရန် တိုးချဲ့ရမည်။ အောက်ပါ view proxy ကိုအသုံးပြုပါက အသုံးပြုသူသည် tree view တွင် constraint object ကို double-click ပြုလုပ်သည်နှင့် Task panel ကို ဖွင့်မည်ဖြစ်သည်။
 
- 
 ```python
 class ViewProxy(FemConstraint.ViewProxy):
 
@@ -297,18 +261,14 @@ class ViewProxy(FemConstraint.ViewProxy):
         return True
 ```
 
-## Extend Elmer\'s writer 
+## Elmer ၏ writer ကို တိုးချဲ့ခြင်း
 
-In this step we are going to modify the following file: 
+ဤခြေလှမ်းတွင် အောက်ပါ ဖိုင်ကို ပြင်ဆင်ပါမည်။
 
 -    **src/Mod/Fem/femsolver/elmer/writer.py**
-    
 
+writer မော်ဂျူးတွင် equation မျိုးအတွက် များစွာသော method များပါရှိသည်။ ကန့်သတ်ချက်၏ အမျိုးအစားနှင့် အခြေအနေ (boundary condition, initial condition, body force) ဖျော်ဖြေမှုအပေါ်မူတည်၍ သင်ပြင်ဆင်ရမည့် method များကွာခြားသွားမည်ဖြစ်သည်။ flow velocity အတွက် ကျွန်တော်တို့သည် {{Incode|_handleFlowBndConditions(...)}} ကို ပြင်ဆင်ရမည်။
 
-
-The writer module contains methods for all equation types. Depending on the type of the constraint, boundary condition, initial condition or body force one has to modify different methods. For our flow velocity we have to adjust {{Incode|_handleFlowBndConditions(...)}}.
-
- 
 ```python
 def _handleFlowBndConditions(self):
     for obj in self._getMember("Fem::ConstraintFlowVelocity"):
@@ -327,8 +287,6 @@ def _handleFlowBndConditions(self):
                     self._boundary(name, "Normal-Tangential Velocity", True)
             self._handled(obj)
 ```
-
-
 
 ---
 ⏵ [documentation index](../README.md) > [FEM](Category_FEM.md) > Add FEM Constraint Tutorial

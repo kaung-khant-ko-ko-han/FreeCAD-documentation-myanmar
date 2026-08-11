@@ -4,45 +4,43 @@
    MenuLocation: Utils , Structure tools , Structure
    Workbenches: BIM_Workbench
    SeeAlso: Arch_Wall, Arch_Rebar
----
+---# Arch Structure
 
-# Arch Structure
+## သရုပ်ဖော်ချက်
 
-## Description
+[Arch Structure](Arch_Structure.md) ကိရိယာသည် အကျယ်၊ အရှည်နှင့် အမြင့်များကို သတ်မှတ်ပေးခြင်းဖြင့် သို့မဟုတ် 2D ပရိုဖိုင် (မျက်နှာပြင်၊ ဝါယာ သို့မဟုတ် ပုံကြမ်း [Sketch]) ကို အခြေခံ၍ ကော်လံ (column) သို့မဟုတ် ဘီးမ် (beam) ကဲ့သို့သော ဖွဲ့စည်းမှု အစိတ်အပိုင်းများကို ဖန်တီးရန် အသုံးပြုနိုင်သည်။
 
-The [Arch Structure](Arch_Structure.md) tool allows you to build structural elements such as columns or beams, by specifying their width, length and height, or by basing them on a 2D profile (face, wire or sketch).
-
-If no profile is given, a set of presets are available to quickly build a structural element from a predefined standard profile.
+ပရိုဖိုင်မရှိပါက အဆင်ပြေစွာ စံပုံစံ ပရိုဖိုင်များမှ အလျင်အမြန် ဖွဲ့စည်းမှု အစိတ်အပိုင်း တစ်ခုကို တည်ဆောက်ရန် အသင့်ဖြင့် ရရှိနိုင်သည့် preset များ ပါရှိသည်။
 
  <img alt="" src=images/Arch_Structure_example.jpg  style="width:400px;">  
-*Column based on a 2D base profile; a column and a beam defined by their height, length and width, without a base profile; a metallic structure based on a 2D face*
+*2D အခြေခံပရိုဖိုင်ကို အခြေခံထားသော ကော်လံတစ်ခု; အခြေခံပရိုဖိုင်မရှိ၍ အမြင့်၊ အရှည်နှင့် အကျယ်ဖြင့် သတ်မှတ်ထားသော ကော်လံနှင့် ဘီးမ်; 2D မျက်နှာပြင်ကို အခြေခံထားသော သံဖွဲ့စည်းမှုတစ်ခု*
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Select a 2D shape (Draft object, face or sketch) (optional).
-2.  Select the **Utils → Structure tools → <img src="images/Arch_Structure.svg" width=16px> Structure** option from the menu.
-3.  Adjust the desired properties.
+1.  2D အရွက် (Draft object, မျက်နှာပြင် သို့မဟုတ် ပုံကြမ်း [Sketch]) တစ်ခုကို ရွေးချယ်ပါ (လိုအပ်လျှင်)။
+2.  မီနူးမှ **Utils → Structure tools → <img src="images/Arch_Structure.svg" width=16px> Structure** ကို ရွေးချယ်ပါ။
+3.  လိုချင်သော ပိုင်ဆိုင်မှုများကို စီမံညှိနှိုင်းပါ။
 
-## Options
+## ရွေးချယ်စရာများ
 
--   When no base 2D object is selected, the structure tool has 2 drawing modes: Column and beam:
-    -   In column mode, you are asked to pick one point on screen or by entering coordinates. The new structural object will be placed at that point.
-    -   In beam mode, you are asked to pick two points on screen or by entering coordinates. The new structural object will span between these two points.
--   Structural elements share the common properties and behaviours of all [Arch Components](Arch_Component.md)
--   The height, width and length of a structure can be adjusted after creation
--   Press **Esc** or the **Cancel** button to abort the current command.
--   Double-clicking on the structure in the tree view after it is created allows you to enter edit mode and access and modify its additions and subtractions
--   In edit mode, it is also possible to add [axes systems](Arch_Axis.md) to the structural element. When adding one axes system, the structural element will be copied once on each axis of the system. When adding two axes systems, the structural element will be copied once on each intersection of the two systems.
+-   အခြေခံ 2D အရာဝတ္ထု မရွေးချယ်ထားပါက Structure ကိရိယာတွင် ခြေလှမ်းရေးဆွဲမှု မုဒ် ၂ မျိုး ရှိသည် — ကော်လံ (Column) နှင့် ဘီးမ် (Beam) မုဒ်များ။
+    -   ကော်လံ မုဒ်တွင် သင့်အား စက်ပေါ်မှ အချက်တစ်ချက်ကို နှိပ်ရန် သို့မဟုတ် ကိုအော်ဒီနိတ်များ ထည့်ရေးရန် တောင်းဆိုပါမည်။ ဖန်တီးမည့် ဖွဲ့စည်းမှု အရာဝတ္ထုသည် အဆိုပါ အချက်တွင် ထားရှိမည်။
+    -   ဘီးမ် မုဒ်တွင် သင့်အား စက်ပေါ်မှ အချက်နှစ်ချက်ကို နှိပ်ရန် သို့မဟုတ် ကိုအော်ဒီနိတ်များ ထည့်ရေးရန် တောင်းဆိုပါမည်။ ဖန်တီးမည့် ဖွဲ့စည်းမှု အရာဝတ္ထုသည် အဆိုပါ အချက်နှစ်ချက်ကို ချိတ်ဆက်သဖြင့် တည်ရှိမည်။
+-   ဖွဲ့စည်းမှု အစိတ်အပိုင်းများသည် [Arch Components](Arch_Component.md) အစရှိတာအားလုံး၏ ပိုင်ဆိုင်မှုများနှင့် အပြုအမူများကို ဝေမျှထားသည်။
+-   ဖွဲ့စည်းမှု၏ အမြင့်၊ အကျယ်နှင့် အရှည်ကို ဖန်တီးပြီးနောက် ပြင်ဆင်နိုင်သည်။
+-   လက်ရှိ ကမ်းလှမ်းချက်ကို ပယ်ဖျက်ရန် **Esc** သို့မဟုတ် **Cancel** ခလုတ်ကို ဖိလိုက်ပါ။
+-   ဖန်တီးပြီးနောက် Tree view တွင် ဖွဲ့စည်းမှုကို ဒဘလ်ကလစ် 하면 အယ်ဒီ့(ပြင်ဆင်) မုဒ်ထဲသို့ ဝင်ရောက်နိုင်ပြီး ၎င်း၏ ဖြည့်စွက်မှုများနှင့် ဖြုတ်ယူမှုများကို ပြင်ဆင်နိုင်သည်။
+-   အယ်ဒီ့(ပြင်ဆင်) မုဒ်တွင် [axes systems](Arch_Axis.md) များကို ဖွဲ့စည်းမှု အရာဝတ္ထုတွင် ထည့်ရန်လည်း ဖြစ်နိုင်သည်။ axes system တစ်ခု ထည့်လျှင် ဖွဲ့စည်းမှု အရာဝတ္ထုကို ထို system ၏ တစ်ခုချင်း axis ပေါ်တွင် စာရင်းအတိုင်း မိတ္တူကူးပေးမည်။ axes system နှစ်ခု ထည့်လျှင် ဖွဲ့စည်းမှုသည် အဆိုပါ နှစ်ခုစနစ်၏ ထိုးချည်ရာ အပေါ်တွင် တစ်ခါ၊ တစ်ခါ မိတ္တူကူးပေးမည်။
 
-## Properties
+## ပိုင်ဆိုင်မှုများ
 
 ### Data
 
--    **Tool**: an optional extrusion path, which can be any type of wire. If this property is empty, the extrusion will be straight, and happen in the direction given by the Normal property
+-    **Tool**: လိုအပ်လျှင် extrusion path တစ်ခု (wire အမျိုးအစား မည်သည့်မျိုးမဆို) ကို ဖော်ပြသည်။ ဤပိုင်ဆိုင်မှုအား ရှန့်ထားပါက extrusion သည် တည့်သော ညှိနှိုင်းဖြင့်နှင့် Normal ပိုင်ဆိုင်မှု အရ ဖြစ်ပျက်မည်။
 
--    **Normal**: specifies the direction in which the base face of this structure will be extruded. If this property is kept to (0,0,0), the direction will be automatically set to the normal direction of the base face.
+-    **Normal**: ဤဖွဲ့စည်းမှု၏ အခြေမြင့် မျက်နှာပြင်ကို မည်သည့်ทิศทางဖြင့် အထူဖော်ထုတ်မည်ကို သတ်မှတ်သည်။ ဤပိုင်ဆိုင်မှုကို (0,0,0) အဖြစ် ထားလျှင် အဆိုပါ ညှိနှိုင်းကို အခြေမြင့် မျက်နှာပြင်၏ ရိုးပျံ့ (normal) ကျဆင်းချက်အတိုင်း အလိုအလျောက် သတ်မှတ်လိမ့်မည်။
 
--    **Face Maker**: specifies the type of face generation algorithm to use to build the profile. The options are:
+-    **Face Maker**: ပရိုဖိုင်ကို ဖန်တီးရာတွင် အသုံးပြုမည့် မျက်နှာဖန်တီးနည်းလမ်းကို သတ်မှတ်သည်။ ရွေးချယ်စရာများမှာ -
 
     -   
         {{Value|None}}
@@ -51,71 +49,71 @@ If no profile is given, a set of presets are available to quickly build a struct
     -   
         {{Value|Simple}}
         
-        : makes faces from all closed wires, ignoring overlaps.
+        : ပိတ်ထားသော ဝါယာများအားလုံးမှ မျက်နှာများကို ဖန်တီးပေးသည်၊ 겹치는 အပိုင်းများကို မလေးစားပဲ။
 
     -   
         {{Value|Cheese}}
         
-        : makes faces with holes, but no faces within holes.
+        : သူး(ဟိုင်း)ပါသည့် မျက်နှာများကို ဖန်တီးပေးသည်၊ သူးအတွင်း ထပ်သော မျက်နှာများကို မဖန်တီးပေး။
 
     -   
         {{Value|Bullseye}}
         
-        : makes faces with holes, including islands within holes.
+        : သူးနှင့် အတွင်းတွင် ကျွန်းပုံရှိနိုင်သည့် မျက်နှာများကိုပါ ဖန်တီးပေးသည်။
 
--    **Length**: specifies the length of the structure. This is only used if the structure is not based on a profile.
+-    **Length**: ဖွဲ့စည်းမှု၏ အရှည်ကို သတ်မှတ်သည်။ ဤသည်ကို ဖွဲ့စည်းမှုသည် ပရိုဖိုင်အပေါ် မအခြေခံထားသော အခါတွင်သာ အသုံးပြုသည်။
 
--    **Width**: specifies the width of the structure. This is only used if the structure is not based on a profile.
+-    **Width**: ဖွဲ့စည်းမှု၏ အကျယ်ကို သတ်မှတ်သည်။ ဤသည်ကို ဖွဲ့စည်းမှုသည် ပရိုဖိုင်အပေါ် မအခြေခံထားသော အခါတွင်သာ အသုံးပြုသည်။
 
--    **Height**: specifies the height of the structure, or the extrusion length when based on a profile. If no height is given, and the structure is inside an [Arch Floor](Arch_Floor.md) object with its height defined, the structure will automatically take the value of the floor height.
+-    **Height**: ဖွဲ့စည်းမှု၏ အမြင့် သို့မဟုတ် ပရိုဖိုင်အပေါ် အခြေခံ၍ ဖြစ်ပါက extrusion ၏ အရှည်ကို သတ်မှတ်သည်။ အမြင့် မပေးထားဘဲ၊ ဖွဲ့စည်းမှုသည် အမြင့်သတ်မှတ်ထားသော [Arch Floor](Arch_Floor.md) အရာဝတ္ထုအတွင်းရှိပါက၊ ဖွဲ့စည်းမှုသည် အလိုအလျောက် ထို အလွှာ (floor) ၏ အမြင့်တန်ဖိုးကို ယူမည်။
 
--    **Nodes Offset**: specifies an optional offset between the centerline and the nodes line.
+-    **Nodes Offset**: centerline နှင့် nodes line အကြား လိုအပ်လျှင် offset တစ်ခုကို သတ်မှတ်ပေးနိုင်သည်။
 
 ### View
 
--    **Nodes Type**: The type of structural nodes of this object, linear or area.
+-    **Nodes Type**: ဤအရာဝတ္ထု၏ ဖွဲ့စည်းမှု nodes ၏ အမျိုးအစား (linear သို့မဟုတ် area) ကို သတ်မှတ်သည်။
 
--    **Show Nodes**: Shows or hides the structural nodes.
+-    **Show Nodes**: ဖွဲ့စည်းမှု nodes များကို ပြပါ သို့မဟုတ် မပြပါ။
 
 ## Presets
 
-The Structure tool also features a series of presets that allow to quickly build standard metallic profiles or precast concrete elements.
+Structure ကိရိယာတွင် စံသတ်မှတ်ထားသော သံပိုင်းပုံစံများ သို့မဟုတ် precast ကွန်ကရစ် အစိတ်အပိုင်းများကို လျှင်မြန်စွာ ဖန်တီးနိုင်ရန် presets များလည်း ပါရှိသည်။
 
  ![](images/Arch_presets_example.jpg )  
-*Some presets for steel structures*
+*သံဖွဲ့စည်းမှုများအတွက် အချို့သော presets*
 
-The presets are obtained by choosing a **Category** from the structure options panel. Available categories are **Precast concrete** or any of the industry-standard metallic profiles such as **HEA**, **HEB** or **INP**. For each of these categories, a number of presets are available. Once a preset is chosen, its individual parameters such as **Length**, **Width** or **Height** can be adjusted. However, for metallic profiles, the profile size is set by the preset and cannot be changed.
+preset များကို ရယူရန် structure options panel မှ **Category** တစ်ခုကို ရွေးချယ်ရမည်။ ရနိုင်သော category များမှာ **Precast concrete** သို့မဟုတ် စက်မှုလုပ်ငန်း စံပုံသတ်မှတ်ထားသည့် သံပိုင်းပရိုဖိုင်များ (ဥပမာ **HEA**, **HEB**, **INP**) တို့ ဖြစ်သည်။ ၎င်းတို့ထဲမှ တစ်ခုချင်းစီအတွက် preset အနေနှင့် အချို့ parameter များ ရရှိနိုင်သည်။ preset တစ်ခု ရွေးချယ်ပြီးနောက် ၎င်း၏ တစ်ကိုယ်တော် parameter များ (ဥပမာ **Length**, **Width**, **Height**) ကို ပြင်ဆင်နိုင်သည်။ သို့သော် သံပရိုဖိုင်များအတွက် profile အရွယ်အစားသည် preset ဖြင့် သတ်မှတ်ထားပြီး ပြောင်းလဲ၍ မရနိုင်ပါ။
 
-The **Switch L/H** button can be used to switch Length and Height values, and therefore building a horizontal beam rather than a vertical column.
+**Switch L/H** ခလုတ်ကို အသုံးပြုပြီး Length နှင့် Height တန်ဖိုးများကို လဲလှယ်နိုင်သည်၊ ထို့ကြောင့် တိုက်ထောက်ကော်လံအသီးအပြင် အလျားလိုက် ဘီးမ် (horizontal beam) တစ်ခုကို တည်ဆောက်နိုင်သည်။
 
  <img alt="" src=images/Arch_precast_example.jpg  style="width:960px;">  
-*Some presets for precast concrete structures*
+*Precast concrete ဖွဲ့စည်းမှုများအတွက် အချို့သော presets*
 
-## Structural nodes 
+## ဖွဲ့စည်းမှု nodes
 
-Structural objects also have the ability to display structural nodes. Structural nodes are a sequence of 3D points stored in a \"Nodes\" property. By switching the \"Show Nodes\" view property on/off, one can see the structural nodes of a structural element:
+ဖွဲ့စည်းမှု အရာဝတ္ထုများတွင် ဖွဲ့စည်းမှု nodes များကို ပြသနိုင်ရန် လည်း အင်အားရှိသည်။ ဖွဲ့စည်းမှု nodes များသည် "Nodes" ပိုင်ဆိုင်မှုအတွင်း သိမ်းဆည်းထားသည့် 3D ပုံစံဖြစ်သည်။ "Show Nodes" view ပိုင်ဆိုင်မှုကို ပွင့်/ပိတ် ပြောင်းခြင်းဖြင့် ဖွဲ့စည်းမှုအားလုံး၏ structural nodes များကို ကြည့်ရှုနိုင်သည်။
 
  <img alt="" src=images/Arch_structural_nodes.jpg  style="width:960px;">  
-*Structural nodes made visible for a set of structures*
+*ဖွဲ့စည်းမှုတချို့အတွက် Structural nodes များကို ဖော်ပြထားသည်*
 
--   Nodes are calculated and updated automatically, as long as you don\'t modify them manually. If you did, they won\'t be updated if the shape of the structural object changes, unless you use the \"Reset nodes\" tool below.
--   Arch structures can have not only linear nodes, but also planar nodes. For this, 1- There must be at least 3 vectors in the \"Nodes\" property of the object, 2- the \"NodesType\" property of their ViewObject must be set to \"Area\".
--   When the nodes calculation is automatic (that is, if you never touched them manually), when setting the \"Role\" property of a structure to \"Slab\", it will automatically become a planar node (there will be more than 3 vectors and the NodesType will be set to \"Area\").
--   When editing a structure object (double-click), a couple of node tools are available in the task view:
-    -   Reset the nodes to automatic calculation, in case you modified them manually
-    -   Edit the nodes graphically, works the same way as [Draft Edit](Draft_Edit.md)
-    -   Extend the nodes of the edited object until it touches the node of another object
-    -   Make the node of this object and another one coincident
-    -   Toggle the display of all nodes of all structural objects of the document on/off
+-   Nodes များကို shape ကို လက်ဖြင့်ပြောင်းလဲသည်မျှသာ မပြုလုပ်သိမ်းဆည်းထားသည့်အထိ အလိုအလျောက်တွက်ချက်ပြီး update လုပ်ပေးမည်။ သင်အတုလက်ဖြင့် ပြင်ဆင်ခဲ့လျှင် ဖွဲ့စည်းမှု၏ ပုံပြင်ပြောင်းလဲမှုများအတွက် အလိုအလျောက် update မခံရနိုင်ပါ၊ ထိုအခါတွင် အောက်ပါ "Reset nodes" ကိရိယာကို အသုံးပြုရမည်။
+-   Arch ဖွဲ့စည်းမှုများတွင် linear nodes သာမက planar nodes များလည်း ရနိုင်သည်။ ၎င်းအတွက် ၁- အရာဝတ္ထု၏ "Nodes" ပိုင်ဆိုင်မှုတွင် vectors အနည်းဆုံး ၃ ခု ရှိရမည်၊ ၂- ၎င်းတို့၏ ViewObject ၏ "NodesType" ပိုင်ဆိုင်မှုကို "Area" သို့ သတ်မှတ်ထားရမည်။
+-   Nodes တွက်ချက်မှုသည် အလိုအလျောက် ဖြစ်နေသောအခါ (သင်က မည်သည့်လက်ဖြင့်လည်း ထိမထားခဲ့သေးပါက) ဖွဲ့စည်းမှုတစ်ခု၏ "Role" ပိုင်ဆိုင်မှုကို "Slab" သို့ သတ်မှတ်လျှင် ၎င်းသည် အလိုအလျောက် planar node ဖြစ်သွားမည် (vectors သာမက ၃ ခုထက်ပို ရှိပြီး NodesType ကို "Area" သို့ သတ်မှတ်မည်)။
+-   ဖွဲ့စည်းမှု အရာဝတ္ထုကို တည်းဖြတ်ချိန် (ဒဘလ်ကလစ်) တွင်၊ task view တွင် node ဆိုင်ရာ ကိရိယာအချို့ရရှိနိုင်သည်။
+    -   သင်လက်ဖြင့် ပြင်ဆင်ခဲ့ပါက nodes များကို အလိုအလျောက်တွက်ချက်မှုသို့ Reset ပြန်လုပ်ရန်
+    -   nodes များကို ဂရပ်ဖစ်အနေနှင့် တည်းဖြတ်ရန် — Draft Edit [Draft Edit](Draft_Edit.md) နည်းလမ်းနှင့် ဆင်တူစနစ်ဖြင့် အလုပ်လုပ်သည်
+    -   ပြင်ဆင်နေသော အရာဝတ္ထု၏ nodes များကို တခြား အရာဝတ္ထု၏ node ထိမိသည်အထိ ချဲ့ထွင်ရန်
+    -   ယခု အရာဝတ္ထု၏ node သို့ နှင့် တခြား အရာဝတ္ထုတစ်ခု၏ node ကို တူညီသည့် နေရာတွင် ပြုလုပ်ရန် (coincident)
+    -   ဒေါက်မြောက်ရှိ အရာဝတ္ထုအားလုံး၏ nodes များကို အပြုံး/ပိတ် ပြောင်းရန် (toggle display)
 
-## Scripting
+## စာရေးသားခြင်း (Scripting)
 
 
-**See also:**
+**ကိုးကားရန် —**
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) ကိုလည်း ကြည့်ပါ။
 
-The Structure tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+Structure ကိရိယာကို [macros](Macros.md) များတွင်နှင့် [Python](Python.md) console မှ သုံးနိုင်ပြီး အောက်ပါ function ကို အသုံးပြုပါ။
 
  
 ```python
@@ -123,11 +121,11 @@ structure = makeStructure(baseobj=None, height=None)
 structure = makeStructure(baseobj=None, length=None, width=None, height=None, name="Structure")
 ```
 
--   Creates a `structure` object from the given `baseobj`, which is a closed profile, and the given extrusion `height`.
-    -   If no `baseobj` is given, you can provide the numerical values for the `length`, `width`, and `height` to create a block structure.
-    -   The `baseobj` can also be any existing solid object.
+-   ပေးထားသော `baseobj` (ပိတ်ထားသော ပရိုဖိုင်) နှင့် ပေးထားသော extrusion `height` အတွက် `structure` အရာဝတ္ထုတစ်ခုကို ဖန်တီးပေးသည်။
+    -   `baseobj` မထည့်လျှင် `length`, `width`, နှင့် `height` သည် ကြိမ်နံပါတ်တန်ဖိုးများကို ပေး၍ block ဖွဲ့စည်းမှုတစ်ခုကို ဖန်တီးနိုင်သည်။
+    -   `baseobj` သည် ရှိပြီးသား solid object မည်သည့် အရာဖြစ်ပါစေ အသုံးပြုနိုင်သည်။
 
-Example:
+ဥပမာ:
 
  
 ```python

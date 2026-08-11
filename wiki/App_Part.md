@@ -1,27 +1,26 @@
 # App Part
-## Introduction
+
+## နိဒါန်း
 
  <img alt="" src=images/Geofeaturegroup.svg  style="width:32px;"> 
 
-An [App Part](App_Part.md) object, or formally an `App::Part`, is an element that allows grouping objects in 3D space.
+[App Part](App_Part.md) အရာဝတ္ထု၊ သို့မဟုတ် တရားဝင်အမည်ဖြစ်သည့် `App::Part` သည် သုံးမิติ (3D) နေရာအတွင်း အရာဝတ္ထုများကို အစုအဝေးအဖြစ် စုပေါင်းနိုင်စေရန် ခွင့်ပြုသည့် အစိတ်အပိုင်းတစ်ခုဖြစ်သည်။
 
-It was developed to be used in assemblies, as it has an **Origin** which serves as the positional reference for the grouped objects.
+၎င်းကို အစိတ်အပိုင်းများ တပ်ဆင်စုစည်းမှု (Assembly) များတွင် အသုံးပြုရန် ဖန်တီးထားပြီး၊ အစုလိုက်ထားသော အရာများ၏ တည်နေရာအညွှန်းအဖြစ် အသုံးပြုနိုင်မည့် **Origin** တစ်ခုကို လည်း ပါဝင်ထားသည်။
 
 <img alt="" src=images/FreeCAD_core_objects.svg  style="width:800px;">
 
 
+*ဖရီးကက် (FreeCAD) အတွင်း မူလ အရာဝတ္ထုများကြား ဆက်နွယ်မှုများကို ရိုးရှင်းစွာ ဖော်ပြထားသော ဇယား*
 
-*Simplified diagram of the relationships between the core objects in FreeCAD*
+## အသုံးပြုခြင်း
 
-## Usage
+အသုံးပြုနည်းများအတွက် [Std Part](Std_Part#Usage.md) ကို ကြည့်ပါ။
 
-See [Std Part](Std_Part#Usage.md).
+## ပိုင်ဆိုင်မှုများ
 
-## Properties
-
-See [Std Part](Std_Part#Properties.md).
-
+ပိုင်ဆိုင်မှု အသေးစိတ်များအတွက် [Std Part](Std_Part#Properties.md) ကို ကြည့်ပါ။
 
 
 ---
-⏵ [documentation index](../README.md) > App Part
+⏵ [စာရွက်စာတမ်း အညွှန်း](../README.md) > App Part

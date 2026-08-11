@@ -4,55 +4,51 @@
    MenuLocation: Utils , Survey
    Workbenches: BIM_Workbench
    SeeAlso: Macro_FCInfo, Macro_SimpleProperties
----
+---# Arch Survey (Arch စစ်ဆေးရေးကိရိယာ)
 
-# Arch Survey
+## ဖော်ပြချက်
 
-## Description
+**Arch Survey** ကိရိယာသည် မူဒယ်မှ တိုင်းတာချက်များနှင့် အချက်အလက်များကို အလျင်အမြန် ရယူနိုင်စေရန် အထူး စစ်ဆေးမှု မိုဒ် (Survey mode) တစ်ခုထဲသို့ ဝင်စေသည်။ စစ်ဆေးမှု မိုဒ်တွင် ရှိစဉ်၊ 3D အရာဝတ္ထုများ၏ မတူညီသော အမျိုးအစားသေးငယ်သော အပိုင်းများကို ကလစ်လ်လုပ်ခြင်းအားဖြင့် အောက်ပါ အချက်အလက်များကို ရယူနိုင်သည် (မင်းကလစ်သော အရာပေါ် မူတည်၍)။
 
-The **Arch Survey** tool enters a special surveying mode, which allows you to quickly grab measurements and information from a model, and transfer that information to other applications. Once you are in Survey mode, clicking on different subelements of 3D objects gathers the following information (depending on what you click):
+- အရိုးတစ်ခု (edge) ကို ကလစ်လျှင် ၎င်း၏ အလျားကို ရရှိသည်
+- တုတ်ချက်တစ်ခု (vertex) ကို ကလစ်လျှင် ၎င်း၏ အမြင့် (Z အချိုးစက် ကြောင့် ရရှိသော ဂုဏ်သတ္တိ) ကို ရရှိသည်
+- မျက်နှာပြင် (face) ကို ကလစ်လျှင် ၎င်း၏ အကြက်အရေအတွက် (area) ကို ရရှိသည်
+- အရာဝတ္ထုတစ်ခုလုံးကို နှစ်ချက်နှိပ်ခြင်း (double-click) ဖြင့် ရွေးချယ်လျှင် ၎င်း၏ အုပ်စုအရွယ်အစား (volume) ကို ရရှိသည်
 
--   If you click on an edge, you get its length
--   If you click on a vertex, you get its height (coordinate on the Z axis)
--   If you click on a face, you get its area
--   If you double-click anything, therefore select the whole object, you get its volume
+ဤအချက်အလက်တစ်ခုချင်းစီ ရယူသည့်အခါ အောက်ပါအရာများ ဖြစ်ပေါ်လာသည်။
 
-When such a piece of information is gathered, several things happen:
-
--   A label is placed on top of the element you clicked, that displays the value (with \"a\" for area, \"l\" for length, \"z\" for height, or \"v\" for volume)
--   The numeric value is copied to the clipboard, so you can paste it in another application
--   A line is printed on the FreeCAD output window. After you exit the survey mode, those lines can be copied and pasted in another application (the values are comma-separated, making it easy to convert to spreadsheet data)
--   The total length or area of the elements you clicked so far is also printed in the output window
--   Each length or area is also recorded in the task dialog
+- မင်းကလစ်ခဲ့သော အစိတ်အပိုင်းအပေါ်တွင် တန်ဖိုးကို ပြသသော တံဆိပ် (label) တစ်ခု ထားရှိပေးသည် (ဤတွင် \"a\" သည် area အတွက်၊ \"l\" သည် length အတွက်၊ \"z\" သည် height အတွက်၊ \"v\" သည် volume အတွက် ဖြစ်သည်)
+- ဂဏန်းတန်ဖိုးသည် ကလစ်ဘုတ် (clipboard) သို့ ကူးယူသွားပြီး မင်းသည် အခြား အက်ပ်လီကေးရှင်းတစ်ခုတွင် ပွာစ်(붙) ထားနိုင်သည်
+- တန်းတစ်ကြောင်း သည် ဖရီးကက် (FreeCAD) အထွက် ပြတင်းပေါက် (output window) တွင် ထုတ်ပေးပါသည်။ မင်းသည် စစ်ဆေးမှု မိုဒ်မှ ထွက်ရာတွင် ထို တန်းများကို ကူးယူ၍ အခြား အက်ပ်လီကေးရှင်းတွင် ပွာစ်(붙) ထားနိုင်သည် (တန်ဖိုးများကို comma ဖြင့် သီးခြားထားသောကြောင့် spreadsheet ဒေတာသို့ ပြောင်းလဲရန် အလွယ်တကူဖြစ်သည်)
+- မင်းအထိ ကလစ်ထားခဲ့သော အစိတ်အပိုင်းများ၏ စုစုပေါင်း အလျား သို့မဟုတ် အရေအတွက်ကိုလည်း အထွက် ပြတင်းပေါက်တွင် ထုတ်ပြသည်
+- တစ်စိတ်တစ်ပိုင်းလျှင် အလျား သို့မဟုတ် အရေအတွက်များကို လုပ်ငန်းတာဝန်ပြား (Task dialog / Task Panel) တွင်လည်း မှတ်တမ်းတင်သည်
 
  <img alt="" src=images/Arch_Survey_example.jpg  style="width:640px;"> 
 
-*The above image shows what happens when running the survey mode.*
+*အပေါ်ပါ ပုံသည် စစ်ဆေးရေး မိုဒ် ဖြင့် လည်ပတ်စဉ် ဖြစ်ပေါ်မည့် အခြေအနေကို ပြသထားသည်။*
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Select the **Utils → <img src="images/Arch_Survey.svg" width=16px> Survey** option from the menu.
-2.  Click on vertices, edges, faces or double-click to select whole objects.
-3.  Click outside any geometry (on the background of the 3D view) to remove existing labels, print a total line in the Task dialog, and restart counting lengths and areas from zero.
-4.  Press **Esc** or the **Close** button to exit survey mode and remove all the labels.
+1. မီနူးမှ **Utils → <img src="images/Arch_Survey.svg" width=16px> Survey** ရွေးချယ်ပါ။
+2. ထိစရာအနေဖြင့် vertices, edges, faces များကို ကလစ်ပါ၊ အသီးသီး အရာဝတ္ထုအားလုံးကို ရွေးရန် နှစ်ချက် နှိပ်ပါ (double-click)။
+3. ရှိပြီးသား တံဆိပ်များကို ဖယ်ရှားရန်၊ Task dialog (လုပ်ငန်းတာဝန်ပြား) ထဲတွင် စုစုပေါင်းတန်းတစ်ကြောင်း အထွက်ထုတ်ပေးရန်နှင့် အလျားများနှင့် အရွယ်အစားများကို သင်စတွက်မည့် စတုရန်းကို မျဉ်းသတ်လို၍ 3D ကိုးနက်တွင် ရှေ့ခံနောက်ခံ (background) ပေါ်ကို ကလစ်ပါ။
+4. စစ်ဆေးမှု မိုဒ်မှ ထွက်ရန် Esc ကို နှိပ်ပါ သို့မဟုတ် **Close** ခလုတ်ကို နှိပ်ပြီး သံဆိပ်များအားလုံးကို ဖယ်ရှားပါ။
 
-## Options
+## ရွေးချယ်စရာများ
 
--   You can add a custom label to any line in the Task dialog by clicking that line, then adding a text in the description field, then press the **set description** button.
--   Once you are done, before closing, you can export the contents of the Task dialog by pressing the \"export CSV\" button. The resulting CSV file can then be opened in any spreadsheet application such as Excel or LibreOffice Calc. The values and units will be separated in the resulting CSV file, and the totals are written as SUM() functions.
+- Task dialog (လုပ်ငန်းတာဝန်ပြား) ထဲရှိ တန်းတစ်ကြောင်းအား ကလစ်ပြီး အထပ်အရှည် ဖော်ပြချက်စာသား (description field) တွင် စာသားထည့်၍ **set description** ခလုတ်ကို နှိပ်ပါက မိမိလိုချင်သည့် စိတ်ကြိုက် တံဆိပ်တစ်ခု ထည့်နိုင်သည်။
+- အပြီးသတ်မှမိမိ ပိတ်မတိုင်ခင်တွင် Task dialog အကြောင်းအရာအား \"export CSV\" ခလုတ်ကို နှိပ်၍ ထုတ်ယူနိုင်သည်။ ရလာမည့် CSV ဖိုင်ကို Excel သို့မဟုတ် LibreOffice Calc ကဲ့သို့သော စာရင်းဇယား (spreadsheet) အက်ပ်လီကေးရှင်းများတွင် ဖွင့်လို့ ရသည်။ ရလာမည့် CSV ဖိုင်တွင် တန်ဖိုးများနှင့် ယူနစ်များကို သီးခြားထားပြီး၊ စုစုပေါင်းများကို SUM() ဖန်ချင်များအဖြစ် ရေးထားသည်။
 
  <img alt="" src=images/Arch_Survey_spreadsheet.jpg  style="width:640px;"> 
 
-## Scripting
+## စခရစ်ရေးသားခြင်း (Scripting)
 
+**သတင်းအချက်အလက် အပို:** 
 
-**See also:**
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) ကိုလည်း ကြည့်ပါ။
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
+Survey ကိရိယာတွင် တိုက်ရိုက် ပရိုဂရမ်းမင်း အင်တာဖေ့စ် မရှိပါ၊ သို့သော် ရွေးချယ်ထားသော [Part](Part_Workbench.md)- အခြေခံ အရာဝတ္ထုများမှ ထိုတူညီသော အချက်အလက်များကို ရယူနိုင်ရန် အောက်ပါ script ကို အသုံးပြုနိုင်သည်။
 
-The Survey tool doesn\'t have a programming interface, but gathering the same information from any selected [Part](Part_Workbench.md)-based object is reproduced with the following script:
-
- 
 ```python
 import FreeCADGui
 
@@ -65,8 +61,6 @@ for obj in selection:
         print("Volume: %f", element.Volume)
         print("Center of Mass: %f", element.CenterOfMass)
 ```
-
-
 
 ---
 ⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch Survey

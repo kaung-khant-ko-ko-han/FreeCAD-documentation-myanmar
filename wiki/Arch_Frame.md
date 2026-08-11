@@ -5,144 +5,151 @@
    Workbenches: BIM_Workbench
    Shortcut: **F** **R**
    SeeAlso: 
----
+---# Arch Frame
 
-# Arch Frame
+## ဖော်ပြချက်
 
-## Description
+**Arch Frame** ကိရိယာသည် ပရိုဖိုင် (profile) တစ်ခုနှင့် အစီအစဉ် (layout) တစ်ခုအခြေပြု၍ အမျိုးမျိုးသော ဖရိမ် (frame) အရာဝတ္ထုများကို တည်ဆောက်ရာတွင် အသုံးပြုသည်။ ပရိုဖိုင်ကို အစီအစဉ်၏ နားလမ်းများပေါ်မှတဆင့် အထူဖော်ထုတ်ခြင်း (Extrude) ပြုလုပ်မည်ဖြစ်ပြီး ၎င်းအစီအစဉ်သည် [ပုံကြမ်း / စကစ် (Sketch)](Sketcher_Workbench.md) သို့မဟုတ် [Draft အရာဝတ္ထု (Draft object)](Draft_Workbench.md) ကဲ့သို့သော 2D အရာဝတ္ထု မည်သည့်မျိုးမဆို ဖြစ်နိုင်သည်။ နာရီပိတ်ရိုးများ (railings) သို့မဟုတ် ဖရိမ်နံရံများ (frame walls) ဖန်တီးရာတွင် အထူးအသုံးဝင်သည်။ ဖရိမ် အရာဝတ္ထုများကို နောက်ပိုင်းတွင် လွယ်ကူစွာ [နံရံ (wall)](Arch_Wall.md) သို့မဟုတ် [ဖွဲ့စည်းမှု (structure)](Arch_Structure.md) အရာဝတ္ထုများအဖြစ် ပြောင်းလဲနိုင်သည်။
 
-The **Arch Frame** tool is used to build all kinds of frame objects based on a profile and a layout. The profile is extruded along the edges of the layout, which can be any 2D object such as a [sketch](Sketcher_Workbench.md), or a [Draft object](Draft_Workbench.md). It is especially useful to create railings, or frame walls. Frame objects can then easily be turned into [wall](Arch_Wall.md) or [structure](Arch_Structure.md) objects.
-
+ 
  <img alt="" src=images/Arch_Frame_example.jpg  style="width:640px;">  
 *Frame object created from a [Draft OrthoArray](Draft_OrthoArray.md) of a [Draft Line](Draft_Line.md), using a [Draft Circle](Draft_Circle.md) as profile*
 
-## Usage
 
-1.  Create a layout object and a profile object, for example with the [Draft Workbench](Draft_Workbench.md) or the [Sketcher Workbench](Sketcher_Workbench.md).
-2.  Select the layout object first, then, with **Ctrl** pressed, select the profile object.
-3.  Press the **<img src="images/Arch_Frame.svg" width=16px> [Frame](Arch_Frame.md)** button, or press **F** then **R** keys.
+## အသုံးပြုနည်း
 
-## Options
+1.  အစီအစဉ် (layout) အရာဝတ္ထုနှင့် ပရိုဖိုင် (profile) အရာဝတ္ထုကို ဖန်တီးပါ — ဥပမာ အတွက် [Draft လုပ်ငန်းခွင် (Draft Workbench)](Draft_Workbench.md) သို့မဟုတ် [ပုံကြမ်း / စကစ် လုပ်ငန်းခွင် (Sketcher Workbench)](Sketcher_Workbench.md) အသုံးပြုနိုင်သည်။
+2.  ပထမဦးဆုံး အစီအစဉ် (layout) အရာဝတ္ထုကို ရွေးချယ်ပြီးနောက် **Ctrl** ကိုဖိထား၍ ပရိုဖိုင် (profile) အရာဝတ္ထုကို ရွေးချယ်ပါ။
+3.  **<img src="images/Arch_Frame.svg" width=16px> [Frame](Arch_Frame.md)** ခလုတ်ကို နှိပ်ပါ၊ သို့မဟုတ် **F** ထည့်ပြီး **R** နှိပ်ပါ။
 
--   Frames share the common properties and behaviours of all [Arch Components](Arch_Component.md)
--   The frame object can be placed at a certain distance from the layout object, by setting its Offset property
--   The profile will be copied at the base of each edge of the layout object, then extruded along it. You can control how the profile is placed at the base of each edge with the Align and Rotation properties.
+## ရွေးချယ်စရာများ
 
-## Properties
+-   ဖရိမ်များသည် [Arch Components](Arch_Component.md) အားလုံး၏ ပုံမှန် ပိုင်ဆိုင်မှုများနှင့် အပြုအမူများကို မျှဝေသည်။
+-   Frame အရာဝတ္ထုကို အစီအစဉ် (layout) အရာဝတ္ထုနှင့် သတ်မှတ်ထားသော အကွာအဝေးတစ်ခုဖြင့် တင်ထားနိုင်သည် — ဤကို Offset ဗီဇအာကာသပိုင်ဆိုင်မှုဖြင့် သတ်မှတ်နိုင်သည်။
+-   ပရိုဖိုင်ကို အစီအစဉ်၏ ဘေးတိုင်း၏ အခြေတွင် မိတ္တူကူးကူး ထားပြီး ထိုဘက်ပေါ်တွင် အထူဖော်ထုတ် (Extrude / Pad) လုပ်မည်။ ပရိုဖိုင်ကို ဘေးတိုင်း၏ အခြေတွင် မည်သို့ထားရမည်ကို Align နှင့် Rotation ပိုင်ဆိုင်မှုများဖြင့် ထိန်းချုပ်နိုင်သည်။
+
+## ပိုင်ဆိုင်မှုများ (Properties)
 
 ### Data
 
 
 {{TitleProperty|Component}}
 
--    **Base|Link**: The layout this frame is based on.
+-    **Base|Link**: ဤဖရိမ်သည် အခြေပြုထားသော အစီအစဉ် (layout)။
+
 
 For the other properties in the group see [Arch Component](Arch_Component#Properties.md).
 
 
 {{TitleProperty|Frame}}
 
--    **Align|Bool**: Specifies if the profile must be rotated to have its normal axis aligned with each edge.
+-    **Align|Bool**: ပရိုဖိုင်ကို ၎င်း၏ သာမာန် အလျား (normal axis) ကို အစီအစဉ်၏ နှစ်ဘက်အပြီးတိုင်းနှင့် ညီအောင် ဖျော့လှေ (rotate) ပြုလုပ်ရန် လိုအပ်မည်ဆိုရင် အမှန် (True) သတ်မှတ်ပါ။ (Align)
 
--    **Base Point|Integer**: Zero-based index indicating the crossing point of the path on the profile:
+-    **Base Point|Integer**: ပရိုဖိုင်ပေါ်မှ လမ်းကြောင်း (path) ဖြတ်ကျော်သည့် အချက်ကို ပြသသည့် zero-based index:
 
     -   
         {{Value|0}}
         
-        : The **Base** of the **Placement** of the profile. This point is also used in case of an invalid index.
+        : ပရိုဖိုင်၏ **Placement** ၏ **Base**။ အမွားယွင်းသော index တန်ဖိုးများတွင်လည်း ဤအချက်ကို အသုံးပြုမည်။
 
     -   
         {{Value|1}}
         
-        : The midpoint of the 1st edge of the profile.
+        : ပရိုဖိုင်၏ ပထမဆုံး အနား၏ အလယ်ဗဟို (midpoint)။
 
     -   
         {{Value|2}}
         
-        : The endpoint of the 1st edge of the profile.
+        : ပထမ အနား၏ အဆုံးအစွန်း (endpoint)။
 
     -   
         {{Value|3}}
         
-        : The midpoint of the 2nd edge of the profile.
+        : ဒုတိယအနား၏ အလယ်ဗဟို (midpoint)။
 
     -   
         {{Value|4}}
         
-        : The endpoint of the 2nd edge of the profile.
+        : ဒုတိယအနား၏ အဆုံးအစွန်း (endpoint)။
 
     -   \...
 
     -   
         {{Value|n*2-1}}
         
-        : The midpoint of the nth edge of the profile.
+        : n တောင့်၏ အလယ်ဗဟို (midpoint)။
 
     -   
         {{Value|n*2}}
         
-        : The endpoint of the nth edge of the profile.
+        : n တောင့်၏ အဆုံးအစွန်း (endpoint)။
 
--    **Edges|Enumeration**: The type of edges to consider. The options are:
+-    **Edges|Enumeration**: ဆင်ခြင်စရာ အနားအမျိုးအစား။ ရွေးချယ်စရာများမှာ:
 
     -   
         {{Value|All edges}}
         
 
+        : အနားအားလုံး
+
     -   
         {{Value|Vertical edges}}
         
+
+        : ထстойတည့်သော အနားများ (vertical edges)
 
     -   
         {{Value|Horizontal edges}}
         
 
+        : ထောင့်လျှာတည့်သော အနားများ (horizontal edges)
+
     -   
         {{Value|Bottom horizontal edges}}
         
-        : Based of the global Z coordinate of the center of mass of the edge.
+        : အနား၏ အလယ်ဗဟို၏ ကမ္ဘာလုံးဆိုင်ရာ Z ကိုဧရိယာအရ အောက်ဘက် horizontal အနားများကို ရွေးချယ်သည်။
 
     -   
         {{Value|Top horizontal edges}}
         
-        : Idem.
+        : အထက်ဘက် horizontal အနားများကို ရွေးချယ်သည် (အထက်ဖော်ပြပါနှင့် တူသည်)။
 
--    **Fuse|Bool**: If true, overlapping solids are fused.
+-    **Fuse|Bool**: True ဖြစ်ပါက အချိုးအလျင်တစ်နေရာတွင် 겹သတ်နေသော solid များ (solids) ကို ပေါင်းစပ်ပေးသည်။ (Fuse)
 
--    **Offset|VectorDistance**: An optional distance between the layout object and the frame object.
+-    **Offset|VectorDistance**: အစီအစဉ် (layout) အရာဝတ္ထုနှင့် ဖရိမ် အရာဝတ္ထုအကြား ရွေးချယ်နိုင်သော အကွာအဝေး။
 
--    **Profile|Link**: The profile this frame is based on.
+-    **Profile|Link**: ဤဖရိမ်အတွက် ရည်ညွှန်းထားသော ပရိုဖိုင် (profile)။
 
--    **Profile Placement|Placement**: An optional additional placement to add to the profile before extruding it. Only the **Rotation** of the **Placement** is used. Ignored if **Align** is `True`.
+-    **Profile Placement|Placement**: ပရိုဖိုင်ကို အထူဖော်ထုတ်ခြင်းမပြုမီ ပိုမိုထည့်သွင်းလိုသော အပေါ်ထပ် Placement တန်ဖိုး။ Placement ၏ **Rotation** သာ အသုံးပြုမည်။ **Align** သတ်မှတ်ချက် True ဖြစ်ပါက ဤအပိုင်းကို ပျက်ပြားမည်။
 
--    **Rotation|Angle**: The rotation of the profile around its extrusion axis.
+-    **Rotation|Angle**: ပရိုဖိုင်ကို ၎င်း၏ အထူဖော်ထုတ်သည့် အလျားကြောင်းပတ်လည် မမြှောက်ခြင်း (rotation)။
 
-## Scripting
+## စကရစ်ရေးခြင်း (Scripting)
 
 
-**See also:**
+**အောက်ပါများကိုလည်း ကြည့်ပါ:**
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
+[Arch API](Arch_API.md) နှင့် [ဖရီးကက် စကရစ် မူလအကြောင်း (FreeCAD Scripting Basics)](FreeCAD_Scripting_Basics.md)။
 
-The Frame tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+Frame ကိရိယာကို [macros](Macros.md) များတွင် သို့မဟုတ် [Python](Python.md) console မှ အသုံးပြုနိုင်ပြီး အောက်ပါ function ကို အသုံးပြုပါ:
 
  
 ```python
 Frame = makeFrame(baseobj, profile)
 ```
 
--   Creates a `Frame` object from the given `baseobj` and `profile`.
+-   ပေးထားသော `baseobj` နှင့် `profile` မှ `Frame` အရာဝတ္ထုကို ဖန်တီးသည်။
     -   
         `baseobj`
         
-        is any object containing wires, like a [Draft Wire](Draft_Wire.md), or a [Draft OrthoArray](Draft_OrthoArray.md) with a collection of them.
+        သည် [Draft Wire](Draft_Wire.md) ကဲ့သို့ ဝိုင်ာများ (wires) ကို ပါဝင်သိမ်းဆည်းထားသည့် အရာဝတ္ထုဖြစ်နိုင်သည်၊ သို့မဟုတ် ၎င်းတို့၏ စုစည်းမှုတစ်ခုဖြစ်သော [Draft OrthoArray](Draft_OrthoArray.md) ဖြစ်နိုင်သည်။
 
     -   
         `profile`
         
-        is an extrudable 2D object containing faces or closed wires.
+        သည် မျက်နှာ(စ်)များ (faces) သို့မဟုတ် ပိတ်ထားသော ဝိုင်ာ(wires) များ ပါဝင်သည့် အထူဖော်ထုတ်လိမ့်မည့် 2D အရာဝတ္ထုဖြစ်ရမည်။
 
-Example:
+ဥပမာ:
 
  
 ```python
@@ -155,7 +162,6 @@ profile = Draft.makeCircle(200)
 Frame = Arch.makeFrame(baseobj, profile)
 FreeCAD.ActiveDocument.recompute()
 ```
-
 
 
 ---

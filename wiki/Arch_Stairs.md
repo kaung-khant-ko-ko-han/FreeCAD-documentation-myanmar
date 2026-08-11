@@ -6,32 +6,30 @@
    Shortcut: **S** **R**
    Version: 0.14
    SeeAlso: 
----
-
-# Arch Stairs
+---# Arch Stairs
 
 ## Description
 
-The [Arch Stairs](Arch_Stairs.md) tool allows you to build several types of stairs automatically. Straight stairs (with or without a central landing) can be created from scratch. More complex stairs require base objects.
+The [Arch Stairs](Arch_Stairs.md) tool သည် လက်စွဲအလိုက် အမျိုးအစားအနှံ့အပြားရှိ မျှော်လင့်ထားသော ဝဲထိုးသော ခြေလှမ်းများကို အလိုအလျောက် ဖန်တီးပေးနိုင်သည်။ တိုက်ရိုက် ရှေ့သာာလမ်းမျဉ် (အလယ်လန်းတန်းပါ/မပါ) ကို မူလဖြစ်အောင် ဖန်တီးနိုင်သည်။ ပိုမိုရှုပ်ထွေးသော ခြေလှမ်းများအတွက် base objects (အခြေခံ အရာဝတ္ထုများ) လိုအပ်သည်။
 
-See the [Stairs entry in wikipedia](https://en.wikipedia.org/wiki/Stairs) for a definition of the different terms used to describe parts of stairs.
+ခြေလှမ်း အပိုင်းများကို ဖော်ပြရာတွင် အသုံးပြုသော အခေါ်အဝေါဟာရများအတွက် အဓိပ္ပာယ် သေချာစေရန် [Stairs entry in wikipedia](https://en.wikipedia.org/wiki/Stairs) ကို ကြည့်ပါ။
 
  <img alt="" src=images/Arch_Stairs_example.jpg  style="width:600px;">  
-*Two constructed stairs, one with a massive structure and a landing, the other with a single stringer.*
+*နှစ်မျိုးသော ဖန်တီးထားသော ခြေလှမ်းများ — တစ်ခုမှာ အလေးသက်သော ဖွဲ့စည်းမှုနှင့် လန်းဒင်းပါရှိပြီး၊ နှစ်သက်ရာမှာ တစ်ခုတည်းသော stringer ပါရှိသည်။*
 
 ## Options
 
--   Stairs share the common properties and behaviors of all [Arch Components](Arch_Component.md)
+-   Stairs သည် [Arch Components](Arch_Component.md) တို့၏ ပုံမှန်ပိုင်ဆိုင်မှုများနှင့် အပြုအမူများကို မျှဝေထားသည်။
 
 ## Usage
 
-1.  Optionally select one or more base objects, for example [Draft Lines](Draft_Line.md), [Draft Wires](Draft_Wire.md) and [Sketches](Sketch.md):
-    -   Draft Wires or Sketches with two or more segments will be used to create landings. They must be on a plane parallel to the global XY plane. For example, select a U-shaped wire for a half-turn landing and an L-shaped wire for a corner landing.
-    -   Draft Lines and Sketches with a single edge will be used to create flights.
-    -   If the vertices of all lines and wires have correct Z coordinates, the created stairs will use this information. A Sketch (plane-parallel to the XY plane) with a single edge, or a Draft Line without a delta Z will also work for a flight, the Height is then be used to construct the flight.
-    -   The base objects must be selected in the correct order starting with the bottom object.
-2.  Press the **<img src="images/Arch_Stairs.svg" width=16px> [Stairs](Arch_Stairs.md)** button, or press **S**, **R** keys.
-3.  Adjust the desired properties. Some parts of the stairs, such as the structure, might not appear immediately, if any of the properties makes it impossible, such as a structure thickness of 0.
+1.  အလိုအလျောက် မရှိဘဲ တစ်ခု သို့မဟုတ် များစွာသော base objects (ဥပမာ [Draft Lines](Draft_Line.md), [Draft Wires](Draft_Wire.md) နှင့် [Sketches](Sketch.md)) ကို ရွေးချယ်နိုင်သည်။  
+    -   Draft Wires သို့မဟုတ် Sketches (segment နှစ်ခု သို့မဟုတ် ထက်ပိုသော) သည် landing များ ဖန်တီးရန် အသုံးပြုမည်။ ၎င်းတို့သည် global XY စက်ဘီးနှင့် ထပ်တူ အလျားပြိုင် plane ထဲတွင် ရှိရမည်။ ဥပမာ U-shaped wire ကို half-turn landing အတွက်၊ L-shaped wire ကို corner landing အတွက် ရွေးချယ်ပါ။  
+    -   Draft Lines နှင့် Sketches (edge တစ်ခုသာရှိသော) ကို flights ဖန်တီးရန် အသုံးပြုမည်။  
+    -   အကယ်၍ များစွာသော lines နှင့် wires ၏ vertex များတွင် Z နှုန်းထားများ မှန်ကန်ပါက ဖန်တီးသော ခြေလှမ်းများသည် ဤအချက်အလက်ကို အသုံးပြုမည်။ XY plane နှင့် ထပ်တူ plane ပါသည့် Sketch တစ်ခု (edge တစ်ခုသာရှိ) သို့မဟုတ် delta Z မပါသော Draft Line တစ်ခုလည်း flight အတွက် အလုပ်လုပ်နိုင်သည်၊ ထို့အခါ Height ကို flight ဖန်တီးရာတွင် အသုံးပြုမည်။  
+    -   base objects များကို အောက်ဆုံး အရာဝတ္ထုမှ စ၍ မှန်ကန်သော အစဉ်အတိုင်း ရွေးချယ်ရမည်။  
+2.  **<img src="images/Arch_Stairs.svg" width=16px> [Stairs](Arch_Stairs.md)** ခလုတ်ကို နှိပ်ပါ၊ သို့မဟုတ် **S**, **R** key များကို နှိပ်ပါ။  
+3.  လိုသည့် ပရော်ပါတိ (properties) များကို ပြင်ဆင်ပါ။ တချို့သော ခြေလှမ်း၏ အစိတ်အပိုင်းများ (ဥပမာ structure) သည် အချိန်တိုအတွင်း မပေါ်နိုင်ပါ၊ အကယ်၍ သတ်မှတ်ထားသော တန်ဖိုးတစ်ခုက အချက်အလက်ကို မဖြစ်နိုင်အောင် ပြုလုပ်နေပါက (ဥပမာ structure thickness = 0)။
 
  <img alt="" src=images/Stairs_and_Landing_02.png  style="width:600px;"> 
 
@@ -41,9 +39,9 @@ See the [Stairs entry in wikipedia](https://en.wikipedia.org/wiki/Stairs) for a 
 
 
 
-*Complex stairs based on a selection of lines and wired as shown on the left.<br>
-In red the wires used for the landings at Z&equals;1500mm, Z&equals;3000mm and Z&equals;4500mm.<br>
-In black the lines connecting them used for the flights.
+*ဘယ်ဘက်တွင် ပြထားသည့်အတိုင်း လိုင်းများနှင့် ဝိုင်းများကို ရွေးချယ်၍ ဖန်တီးထားသော ရှုပ်ချွန်သော ခြေလှမ်းများ။<br>
+လည်ပတ်ထားသော အနီရောင် ဝိုင်းများသည် Z&equals;1500mm, Z&equals;3000mm နှင့် Z&equals;4500mm တွင် landing များအတွက် အသုံးပြုထားသော ဝိုင်းများဖြစ်သည်။<br>
+ကာလာနက် (အမည်း) အဖြစ် ဖလှယ်၍ ချိတ်ဆက်ထားသော လိုင်းများသည် flights များ အတွက် အသုံးပြုထားသည်။
 *
 
 ## Properties
@@ -53,98 +51,100 @@ In black the lines connecting them used for the flights.
 
 {{TitleProperty|Segment and Parts}}
 
--    **Abs Top|Vector**: (read-only) The absolute top level the stairs lead to.
+-    **Abs Top|Vector**: (read-only) ခြေလှမ်းအတွဲမှ တက်ပြီးရောက်မည့် အပြည့်အစုံ အပျက်ဆုံး မြင့်တက်မည့် အဆင့် (absolute top)။
 
--    **Last Segment|Link**: Last segment (flight or landing) of an Arch Stairs connecting to this segment. The start level of the stairs will be the end level of this last segment.
+-    **Last Segment|Link**: ဤ segment နှင့် ချိတ်ဆက်နေသော Arch Stairs ၏ နောက်ဆုံး segment (flight သို့မဟုတ် landing)။ Stairs ၏ start level သည် ဤနောက်ဆုံး segment ၏ end level ဖြစ်မည်။
 
--    **Outline Left|VectorList**: The left outline of the stairs (read-only).
+-    **Outline Left|VectorList**: ခြေလှမ်း၏ ဘယ်ဘက် အကွက်အထွေထွေ (left outline) (စာဖတ်သာ)။
 
--    **Outline Left All|VectorList**: The left outline of all segments of the stairs (read-only).
+-    **Outline Left All|VectorList**: ခြေလှမ်း၏ အစိတ်အပိုင်းများအားလုံး၏ ဘယ်ဘက် အကွက်အထွေထွေ (စာဖတ်သာ)။
 
--    **Outline Right|VectorList**: The right outline of the stairs (read-only).
+-    **Outline Right|VectorList**: ခြေလှမ်း၏ ညာဘက် အကွက်အထွေထွေ (right outline) (စာဖတ်သာ)။
 
--    **Outline Right All|VectorList**: The right outline of all segments of the stairs (read-only).
+-    **Outline Right All|VectorList**: ခြေလှမ်း၏ အစိတ်အပိုင်းများအားလုံး၏ ညာဘက် အကွက်အထွေထွေ (စာဖတ်သာ)။
 
--    **Railing Height Left|Length**: Height of the left railing of the stairs or landing.
+-    **Railing Height Left|Length**: ခြေလှမ်း သို့မဟုတ် landing ၏ ဘယ်ဘက် ရေထိန်းတံ၏ အမြင့်။
 
--    **Railing Height Right|Length**: Height of the right railing of the stairs or landing.
+-    **Railing Height Right|Length**: ခြေလှမ်း သို့မဟုတ် landing ၏ ညာဘက် ရေထိန်းတံ၏ အမြင့်။
 
--    **Railing Left|LinkHidden**: The left railing object. <small>(v0.20)</small> : Property type updated from {{Incode|String}} to {{Incode|LinkHidden}}.
+-    **Railing Left|LinkHidden**: ဘယ်ဘက် railing အရာဝတ္ထု။ <small>(v0.20)</small> : ပရော်ပတ်တီအမျိုးအစားကို {{Incode|String}} မှ {{Incode|LinkHidden}} သို့ အပ်ဒိတ်ပြုလုပ်ပြီးဖြစ်သည်။
 
--    **Railing Offset Left|Length**: Offset of the left railing from the edge of the stairs or landing.
+-    **Railing Offset Left|Length**: ခြေလှမ်း သို့မဟုတ် landing ၏ မျက်နှာပြင်၏ နေရာမှ ဘယ်ဘက် railing ၏ အဝေးအကွာ (offset)။
 
--    **Railing Offset Right|Length**: Offset of the right railing from the edge of the stairs or landing.
+-    **Railing Offset Right|Length**: ခြေလှမ်း သို့မဟုတ် landing ၏ မျက်နှာပြင်၏ နေရာမှ ညာဘက် railing ၏ အဝေးအကွာ (offset)။
 
--    **Railing Right|LinkHidden**: The right railing object. <small>(v0.20)</small> : Property type updated from {{Incode|String}} to {{Incode|LinkHidden}}.
+-    **Railing Right|LinkHidden**: ညာဘက် railing အရာဝတ္ထု။ <small>(v0.20)</small> : ပရော်ပတ်တီအမျိုးအစားကို {{Incode|String}} မှ {{Incode|LinkHidden}} သို့ အပ်ဒိတ်ပြုလုပ်ပြီးဖြစ်သည်။
 
 
 {{TitleProperty|Stairs}}
 
--    **Align|Enumeration**: The alignment of the stairs on the baseline. Only used if a baseline is defined. Can be {{value|Left}}, {{value|Right}} or {{value|Center}}.
+-    **Align|Enumeration**: baseline ပေါ်တွင် stairs ၏ alignment ။ baseline သတ်မှတ်ထားလျှင်သာ အသုံးပြုသည်။ {{value|Left}}, {{value|Right}} သို့မဟုတ် {{value|Center}} တို့ကို ရွေးနိုင်သည်။
 
--    **Height|Length**: The total height of the stairs. Only used if no baseline is defined, or if the baseline is horizontal. Ignored if **Riser Height Enforce** is non-zero.
+-    **Height|Length**: ခြေလှမ်း၏ စုစုပေါင်း အမြင့်။ baseline သတ်မှတ်ထားမထား မဟုတ်လျှင် သို့မဟုတ် baseline သည် အလျှားလိုက် ဖြစ်ပါကသာ အသုံးပြုသည်။ **Riser Height Enforce** သည် non-zero ဖြစ်ပါက ဒီတန်ဖိုးကို မလိုက်နာပါ (ignored)။
 
--    **Length|Length**: The total length of the stairs if no baseline is defined. Ignored if **Tread Depth Enforce** is non-zero.
+-    **Length|Length**: baseline မသတ်မှတ်ထားပါက ခြေလှမ်း၏ စုစုပေါင်း အရှည်။ **Tread Depth Enforce** non-zero ဖြစ်ပါက ဤတန်ဖိုးကို မလိုက်နာပါ (ignored)။
 
--    **Width|Length**: The width of the stairs.
+-    **Width|Length**: ခြေလှမ်း၏ အကျယ်။
 
--    **Width of Landing|FloatList**: If the **Number Of Steps** is 1, the stairs object acts as a landing. When this is the case and the baseline is multi-segment, the width of first segment of the landing follows the **Width**, the widths of subsequent segments follow the list set here.
+-    **Width of Landing|FloatList**: **Number Of Steps** သည် 1 ဖြစ်ပါက stairs အရာဝတ္ထုသည် landing အဖြစ် အလုပ်လုပ်သည်။ ဤအခြေအနေတွင် baseline သည် multi-segment ဖြစ်လျှင် landing ၏ ပထမ segment ၏ width သည် **Width** ကို လိုက်နာပြီး၊ ဆက်လက်လာသော segment များ၏ width များသည် ဤစာရင်း (list) အရ သတ်မှတ်ထားသည့် တန်ဖိုးများကို လိုက်နာမည်။
 
+ 
 
 {{TitleProperty|Steps}}
 
--    **Blondel Ratio|Float**: (read-only) The calculated Blondel ratio. This ratio indicates comfortable stairs and should be between 62 and 64cm or 24.5 and 25.5in.
+-    **Blondel Ratio|Float**: (read-only) တွက်ချက်ထားသော Blondel ratio။ ၎င်းသည် သက်တောင့်သက်သာရှိသော ခြေလှမ်းကို ဖော်ပြသည်။ ပမာဏအားဖြင့် 62 မှ 64cm သို့မဟုတ် 24.5 မှ 25.5in အကြား ရှိသင့်သည်။
 
--    **Landing Depth|Length**: The depth of the landing of the flight, if enabled in **Landings**. Defaults to the **Width** if 0.
+-    **Landing Depth|Length**: **Landings** တွင် เปิด_enable ဖြစ်ပါက flight ၏ landing ၏ အနက် (depth)। 0 ဖြစ်ပါက ပုံမှန်အားဖြင့် **Width** ကို ဉပမာထားသည်။
 
--    **Nosing|Length**: The size of the nosing.
+-    **Nosing|Length**: nosing ၏ အရွယ်အစား။
 
--    **Number Of Steps|Integer**: The numbers of steps (risers). Must be at least 2 for a single flight, and at least 4 for a stairs with a central landing.
+-    **Number Of Steps|Integer**: ခြေလှမ်းများ (risers) ၏ အရေအတွက်။ single flight အတွက် အနည်းဆုံး 2 ဖြစ်ရမည်၊ အလယ်လန်းတန်းပါသော stairs အတွက် အနည်းဆုံး 4 ဖြစ်ရမည်။
 
--    **Riser Height|Length**: (read-only) The height of the risers. If **Riser Height Enforce** is 0 it is calculated (**Height** / **Number of Steps**). Else it is the same as **Riser Height Enforce**.
+-    **Riser Height|Length**: (read-only) risers ၏ အမြင့်။ **Riser Height Enforce** သည် 0 ဖြစ်ပါက ( **Height** / **Number of Steps** ) အဖြစ် တွက်ချက်ပေးမည်။ မဟုတ်လျှင် **Riser Height Enforce** နှင့် တူညီပါမည်။
 
--    **Riser Height Enforce|Length**: The enforced height of the risers.
+-    **Riser Height Enforce|Length**: risers ၏ အတင်းအကျပ် သတ်မှတ်ထားသော အမြင့်။
 
--    **Riser Thickness|Length**: The thickness of the risers.
+-    **Riser Thickness|Length**: risers ၏ ထူထဲချင်း။
 
--    **Tread Depth|Length**: (read-only) The depth of the treads. If **Tread Depth Enforce** is 0 it is calculated (**Length** / **Number of Steps**). Else it is the same as **Tread Depth Enforce**.
+-    **Tread Depth|Length**: (read-only) treads ၏ အနက် (depth)။ **Tread Depth Enforce** သည် 0 ဖြစ်ပါက ( **Length** / **Number of Steps** ) ဖြင့် တွက်ချက်ပေးမည်။ မဟုတ်လျှင် **Tread Depth Enforce** နှင့် တူညီပါမည်။
 
--    **Tread Depth Enforce|Length**: The enforced depth of the treads.
+-    **Tread Depth Enforce|Length**: treads ၏ အတင်းအကျပ် သတ်မှတ်ထားသော အနက်။
 
--    **Tread Thickness|Length**: The thickness of the treads.
+-    **Tread Thickness|Length**: treads ၏ ထူထဲချင်း။
 
 
 {{TitleProperty|Structure}}
 
--    **Connection Down Start Stairs|Enumeration**: The type of connection between the lower floor slab and the start of the stairs. Can be {{value|HorizontalCut}}, {{value|VerticalCut}} or {{value|HorizontalVerticalCut}}.
+-    **Connection Down Start Stairs|Enumeration**: အောက်ဆုံး မျက်နှာပြင် (lower floor slab) နှင့် stairs အစ၏ ချိတ်ဆက်မှု အမျိုးအစား။ {{value|HorizontalCut}}, {{value|VerticalCut}} သို့မဟုတ် {{value|HorizontalVerticalCut}} တို့ကို ရွေးနိုင်သည်။
 
--    **Connection End Stairs Up|Enumeration**: The type of connection between the end of the stairs and the upper floor slab. Can be {{value|toFlightThickness}} or {{value|toSlabThickness}}.
+-    **Connection End Stairs Up|Enumeration**: ခြေလှမ်း၏ အဆုံး နှင့် အပေါ် မျက်နှာပြင် (upper floor slab) အကြား ချိတ်ဆက်မှု အမျိုးအစား။ {{value|toFlightThickness}} သို့မဟုတ် {{value|toSlabThickness}} တို့ကို ရွေးနိုင်သည်။
 
--    **Down Slab Thickness|Length**: The thickness of the lower floor slab.
+-    **Down Slab Thickness|Length**: အောက်မီ မျက်နှာပြင် (lower slab) ၏ ထူထဲချင်း။
 
--    **Flight|Enumeration**: The direction of the flight after the landing. Can be {{value|Straight}}, {{value|HalfTurnLeft}} or {{value|HalfTurnRight}}.
+-    **Flight|Enumeration**: landing အပြီး flight ၏ ဦးတည်ချက်။ {{value|Straight}}, {{value|HalfTurnLeft}} သို့မဟုတ် {{value|HalfTurnRight}} တို့ကို ရွေးနိုင်သည်။
 
--    **Landings|Enumeration**: The type of landings. Can be {{value|None}} or {{value|At center}} ({{value|At each corner}} not implemented yet).
+-    **Landings|Enumeration**: landing များ၏ အမျိုးအစား။ {{value|None}} သို့မဟုတ် {{value|At center}} ({{value|At each corner}} မသုံးထားသေး) တို့ကို ရွေးနိုင်သည်။
 
--    **Stringer Overlap|Length**: The overlap of the stringers above the bottom of the treads.
+-    **Stringer Overlap|Length**: treads အောက်ဘက်တွင် stringers များ၏ ရှုပ်ထွေးသည့် အပိုင်း (overlap)။
 
--    **Stringer Width|Length**: The width of the stringers.
+-    **Stringer Width|Length**: stringers ၏ အကျယ်။
 
--    **Structure|Enumeration**: The structure type of the stairs. Can be {{value|None}}, {{value|Massive}}, {{value|One stringer}} or {{value|Two stringers}}.
+-    **Structure|Enumeration**: ခြေလှမ်း၏ ဖွဲ့စည်းမှု အမျိုးအစား။ {{value|None}}, {{value|Massive}}, {{value|One stringer}} သို့မဟုတ္ {{value|Two stringers}} တို့ကို ရွေးနိုင်သည်။
 
--    **Structure Offset|Length**: The offset between the border of the stairs and the structure.
+-    **Structure Offset|Length**: ခြေလှမ်း နေရာနဲ့ ဖွဲ့စည်းမှု (structure) အကြား ရွေးချယ်ထားသော အဝေးအကွာ (offset)။
 
--    **Structure Thickness|Length**: The thickness of the structure.
+-    **Structure Thickness|Length**: ဖွဲ့စည်းမှု၏ ထူထဲချင်း။
 
--    **Up Slab Thickness|Length**: The thickness of the upper floor slab.
+-    **Up Slab Thickness|Length**: အပေါ် မျက်နှာပြင် (upper slab) ၏ ထူထဲချင်း။
 
--    **Winders|Enumeration**: The type of winders. Not implemented.
+-    **Winders|Enumeration**: winders အမျိုးအစား။ မပြီးမြောက်သေးပါ။
+
 
 ## Limitations
 
--   Straight, HalfTurnLeft or HalfTurnRight stairs and landings are available at the moment
--   See the [forum entry](http://forum.freecadweb.org/viewtopic.php?f=23&t=6534) for circle stairs.
--   See the [forum announcement](http://forum.freecadweb.org/viewtopic.php?f=9&t=4564).
+-   လက်ရှိတွင် Straight, HalfTurnLeft သို့မဟုတ် HalfTurnRight stairs နှင့် landings မျာသာ ရရှိနိုင်သည်။  
+-   circle stairs အတွက် [forum entry](http://forum.freecadweb.org/viewtopic.php?f=23&t=6534) ကို ကြည့်ပါ။  
+-   အဆိုပါ အစီအစဉ်အကြောင်း [forum announcement](http://forum.freecadweb.org/viewtopic.php?f=9&t=4564) တွင် ကြေညာထားသည်။
 
 ## Scripting
 
@@ -153,13 +153,13 @@ In black the lines connecting them used for the flights.
 
 [Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
 
-The Stairs tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:  
+The Stairs tool ကို [macros](Macros.md) များတွင်နှင့် [Python](Python.md) console မှ အသုံးပြုနိုင်ပြီး အောက်ပါ function ကို အသုံးပြုပါသည်။  
 ```python
 Stairs = makeStairs(baseobj=None, length=None, width=None, height=None, steps=None, name="Stairs")
 ```
 
--   Creates a `Stairs` object from the given `baseobj`.
--   If `baseobj` is not given, it will use `length`, `width`, `height`, and `steps`, to build a solid object.
+-   ပေးထားသော `baseobj` ထံမှ `Stairs` အရာဝတ္ထုကို ဖန်တီးသည်။
+-   `baseobj` မပေးပါက `length`, `width`, `height`, နှင့် `steps` တန်ဖိုးများကို အသုံးပြုပြီး solid အရာဝတ္ထုကို ဖန်တီးမည်။
 
 Example:  
 ```python

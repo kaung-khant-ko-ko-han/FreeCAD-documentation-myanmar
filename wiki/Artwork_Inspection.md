@@ -1,7 +1,7 @@
-# Artwork Inspection
-These icons are in the indicated source path.
+# ပုံပစ္စည်း အကဲဖြတ်ခြင်း (Artwork Inspection)
+ဤအိုင်ကွန်များကို ဖော်ပြထားသည့် မူရင်းတည်နေရာ (source path) တွင် တွေ့ရှိနိုင်ပါသည်။
 
-For all icons in the source tree, see [Artwork](Artwork.md).
+မူရင်းပင် (source tree) အတွင်းရှိ အိုင်ကွန်အားလုံးအတွက် ကြည့်ရန် [ပုံပစ္စည်း (Artwork)](Artwork.md) ကို ဖွင့်ပါ။
 
 ## src/Mod/Inspection/
 
@@ -12,4 +12,4 @@ For all icons in the source tree, see [Artwork](Artwork.md).
 
 
 ---
-⏵ [documentation index](../README.md) > [Artwork](Category_Artwork.md) > [Inspection](Category_Inspection.md) > Artwork Inspection
+⏵ [စာရွက်စာတမ်း အညွှန်း (documentation index)](../README.md) > [ပုံပစ္စည်း (Artwork)](Category_Artwork.md) > [အကဲဖြတ်ခြင်း (Inspection)](Category_Inspection.md) > ပုံပစ္စည်း အကဲဖြတ်ခြင်း (Artwork Inspection)

@@ -5,114 +5,112 @@
    Workbenches: BIM_Workbench
    Shortcut: **S** **I**
    SeeAlso: 
----
+---# Arch Site (ဆိုက်)
 
-# Arch Site
+## ဖော်ပြချက်
 
-## Description
+**Arch Site** သည် ပုံမှန် ဖရီးကက် (FreeCAD) group object နှင့် Arch objects များ၏ လက္ခဏာများကို ပေါင်းစပ်ထားသော အထူးအရာဝတ္ထုတစ်ခု ဖြစ်သည်။ ၎င်းအား တစ် ပြည့်သော စီမံကိန်းဆိုက် (project site) သို့မဟုတ် မြေပြင်ကို ကိုယ်စားပြုရန် အထူးသင့်တော်သည်။ IFC အခြေခံ အင်ဂျင်နီယာ အိမ်ရာ (architectural) အလုပ်များတွင် အများအားဖြင့် မော်ဒယ်ကို စီစဉ်ရန်၊ [building](Arch_Building.md) အရာဝတ္ထုများကို ထည့်သွင်းထိန်းချုပ်ရန် အသုံးပြုကြသည်။ Site သည် သက်တမ်းရှိ သဘာဝမြေပြင်ကို ကိုင်တွယ်ပြသရန်နှင့် ထည့်သွင်းရန် သို့မဟုတ် ဖယ်ရှားရန် လိုအပ်သည့် မြေပမာဏများကို တွက်ချက်ရန် အသုံးပြုနိုင်သည်။
 
-The **Arch Site** is a special object that combines properties of a standard FreeCAD group object and Arch objects. It is particularly suited for representing a whole project site, or terrain. In IFC-based architectural work, it is mostly used to organize your model, by containing [building](Arch_Building.md) objects. The site is also used to manage and display a physical terrain, and can compute volumes of earth to be added or removed.
+## အသုံးပြုနည်း
 
-## Usage
+1.  ရွေးချယ်လိုပါက သင်၏ Site အသစ်ထဲသို့ ထည့်လိုသော အရာဝတ္ထု(များ) တစ်ခု သို့မဟုတ် အများကို ရွေးပါ။
+2.  **<img src="images/Arch_Site.svg" width=16px> [Site](Arch_Site.md)** ခလုတ်ကိုနှိပ်ပါ၊ သို့မဟုတ် **S** နှင့် **I** ကီးများကို အဆက်မပြတ်နှိပ်ပါ။
 
-1.  Optionally, select one or more objects to be included in your new site.
-2.  Press the **<img src="images/Arch_Site.svg" width=16px> [Site](Arch_Site.md)** button, or press the **S** then **I** keys.
+## ရွေးချယ်စရာများ
 
-## Options
+-   Site တစ်ခု ဖန်တီးပြီးနောက်၊ [Tree view](Tree_view.md) ထဲတွင် ဆွဲလိုက်၍ လျှောက်ထည့်ခြင်း (drag and drop) အားဖြင့် သို့မဟုတ် **<img src="images/Arch_Add.svg" width=16px> [Arch Add](Arch_Add.md)** ကိရိယာဖြင့် အရာများကို အဆိုပါ Site ထဲသို့ ထပ်ထည့်နိုင်သည်။ ၎င်းသည် သတ်မှတ်ထားသော Site အတွက် ဘယ်အရာများ ပါဝင်သည်ဆိုသည်ကိုသာ သတ်မှတ်ပေးပြီး မြေပြင်ကို မထိခိုက်ပါ။
+-   [Tree view](Tree_view.md) ထဲတွင် ဆွဲပြီး Site မှ ထုတ်ကြေးခြင်း (drag and drop) သို့မဟုတ် **<img src="images/Arch_Remove.svg" width=16px> [Arch Remove](Arch_Remove.md)** ကိရိယာကို သုံး၍ Site မှ အရာများကို ဖယ်ရှားနိုင်သည်။
+-   Site ၏ **Terrain** ပိုင်ဆိုင်မှု (property) ကို တည်းဖြတ်ခြင်းဖြင့် မြေပြင် အရာဝတ္ထုတစ်ခု ထည့်သွင်းနိုင်သည်။ Terrain သည် open shell ဖြစ်နိုင်ပြီး (<small>(v0.21)</small>) solid တစ်ခုလည်း ဖြစ်နိုင်သည်။
+-   မူလ Terrain ထဲတွင် ထည့်ရမည့် သို့မဟုတ် ဖယ်ရှားရမည့် အရာအမွှာများ (volumes) ကို Site ကို ဒဘယ်လ်ကလစ်လုပ်၍ Additions သို့မဟုတ် Subtractions အုပ်စုများထဲသို့ ဖန်တီးချိတ်ဆက်နိုင်သည်။ အဆိုပါ အရာများသည် solid ဖြစ်ရမည်။
+-   **Extrusion Vector** property ကို open shell ဖြစ်သော terrain တွင် additions သို့မဟုတ် subtractions များရှိသည့်အခါ ဖြစ်ပေါ်နိုင်သည့် အချို့ပြဿနာများကို ဖြေရှင်းရန် အသုံးပြုနိုင်သည်။ ထို additions/subtractions များကို ဆောင်ရွက်ရန် open shell ကို solid အဖြစ် extrusion ပြုလုပ်ပြီး ထို့နောက် မိမိလိုအပ်သလို union/subtract လုပ်သွားသည်။ မြေပြင်၏ topology ပေါ်မူတည်၍၊ ပုံမှန် extrusion vector ဖြင့် ဤ extrusion အဆင်မပြေနိုင်နိုင်သည်။ ထိုအခါ၌ သင်သည် အခြားတန်ဖိုးတစ်ခုအဖြစ် ပြောင်းလဲခြင်း၊ ပြဿနာကို ဖြေရှင်းနိုင်သည်။ ဤ property သည် terrain が solid ဖြစ်ပါက မယူသင့်ပါ။
 
--   After creating a site, you can add objects to it by drag and dropping them in the [Tree view](Tree_view.md) or by using the **<img src="images/Arch_Add.svg" width=16px> [Arch Add](Arch_Add.md)** tool. This only determines which objects are part of the given site, and has no effect on the terrain.
--   You can remove objects from a site by drag and dropping them out of it in the [Tree view](Tree_view.md) or by using the **<img src="images/Arch_Remove.svg" width=16px> [Arch Remove](Arch_Remove.md)** tool.
--   You can add a terrain object by editing the Site\'s **Terrain** property. The terrain can be an open shell or (<small>(v0.21)</small> ) a solid.
--   You can add volumes to be added or subtracted from the base terrain, by double-clicking the Site, and adding objects to its Additions or Subtractions groups. The objects must be solids.
--   The **Extrusion Vector** property can be used to solve some problems that can appear when the terrain is an open shell and there are additions and/or subtractions. In order to perform those additions/subtractions, the open shell is extruded into a solid, which is then appropriately unioned/subtracted. Depending on the terrain topology, this extrusion might fail with the default extrusion vector. You might then be able to remedy the problem by changing this to a different value. This property is ignored if the terrain is a solid.
-
-## Properties
+## ပိုင်ဆိုင်မှုများ (Properties)
 
 ### Data
 
--    **Terrain**: The base terrain of this site
+-    **Terrain**: ဤ site ၏ မူလ မြေပြင် (Terrain)
 
--    **Address**: The street and housenumber of this site
+-    **Address**: ဤ site ၏ လမ်းနာမည်နှင့် အိမ်နံပါတ် (Address)
 
--    **Postal Code**: The postal or zip code of this site
+-    **Postal Code**: ဤ site ၏ စာတိုက်ကုဒ် (Postal Code)
 
--    **City**: The city of this site
+-    **City**: ဤ site ၏ မြို့နယ် / မြို့ (City)
 
--    **Country**: The country of this site
+-    **Country**: ဤ site ၏ နိုင်ငံ (Country)
 
--    **Latitude**: The latitude of this site
+-    **Latitude**: ဤ site ၏ အနောက်/တောင်မြောက် အရှေ့/အနိမ့် နေရာ (Latitude)
 
--    **Longitude**: The longitude of this site
+-    **Longitude**: ဤ site ၏ ရှေ့/နောက်အနေအထား (Longitude)
 
--    **Url**: An url that shows this site in a mapping website
+-    **Url**: ဤ site ကို မြေပုံဝက်ဘ်ဆိုက်ပေါ်တွင် ပြသသည့် URL (Url)
 
--    **Projected Area**: The area of the projection of this object onto the XY plane
+-    **Projected Area**: ဤ အရာအပေါ်က XY မျက်နှာပြင်သို့ ပရောဂျက် (projection) ထားသော အကွာအဝေး၏ ကွင်းဧရိယာ (Projected Area)
 
--    **Perimeter**: The perimeter length of this terrain
+-    **Perimeter**: ဤ terrain ၏ စပါယ်လက်ရှည် (Perimeter)
 
--    **Addition Volume**: The volume of earth to be added to this terrain
+-    **Addition Volume**: ဤ terrain သို့ ထည့်ရမည့် မြေ/မြေထူ အတိုင်းအတာ (Addition Volume) — (ထုပမာဏ/အပိုမြေနှုန်း)
 
--    **Subtraction Volume**: The volume of earth to be removed from this terrain
+-    **Subtraction Volume**: ဤ terrain မှ ဖယ်ရှားရမည့် မြေ/မြေထူ အတိုင်းအတာ (Subtraction Volume)
 
--    **Extrusion Vector**: An extrusion vector to use when performing boolean operations
+-    **Extrusion Vector**: boolean လုပ်ငန်းများ ဆောင်ရွက်ရာတွင် အသုံးပြုမည့် extrusion vector (Extrusion Vector)
 
--    **Remove Splitter**: Remove splitters from the resulting shape
+-    **Remove Splitter**: ရလဒ် ထူသည့် ပုံစံမှ splitter များကို ဖယ်ရှားမည် (Remove Splitter)
 
--    **Declination**: The angle between the true North and the North direction in this document, that is, the Y axis. This means that by default North points to the Y axis, and East to the X axis; the angle increments counterclockwise. This property was previously known as **North Deviation**.
+-    **Declination**: အမှန်တကယ် မြောက် (true North) နှင့် ဒီစာရွက်စာတမ်းရှိ မြောက် ဦးတည်ချက် (Y အချက်) အကြား ဇောင်ကြောလျားသော ထောင့်။ ၎င်းအရ ပုံမှန်အားဖြင့် မြောက်သည် Y အချက်သို့ ဦးတည်ပြီး အရှေ့သည် X အချက်သို့ ဦးတည်သည်; ထောင့်သည် ကောင်တာကလော့ကျဝိုင်း (counterclockwise) အတိုင်း မြှင့်သည်။ ဤ property ကို ယခင်တွင် **North Deviation** ဟု ခေါ်ခဲ့သည်။ (Declination)
 
--    **EPW File**: Allow to attach an EPW file from the [Ladybug EPW data website](https://www.ladybug.tools/epwmap/) to this site. This is needed to display wind rose diagrams
+-    **EPW File**: [Ladybug EPW data website](https://www.ladybug.tools/epwmap/) မှ EPW ဖိုင်တစ်ခုကို ဤ site ထဲသို့ တပ်ဆင်ခွင့်ပြုသည်။ ၎င်းသည် လေဆောင် ရွှေ့ပုံ (wind rose) တူရိယာများကို ပြသရန် လိုအပ်သည်။
 
 ### View
 
--    **Solar Diagram**: Shows or hides the solar diagram
+-    **Solar Diagram**: နေရောင်ဇယားကို ပြသမည်/ဖျောက်မည် (Solar Diagram)
 
--    **Solar Diagram Color**: The color of the solar diagram
+-    **Solar Diagram Color**: နေရောင်ဇယား၏ အရောင် (Solar Diagram Color)
 
--    **Solar Diagram Position**: The position of the solar diagram
+-    **Solar Diagram Position**: နေရောင်ဇယား၏ တည်နေရာ (Solar Diagram Position)
 
--    **Solar Diagram Scale**: The scale of the solar diagram
+-    **Solar Diagram Scale**: နေရောင်ဇယား၏ အရွယ်အစား (Solar Diagram Scale)
 
--    **Wind Rose**: Shows or hides the wind rose diagram (requires the **EPW File** data property filled, and the Ladybug Python module installed (see below)
+-    **Wind Rose**: လေဆိုင်ရာ ရွှေ့ပုံ (wind rose) ဇယားကို ပြသမည်/ဖျောက်မည် (Wind Rose) — (ကြိုတင်သတ်မှတ်ရန် **EPW File** data property ဖြည့်ထားရမည်နှင့် Ladybug Python module တပ်ဆင်ထားရမည် (အောက်တွင် ဖော်ပြသည်) )
 
-## Typical workflow 
+## ပုံမှန် လုပ်ငန်းစဉ် (Typical workflow)
 
-Start by creating an object that represents your terrain. For example, it is easy to import mesh data, that can be turned into a Part Shape from menu **Part → Create Shape from Mesh**. Then, create a Site object, and set its **Terrain** property to the Part we just created:
+ပထမဦးစွာ သင်၏ မြေပြင်ကို ကိုယ်စားပြုမည့် အရာဝတ္ထုတစ်ခု ဖန်တီးပါ။ ဥပမာ၊ mesh ဒေတာကို import ပြီး အဆိုပါ mesh ကို Part Shape အဖြစ် ပြောင်းလို့ လွယ်ကူသည် — menu ရှိ **Part → Create Shape from Mesh** ကို အသုံးပြုပါ။ ထို့နောက် Site object ဖန်တီး၍ ၎င်း၏ **Terrain** property ကို မိမိဖန်တီးထားသည့် Part သို့ သတ်မှတ်ပါ။
 
 ![](images/Arch_site_example_01.jpg )
 
-Create some volumes (they must be solids) that represent the areas that you wish to be excavated or filled. Double-click the Site object in the Tree View, and add these volumes to the Additions or Subtractions groups. Click OK.
+အလုပ်ဆောင်ရန် သင်လိုချင်သည့် အပိုင်းများကို ကိုယ်စားပြုသည့် အရွယ်အစားများ (volumes) ထူထဲဖန်တီးပါ (ဤအရာများသည် solids ဖြစ်ရမည်)။ Tree View အတွင်း Site object ကို ဒဘယ်လ်ကလစ်ထုတ်၍ Additions သို့မဟုတ် Subtractions အုပ်စုများထဲသို့ ဤ volumes များကို ထည့်ပါ။ OK ကို နှိပ်ပါ။
 
 ![](images/Arch_site_example_02.jpg )
 
-The site geometry will be recomputed and the areas, perimeter, and volumes properties recalculated.
+Site ၏ ဂျီယိုမက်ထရီကို ထပ်မံတွက်ချက်ပြီး အပိုင်းများ၊ ဝမ်းနည်းနောက်ပိုင်း (perimeter) နှင့် အရွယ်အစား (volumes) ပိုင်ဆိုင်မှုများကို ပြန်တွက်ချက်ပေးမည်ဖြစ်သည်။
 
 ![](images/Arch_site_example_03.jpg )
 
-## Solar and wind diagrams 
+## နေရောင်နှင့် လေတိုက်ဇယားများ (Solar and wind diagrams)
 
-If [Ladybug](https://www.ladybug.tools/ladybug.html) is installed on your system, [Arch Sites](Arch_Site.md) can display a solar diagram and/or a wind rose. For this, **Longitude**, **Latitude** and **Declination** (previously **North Deviation**) must be correctly set, and **Solar Diagram** or **Wind Rose** set to `True`.
+သင့်စနစ်တွင် [Ladybug](https://www.ladybug.tools/ladybug.html) တပ်ဆင်ပြီးဖြစ်ပါက, [Arch Sites](Arch_Site.md) သည် နေရောင်ဇယား (solar diagram) နှင့်/သို့မဟုတ် လေဆွန် ရွှေ့ပုံ (wind rose) ကို ပြသနိုင်သည်။ ထိုအတွက် **Longitude**, **Latitude** နှင့် **Declination** (ယခင် **North Deviation**) ကို မှန်ကန်စွာ သတ်မှတ်ထားရမည်၊ နှင့် **Solar Diagram** သို့မဟုတ် **Wind Rose** ကို `True` သို့ သတ်မှတ်ထားရမည်။
 
-**Note**: If you don\'t have Ladybug, [pysolar](http://pysolar.org/) is still supported to generate solar diagrams, but not wind roses. Pysolar 0.7 or above is required. However, Ladybug is a much more powerful tool that will probably be used more in the future, so we recommend using it instead of pysolar. Ladybug can be installed simply via [pip](https://github.com/ladybug-tools/ladybug).
+**မှတ်စု**: Ladybug မရှိသေးပါက [pysolar](http://pysolar.org/) ကို နေရောင်ဇယား ဖန်တီးရန် ထပ်မံအထောက်အပံ့ ပြုထားသည် — သို့သော် လေဆွန် ရွှေ့ပုံများကို pysolar ဖြင့် မထောက်ပံ့ပါ။ Pysolar 0.7 သို့ အထက် ဖြစ်ရမည်။ သို့သော် Ladybug သည် အလွန်စွမ်းအားမြင့်တီထွင်မှုဖြစ်ပြီး အနာဂတ်တွင် များစွာ အသုံးပြုမည်ဟု ယူဆထားပါသည်၊ ထို့ကြောင့် pysolar ထက် Ladybug ကို အသုံးပြုရန် အကြံပြုပါသည်။ Ladybug ကို [pip](https://github.com/ladybug-tools/ladybug) ဖြင့် ပိုမိုလွယ်ကူစွာ တပ်ဆင်နိုင်သည်။
 
 ![](images/Freecad-solar-diagram.jpg )
 
-## Scripting
+## စကရစ်(စ်)ရေးခြင်း (Scripting)
 
 
-**See also:**
+**သိရှိရန် အလားတူ:** 
 
-[Arch API](Arch_API.md) and [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md).
+[Arch API](Arch_API.md) နှင့် [FreeCAD Scripting Basics](FreeCAD_Scripting_Basics.md) ကို ကြည့်ပါ။
 
-The Site tool can be used in [macros](Macros.md) and from the [Python](Python.md) console by using the following function:
+Site ကိရိယာအား [macros](Macros.md) များတွင်နှင့် [Python](Python.md) console မှ အသုံးပြုနိုင်ပြီး အောက်ပါ function ကို သုံးနိုင်သည်။
 
  
 ```python
 Site = makeSite(objectslist=None, baseobj=None, name="Site")
 ```
 
--   Creates a `Site` object from `objectslist`, which is a list of objects, or `baseobj`, which is a `Shape` or `Terrain`.
+-   `objectslist` သည် object များစာရင်းဖြစ်သော်လည်း `baseobj` သည် `Shape` သို့မဟုတ် `Terrain` ဖြစ်သည့် အခြေခံ Object မှ Site ကို ဖန်တီးသည်။
 
-Example:  
+ဥပမာ:  
 ```python
 import FreeCAD, Draft, Arch
 
@@ -129,11 +127,11 @@ FreeCAD.ActiveDocument.recompute()
 FreeCAD.Gui.ActiveDocument.ActiveView.viewIsometric()
 ```
 
-### Solar diagram 
+### နေရောင်ဇယား (Solar diagram)
 
-As long as the `pysolar` module is present, a solar diagram can be added to the site. Set the longitude, latitude and declination angles as appropriate, as well as an adequate scale for the size of your model.
+`pysolar` module တပ်ဆင်ထားသော်လည်း နေရောင်ဇယားကို Site သို့ ထည့်နိုင်သည်။ ဆိုင်ရာ longitude၊ latitude နှင့် declination ကို သတ်မှတ်ပြီး မော်ဒယ်၏ အရွယ်အစားအတွက် သင့်တော်သော scale ကို သတ်မှတ်ပါ။
 
-Please note that Pysolar 0.7 or above is required, and this version only works with Python 3.
+Pysolar 0.7 သို့ အထက် လိုအပ်ပါသည်၊ ၎င်းပဲ Python 3 နှင့်သာ လုပ်ဆောင်နိုင်သည်ကို သတိပြုပါ။
 
  
 ```python
@@ -147,15 +145,15 @@ Site.ViewObject.SolarDiagramScale = 10000
 FreeCAD.ActiveDocument.recompute()
 ```
 
-### Solar diagram independent of Site 
+### Site လိုအပ်ချက်မရှိပဲ နေရောင်ဇယား ဖန်တီးခြင်း
 
-A solar diagram can be created with the following function, independently of any site.  
+Site အလိုမရှိပဲ အောက်ပါ function ဖြင့် နေရောင်ဇယားကို ဖန်တီးနိုင်သည်။  
 ```python
 Node = makeSolarDiagram(longitude, latitude, scale=1, complete=False)
 ```
 
--   Creates a solar diagram as a Pivy node, using `longitude` and `latitude`, with an optional `scale`.
--   If `complete` is `True`, the 12 months are drawn, which shows the full solar [analemma](https://en.wikipedia.org/wiki/Analemma).
+-   `longitude` နှင့် `latitude` ကို အသုံးပြု၍ Pivy node အဖြစ် နေရောင်ဇယားကို ဖန်တီးသည်၊ `scale` ကို ရွေးချယ်နိုင်သည်။
+-   `complete` ကို `True` ထားလျှင် ၁၂ လလုံး၏ မျိုးစုံကို ဆွဲထုတ်၍ solar [analemma](https://en.wikipedia.org/wiki/Analemma) အပြည့်အစုံကို ပြသနိုင်သည်။
 
  
 ```python
@@ -164,7 +162,6 @@ import FreeCADGui, Arch
 Node = Arch.makeSolarDiagram(-46.38, -23.33, scale=10000, complete=True)
 FreeCAD.Gui.ActiveDocument.ActiveView.getSceneGraph().addChild(Node)
 ```
-
 
 
 ---

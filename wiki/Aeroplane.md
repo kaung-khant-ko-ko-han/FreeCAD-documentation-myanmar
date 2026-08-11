@@ -6,103 +6,87 @@
    Author: Hughthecat
    FCVersion: 
    Files: 
----
+---# လေယာဉ် (Aeroplane)
 
-# Aeroplane
+## ပထမအဆင့်များ
 
- 
+ကျွန်တော်တို့သည် <img alt="" src=images/Workbench_Part.svg  style="width:24px;"> [Part Workbench](Part_Workbench.md) (Part လုပ်ငန်းခွင်) တွင် လုပ်ဆောင်မည်ဖြစ်ပြီး **View → Workbench → Part** မှတစ်ဆင့် သို့မဟုတ် [Workbench Selector](Std_Workbench.md) မှရွေးပါ။
 
+-   ဖိုင်အသစ်တစ်ခု ဖွင့်ပါ။
+-   <img alt="" src=images/Std_ViewIsometric.svg  style="width:24px;"> [isometric view](Std_ViewIsometric.md) သို့ ဖွင့်ပါ။
+-   အဘာဂ်စ်မြို့၏ အခြား အမြင်များအတွက် axis cross ကို **ON** လုပ်ပါ (View မီနူးမှ)။
+-   [Combo View](Combo_view.md) ကိုပြသထားသည်ကို အတည်ပြုပါ ( **View → Views** မှ)။
 
+-   <img alt="" src=images/Part_Cylinder.svg  style="width:24px;"> [Cylinder](Part_Cylinder.md) ခလုတ်ကို နှိပ်ပြီး စင်တီးလင်ဒါ (cylinder) ကို ဖန်တီးပါ။
+-   Project viewer ထဲမှ Cylinder ကို အလှည့်နှိပ်၍ ရွေးပါ။
+-   Project viewer အောက်မှ Data တက်ဘ်ကို နှိပ်ပါ။
 
-## First Steps 
+Height ကို 20mm သို့ ပြောင်းသတ်မှတ်ပါ။ Radius ကို 2mm အဖြစ် ထားပါ။
 
-We will be working in the <img alt="" src=images/Workbench_Part.svg  style="width:24px;"> [Part Workbench](Part_Workbench.md) - select it from menus via **View → Workbench → Part** or from the [Workbench Selector](Std_Workbench.md).
-
--   Create a new empty document.
--   Switch to <img alt="" src=images/Std_ViewIsometric.svg  style="width:24px;"> [isometric view](Std_ViewIsometric.md).
--   Toggle axis cross **ON** (via View Menu).
--   Ensure you have the [Combo View](Combo_view.md) showing (via **View → Views**).
-
--   Create a cylinder by clicking on the <img alt="" src=images/Part_Cylinder.svg  style="width:24px;"> [Cylinder](Part_Cylinder.md) button.
--   Select it by clicking on Cylinder in the Project viewer.
--   Click on the Data tab at the bottom of the Project viewer.
-
-Change the Height to 20mm. Leave the Radius at 2mm.
-
-Click on [Placement](Placement.md) (note the little **[+]**) and a button with three dots will appear **...**. Click on it. (You can also select: **Menu → Edit → Placement**) The Tasks viewer appears.
+[Placement](Placement.md) ကို နှိပ်ပါ (သေးငယ်သော **[+]** ကို သတိပြုပါ)၊ သုံးချက်ရှိသော ခလုတ် **...** ပေါ်လာမည်။ ဤကို နှိပ်ပါ။ (သို့မဟုတ် **Menu → Edit → Placement** ကိုရွေးနိုင်သည်) Tasks viewer ပေါ်လာပါလိမ့်မည်။
 
 <img alt="" src=images/HTCaeroplane01.png  style="width:300px;">
 
-If you are unfamiliar with the XYZ axes then have a play with the numbers in the Translation box. When finished playing click on the **Reset** button.
+XYZ အကန့်အလန့်များကို မကျွမ်းကျင်သေးပါက Translation စာရင်းထဲရှိ နံပါတ်များဖြင့် ကစားကြည့်ပါ။ ကစားပြီးပြီးနောက် **Reset** ခလုတ်ကို နှိပ်ပါ။
 
-## Second Steps 
+## ဒုတိယအဆင့်များ
 
 <img alt="" src=images/HTCaeroplane02.png  style="width:400px;">
 
-We are now going to rotate the cylinder so that it is lying along the X axis. To do this it needs to be rotated around the Y axis. The Rotation box should say \'Rotation axis with angle\' so change the Axis to Y and increment the Angle until it reaches 90. Click on **OK**.
+ယခု စင်တီးလင်ဒါကို X အက်ဆ်တန်းအလျားတွင် တန်းထားရန် ကွေ့ဝတ်ပုဖြစ်အောင် Y အက်ဆ်ပတ်လှည့်ရန် လိုသည်။ Rotation ဘောက်စ်တွင် \'Rotation axis with angle\' ဟု ပြထားခြင်းကို သတိပြုကာ Axis ကို Y သို့ ပြောင်းပြီး Angle ကို 90 ထိ တိုးပါ။ **OK** ကို နှိပ်ပါ။
 
-I like to play with rotating the view at this point (and often!) so by all means do so. You should find the \'seam\' of the cylinder on the underside.
+ဤအချိန်၌ ငါသည် ကြည့်မြင်မှုကို လှည့်ကြည့်ရတာ အကြိုက်ပါသဖြင့် သင့်ကြိုက်သလို ကြည့်မြင်မှုကို လှည့်ကြည့်နိုင်ပါသည်။ Cylinder ၏ 'seam' ကို အောက်ဖက်မှာ တွေ့ရမည်။
 
 <img alt="" src=images/HTCaeroplane03.png  style="width:400px;">
 
-We are now going to add and modify a box so click on the <img alt="" src=images/Part_Box.svg  style="width:32px;"> [Cube](Part_Box.md) button. Select it by clicking on Box in the Project viewer. Change the Height to 1mm, the Length to 5mm and the Width to 20mm.
+ယခု အရမ်းဖန်တီးပြီးပြင်ဆင်ရန် Box တစ်ခု ထပ်ထည့်မည်။ <img alt="" src=images/Part_Box.svg  style="width:32px;"> [Cube](Part_Box.md) ခလုတ်ကို နှိပ်ပါ။ Project viewer မှ Box ကို ရွေးချယ်ပါ။ Height ကို 1mm၊ Length ကို 5mm၊ Width ကို 20mm အဖြစ် ပြောင်းပါ။
 
-Click on [Placement → **...**](Placement.md) to get the Tasks viewer. Using the Translation box enter Y: -10 and Z: -1. Click on **OK**
+[Placement → **...**](Placement.md) ကို နှိပ်ပြီး Tasks viewer ကို ဖွင့်ပါ။ Translation ဘောက်စ်တွင် Y: -10 နှင့် Z: -1 ထည့်ပါ။ **OK** ကို နှိပ်ပါ။
 
-We are now going to merge these two shapes together with a Boolean Operation. Click on the <img alt="" src=images/Part_Boolean.svg  style="width:32px;"> [Boolean](Part_Boolean.md) button and the Tasks viewer will display the Boolean Operation selector.
+ယခု ပုံနှစ်ပုဒ်ကို Boolean Operation ဖြင့် ပေါင်းစပ်မှာ ဖြစ်သည်။ <img alt="" src=images/Part_Boolean.svg  style="width:32px;"> [Boolean](Part_Boolean.md) ခလုတ်ကို နှိပ်ပါ၊ Tasks viewer တွင် Boolean Operation ရွေးချယ်စရာပေါ်လာမည်။
 
-Make sure Union is selected, and that the Cylinder and the Box are each ticked once in the two shape lists. Click on **Apply**. Click on **Close**. You now have a single object called **Fusion**.
+Union ကို ရွေးထားသည်ကို ထိန်းသိမ်းပြီး Cylinder နှင့် Box ကို shape စာရင်းနှစ်ခုတွင် တစ်ကြိမ်စီ မှတ်သားထားပါ။ **Apply** ကို နှိပ်ပါ။ **Close** ကို နှိပ်ပါ။ ယခု သင့်တွင် **Fusion** ဆိုသော တစ်ခုတည်းသော အရာရှိပါပြီ။
 
+ဒီနောက် Box တစ်ခု ပေါင်းထည့်ပြီး ဂေါက်ပုံကို အဆုံးသတ်မယ်။ Box တစ်ခု ဖန်တီး၍ ရွေးပါ၊ Height ကို 5mm၊ Length ကို 3mm၊ Width ကို 1mm သတ်မှတ်ပါ။ Placement ကို Y: -0.5 သို့ ပြောင်းပါ။
 
+ယခု Fusion နှင့် Box001 ကို ပေါင်းစပ်ရန် လျင်မြန်သောနည်းကို အသုံးပြုမည်။ Project viewer တွင် Fusion ကို နှိပ်ပြီး **Ctrl** + Box001 ကို နှိပ်ပါ။ နှစ်ခုစလုံး ရွေးထားမည်။ ထို့နောက် <img alt="" src=images/Part_Fuse.svg  style="width:32px;"> [Fuse](Part_Fuse.md) ခလုတ်ကို နှိပ်၍ **Fusion001** ကို ရယူပါ။
 
-
-Let\'s add one more box to finish off our model. Create a Box, Select it and change its Height to 5mm, Length to 3mm and Width to 1mm. Change its Placement by Y: -0.5.
-
-We now need to join our Fusion to Box001 so we\'ll do it the quick way. Click on Fusion in the Project viewer and **Ctrl**+click on Box001. This selects both parts together. Now click on the <img alt="" src=images/Part_Fuse.svg  style="width:32px;"> [Fuse](Part_Fuse.md) button to get **Fusion001**.
-
-You should now have a simple aeroplane model. Right-click on **Fusion001** and Rename it **Aeroplane**.
+ယခု သင့်တွင် ရိုးရှင်းသော လေယာဉ် မော်ဒယ် တစ်ခု ရှိပြီဖြစ်သည်။ **Fusion001** ကိုညာဘက်ကလစ်လုပ်ပြီး Rename ကို သုံးကာ **Aeroplane** ဟု အမည်ပြောင်းပါ။
 
 <img alt="" src=images/HTCaeroplane04.png  style="width:500px;">
 
-I think the wings need to be moved forward a bit but if I select Aeroplane and try changing its Placement X Translation the whole thing moves. I only want to move the wings so cancel the Placement.
+ငါထင်တဲ့အတိုင်း ပြိုင်း (wings) များကို အရှေ့ဘက်သို့ နည်းနည်း ရှေ့ဆွဲလိုက်ချင်သည်။ သို့သော် Aeroplane ကို ရွေး၍ Placement X Translation ကို ပြောင်းပါက အရာအားလုံးလုံးဝ ဆက်ရွှေ့သွားသည်။ ငါ ဆောင်းများကိုသာ ရွှေ့ချင်နေသောကြောင့် Placement ကို cancel လုပ်ပါ။
 
-Expand Aeroplane (click on the **[+]** beside it) and expand Fusion.
+Aeroplane ကို ဖွင့်ပါ (အနားရှိ **[+]** ကို နှိပ်ပါ) နှင့် Fusion ကိုလည်း ဖွင့်ပါ။
 
-Click on Box and get its [Placement into Tasks](Placement.md). Notice it already has Y: -10 and Z: -1 in the Translation. Change the X translation to 3 and click on **Apply**. That\'s better. Click **OK**.
+Box ကို နှိပ်ပြီး ၎င်း၏ [Placement into Tasks](Placement.md) ကို ဖော်ထုတ်ပါ။ Translation တွင် Y: -10 နှင့် Z: -1 ရှိနေသည်ကို တွေ့မည်။ X translation ကို 3 သို့ ပြောင်းပြီး **Apply** ကို နှိပ်ပါ။ အဲဒါ ကောင်းပြီ။ **OK** ကို နှိပ်ပါ။
 
+## လှည့်ခြင်းများ (Rotations)
 
+Aeroplane ကို နှိပ်ပြီး ၎င်း၏ [Placement into Tasks](Placement.md) ကို ဖွင့်ပါ။ Rotation အပိုင်းတွင် \'Rotation axis with angle\' ကို 'Euler angles' သို့ ပြောင်းပါ၊ အကြောင်းကတော့ Euler angles များသည် လုပ်ဆောင်ရ လွယ်ကူလှပါသည်။
 
+![](images/Tache_Placement_Lacet_fr_Mini.gif )**Yaw** သည် **Z axis** အပေါ် လှည့်ခြင်း ဖြစ်သည်၊ ဆိုလိုချင်တာက ဘေးဘက်မှညာဘက်သို့ လှည့်ခြင်းဖြစ်သည်။ (Yaw angle သည် **Psi ψ** ဖြစ်သည်)  ![](images/Tache_Placement_Tangage_fr_Mini.gif )**Pitch** သည် **Y axis** အပေါ် လှည့်ခြင်း ဖြစ်သည်၊ ဆိုလိုချင်တာက ခေါင်းမြင့်၊ ခေါင်းကျ လှည့်ခြင်းဖြစ်သည်။ (Pitch angle သည် **Phi φ** ဖြစ်သည်)  ![](images/Tache_Placement_Roulis_fr_Mini.gif )**Roll** သည် **X axis** ပတ်လည် လှည့်ခြင်း ဖြစ်သည်၊ ဆိုလိုချင်တာက ဘက်ပျော့ကောင်း၊ ဘက်မြင့် လှည့်ခြင်းဖြစ်သည်။ (Roll angle သည် **Thêta θ** ဖြစ်သည်)
 
-## Rotations
+သို့သော် ဤနေရာတွင် သတိပြုရန် အဓိကအချက်များ ရှိသည်။
 
-Click on Aeroplane and get its [Placement into Tasks](Placement.md). In the Rotation section change where it says \'Rotation axis with angle\' to \'Euler angles\' because they\'re a lot easier to work with.
+-   ပြင်းထန်စွာနောက်ဘက်က လှည့်မှုများ (Positive Rotations) သည် Origin ထံမှ ကောင်းမွန်သော အပေါ်တန်းအက်ဆ်တန်းဘက်ကို ကြည့်သောအခါ အလျှော့ချိုး (clockwise) ဖြစ်သည်။ အခြားအနေနှင့်ဆိုရင် Positive Rotations သည် အပေါ်တန်းအက်ဆ်တန်းမှ Origin ဆီသို့ ကြည့်ရာတွင် anticlockwise ဖြစ်သည်။
+-   Yaw, Pitch, Roll ဟူသော တံဆိပ်များသည် အမှန်တကယ် အရာများကို တိုက်ရိုက်ဖော်ပြခြင်းမဟုတ်ဘဲ အရာဝတ္ထု၏ *body coordinates* ကို ကိုးကားသည်။ ယင်းတံဆိပ်များအစား Heading, Elevation, Bank သို့မဟုတ် Azimuth, Inclination, Bank ဟူ၍ သတ်မှတ်သင့်သည်၊ ၎င်းတို့သည် အမှန်တကယ် 3D စနစ်၏ *space coordinates* ကို ကိုးကားပါသည်။ ဤသည်တို့ကို **Tait-Bryan angles** ဟု ခေါ်သည်။ အသေးစိတ်ကို သိလိုပါက [Euler Angles](http://en.wikipedia.org/wiki/Euler_angles#Tait-Bryan_angles) ကို ကြည့်ပါ။
+-   Aeroplane ကို လက်ရှိ တည်နေရာတွင်ထားသော်လည်း ရိုးရှင်းသော စည်းမျဉ်းများ အကျင့်သက်ရောက်ပါသည်။ Yaw သည် Z အက်ဆ်၏ ပတ်လမ်းပတ်လှည့်ဖြစ်ပြီး ဘေးဘက်၊ ညာဘက် လှည့်ချခြင်းဖြစ်သည်။ Pitch သည် Y အက်ဆ်ပတ်လည် လှည့်ဖြစ်ပြီး ခေါင်းမြင့်/ကျ ဖြစ်သည်။ Roll သည် X အက်ဆ်ပတ်လည် လှည့်ဖြစ်ပြီး အခါအားလျော်စွာ၊ ပြင်းကို အပေါ်/အောက် လှည့်စေသည်။ အစ အနေနှင့် ဤနေရာအတွက် သေချာကောင်းစွာ သတ်မှတ်နိုင်သော်လည်း နောက်ပိုင်းတွင် မဖြစ်နိုင်တော့ပါ။
 
-![](images/Tache_Placement_Lacet_fr_Mini.gif )**Yaw** is the rotation about the **Z axis**, that is to say a rotation from left to right. (The yaw angle is the **Psi ψ**).  ![](images/Tache_Placement_Tangage_fr_Mini.gif )**Pitch** is rotation about the **Y axis**, that is to say nose-up and nose-down. (The Pitch angle is the **Phi φ**).  ![](images/Tache_Placement_Roulis_fr_Mini.gif )**Roll** is rotation about the **X axis**, that is to say wing up and down. (The Roll angle is the **Thêta θ**). 
+Yaw, Pitch, Roll (YPR) သုံးကိန်းများနှင့် ကစားကြည့်ပါ။ အနည်းငယ် ဒီဂရီလောက်သာ ပြောင်းရန် လုံလောက်ပြီး သဘောပေါက်မည်။ ပြီးသော် **Reset** ကိုနှိပ်ပါ။
 
-However, even here there are some important things to remember:
+ယခု Yaw-Pitch-Roll တံဆိပ်များက အမှန်တကယ် သင့်ရဲ့ အတွက်ကို မဖြစ်ကြောင်း ပြသပေးမည်။ Roll ကို 90° သို့ ပြောင်းပါ။ Yaw သည် လေယာဉ်၏ ခေါင်းကို အပေါ်/အောက် လှည့်စေပြီး Pitch သည် ဘေးဘက်သို့လှည့်စေသင့်သည် (အပြင်ဘက်မှ ကြည့်သောအခါ)။ ထိုသို့ ဖြစ်သနည်း? မဖြစ်ပါ။ Pitch သည် Yaw ကို ပြောင်းလဲစေပြီး Yaw သည် Pitch ကို ပြောင်းလဲစေသည်။ အိုကေ၊ **Reset** လုပ်ပါ။
 
--   Positive Rotations are clockwise when viewed from the Origin outwards along a positive axis. Or to put it another way: Positive Rotations are anticlockwise when viewed from a positive axis towards the Origin.
+သို့ဖြစ်၍ လှည့်ခြင်းကို တွေးရမည့် ကောင်းသောနည်းလမ်းမှာ Yaw သည် သင့် Longitude ကို ပြောင်းစေသည်၊ Pitch သည် သင့် Latitude ကို ပြောင်းစေသည်၊ Roll သည် သင် ရင်ဆိုင်နေသော ဦးတည်ချက် (NSEW) ကို ပြောင်းစေသည်ဟု ယူဆပါ। ဒါမှမဟုတ် [Axes conventions](http://en.wikipedia.org/wiki/Axes_conventions) ကို ကြည့်ပြီး အခြားဖော်ပြချက်များကို ရှာနိုင်သည်။
 
--   Although the three labels are Yaw, Pitch and Roll that\'s not really what they are. Yaw, Pitch and Roll are references to the *body coordinates* of an object in 3D space. The labels should be Heading, Elevation and Bank or even Azimuth, Inclination and Bank because they actually refer to the *space coordinates* of the 3D system. These are the **Tait-Bryan angles**. If you want more information then try [Euler Angles](http://en.wikipedia.org/wiki/Euler_angles#Tait-Bryan_angles).
+အခု အလုပ်ဆက်ကြပါစို့။ Yaw ကို 45° သို့ ပြောင်းပြီး Pitch ကို -30° သို့ ပြောင်းပါ။ အလုပ်ပြီးစဉ် **OK** ကို နှိပ်ပါ။ အခု [Placement Task](Placement.md) ကို ပြန်ဖွင့်ပြီး Rotation ဘောက်စ်ကို ကြည့်ပါ။ ၎င်းသည် 다시 'Rotation axis with angle' သို့ ပြန်သွားပြီး အံ့ဩစရာ နံပါတ်များ Axis နှင့် Angle ဘောက်စ်များတွင် ပြပါလိမ့်မည်။ ဥပမာ Axis: (0.219493,-0.529904,0.819161) နှင့် Angle: 53.65° ကဲ့သို့ ဖြစ်နိုင်သည်။ ကိုးကွယ်တွင် ရှိသော အမှတ်သုံးခုသည် 3D အာကာသ၌ unit vector တစ်ခု၏ XYZ ကိန်းဂဏန်းများဖြစ်သည်။ ၎င်းသည် မူလ Aeroplane ကို နောက်ဆုံး ဂဏန်းအတိုင်း အသားပေးရန် သတ်မှတ်လိုက်သော axis ဖြစ်သည်။ Angle သည် အလယ်လှည့်မည့် ဒဂရီပမာဏ ဖြစ်သည်။ Euler သည် XYZ လှည့်မူများ စုပေါင်း၍ တစ်ခုသော axis အပေါ် လှည့်မှုတစ်ခုအဖြစ် ပြန်လုံ့လခိုင်းနိုင်ကြောင်း ပြသခဲ့သည်။
 
--   With the Aeroplane in its present position simple rules apply. Yaw is rotation around the Z axis, ie left and right. Pitch is rotation around the Y axis, ie nose up and down. Roll is rotation around the X axis, ie wings up and down. That\'s fine to start with but it\'s not going to be true later!
+Aeroplane နှင့် အပေါ်တွင် ကစားရန် အကြံပြုချက်များအနည်းငယ် —
 
-Have a play with the three YPR numbers. You only need to change things by a few degrees to get the idea. Reset when you finished.
+-   Z Location ကို ပြောင်းပြီး (နှင့် Apply) ထို့နောက် YPR ကိန်းများကို ပြောင်းကြည့်ပြီး သက်ရောက်မှုကို သတိထားပါ။ ထို့နောက် X နှင့် Y Location များကို ပြောင်း၍ လှည့်ကြည့်ပါ။
+-   X Centre ကို ပြောင်းပြီး (နှင့် Apply) ထို့နောက် YPR ကိန်းများကို ပြောင်းကြည့်ပါ။ ထို့နောက် Y နှင့် Z Centres များကို ပြောင်း၍ လှည့်ကြည့်ပါ။
 
-Now we\'re going to see why the Yaw-Pitch-Roll labels are not really suitable. Change the Roll number to 90°. Yaw should move the nose of the aeroplane up and down and Pitch should move it side to side *as viewed from outside the aeroplane* which is where we are. Do they? No they don\'t! Pitch changes the yaw and Yaw changes the pitch. OK, Reset.
-
-So, a better way of thinking about rotations is that Yaw changes your Longitude, Pitch changes your Latitude and Roll changes the direction (NSEW) that you\'re facing. Or you could check out [Axes conventions](http://en.wikipedia.org/wiki/Axes_conventions) for other descriptions.
-
-Right, back to work. Change Yaw to 45° and Pitch to -30°. Click on OK to show that the operation has been completed. Now get back the [Placement Task](Placement.md) and look at the Rotation box. It has reverted to \'Rotation axis with angle\' and has some wierd numbers Axis and Angle boxes. Mine had Axis: (0.219493,-0.529904,0.819161) and Angle: 53.65°. The three numbers in brackets are the XYZ components of a unit vector in the 3D space. It is the axis about which our original Aeroplane was rotated to get our final Aeroplane. The angle is how much it was rotated. Clever, huh, but not very friendly! It was Euler who showed that you could combine a series of XYZ rotations into one rotation about one axis.
-
-Here\'s some more suggestions for playing with the Aeroplane:
-
--   Change the Z Location (and Apply) then change the YPR numbers and see what the effect is. Then try changing the X and Y Locations and rotating.
--   Change the X Centre (and Apply) then change the YPR numbers and see what the effect is. Then try changing the Y and Z Centres and rotating.
-
-I hope this little tutorial has helped you to get a feel for rotations.
-
-
+ဤသင်ခန်းစာလေးသည် လှည့်ခြင်းများအား နားလည်ရန် ကူညီပေးပါရန် မျှော်လင့်ပါသည်။
 
 ---
 ⏵ [documentation index](../README.md) > [Part](Category_Part.md) > Aeroplane

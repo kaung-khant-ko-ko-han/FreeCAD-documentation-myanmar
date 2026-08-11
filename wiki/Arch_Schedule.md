@@ -4,94 +4,93 @@
    MenuLocation: Manage , Schedule
    Workbenches: BIM_Workbench
    SeeAlso: 
----
+---# Arch Schedule
 
-# Arch Schedule
+## ဖော်ပြချက်
 
-## Description
+**Arch Schedule** ကိရိယာသည် မော်ဒယ်သို့မှ တွက်ချက်ကောက်ယူထားသည့် အချက်အလက်များဖြင့် [spreadsheet](Spreadsheet_Workbench.md) တစ်ခုကို ဖန်တီး၍ အလိုအလျောက် ဖြည့်သွင်းပေးနိုင်သည်။
 
-The **Arch Schedule** tool allows you to create and automatically populate a [spreadsheet](Spreadsheet_Workbench.md) with contents gathered from the model.
+ပိုမိုယေဘူယျ ဖြေရှင်းချက်တစ်ခုအနေနှင့် [external workbenches](External_workbenches.md) အရင်းအမြစ်စာရင်း၌ ရှိသော [Reporting Workbench](https://github.com/furti/FreeCAD-Reporting/tree/master) ကို ကြည့်ပါ။ ထို workbench သည် ဒီဇစ်ဖြင့် (SQL syntax) စာရွက်အား ထုတ်ယူရန် အသုံးပြုသည်။
 
-For a more general solution, see the [Reporting Workbench](https://github.com/furti/FreeCAD-Reporting/tree/master) in the list of [external workbenches](External_workbenches.md). This workbench uses SQL syntax to extract information from the document.
+(အထွေထွေ အသုံးအနှုန်းအတွက် FreeCAD ကို ဖရီးကက် (FreeCAD) ဟု သတ်မှတ်၍ ဖော်ပြထားပါသည်။)
 
-## Usage
+## အသုံးပြုနည်း
 
-1.  Open or create a FreeCAD document which contains some objects.
-2.  Press the **<img src="images/Arch_Schedule.svg" width=16px> [Schedule](Arch_Schedule.md)** button.
-3.  Adjust the desired options. Enable the **Associate spreadsheet** option if you want the schedule to generate a FreeCAD [spreadsheet](Spreadsheet_Workbench.md). Or, alternatively, right-click the schedule in the [Tree view](Tree_view.md) after creation, and select **Attach spreadsheet** from the context menu.
-4.  Press **OK**.
+1.  အရာဝတ္ထုအချို့ပါဝင်သည့် ဖရီးကက် (FreeCAD) စာရွက်(စာရွက်စာတမ်း) တစ်ခုဖွင့်မည် သို့မဟုတ် ဖန်တီးမည်။
+2.  **<img src="images/Arch_Schedule.svg" width=16px> [Schedule](Arch_Schedule.md)** ခလုတ်ကို နှိပ်ပါ။
+3.  လိုအပ်သည့် ရွေးချယ်နိုင်မှုများကို ချိန်ညှိပါ။ အကယ်၍ schedule သည် ဖရီးကက် [spreadsheet](Spreadsheet_Workbench.md) တစ်ခုကို ဖန်တီးရန် သက်ဆိုင်ပါက **Associate spreadsheet** ဆိုသော ရွေးချယ်မှုကို အချပ်အတည်း ဖွင့်ပါ။ အခြားနည်းလမ်းအဖြစ် ဖန်တီးပြီးနောက် [Tree view](Tree_view.md) တွင် schedule ကို ညာကလစ်နှိပ်ပြီး context မီနူးမှ **Attach spreadsheet** ကို ရွေးချယ်နိုင်သည်။
+4.  **OK** ကို နှိပ်ပါ။
 
-## Workflow
+## လုပ်ငန်းစဥ်
 
-First you need to have a model. For example, here is a document with a couple of Arch objects, but other objects are also supported.
+ပထမဦးဆုံး မော်ဒယ်တစ်ခု ရှိရန် လိုအပ်သည်။ ဥပမာ အောက်တွင် Arch အရာဝတ္ထု အနည်းငယ်ပါဝင်သည့် စာရွက်(သို့)စာတမ်းတစ်ခုကို ပြထားသည်၊ သို့သော် အခြားအရာဝတ္ထုများလည်း ထောက်ခံလက်ခံသည်။
 
  ![](images/Arch_schedule_example01.jpg ) 
 
-When you press the **<img src="images/Arch_Schedule.svg" width=16px> [Schedule](Arch_Schedule.md)** button this dialog opens:
+**<img src="images/Arch_Schedule.svg" width=16px> [Schedule](Arch_Schedule.md)** ခလုတ်ကို နှိပ်ပါက ဤဒိုင်ယာလော့ မြင်ရမည်။
 
  ![](images/ArchSchedule.png ) 
 
-You can now fill the schedule row by row. Each row is a \"query\" and will render one row in the spreadsheet. Press the **<img src="images/List-add.svg" width=16px> Add row** button to add a new row, and double-click each cell from that row to fill in the values. The **<img src="images/List-remove.svg" width=16px> Del row** button will delete the row which contains a currently selected cell, and **<img src="images/Delete.svg" width=16px> Clear** will delete all rows. Possible values to put in columns are:
+ယခု သင်သည် schedule ကို တန်းတန်းစီဖြင့် ဖြည့်နိုင်သည်။ တန်းတိုင်းသည် "query" တစ်ခု ဖြစ်ပြီး spreadsheet တွင် တန်းတစ်န်းကို ဖော်ပြမည်။ တန်းအသစ် ထည့်ရန် **<img src="images/List-add.svg" width=16px> Add row** ခလုတ်ကို နှိပ်ပြီး ထိုတန်းမှ အဆセルများကို ဒဘယ်လ်ကလစ်၍ တန်ဖိုးများ ထည့်နိုင်သည်။ **<img src="images/List-remove.svg" width=16px> Del row** ခလုတ်သည် လက်ရှိရွေးထားသောဆဲလ် ပါဝင်သည့် တန်းကို ဖျက်ပစ်မည်ဖြစ်ပြီး **<img src="images/Delete.svg" width=16px> Clear** သည် တန်းအားလုံးကို ဖျက်ပစ်မည်။ ကော်လံများတွင် ထည့်နိုင်သည့် တန်ဖိုးများမှာ အောက်ပါအတိုင်း ဖြစ်သည်။
 
--   **Description**: A description for this query. The Description column will be the first column of the resulting spreadsheet. The description is mandatory to have a query performed. If you leave the description cell empty, the whole row will be skipped and left blank in the spreadsheet. This allows you to add \"separator\" rows.
--   **Property**: This is the real query that you want to perform on all the objects selected by the query. It can be two things: either the word `count` or an object property:
-    -   If you enter `count` (or `Count` or `COUNT`, it\'s case-insensitive) the selected objects will simply be counted.
-    -   If you enter an object property the value of this property will be retrieved for each of the selected objects and summed up. Objects that do not have the given property will be skipped. Generally a property name will be that shown in the [Property editor](Property_editor.md), without spaces (e.g. type `PerimeterLength` in the Property column if the object has a `Perimeter Length` in the Property editor). Use the dot notation to retrieve properties of properties: `PropertyOfObject.PropertyOfProperty1.PropertyOfProperty2`. If the property before the first dot starts with a lowercase letter it will be considered a reference to the object itself and be ignored. Entering for example `object.Shape.Volume` is the same as entering `Shape.Volume`.
--   **Unit**: An optional unit to express the results in. It\'s up to you to give a unit that matches the query you are doing, for example, if you are retrieving volumes, you should use a volume unit, such as `m^3` or `m³`. If you use a wrong unit for the property, e.g. `cm` for volume, you\'ll get wrong results.
--   **Objects**: You can leave this empty, then all the objects of the document will be considered by this query, or give a semicolon`;`-separated list of object names. If any of the objects in this list is a group, its children will be selected as well. So the easiest way to use this feature is to group your objects meaningfully in the document, and just give a group name here. You can also use the **<img src="images/Edit-select-all.svg" width=16px> Add selection** button to add objects currently selected in the document. You must use internal names here. To select objects by their label, leave this column empty and use the Filter column instead.
--   **Filter**: Here you can add a semicolon`;`-separated list of filters. Each filter is written in the form: `property:value`. You can only use properties that hold a string value. Both the property and the value are case-insensitive. The `value` can be left out but not the `:`. To properly handle schedules created with previous versions of Arch Schedule the `type` property will be translated to the `ifctype` property. It is advisable to not use `type` in new schedules.
+-   **Description**: ဤ query အတွက် ဖော်ပြချက်။ Description ကော်လံသည် အဆုံးပေါ် spreadsheet ၏ ပထမ ကော်လံ ဖြစ်မည်။ query တစ်ခုကို ဆောင်ရွက်ရန် Description は လိုအပ်ပါသည်။ Description ဆဲလ်ကို ဝက်ရှင်းလျှင် အကြောင်းအရာမပါလျှင် အဘယ်သူမျှ မေးခွန်းအား စစ်ဆေးမည် မဟုတ်ပဲ အွန်ရွေ့ထား၍ spreadsheet တွင် အလင်းပြတ်စွာ ထားရှိမည်။ ၎င်းက \"separator\" တန်းများ ထည့်နိုင်စေရန် အဆင်ပြေစေသည်။
+-   **Property**: ၎င်းသည် သင် query ဖြင့် ရွေးချယ်လိုသော အရာဝတ္ထုများအား စစ်ဆေးမည့် အမှန်တကယ် query ဖြစ်သည်။ အရာနှစ်မျိုး ဖြစ်နိုင်သည်။ သို့မဟုတ် `count` ဟူသော စကားလုံးမှတစ်ခု သို့မဟုတ် အရာဝတ္ထု၏ property တစ်ခု:
+    -   သင် `count` (သို့) `Count` (သို့) `COUNT` ထည့်ပါက — case-insensitive ဖြစ်သည် — ရွေးချယ်ထားသည့် အရာဝတ္ထုများကို ရေတွက်ပေးမည်။
+    -   သင် အရာဝတ္ထု၏ property ကို ထည့်ပါက ထို property ၏ တန်ဖိုးကို ရွေးချယ်ထားသည့် အရာဝတ္ထု တစ်ခုချင်းစီအတွက် ရယူ၍ သင်္ချာအားဖြင့် စုစုပေါင်းတွက်မည်။ သတ်မှတ်ထားသော property မရှိသော အရာဝတ္ထုများကို ကလစ်ကျော်မည်။ အခြားအားဖြင့် property အမည်မှာ [Property editor](Property_editor.md) တွင် ပြသထားသည့် အမည်နှင့် ကိုက်ညီပြီး အလင်းတန်းများမပါသင့် (ဥပမာ Property editor တွင် `Perimeter Length` သည် `PerimeterLength` အဖြစ် Property ကော်လံတွင် ရိုက်ထည့်ပါ)။ property-of-property ကို ရယူရန် dot notation ကို အသုံးပြုပါ: `PropertyOfObject.PropertyOfProperty1.PropertyOfProperty2`။ ပထမ dot မခေါက်သော အပိုင်း၏ အစမှာ အရှည်လျော့အက္ခရာ (lowercase) ဖြင့် စတင်ပါက ၎င်းကို အရာဝတ္ထုကို ကိုးကားထားသည်ဟု ထင်၍ ထည့်မထားသည့်အဖြစ် တွက်ချက်မည်။ ဥပမာ `object.Shape.Volume` ဟု ထည့်ခြင်းသည် `Shape.Volume` ဟု ထည့်ခြင်းနှင့် တူညီသည်။
+-   **Unit**: ရလဒ်များကို ဖော်ပြရန် အသုံးပြုမည့် ရာထူး (unit) အတွက် ရွေးချယ်နိုင်သော အားလက်ခံ optional ကော်လံ။ ကိုယ်လုပ်နေတာနှင့် ကိုက်ညီသော unit ကို သတ်မှတ်ပေးရန် သင်သည် တာဝန်ရှိသည်။ ဥပမာ သင်သည် အရွယ်အစား (volume) များကို ရယူနေပါက `m^3` သို့မဟုတ် `m³` ကဲ့သို့သော မှန်ကန်သည့် အရွယ်အစား unit ကို အသုံးပြုသင့်သည်။ property အတွက် မမှန်သည့် unit ကို သတ်မှတ်ပါက (ဥပမာ အရွယ်အစားအတွက် `cm` သို့) ငြင်းပယ်ချွတ်သော ရလဒ်များကို ရရှိမည်။
+-   **Objects**: ဤကော်လံကို ဖွင့်ထားနိုင်သည် — ထိုအခါ ဤ query အတွက် စာရွက်စာတမ်းအတွင်းရှိ အရာဝတ္ထုအားလုံးကို သတ်မှတ်မည် — သို့မဟုတ် `;` ဖြင့် ခွဲထားသည့် object အမည်စာရင်းကို ထည့်နိုင်သည်။ စာရင်းရှိ အရာဝတ္ထုတစ်ခုခုသည် group ဖြစ်ပါက ၎င်း၏ children များလည်း ရွေးချယ်မည်။ ထို့ကြောင့် ဤ feature ကို အသုံးပြုရန် အလွယ်တကူအကောင်အထည်ဖော်နည်းမှာ သင်၏ အရာဝတ္ထုများကို မှန်ကန်စွာ စုပေါင်း group များဝင်အုပ်စုတစ်ခုအဖြစ် ထား၍ ဒီနေရာတွင် အုပ်စုအမည်ကိုသာ ထည့်ပေးခြင်းဖြစ်သည်။ သင်သည် လောလောဆယ် စာရွက်ထဲတွင် ရွေးထည့်ထားသော အရာများကို ထည့်ရန် **<img src="images/Edit-select-all.svg" width=16px> Add selection** ခလုတ်ကို အသုံးပြုနိုင်သည်။ ၎င်းတွင် အတွင်းရေးအမည်များ (internal names) ကိုသာ အသုံးပြုရမည်။ Label အမည်ဖြင့် object များကို ရွေးချယ်လိုပါက ဤကော်လံကို ဖွင့်ထား၍ မလိုအပ်ပါ၊ အစား Filter ကော်လံကို အသုံးပြုပါ။
+-   **Filter**: ဒီမှာ သင်သည် `;` ဖြင့် ခွဲထားသော filter စာရင်းကို ထည့်နိုင်သည်။ filter တစ်ခုစီကို `property:value` အဖြစ် ရေးရမည်။ သင် အသုံးပြုနိုင်သည်မှာ string value ကိုသာ သိုလှောင်ထားသည့် properties များသာ ဖြစ်သည်။ property နှင့် value နှစ်ခုစလုံးသည် case-insensitive ဖြစ်သည်။ `value` ကို မရေးထားနိုင်သော်လည်း `:` ကို မလွှတ်နိုင်ပါ။ Arch Schedule ၏ ယခင်ဗားရှင်းများဖြင့် ဖန်တီးထားသည့် schedules များကို မှန်ကန်စွာ ကိုင်တွယ်နိုင်ရန် `type` property ကို `ifctype` property သို့ ဘာသာပြန်သင့်သည်။ မျာသည့် schedule အသစ်များတွင် `type` ကို အသုံးမပြုရန် အကြံပြုလိုက်ပါတယ်။
 
 +++
 | Query                                  | Description                                                                                                                                                                                                                                                                                                                  |
 +========================================+==============================================================================================================================================================================================================================================================================================================================+
-|                         | Will retain only objects that have \"floor1\" in their **Label** and \"window\" in their **IFC Type**. A window with the **Label** \"Floor1-AA\" and the **IFC Type** \"Window Standard Case\" will be included. |
+|                         | "Label" တွင် "floor1" ပါရှိပြီး **IFC Type** တွင် "window" ပါရှိသည့် အရာများကိုသာ ထိန်းသိမ်းမည့် စစ်ဆေးချက်။ **Label** သည် "Floor1-AA" ဖြစ်ပြီး **IFC Type** သည် "Window Standard Case" ဖြစ်သော ပြတင်းပေါက်တစ်ခုကို ထည့်သွင်းပါလိမ့်မည်။ |
 | `label:floor1;ifctype:window` |                                                                                                                                                                                                                                                                                                                              |
 |                                     |                                                                                                                                                                                                                                                                                                                              |
 +++
-|                         | Will retain only objects that have \"door\" in their **Label**                                                                                                                                                                                                                                    |
+|                         | **Label** တွင် "door" ပါရှိသည့် အရာများကိုသာ ထိန်းသိမ်းမည်။                                                                                                                                                                                                                                    |
 | `label:door`                  |                                                                                                                                                                                                                                                                                                                              |
 |                                     |                                                                                                                                                                                                                                                                                                                              |
 +++
-|                         | Will retain only objects that do not have \"door\" in their **Label**                                                                                                                                                                                                                             |
+|                         | **Label** တွင် "door" မပါရှိသည့် အရာများကိုသာ ထိန်းသိမ်းမည်။                                                                                                                                                                                                                             |
 | `!label:door`                 |                                                                                                                                                                                                                                                                                                                              |
 |                                     |                                                                                                                                                                                                                                                                                                                              |
 +++
-|                         | Will retain only objects that have \"structural\" in their **IFC Type**                                                                                                                                                                                                                           |
+|                         | **IFC Type** တွင် "structural" ပါရှိသည့် အရာများကိုသာ ထိန်းသိမ်းမည်။                                                                                                                                                                                                                           |
 | `ifctype:structural`          |                                                                                                                                                                                                                                                                                                                              |
 |                                     |                                                                                                                                                                                                                                                                                                                              |
 +++
-|                         | Will retain only objects that do not have \"structural\" in their **IFC Type** or that do not have the **IFC Type** property                                                                                                                                           |
+|                         | **IFC Type** တွင် "structural" မပါရှိသည့် အရာများ သို့မဟုတ် **IFC Type** property ကို မရှိသည့် အရာများကိုသာ ထိန်းသိမ်းမည်။                                                                                                                                           |
 | `!ifctype:something`          |                                                                                                                                                                                                                                                                                                                              |
 |                                     |                                                                                                                                                                                                                                                                                                                              |
 +++
-|                         | Will retain only objects that do not have the **IFC Type** property                                                                                                                                                                                                                               |
+|                         | **IFC Type** property ကို မရှိသည့် အရာများကိုသာ ထိန်းသိမ်းမည်။                                                                                                                                                                                                                               |
 | `!ifctype:`                   |                                                                                                                                                                                                                                                                                                                              |
 |                                     |                                                                                                                                                                                                                                                                                                                              |
 +++
 
-: Example filter queries
+: ဥပမာ filter မေးခွန်းများ
 
-The **<img src="images/Document-open.svg" width=16px> Import** button allows you to build this list in another spreadsheet application, and import that as a csv file here.
+**<img src="images/Document-open.svg" width=16px> Import** ခလုတ်အား အသုံးပြု၍ အခြား spreadsheet application တစ်ခုတွင် ဤစာရင်းကို တည်ဆောက်ပြီး csv ဖိုင်အဖြစ် ဒီထဲသို့ သွင်းနိုင်သည်။
 
-The finished schedule may look like this:
+ပြီးစီးခဲ့သော schedule အကောင်အထည်ကို အောက်ဖော်ပြပါအတိုင်း ရှုမြင်နိုင်တတ်သည်။
 
  ![](images/ArchScheduleExample.png ) 
 
-Finally, press **OK** and a new schedule is added to the document. If the related option has been selected, the schedule will contain an associate spreadsheet:
+နောက်ဆုံးတွင် **OK** ကို နှိပ်ပါ။ အသစ်သတ်မှတ်သော schedule သည် စာရွက်(စာတမ်း) ထဲသို့ ထည့်သွင်းမည်။ ဆက်စပ်ရွေးချယ်မှုကို ရွေးထားလျှင် schedule တွင် ဆက်စပ် spreadsheet တစ်ခု ပါလာမည်။
 
  ![](images/Arch_schedule_example04.jpg ) 
 
-To edit an existing schedule double-click it in the Tree view. By double-clicking the spreadsheet, you get the results in 3 columns: Description, Value, Unit (if applicable):
+လက်ရှိတည်ရှိသော schedule ကို တည်းဖြတ်ရန် [Tree view](Tree_view.md) တွင် ဒါဘယ်ကလစ် (double-click) လုပ်ပါ။ spreadsheet ကို ဒဘယ်လ်ကလစ် လုပ်ပါက သင်သည် Description, Value, Unit (သက်ဆိုင်ပါက) ဆိုသည့် ကော်လံ ၃ ခုဖြင့် ရလဒ်များကို ကြည့်ရှုနိုင်မည်။
 
  ![](images/Arch_schedule_example05.jpg ) 
 
-The spreadsheet can then be exported to csv normally, from the [Spreadsheet Workbench](Spreadsheet_Workbench.md).
+Spreadsheet ကို ထိုနောက် [Spreadsheet Workbench](Spreadsheet_Workbench.md) မှာ အဓိပ္ပာယ်သတ်မှတ်သည့်ပုံစံအတိုင်း csv အဖြစ် တင်ပြနိုင်သည်။
 
-## Dynamic properties 
+## စွန်ရဲ့ (Dynamic) ပစ္စည်းအင်္ဂါရပ်များ
 
-It is possible to add your own properties to objects. These are called [Dynamic properties](Property_editor#Actions.md). If they have been added with the **Prefix group name** option selected, their names will indeed start with the group name, but this prefix is not displayed in the [Property editor](Property_editor.md). Their names have this form: `NameOfGroup_NameOfProperty`. To reference them in a schedule this full name must be used.
-
-
+အရာဝတ္ထုများသို့ သင်၏ ကိုယ်ပိုင် ပရိုပါတီများ (properties) ကို ထည့်သွင်းနိုင်သည်။ ၎င်းတို့ကို [Dynamic properties](Property_editor#Actions.md) ဟု ခေါ်သည်။ ၎င်းတို့ကို **Prefix group name** ရွေးချယ်မှုနှင့်အတူ ထည့်သွင်းထားသောအခါ၊ ၎င်းတို့၏ အမည်များသည် အမှန်တကယ် group အမည်ဖြင့် စတင်မည်ဖြစ်သော်လည်း အဆိုပါ prefix ကို [Property editor](Property_editor.md) တွင် မပြသပါ။ ၎င်းတို့၏ အမည်ပုံစံမှာ `NameOfGroup_NameOfProperty` ဖြစ်သည်။ Schedule အတွင်း၌ အဆိုပါ dynamic property များကို ကိုးကားချင်ပါက ဤ အပြည့်အစုံအမည်ကိုသာ အသုံးပြုရမည်။
 
 ---
+
 ⏵ [documentation index](../README.md) > [BIM](Category_BIM.md) > Arch Schedule
