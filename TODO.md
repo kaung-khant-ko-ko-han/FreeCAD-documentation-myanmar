@@ -1,23 +1,24 @@
-# FreeCAD documentation
+```markdown
+# ဖရီးကက် (FreeCAD) စာတမ်းများ
 
-This repository contains an automatic conversion of the FreeCAD wiki located at https://wiki.freecadweb.org to [markdown format](https://en.wikipedia.org/wiki/Markdown). The conversion is done automatically through the [migrate.py](./migrate.py) script located within this repository. The script downloads the wiki contents in XML format using the MediaWiki API and uses [pandoc](https://pandoc.org/) to convert between mediawiki and markdown formats.
+ဤသိုလှောင်ရာတွင် https://wiki.freecadweb.org တွင်တည်ရှိသော ဖရီးကက် ဝီကီကို [markdown format](https://en.wikipedia.org/wiki/Markdown) သို့ အလိုအလျောက်ပြောင်းလဲထားသည်။ ပြောင်းလဲခြင်းကို ဤသိုလှောင်ရာအတွင်းရှိ [migrate.py](./migrate.py) စကရစ်ပ်ဖြင့် အလိုအလျောက် ဆောင်ရွက်သည်။ စကရစ်ပ်သည် MediaWiki API ကို အသုံးပြုကာ ဝီကီအကြောင်းအရာများကို XML ပုံစံဖြင့် ဒေါင်းလုပ်ဆွဲပြီး [pandoc](https://pandoc.org/) ဖြင့် mediawiki နှင့် markdown ပုံစံများအကြား ပြောင်းလဲပေးသည်။
 
-The general idea is to keep allowing users to use the wiki to edit and add contents, while the markdown format for:
+အဓိက ရည်ရွယ်ချက်မှာ အသုံးပြုသူများကို ဝီကီတွင် ဆက်လက်တည်းဖြတ်ထည့်သွင်းခွင့်ပြုထားပြီး၊ markdown ပုံစံကို အသုံးပြုခြင်းဖြင့် -
 
-1. Better handling of the documentation within FreeCAD, have the ability to code an own help viewer better than the QAssistant viewer currently in use
-2. Allow to use either an online or an offline version of the documentation
-3. Automatic and easier backups, same as the FreeCAD source code
-4. Better versioning and matching to FreeCAD versions
-5. Better handling of translations
+1. ဖရီးကက် (FreeCAD) အတွင်း စာတမ်းများကို ပိုမိုကောင်းမွန်စွာ စီမံခန့်ခွဲနိုင်ရန်၊ လက်ရှိ အသုံးပြုနေသော QAssistant viewer ထက် ပိုမိုကောင်းမွန်သော ကိုယ်ပိုင် အကူအညီ ကြည့်ရှုသူ (help viewer) ကို ဖန်တီးနိုင်ရန်
+2. အွန်လိုင်း (online) သို့မဟုတ် အော့ဖ်လိုင်း (offline) ဗားရှင်းများကို အသုံးပြုနိုင်ရန်
+3. ဖရီးကက် (FreeCAD) မူရင်းကုဒ်နှင့်တူညီသော အလိုအလျောက် နှင့် လွယ်ကူသော မိတ္တူယူခြင်း (backup) များ ပြုလုပ်နိုင်ရန်
+4. ဖရီးကက် ဗားရှင်းများနှင့် ကိုက်ညီသော ဗားရှင်းစနစ် ပိုမိုကောင်းမွန်စေရန်
+5. ဘာသာပြန်ချက်များကို ပိုမိုကောင်းမွန်စွာ စီမံခန့်ခွဲနိုင်ရန်
 
-Further goals:
+နောက်ထပ် ရည်မှန်းချက်များ -
 
-* Create a Help workbench with a md viewer
-    * [QTextDocument](https://doc.qt.io/qtforpython-5/PySide2/QtGui/QTextDocument.html#PySide2.QtGui.PySide2.QtGui.QTextDocument.setMarkdown) supports markdown (but might be problems with online images)
-    * Maybe better to use an HTML viewer and convert the markdown content?
-* Allow the help workbench to access both online or offline (local files) versions
-* Allow the help workbench to access any translated version
-* Tie the FreeCAD help system to the Help workbench
-* Tie the FreeCAD what's this system to the Help workbench
-* Allow to export parts of the documentation to other formats (PDF, ePub,...)
-
+* md viewer ပါရှိသည့် အကူအညီ လုပ်ငန်းခွင် (Help workbench) တည်ဆောက်ခြင်း
+    * [QTextDocument](https://doc.qt.io/qtforpython-5/PySide2/QtGui/QTextDocument.html#PySide2.QtGui.PySide2.QtGui.QTextDocument.setMarkdown) သည် markdown ကို ထောက်ပံ့ပေးသော်လည်း (အွန်လိုင်း ပုံများနှင့် ပတ်သက်၍ ပြဿနာများ ဖြစ်ပေါ်နိုင်သည်)
+    * markdown အကြောင်းအရာကို HTML viewer ဖြင့် ပြောင်းလဲအသုံးပြုသင့်နိုင်ခြင်း
+* အကူအညီ လုပ်ငန်းခွင်မှ အွန်လိုင်း သို့မဟုတ် အော့ဖ်လိုင်း (ဒေသခံဖိုင်များ) ဗားရှင်းများကို ဝင်ရောက်ကြည့်ရှုနိုင်ရန် ခွင့်ပြုခြင်း
+* ဘာသာပြန်ထားသော ဗားရှင်းများကိုလည်း အကူအညီ လုပ်ငန်းခွင်မှ ဝင်ရောက်ကြည့်ရှုနိုင်ရန် ခွင့်ပြုခြင်း
+* ဖရီးကက် (FreeCAD) အကူအညီ စနစ်ကို အကူအညီ လုပ်ငန်းခွင်နှင့် ချိတ်ဆက်ခြင်း
+* ဖရီးကက် (FreeCAD) "what's this" စနစ်ကို အကူအညီ လုပ်ငန်းခွင်နှင့် ချိတ်ဆက်ခြင်း
+* စာတမ်းအပိုင်းများကို အခြားဖော်မတ်များ (PDF, ePub, ...) သို့ တင်ပို့နိုင်ရန် ခွင့်ပြုခြင်း
+```

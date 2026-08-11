@@ -1,7 +1,5 @@
-# 3D View
-1.  REDIRECT [3D view](3D_view.md)
+# 3D ကြည့်ရှုမှု  
+1.  ပြောင်းလမ်းညွှန် [3D ကြည့်ရှုမှု](3D_view.md)  
 
-
-
----
-⏵ [documentation index](../README.md) > 3D View
+---  
+⏵ [စာတမ်းညွှန်းအညွှန်း](../README.md) > 3D ကြည့်ရှုမှု
